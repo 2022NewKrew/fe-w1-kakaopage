@@ -1,11 +1,18 @@
 .contents-wrapper {
   flex-direction: column;
   padding: 20px;
-  background-color: white;
 }
 
 .content {
   display: flex;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+.content:first-of-type {
+  padding-top: 0px;
+}
+.content:last-child {
+  padding-bottom: 0px;
 }
 
 .content > img {
@@ -43,6 +50,7 @@
   text-overflow: ellipsis;
   margin: 8px 0px 0px;
   line-height: 22.4px;
+  height: 28px;
 }
 
 .content span {
@@ -73,4 +81,18 @@
   width: 1px;
   height: 11px;
   background-color: #d9d9d9;
+}
+
+.show-more-btn {
+  margin-left: auto;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+
+.show-more-btn > img {
+  margin-left: 4px;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 14px;
 }
