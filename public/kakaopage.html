@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/header-script.js"></script>
 </head>
 <body>
     <div class="header">
@@ -39,16 +40,45 @@
             </div>
             <div class="low-header">
                 <ul class="low-header-nav">
-                    <li class="low-header-nav-item">홈</li>
-                    <li class="low-header-nav-item selected-low-header-nav-item">웹툰</li>
-                    <li class="low-header-nav-item">웹소설</li>
-                    <li class="low-header-nav-item">영화</li>
-                    <li class="low-header-nav-item">방송</li>
-                    <li class="low-header-nav-item">책</li>
+                    <li id="low-header-nav-home" class="low-header-nav-item selected-low-header-nav-item">홈</li>
+                    <li id="low-header-nav-webtoon" class="low-header-nav-item">웹툰</li>
+                    <li id="low-header-nav-webnovel" class="low-header-nav-item">웹소설</li>
+                    <li id="low-header-nav-movie" class="low-header-nav-item">영화</li>
+                    <li id="low-header-nav-broadcast" class="low-header-nav-item">방송</li>
+                    <li id="low-header-nav-book" class="low-header-nav-item">책</li>
                 </ul>
             </div>
         </div>
     </div>
-    <script src="javascripts/script.js"></script>
+    <div class="main-container">
+        <div class="home-content">
+            HOME
+        </div>
+        <div class="webtoon-content">
+            <ul class="content-nav">
+                <li class="content-nav-item">홈</li>
+                <li class="content-nav-item">요일연재</li>
+                <li class="content-nav-item">웹툰</li>
+                <li class="content-nav-item">소년</li>
+                <li class="content-nav-item">드라마</li>
+                <li class="content-nav-item">로맨스</li>
+                <li class="content-nav-item">로판</li>
+                <li class="content-nav-item">액션무협</li>
+                <li class="content-nav-item">BL</li>
+            </ul>
+        </div>
+        <div class="webnovel-content">
+            WEBNOVEL
+        </div>
+        <div class="movie-content">
+            MOVIE
+        </div>
+        <div class="broadcast-content">
+            BROADCAST
+        </div>
+        <div class="book-content">
+            BOOK
+        </div>
+    </div>
 </body>
 </html>

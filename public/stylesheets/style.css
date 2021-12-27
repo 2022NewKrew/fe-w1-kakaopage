@@ -55,6 +55,7 @@ table {
   font-family: 'Noto Sans KR';
   line-height: 1.4;
   color: #333333;
+  background-color: #FFFFFF;
 }
 
 
@@ -154,4 +155,29 @@ table {
 .selected-low-header-nav-item {
   padding-bottom: 10px;
   border-bottom: 3px solid #FFD500;
+}
+
+
+/* ==== main content ==== */
+.main-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #EEEEEE;
+}
+
+.webtoon-content {
+  width: 800px;
+}
+
+.content-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-nav-item {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 20px;
 }
