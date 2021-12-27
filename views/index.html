@@ -5,9 +5,39 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kakaopage clone coding</title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
     </head>
-    <body>
-        hello
+    <body onload="init()">
+        <header class="main_header">
+            <div class="main_header_content">
+                <h1 class="main_header_content_left">
+                    <img
+                        src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954"
+                        alt="kakaopage logo"
+                    />
+                </h1>
+                <div class="main_header_content_right">
+                    <div>
+                      <div class="wrap_search">
+                        <div class="search_input">
+                          <input type="text" />
+                        </div>
+                        <div class="search_img">
+                          <img src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="검색 버튼" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header_stage">
+                      <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="스테이지">
+                    </div>
+                    <button class="header_button">
+                      <div>캐시충전</div>
+                      <div class="division"></div>
+                      <div>로그인</div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <script src="/javascripts/index.js"></script>
     </body>
 </html>
