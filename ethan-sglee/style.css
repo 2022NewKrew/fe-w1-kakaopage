@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.width-100 {
+    width: 100px;
+}
