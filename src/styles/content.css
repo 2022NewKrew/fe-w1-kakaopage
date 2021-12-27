@@ -1,0 +1,36 @@
+.contents-wrapper {
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+}
+
+.content {
+  display: flex;
+}
+
+.content img {
+  width: 142px;
+  height: 96px;
+  overflow: hidden;
+}
+
+.content > :last-child {
+  flex: 1;
+  margin: 10px 0px 10px 20px;
+}
+
+.content > :last-child img {
+  width: 11px;
+  height: 11px;
+}
+
+.appDownloadWrap {
+  background: #fecc2e;
+  cursor: pointer;
+  display: flex;
+}
+
+.appDownloadWrap > img {
+  width: 70%;
+  margin: 0 auto;
+}

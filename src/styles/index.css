@@ -1,0 +1,70 @@
+@import "app.css";
+@import "header.css";
+@import "footer.css";
+@import "content.css";
+
+* {
+  font-family: NotoSans;
+  line-height: 1.4;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: #eee;
+  user-select: none;
+}
+
+main {
+  margin-top: 167px;
+}
+
+section {
+  margin: 11px auto 0px;
+  width: 720px;
+}
+
+nav {
+  box-sizing: border-box;
+  min-width: 0px;
+  background-color: rgb(255, 255, 255);
+  padding: 0px;
+  margin: 0px auto;
+  width: 720px;
+  display: flex;
+}
+
+nav ul {
+  box-sizing: border-box;
+  min-width: 0px;
+  background-color: rgb(255, 255, 255);
+  padding: 0px;
+  margin: 0px auto;
+  width: 720px;
+  display: flex;
+}
+
+nav ul > li {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  text-align: center;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0px;
+  font-size: 20px;
+  display: flex;
+}
+
+nav ul > li > * {
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}

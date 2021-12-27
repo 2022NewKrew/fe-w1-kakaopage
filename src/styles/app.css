@@ -1,0 +1,79 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* ---- components ---- */
+
+.text-btn {
+  box-sizing: border-box;
+  appearance: none;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  display: flex;
+  font-size: 18px;
+  color: #999;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.topBannerBox {
+  background: #ffffff;
+  cursor: pointer;
+  height: 480px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.separator {
+  box-sizing: border-box;
+  margin: 0;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 7px;
+  margin-bottom: 2px;
+  min-width: 1px;
+  width: 1px;
+  height: 12px;
+  background-color: #e2e2e2;
+}
+
+/* ---- contents ---- */
+
+.searchbar-container {
+  line-height: 23px;
+  padding: 2px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  display: flex;
+  border-radius: 30px;
+}
+
+.searchbar-container input {
+  width: 136px;
+  height: 100%;
+  border: 0;
+  padding: 2px 3px 2px 11px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.15;
+  outline: none;
+  height: 24px;
+}
+
+.searchbar-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-submit-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
