@@ -1,18 +1,10 @@
-* {
-    padding: 0;
-    margin: 0;
-    /* border: 1px solid black; */
-}
-html,
-body {
-    height: 100%;
-    width: 100%;
-}
 header.main_header {
     height: 80px;
     width: 100%;
     top: 0px;
     position: fixed;
+    background-color: #fff;
+    z-index: 2;
 }
 div.main_header_content {
     width: 720px;

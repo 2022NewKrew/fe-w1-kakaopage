@@ -1,14 +1,28 @@
-.main_content {
-    margin-top: 167px;
-}
 nav.content_nav {
     position: fixed;
     top: 80px;
     border-bottom: 1px solid #dfdfdf;
     width: 100%;
     background-color: #fff;
+    z-index: 2;
 }
-nav.content_nav > ul {
+div.content_sub_nav {
+    background-color: white;
+    color: darkgray;
+}
+div.content_sub_nav > ul li {
+    justify-content: center;
+    padding: 22px 0px;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+nav.content_nav > ul,
+div.content_sub_nav > ul {
     display: flex;
     width: 720px;
     margin: 0px auto;
@@ -38,4 +52,14 @@ nav.content_nav > ul > li > img {
 }
 div.main_content {
     width: 720px;
+    margin: 167px auto;
+}
+
+div.content_sub_nav {
+    width: 720px;
+    margin: 0px auto;
+}
+
+li.selected {
+    color: black;
 }
