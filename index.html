@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/search-bar.css">
 </head>
 <body>
-    <header></header>
+    <header id="kpw-header">
+        <div class="header-top">
+            <h1 class="logo">
+                <img
+                    src="https://static-page.kakao.com/static/common/logo-kakaopage.svg"
+                    alt="kakaopage logo">
+            </h1>
+            <div class="header-ui">
+                <div class="search-div search-bar">
+                    <form>
+                        <input>
+                    </form>
+                    <img class="search-submit-btn"
+                        src="https://static-page.kakao.com/static/pc/btn_search.png"
+                        alt="검색 버튼">
+                </div>
+                <div class="stage-div">
+                    <img
+                        src="https://static-page.kakao.com/static/common/pc-logo-stage.svg"
+                        alt="스테이지">
+                    <img
+                        class="stage-toolip"
+                        src="https://static-page.kakao.com/static/common/stage-tooltip.svg">
+                </div>
+                <ul class="button-div">
+                    <li class="btn">캐시충전</li>
+                    <li class="split"></li>
+                    <li class="btn">로그인</li>
+                </ul>
+            </div>
+        </div>
+        <nav id="header-category">
+            <ul></ul>
+        </nav>
+    </header>
     <div id="root"></div>
     <footer></footer>
+    <script src="js/header-generate.js"></script>
 </body>
 </html>
