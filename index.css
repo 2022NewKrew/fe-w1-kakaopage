@@ -94,7 +94,7 @@ main {
 /* menu css */
 
 .menu-container {
-  margin: 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   background-color: white;
@@ -112,5 +112,54 @@ main {
 }
 
 .menu-list.active {
+  color: black;
+}
+
+/* day css */
+
+.day-outer-container {
+  margin-top: 20px;
+  background-color: white;
+}
+
+.day-container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+}
+
+.day-circle {
+  display: none;
+  position: absolute;
+  left: 21%;
+  top: 8%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  background-color: #ffd200;
+}
+
+.day-circle.active {
+  display: block;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  flex: auto;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #bbbbbb;
+  position: relative;
+}
+
+.day-span {
+  z-index: 2;
+}
+
+.day.active {
   color: black;
 }
