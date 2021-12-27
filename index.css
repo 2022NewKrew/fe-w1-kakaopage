@@ -195,3 +195,45 @@ main {
   align-items: center;
   gap: 7px;
 }
+
+/* webtoon css */
+
+.webtoon-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.webtoon {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.webtoon-title {
+  font-size: 1.1rem;
+}
+
+.webtoon-thumbnail {
+  width: 120px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.webtoon-viewer-count {
+  color: #bbbbbb;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.webtoon-viewer-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.webtoon-viewer-container img {
+  height: 11px;
+}
