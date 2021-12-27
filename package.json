@@ -1,0 +1,18 @@
+{
+  "name": "fe-w1-kakaopage",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/bepyan/fe-w1-kakaopage",
+  "author": "edward.kk <edward.kk@kakaocorp.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "type": "module"
+}
