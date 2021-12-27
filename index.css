@@ -163,3 +163,35 @@ main {
 .day.active {
   color: black;
 }
+
+/* category css */
+
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  color: #bbbbbb;
+}
+
+.category-left {
+  display: flex;
+  align-items: center;
+}
+
+.category {
+  cursor: pointer;
+  padding: 25px;
+  font-size: 1.1rem;
+}
+
+.category.active {
+  color: black;
+}
+
+.category-right {
+  cursor: pointer;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
