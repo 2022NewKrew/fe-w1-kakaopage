@@ -125,13 +125,13 @@ main {
     height: 200vh;
 }
 
-.webtoon-types {
+.webtoon-genres {
     width: 720px;
     margin: 0 auto; 
     padding: 22px 0;
 }
 
-.webtoon-types > ul {
+.webtoon-genres > ul {
     background-color: white;   
     display: flex;
     align-items: center;
@@ -141,7 +141,7 @@ main {
     color: rgb(187, 187, 187);
 }
 
-.webtoon-types > ul > li:first-child {
+.webtoon-genres > ul > li:first-child {
     color: black;
 }
 
@@ -235,4 +235,74 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* webtoon menus */
+.webtoon-menus {
+    width: 720px;
+    margin: 11px auto 0 auto;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.webtoon-menus-container {
+    display: flex; 
+    box-sizing: border-box;
+    flex-wrap: wrap; 
+    /* 왜 적용이 안될까 ㅜ  
+    border-radius: 8px; 
+    */
+}
+
+
+/* 비효율적인 방법이지만.. 일단 border-radius 아래 방법으로 해결
+더 좋은 방법 찾아보기  */
+.webtoon-menu-top-left {
+    border-top-left-radius: 8px;
+}
+
+.webtoon-menu-top-right {
+    border-top-right-radius: 8px;
+}
+
+.webtoon-menu-bottom-left {
+    border-bottom-left-radius: 8px;
+}
+
+.webtoon-menu-bottom-right {
+    border-bottom-right-radius: 8px;
+}
+
+/* 각 메뉴 styling */
+.webtoon-menus-container > a {
+    width: 30%;
+    padding: 0 10px;
+    height: 60px;
+    background-color: #f3f3f3;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.webtoon-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webtoon-menu > p {
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+    overflow: hidden; 
+    font-size: 18px;
+}
+
+.webtoon-menu > div {
+    background-color: #ffd200;
+    height: 24px;
+    padding: 0 8px; 
+    margin-left: 10px;
+    font-size: 16px; 
+    border-radius: 13px;
 }
