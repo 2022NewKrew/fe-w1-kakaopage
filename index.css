@@ -1,0 +1,81 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.4; 
+}
+
+body {
+    /* background: #eee; */
+    margin: 0; 
+}
+
+
+/**
+ header CSS 
+*/
+header {
+    margin: 30px 0;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    width: 720px;
+    margin: 0 auto; 
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-right > * + * {
+    margin-left: 24px;
+}
+
+/* search bar  */
+.search {
+    border: 1px solid #cfcfcf;
+    border-radius: 30px;
+    line-height: 23px;
+    width: 180px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.search > input {
+    border-style: none;
+    width: 136px;
+    padding: 0; 
+}
+
+.search > input:focus-visible {
+    outline-style: none;
+}
+
+.search > img {
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+}
+
+/* header-text (캐시충전/로그인 부분) */
+.header-text {
+    display: flex; 
+    align-items: center;
+    color: #999;
+    font-size: 18px;
+}
+
+.header-text > * + * {
+    font-weight: 400;
+}
+
+.header-text > .separator {
+    display: block;
+    box-sizing: border-box;
+    background-color: #e2e2e2; 
+    width: 1px;
+    height: 12px; 
+    margin: 0 10px;
+}
