@@ -1,0 +1,57 @@
+footer {
+    width: 720px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+footer > div.leftBox > ul {
+    display: flex;
+}
+footer > div.leftBox > ul li {
+    list-style: none;
+}
+.companyInfo.on::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: no-repeat center
+        url("https://page.kakao.com/static/common/icon_trace_on.png");
+    background-size: 100%;
+}
+.companyInfo.off::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: no-repeat center
+        url("https://page.kakao.com/static/common/icon_trace_off.png");
+    background-size: 100%;
+}
+span.separator {
+    padding: 0px 10px;
+}
+div.leftBox,
+div.rightBox {
+    color: #cdcdcd;
+}
+div.leftBox > .companyInfoWrap {
+    display: flex;
+}
+footer .companyInfoUrl {
+    text-decoration: underline;
+}
+div.leftBox > .copyrightArea {
+    line-height: 24px;
+    padding-bottom: 50px;
+}
+
+div.rightBox > img {
+    width: 55px;
+    height: 55px;
+}
+div.rightBox > p {
+    font-size: small;
+    text-align: center;
+}
