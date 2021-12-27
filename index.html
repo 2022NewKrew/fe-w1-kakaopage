@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/common.css" />
     <link rel="stylesheet" href="./styles/header.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <title>홈 - 웹툰 | 카카오페이지</title>
   </head>
   <body>
+    <!-- 헤더 영역 -->
     <header>
       <div class="header-wrapper">
         <div>
@@ -36,12 +39,36 @@
             </div>
           </div>
         </div>
-        <nav>
-          <ul>
-            <li></li>
-          </ul>
-        </nav>
       </div>
     </header>
+
+    <!-- 네비 영역 -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#"><img src="images/홈.svg" /></a>
+        </li>
+        <li class="selected">
+          <a href="#"><img src="images/웹툰_만화.svg" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/웹소설_장르.svg" /></a>
+          <div class="nav-dot"></div>
+        </li>
+        <li>
+          <a href="#"><img src="images/영화.svg" /></a>
+          <div class="nav-dot"></div>
+        </li>
+
+        <li>
+          <a href="#"><img src="images/예능_드라마.svg" /></a>
+          <div class="nav-dot"></div>
+        </li>
+        <li>
+          <a href="#"><img src="images/책.svg" /></a>
+          <div class="nav-dot"></div>
+        </li>
+      </ul>
+    </nav>
   </body>
 </html>
