@@ -47,6 +47,7 @@
   display: flex;
   border-radius: 30px;
   overflow: hidden;
+  margin-top: -4px;
 }
 
 .searchbar-container input {
