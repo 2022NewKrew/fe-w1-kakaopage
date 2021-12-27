@@ -3,7 +3,14 @@
 }
 body {
   background-color: #eee;
+  height: 200vh;
+  position: relative;
+  margin-top: 170px;
 }
 header {
   background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
