@@ -1,0 +1,114 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-row">
+      <div class="left-container">
+        <h1>
+          <img src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954" alt="kakaopage logo">
+        </h1>
+      </div>
+      <div class="right-container">
+        <div class="header-searchbar">
+          <input maxlength="50"></input>
+          <img src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="검색 버튼">
+        </div>
+        <div class="header-links">
+          <a target="_blank" href="https://pagestage.kakao.com/">
+            <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="스테이지" class="css-9taffg">
+          </a>
+          <a href="https://kakao.com">캐시충전</a>
+          <div class="header-sep"></div>
+          <a href="https://kakao.com">로그인</a>
+        </div>
+      </div>
+    </div>
+    <nav class="header-row" id="header-tabs">
+      <a class="header-tab header-tab-active" id="home-tab">
+        홈
+      </a>
+      <a class="header-tab" id="webtoon-tab">
+        웹툰
+      </a>
+      <a class="header-tab" id="webfic-tab">
+        웹소설
+      </a>
+      <a class="header-tab" id="movie-tab">
+        영화
+      </a>
+      <a class="header-tab" id="broadcast-tab">
+        방송
+      </a>
+      <a class="header-tab" id="book-tab">
+        책
+      </a>
+    </nav>
+  </header>
+
+  <section id="contents">
+    <object data="home.html" id="contents-container" class="contents-container"></object>
+  </section>
+
+  <footer>
+    footer
+  </footer>
+
+  <script>
+     function add_tab_active(tab){
+      let tabs=document.getElementById("header-tabs");
+      Array.from(tabs.children).some((ele)=>{
+        if(ele.classList.contains("header-tab-active")){
+          ele.classList.remove("header-tab-active");
+          return true;
+        }
+        return false;
+      });
+      tab.classList.add("header-tab-active");
+    }
+    function home_tab(e){
+      add_tab_active(document.getElementById("home-tab"));      
+      let container=document.getElementById("contents-container");
+      container.data="home.html";
+    }
+    function webtoon_tab(){
+      add_tab_active(document.getElementById("webtoon-tab"));      
+      let container=document.getElementById("contents-container");
+      container.data="webtoon.html";
+    }
+    function webfic_tab(){
+      add_tab_active(document.getElementById("webfic-tab"));      
+      let container=document.getElementById("contents-container");
+      container.data="webfic.html";
+    }
+    function movie_tab(){
+      add_tab_active(document.getElementById("movie-tab"));      
+      let container=document.getElementById("contents-container");
+      container.data="movie.html";
+    }
+    function broadcast_tab(){
+      add_tab_active(document.getElementById("broadcast-tab"));      
+      let container=document.getElementById("contents-container");
+      container.data="broadcast.html";
+    }
+    function book_tab(){
+      add_tab_active(document.getElementById("book-tab"));      
+      let container=document.getElementById("contents-container");
+      container.data="book.html";
+    }
+    document.getElementById("home-tab").onclick=home_tab;
+    document.getElementById("webtoon-tab").onclick=webtoon_tab;
+    document.getElementById("webfic-tab").onclick=webfic_tab;
+    document.getElementById("movie-tab").onclick=movie_tab;
+    document.getElementById("broadcast-tab").onclick=broadcast_tab;
+    document.getElementById("book-tab").onclick=book_tab;
+
+  </script>
+</body>
+</html>
