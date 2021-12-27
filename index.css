@@ -2,6 +2,12 @@ body {
   background-color: #eee;
 }
 
+main {
+  width: 720px;
+  margin: auto;
+}
+/* header css */
+
 .header {
   display: flex;
   justify-content: center;
@@ -79,4 +85,29 @@ body {
   align-items: center;
   padding: 20px;
   cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* menu css */
+
+.menu-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  flex: auto;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #bbbbbb;
+}
+
+.menu-list.active {
+  color: black;
 }
