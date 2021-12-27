@@ -1,0 +1,27 @@
+.genres {
+  display: flex;
+  width: 720px;
+  height: 67px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.genres > li {
+  text-align: center;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0px;
+  font-size: 20px;
+  display: flex;
+}
+.genres > li > a {
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+  font-weight: 350;
+  line-height: 1.15;
+}
+.genres > li:first-child > a {
+  color: rgb(51, 51, 51);
+}

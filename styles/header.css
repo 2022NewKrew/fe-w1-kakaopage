@@ -46,7 +46,6 @@
   height: 18px;
 }
 .stage-wrapper {
-  margin-left: 23px;
   width: 64px;
   height: 25px;
   display: flex;
@@ -54,7 +53,7 @@
 }
 .stage-wrapper > img {
   position: absolute;
-  bottom: -40px;
+  bottom: -37px;
   left: -50%;
 }
 .tab-menu {
