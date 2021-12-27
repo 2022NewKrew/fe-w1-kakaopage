@@ -1,0 +1,41 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    width: 80px;
+    display: flex;
+}
+
+.nav-item {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    list-style: none;
+    position: relative;
+    border-bottom-color: transparent;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 30px 0 15px;
+}
+
+* {
+    font-family: NotoSans;
+    line-height: 1.4;
+}
+
+.root {
+    background-color: rgb(238, 238, 238);
+}
