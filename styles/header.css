@@ -1,0 +1,75 @@
+.header-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  width: 720px;
+  margin: 0 auto;
+}
+.logo {
+  width: 129px;
+  height: 80px;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+}
+
+.tap {
+  width: 430px;
+}
+
+.tap-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.searchbar {
+  width: 186px;
+  height: 32px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchbar > input {
+  margin-left: 15px;
+  width: 90px;
+  outline: none;
+  border: none;
+}
+.searchbar > span {
+  margin-right: 15px;
+  background-image: url("../images/검색\ 버튼.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+}
+.stage-wrapper {
+  margin-left: 23px;
+  width: 64px;
+  height: 25px;
+  display: flex;
+  position: relative;
+}
+.stage-wrapper > img {
+  position: absolute;
+  bottom: -40px;
+  left: -50%;
+}
+.tab-menu {
+  width: 134px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+.tab-menu > a {
+  text-decoration: none;
+  color: rgba(128, 128, 128, 0.5);
+}
+.tab-menu > span:nth-child(2) {
+  width: 1px;
+  background-color: rgba(128, 128, 128, 0.4);
+  height: 14px;
+  line-height: 14px;
+}
