@@ -4,14 +4,28 @@
 }
 
 body, ul {
-    /* background: #eee; */
     margin: 0; 
     padding: 0;
 }
 
+li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+/** 
+    header + navigation 고정 
+*/
+.top {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
 
 /**
- header CSS 
+ header 
 */
 header {
     margin: 30px 0;
@@ -86,18 +100,12 @@ header > div {
 */
 .menus {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     margin: 0px auto;
     padding: 30px 0 15px;
-    width: 720px;
+    width: 750px;
 }
 
-.menus > li {
-    list-style: none;
-    width: 100%;
-    text-align: center;
-}
 .menus > li > a {
     text-decoration: none;   
     color: black;
@@ -105,4 +113,33 @@ header > div {
     max-width: 100%;
     margin: 0 auto;
     font-size: 1.3rem;
+}
+
+/**
+    webtoon menu
+*/
+main {
+    background: #eee;
+    padding-top: 165px;
+    height: 200vh;
+}
+
+.webtoon-types {
+    width: 750px;
+    margin: 0 auto; 
+    padding: 22px 0;
+}
+
+.webtoon-types > ul {
+    background-color: white;   
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    align-items: center;
+    font-size: 1.3rem;
+    color: rgb(187, 187, 187);
+}
+
+.webtoon-types > ul > li:first-child {
+    color: black;
 }
