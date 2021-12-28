@@ -65,7 +65,6 @@
 .tab-nav ul {
   width: 720px;
   display: flex;
-  padding: 0;
 }
 .tab-nav li {
   list-style-type: none;
@@ -89,7 +88,6 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
-
 .featuring-tab {
   background-color: #f3f3f3;
   margin: 1px;
@@ -102,4 +100,95 @@
   font-weight: bold;
   border: none;
   cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+.carousel > div > img {
+  width: 40px;
+  height: 100px;
+  cursor: pointer;
+}
+.carousel > div:nth-child(2) > img {
+  width: 550px;
+  height: 100px;
+  margin: 0 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.card-header {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+.card-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-header > div:first-child {
+  margin-right: auto;
+  font-size: 20px;
+}
+.card-header-more {
+  color: #a1a1a1;
+  cursor: pointer;
+}
+.card-header-more > img {
+  width: 8px;
+  margin-left: 4px;
+}
+.weekly-tab-nav ul{
+  display: flex;
+  justify-content: stretch;
+}
+.weekly-tab-nav li{
+  list-style-type: none;
+  display: flex;
+}
+.weekly-tab-nav button {
+  border: none;
+  background-color: #0000;
+}
+.weekly-tab {
+  flex: 1;
+  padding: 10px 0;
+  border-bottom: 3px solid #0000;
+  margin-top: auto;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weekly-tab-active-line {
+  border-bottom: 3px solid #ffd200;
+}
+.weekly-tab-active-circle {
+  border-radius: 50%;
+  background-color: #ffd200;
+}
+.weekly-tab > button {
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #a1a1a1;
+  width: 100%;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+.item-image {
+  
 }
