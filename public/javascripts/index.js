@@ -8,13 +8,10 @@ function init() {
     );
     const kakao_footer_companyInfo = document.querySelector("p.companyInfo");
 
-    kakao_content_nav_ul.addEventListener("click", nav_list_toggle_clicked, {
-        capture: true,
-    });
+    kakao_content_nav_ul.addEventListener("click", nav_list_toggle_clicked);
     kakao_content_sub_nav_ul.addEventListener(
         "click",
-        nav_list_toggle_selected,
-        { capture: true }
+        nav_list_toggle_selected
     );
     kakao_footer_companyInfo.addEventListener(
         "click",
