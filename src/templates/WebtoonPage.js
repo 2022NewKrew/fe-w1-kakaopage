@@ -1,46 +1,26 @@
-import { SectionHeader } from "../components/commons/SectionHeader.js";
-import { ContentRowList } from "../components/contents/ContentRowList.js";
-import { SlideBannerBox } from "../components/contents/SlideBannerBox.js";
-import { DayNavigator } from "../components/navigators/DayNavigator.js";
 import { GenreNavigator } from "../components/navigators/GenreNavigator.js";
 import { AppDownloadSection } from "../components/sections/AppDownloadSection.js";
+import { WebtoonDaliyTab } from "./WebtoonDaliyTab.js";
+import { WebtoonHomeTab } from "./WebtoonHomeTab.js";
+import { WebtoonWebtoonTab } from "./WebtoonWebtoonTab.js";
 
 export const WebtoonPage = () => {
   const $root = document.createElement("main");
 
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const { genre } = Object.fromEntries(urlSearchParams.entries());
+
   $root.appendChild(GenreNavigator().$root);
-  $root.appendChild(TobBannerSection().$root);
-  $root.appendChild(WebtoonSection().$root);
-  $root.appendChild(HotPromotionSection().$root);
+
+  if (genre === "홈") {
+    $root.appendChild(WebtoonHomeTab().$root);
+  } else if (genre === "요일연재") {
+    $root.appendChild(WebtoonDaliyTab().$root);
+  } else if (genre === "웹툰") {
+    $root.appendChild(WebtoonWebtoonTab().$root);
+  }
+
   $root.appendChild(AppDownloadSection().$root);
-
-  return { $root };
-};
-
-const TobBannerSection = () => {
-  const $root = document.createElement("section");
-
-  $root.appendChild(SlideBannerBox().$root);
-  $root.appendChild(DayNavigator().$root);
-
-  return { $root };
-};
-
-const WebtoonSection = () => {
-  const $root = document.createElement("section");
-
-  $root.appendChild(ContentRowList({ contentList: [...Array(10)] }).$root);
-
-  return { $root };
-};
-
-const HotPromotionSection = () => {
-  const $root = document.createElement("section");
-
-  $root.appendChild(
-    SectionHeader({ title: "🔥HOT 최근 프로모션 진행작" }).$root
-  );
-  $root.appendChild(ContentRowList({ contentList: [...Array(5)] }).$root);
 
   return { $root };
 };
