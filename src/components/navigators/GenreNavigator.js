@@ -6,22 +6,23 @@ export const GenreNavigator = () => {
   const { genre } = Object.fromEntries(urlSearchParams.entries());
 
   const isSelected = (str) => {
-    const target = new URLSearchParams(str).get("genre");
-    if (!genre && target === "홈") return true;
+    if ((!genre && str === "홈") || genre === str)
+      return "genreNav__item--selected";
 
-    return genre === target;
+    return "";
   };
 
   $root.innerHTML = `
     <ul>
         ${genreList
           .map(
-            ({ text, url }) => `
+            (genre) => `
               <li>
-                <a class="genreNav__item ${
-                  isSelected(url) ? "genreNav__item--selected" : ""
-                }" href="?${url}">
-                  ${text}
+                <a 
+                  class="genreNav__item ${isSelected(genre)}" 
+                  href="?${new URLSearchParams({ genre }).toString()}"
+                >
+                  ${genre}
                 </a>
               </li>
             `
@@ -34,19 +35,13 @@ export const GenreNavigator = () => {
 };
 
 const genreList = [
-  { text: "홈", url: new URLSearchParams({ genre: "홈" }).toString() },
-  {
-    text: "요일연재",
-    url: new URLSearchParams({ genre: "요일연재" }).toString(),
-  },
-  { text: "웹툰", url: new URLSearchParams({ genre: "웹툰" }).toString() },
-  { text: "소년", url: new URLSearchParams({ genre: "소년" }).toString() },
-  { text: "드라마", url: new URLSearchParams({ genre: "드라마" }).toString() },
-  { text: "로멘스", url: new URLSearchParams({ genre: "로멘스" }).toString() },
-  { text: "로판", url: new URLSearchParams({ genre: "로판" }).toString() },
-  {
-    text: "액션무협",
-    url: new URLSearchParams({ genre: "액션무협" }).toString(),
-  },
-  { text: "BL", url: new URLSearchParams({ genre: "BL" }).toString() },
+  "홈",
+  "요일연재",
+  "웹툰",
+  "소년",
+  "드라마",
+  "로멘스",
+  "로판",
+  "앤션무협",
+  "BL",
 ];
