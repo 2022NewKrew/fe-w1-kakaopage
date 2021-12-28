@@ -15,5 +15,8 @@
         "morgan": "~1.9.1",
         "mustache": "^4.2.0",
         "pug": "2.0.0-beta11"
+    },
+    "devDependencies": {
+        "eslint": "^8.5.0"
     }
 }
