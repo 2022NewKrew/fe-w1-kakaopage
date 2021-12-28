@@ -31,8 +31,16 @@
         : createEmptyPage();
   };
 
-  navParent.addEventListener("click", changeMainContent);
+  const changeCssActiveIndex = (e) => {
+    if (Number(e.target.dataset.idx) === currCssActiveIndex) return;
 
+    navParent.childNodes[currCssActiveIndex].classList.remove("active");
+    currCssActiveIndex = Number(e.target.dataset.idx);
+    navParent.childNodes[currCssActiveIndex].classList.add("active");
+  };
+
+  navParent.addEventListener("click", changeMainContent);
+  navParent.addEventListener("click", changeCssActiveIndex);
   const createEmptyPage = () => {
     return `
           <div class='empty-page-container'>
