@@ -1,5 +1,6 @@
 * {
   border: 1px solid gray;
+  line-height: 1.4;
 }
 body {
   background-color: #eee;
@@ -13,4 +14,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
+}
+button {
+  border: none;
+  background-color: white;
 }
