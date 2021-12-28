@@ -31,6 +31,10 @@ a:hover, a:active {
      margin-top: 11px;
 }
 
+.padding-wrapper{
+    padding: 20px;
+}
+
 .fix {
     position: fixed;
     left: 0;
@@ -38,6 +42,7 @@ a:hover, a:active {
     justify-content: center;
     width: 100%;
     background-color: #FFFFFF;
+    z-index: 1;
 }
 
 .fix.first {
@@ -80,6 +85,13 @@ nav ul {
 .nav-link {
     margin: 0 auto;
     padding: 30px 0 15px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link.selected {
+    border-bottom: 3px solid rgb(255, 210, 0);
 }
 
 .genre-ul {
@@ -109,9 +121,6 @@ nav ul {
 }
 
 .carousel {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
     position: relative;
     width: 720px;
     height: 480px;
@@ -151,14 +160,16 @@ nav ul {
     font-size: 18px;
 }
 
-.link-table {
+.link-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
     grid-gap: 3px;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.link-table a {
+.link-grid a {
     background-color: #EEEEEE;
     height: 60px;
     display: flex;
@@ -170,7 +181,6 @@ nav ul {
 
 .banner-carousel {
     display: flex;
-    /* justify-content: space-evenly; */
     align-items: center;
 }
 
@@ -190,4 +200,169 @@ nav ul {
 .banner-image > img {
     width: 100%;
     margin: 20px 0px;
+}
+
+.h3-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(153, 153, 153);
+    padding-top: 2px;
+}
+
+.h3-header > div {
+    display: flex;
+    align-items: center;
+}
+
+.h3-header h3 {
+    font-size: 20px;
+    color: black;
+}
+
+.h3-header > div > span {
+    margin-left: 4px;
+}
+
+.more {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.more > img {
+    margin-left: 4px;
+    margin-bottom: 2px;
+    width: 8px;
+    height: 14px;
+}
+
+.weekly-container {
+    margin-top: 15px;
+}
+
+.weekday ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(187, 187, 187);
+}
+
+.weekday ul li {
+    box-sizing: border-box;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(241, 241, 241);
+    margin: 0px;
+    flex: 1 1 0%;
+}
+
+.weekday ul li.selected {
+    border-bottom: 2px solid rgb(255, 210, 0);
+}
+
+.weekday ul li > div {
+    padding: 15px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 20px;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.content-item {
+}
+
+.content-grid a {
+    width: 120.4px;
+    margin-bottom: 20px;
+}
+
+.content-grid .thumbnail-wrapper {
+    width: 120.4px;
+    border-radius: 8px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.content-grid .thumbnail {
+    width: 120.4px;
+    height: 120.4px;
+}
+
+.content-grid .thumbnail-bottom {
+    background-color: #242526;
+    padding: 0 8px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-grid .thumbnail-bottom :first-child {
+    color: #FFD200;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.content-grid .thumbnail-bottom > :nth-child(2) {
+    height: 16px;
+}
+
+.content-grid .thumbnail-bottom > :nth-child(2) > img {
+    height: 100%;
+}
+
+.content-grid a > :nth-child(2) {
+    width: 120.4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px 0px 5px 0px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.content-grid a .content-detail {
+    font-size: 14px;
+    font-weight: 350;
+    color: #9c9c9c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.content-detail .badges {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.content-detail .badges > img {
+    height: 13px;
+}
+
+.content-detail .badges :nth-child(2) {
+    margin-left: 2px;
+}
+
+.content-detail :nth-child(2) {
+    height: 13px;
+}
+
+.content-detail :nth-child(3) {
+    margin-left: 4px;
 }
