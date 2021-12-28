@@ -1,5 +1,3 @@
-// TODO: 파일명 일관성있게 만들기
-
 function removeAllChild(element) {
     while (element.hasChildNodes()) {
         element.removeChild(element.firstChild)
