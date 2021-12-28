@@ -125,10 +125,9 @@
   margin: 0 auto;
 }
 
-/* show more btn  */
+/* ---- show more btn ---- */
 
 .showMoreBtn {
-  margin-left: auto;
   color: #999999;
   display: flex;
   align-items: center;

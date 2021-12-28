@@ -1,3 +1,4 @@
+import { SectionHeader } from "../components/commons/SectionHeader.js";
 import { ContentRowList } from "../components/contents/ContentRowList.js";
 import { SlideBannerBox } from "../components/contents/SlideBannerBox.js";
 import { DayNavigator } from "../components/navigators/DayNavigator.js";
@@ -36,31 +37,10 @@ const WebtoonSection = () => {
 const HotPromotionSection = () => {
   const $root = document.createElement("section");
 
-  $root.appendChild(TmpSectionHeader().$root);
   $root.appendChild(
-    ContentRowList({ contentList: [...Array(5)] }).$root
+    SectionHeader({ title: "🔥HOT 최근 프로모션 진행작" }).$root
   );
-
-  return { $root };
-};
-
-const TmpSectionHeader = () => {
-  const $root = document.createElement("header");
-  $root.className = "flex";
-
-  $root.innerHTML = `
-    <h5>🔥HOT 최근 프로모션 진행작</h5>
-    <a
-      href="https://page.kakao.com/theme/list?themeId=24424"
-      class="showMoreBtn"
-    >
-      <span>더보기</span>
-      <img
-        src="https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e"
-        alt="ic-more-gray"
-      />
-    </a>
-  `;
+  $root.appendChild(ContentRowList({ contentList: [...Array(5)] }).$root);
 
   return { $root };
 };
