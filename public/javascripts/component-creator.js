@@ -1,12 +1,10 @@
 import { createCarousel } from './carousel.js'
 
-(() => {
-    const homeData = JSON.parse(JSON.stringify(homeJson));
-    
-    window.addEventListener('DOMContentLoaded', () => {
-        drawComponent(homeData)
-    })
-})()
+const homeData = JSON.parse(JSON.stringify(homeJson));
+
+window.addEventListener('DOMContentLoaded', () => {
+    drawComponent(homeData)
+})
 
 function removeAllChild(element) {
     while (element.hasChildNodes()) {
