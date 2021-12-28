@@ -1,4 +1,3 @@
-const homeData = JSON.parse(JSON.stringify(homeJson));
 let carouselEl
 let carouselBannerEl
 
@@ -6,13 +5,11 @@ window.addEventListener('DOMContentLoaded', () => {
     carouselEl = document.querySelector('.carousel')
     carouselBannerEl = document.querySelector('.carousel-banner')
     
-    const componentBoxEl = document.querySelector('.component-box')
+    const componentContainerEl = document.querySelector('.component-container')
     const carouselBannerPartEl = document.querySelector('.carousel-banner-part')
     
-    componentBoxEl.removeChild(carouselEl)
+    componentContainerEl.removeChild(carouselEl)
     carouselBannerPartEl.removeChild(carouselBannerEl)
-    
-    componentBoxEl.appendChild(createCarousel(homeData[0].content))
 })
 
 function createBanner(content) {
@@ -34,14 +31,17 @@ function createBanner(content) {
     return newBannerEl
 }
 
-function createCarousel(data) {
+export function createCarousel(data) {
     const newCarouselEl = carouselEl.cloneNode(true)
     const newCarouselBannerPartEl = newCarouselEl.querySelector('.carousel-banner-part')
+    const pageNumberEl = newCarouselEl.querySelector('.carousel-page-number')
     const btnEls = newCarouselEl.querySelectorAll('.carousel-side-btn')
     const leftBtnEl = btnEls[0]
     const rightBtnEl = btnEls[1]
     
     let idx = 1
+    
+    pageNumberEl.innerText = `1 / ${data.length}`
     
     newCarouselBannerPartEl.appendChild(createBanner(data[data.length - 1]))
     data.forEach((content, index) => {
@@ -55,16 +55,28 @@ function createCarousel(data) {
     leftBtnEl.addEventListener('click', () => {
         if (idx > 0) {
             idx--
-            newCarouselBannerPartEl.style.transform = `translateX(${idx * -720}px)`
+            newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
             newCarouselBannerPartEl.style.transitionDuration = '500ms'
+    
+            if (idx === 0) {
+                pageNumberEl.innerText = `${data.length} / ${data.length}`
+            } else {
+                pageNumberEl.innerText = `${idx} / ${data.length}`
+            }
         }
     })
     
     rightBtnEl.addEventListener('click', () => {
         if (idx < data.length + 1) {
             idx++
-            newCarouselBannerPartEl.style.transform = `translateX(${idx * -720}px)`
+            newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
             newCarouselBannerPartEl.style.transitionDuration = '500ms'
+    
+            if (idx === data.length + 1) {
+                pageNumberEl.innerText = `1 / ${data.length}`
+            } else {
+                pageNumberEl.innerText = `${idx} / ${data.length}`
+            }
         }
     })
     
@@ -77,7 +89,7 @@ function createCarousel(data) {
             idx = 1
         }
     
-        newCarouselBannerPartEl.style.transform = `translateX(${idx * -720}px)`
+        newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
     })
     
     return newCarouselEl
