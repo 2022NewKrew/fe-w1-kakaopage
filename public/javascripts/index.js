@@ -42,11 +42,11 @@ function nav_list_toggle_selected(e) {
     cur_content_sub_nav_li.classList.add(selected);
 }
 
-function footer_companyInfo_onoff(e) {
-    const companyInfo = e.target;
-    if (companyInfo.classList.contains("on")) {
-        companyInfo.classList.replace("on", "off");
-    } else if (companyInfo.classList.contains("off")) {
-        companyInfo.classList.replace("off", "on");
+function footer_companyinfo_onoff(e) {
+    const company_info = e.target;
+    if (company_info.classList.contains("on")) {
+        company_info.classList.replace("on", "off");
+    } else if (company_info.classList.contains("off")) {
+        company_info.classList.replace("off", "on");
     }
 }
