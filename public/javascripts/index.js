@@ -1,3 +1,6 @@
+const selected = "selected";
+const clicked = "clicked";
+
 function init() {
     const kakao_content_nav = document.querySelector("nav");
     const kakao_header = document.querySelector("header");
@@ -23,20 +26,20 @@ function nav_list_toggle_clicked(e) {
     let cur_content_nav_li = document.querySelector("li.clicked");
     if (e.target.parentNode.tagName !== "LI") return;
     if (cur_content_nav_li) {
-        cur_content_nav_li.classList.remove("clicked");
+        cur_content_nav_li.classList.remove(clicked);
     }
     cur_content_nav_li = e.target.parentNode;
-    cur_content_nav_li.classList.add("clicked");
+    cur_content_nav_li.classList.add(clicked);
 }
 
 function nav_list_toggle_selected(e) {
     let cur_content_sub_nav_li = document.querySelector("li.selected");
     if (e.target.tagName !== "LI") return;
     if (cur_content_sub_nav_li) {
-        cur_content_sub_nav_li.classList.remove("selected");
+        cur_content_sub_nav_li.classList.remove(selected);
     }
     cur_content_sub_nav_li = e.target;
-    cur_content_sub_nav_li.classList.add("selected");
+    cur_content_sub_nav_li.classList.add(selected);
 }
 
 function footer_companyInfo_onoff(e) {
