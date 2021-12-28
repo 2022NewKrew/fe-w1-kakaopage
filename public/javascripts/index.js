@@ -20,7 +20,7 @@ function init() {
 }
 
 function nav_list_toggle_clicked(e) {
-    let cur_content_nav_li = document.querySelector("li.clicked") || null;
+    let cur_content_nav_li = document.querySelector("li.clicked");
     if (e.target.parentNode.tagName !== "LI") return;
     if (cur_content_nav_li) {
         cur_content_nav_li.classList.remove("clicked");
@@ -30,7 +30,7 @@ function nav_list_toggle_clicked(e) {
 }
 
 function nav_list_toggle_selected(e) {
-    let cur_content_sub_nav_li = document.querySelector("li.selected") || null;
+    let cur_content_sub_nav_li = document.querySelector("li.selected");
     if (e.target.tagName !== "LI") return;
     if (cur_content_sub_nav_li) {
         cur_content_sub_nav_li.classList.remove("selected");
