@@ -31,8 +31,9 @@ function createBanner(content) {
     return newBannerEl
 }
 
-// TODO: 반복된 연산 리팩토링하기
 export function createCarousel(data) {
+    const BANNER_WIDTH = 720
+    
     const newCarouselEl = carouselEl.cloneNode(true)
     const newCarouselBannerPartEl = newCarouselEl.querySelector('.carousel-banner-part')
     const pageNumberEl = newCarouselEl.querySelector('.carousel-page-number')
@@ -50,14 +51,13 @@ export function createCarousel(data) {
     })
     newCarouselBannerPartEl.appendChild(createBanner(data[0]))
     
-    // TODO: 상수 변수로 관리하기
-    newCarouselBannerPartEl.style.width = (data.length + 2) * 720 + 'px'
-    newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
+    newCarouselBannerPartEl.style.width = (data.length + 2) * BANNER_WIDTH + 'px'
+    newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
     
     leftBtnEl.addEventListener('click', () => {
         if (idx > 0) {
             idx--
-            newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
+            newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
             newCarouselBannerPartEl.style.transitionDuration = '500ms'
     
             if (idx === 0) {
@@ -71,7 +71,7 @@ export function createCarousel(data) {
     rightBtnEl.addEventListener('click', () => {
         if (idx < data.length + 1) {
             idx++
-            newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
+            newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
             newCarouselBannerPartEl.style.transitionDuration = '500ms'
     
             if (idx === data.length + 1) {
@@ -91,7 +91,7 @@ export function createCarousel(data) {
             idx = 1
         }
     
-        newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
+        newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
     })
     
     return newCarouselEl
