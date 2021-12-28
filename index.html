@@ -133,7 +133,7 @@
                 </a>
             </div>
         </section>
-        <!-- 배너 캐루셀 부분 -->
+        <!-- Banner Carousel -->
         <section class="banner">
             <div class="banner-container">
                 <button class="banner-btn prevBtn" onClick="plusSlides(-1)">
@@ -163,31 +163,6 @@
         </section>
     </main>
 </body>
+<script type="text/javascript" src="main.js"></script>
 <script src="https://kit.fontawesome.com/e47ffc1d6a.js" crossorigin="anonymous"></script>
-
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("slide_item");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      slides[slideIndex-1].style.display = "flex";  
-      slides[slideIndex-1].style.alignItems = "center"; 
-    }
-    </script>
-    
 </html>
