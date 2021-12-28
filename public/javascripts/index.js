@@ -2,51 +2,42 @@ const selected = "selected";
 const clicked = "clicked";
 
 function init() {
-    const kakao_content_nav = document.querySelector("nav");
-    const kakao_header = document.querySelector("header");
-    const kakao_content = document.querySelector("#main_content>div.content");
-    const kakao_content_nav_ul = document.querySelector("nav.content_nav>ul");
-    const kakao_content_sub_nav_ul = document.querySelector(
-        "div.content_sub_nav>ul"
-    );
-    const kakao_footer_companyInfo = document.querySelector("p.companyInfo");
+  const kakao_content_nav = document.querySelector("nav");
+  const kakao_header = document.querySelector("header");
+  const kakao_content_nav_ul = document.querySelector("nav.content_nav>ul");
+  const kakao_content_sub_nav_ul = document.querySelector("div.content_sub_nav>ul");
+  const kakao_footer_companyInfo = document.querySelector("p.companyInfo");
 
-    kakao_content_nav_ul.addEventListener("click", nav_list_toggle_clicked);
-    kakao_content_sub_nav_ul.addEventListener(
-        "click",
-        nav_list_toggle_selected
-    );
-    kakao_footer_companyInfo.addEventListener(
-        "click",
-        footer_companyInfo_onoff
-    );
+  kakao_content_nav_ul.addEventListener("click", nav_list_toggle_clicked);
+  kakao_content_sub_nav_ul.addEventListener("click", nav_list_toggle_selected);
+  kakao_footer_companyInfo.addEventListener("click", footer_company_info_onoff);
 }
 
 function nav_list_toggle_clicked(e) {
-    const cur_content_nav_li = document.querySelector("li.clicked");
-    if (e.target.parentNode.tagName !== "LI") return;
-    if (cur_content_nav_li) {
-        cur_content_nav_li.classList.remove(clicked);
-    }
-    cur_content_nav_li = e.target.parentNode;
-    cur_content_nav_li.classList.add(clicked);
+  let cur_content_nav_li = document.querySelector("li.clicked");
+  if (e.target.parentNode.tagName !== "LI") return;
+  if (cur_content_nav_li) {
+    cur_content_nav_li.classList.remove(clicked);
+  }
+  cur_content_nav_li = e.target.parentNode;
+  cur_content_nav_li.classList.add(clicked);
 }
 
 function nav_list_toggle_selected(e) {
-    const cur_content_sub_nav_li = document.querySelector("li.selected");
-    if (e.target.tagName !== "LI") return;
-    if (cur_content_sub_nav_li) {
-        cur_content_sub_nav_li.classList.remove(selected);
-    }
-    cur_content_sub_nav_li = e.target;
-    cur_content_sub_nav_li.classList.add(selected);
+  let cur_content_sub_nav_li = document.querySelector("li.selected");
+  if (e.target.tagName !== "LI") return;
+  if (cur_content_sub_nav_li) {
+    cur_content_sub_nav_li.classList.remove(selected);
+  }
+  cur_content_sub_nav_li = e.target;
+  cur_content_sub_nav_li.classList.add(selected);
 }
 
-function footer_companyinfo_onoff(e) {
-    const company_info = e.target;
-    if (company_info.classList.contains("on")) {
-        company_info.classList.replace("on", "off");
-    } else if (company_info.classList.contains("off")) {
-        company_info.classList.replace("off", "on");
-    }
+function footer_company_info_onoff(e) {
+  const company_info = e.target;
+  if (company_info.classList.contains("on")) {
+    company_info.classList.replace("on", "off");
+  } else if (company_info.classList.contains("off")) {
+    company_info.classList.replace("off", "on");
+  }
 }

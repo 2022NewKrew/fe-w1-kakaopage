@@ -1,84 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kakaopage clone coding</title>
-        <link rel="stylesheet" href="/stylesheets/header.css" />
-        <link rel="stylesheet" href="/stylesheets/content.css" />
-        <link rel="stylesheet" href="/stylesheets/index.css" />
-        <link rel="stylesheet" href="/stylesheets/footer.css">
-      </head>
-    <body onload="init()">
-        <header class="main_header">
-            <div class="main_header_content">
-                <h1 class="main_header_content_left">
-                    <img
-                        src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954"
-                        alt="kakaopage logo"
-                    />
-                </h1>
-                <div class="main_header_content_right">
-                    <div>
-                      <div class="wrap_search">
-                        <div class="search_input">
-                          <input type="text" />
-                        </div>
-                        <div class="search_img">
-                          <img src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="검색 버튼" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="header_stage">
-                      <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="스테이지">
-                    </div>
-                    <button class="header_button">
-                      <div>캐시충전</div>
-                      <div class="division"></div>
-                      <div>로그인</div>
-                    </button>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kakaopage clone coding</title>
+    <link rel="stylesheet" href="/stylesheets/header.css" />
+    <link rel="stylesheet" href="/stylesheets/content.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+  </head>
+  <body onload="init()">
+    <header class="main_header">
+      <div class="main_header_content">
+        <h1 class="main_header_content_left">
+          <img src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954" alt="kakaopage logo" />
+        </h1>
+        <div class="main_header_content_right">
+          <div>
+            <div class="wrap_search">
+              <div class="search_input">
+                <input type="text" />
+              </div>
+              <div class="search_img">
+                <img src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="검색 버튼" />
+              </div>
             </div>
-        </header>
-        <section class="wrap_content">
-          <nav class="content_nav">
-            <ul>
-              <li>
-                <img src="https://static-page.kakao.com/static/pc/menu_home.svg?156813c20605e12311c90bae39f38c31" alt="홈">
-              </li>
-              <li class="clicked">
-                <img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8" alt="웹툰/만화">
-              </li>
-              <li>
-                <img src="https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55" alt="웹소설/장르">
-              </li>
-              <li>
-                <img src="https://static-page.kakao.com/static/pc/menu_vod.svg?549a6831d63d4b27a463c6cc2be7044f" alt="영화">
-              </li>
-              <li>
-                <img src="https://static-page.kakao.com/static/pc/menu_broadcast.svg?549cf0553505cda3d418aa684f358c18" alt="예능/드라마">
-              </li>
-              <li>
-                <img src="https://static-page.kakao.com/static/pc/menu_book.svg?eb9b97c2528955f1e6cf788c6fe7e504" alt="책">
-              </li>
-            </ul>
-          </nav>
-          
-          <div class="main_content">
-            <div class="content_sub_nav">
-              <ul>
-                <li class="selected">홈</li>
-                <li>요일연재</li>
-                <li>웹툰</li>
-                <li>소년</li>
-                <li>드라마</li>
-                <li>로맨스</li>
-                <li>로판</li>
-                <li>액션무협</li>
-                <li>BL</li>
-              </ul>
-            </div>
+          </div>
+          <div class="header_stage">
+            <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="스테이지" />
+          </div>
+          <button class="header_button">
+            <div>캐시충전</div>
+            <div class="division"></div>
+            <div>로그인</div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="wrap_content">
+      <nav class="content_nav">
+        <ul>
+          <li>
+            <img src="https://static-page.kakao.com/static/pc/menu_home.svg?156813c20605e12311c90bae39f38c31" alt="홈" />
+          </li>
+          <li class="clicked">
+            <img src="https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8" alt="웹툰/만화" />
+          </li>
+          <li>
+            <img src="https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55" alt="웹소설/장르" />
+          </li>
+          <li>
+            <img src="https://static-page.kakao.com/static/pc/menu_vod.svg?549a6831d63d4b27a463c6cc2be7044f" alt="영화" />
+          </li>
+          <li>
+            <img src="https://static-page.kakao.com/static/pc/menu_broadcast.svg?549cf0553505cda3d418aa684f358c18" alt="예능/드라마" />
+          </li>
+          <li>
+            <img src="https://static-page.kakao.com/static/pc/menu_book.svg?eb9b97c2528955f1e6cf788c6fe7e504" alt="책" />
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main_content">
+        <div class="content_sub_nav">
+          <ul>
+            <li class="selected">홈</li>
+            <li>요일연재</li>
+            <li>웹툰</li>
+            <li>소년</li>
+            <li>드라마</li>
+            <li>로맨스</li>
+            <li>로판</li>
+            <li>액션무협</li>
+            <li>BL</li>
+          </ul>
+        </div>
         <div class="carousel">
           <div class="slider">
             <div class="slider_list">
@@ -116,55 +113,57 @@
             <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="다음" />
           </div>
         </div>
-            <div class="carousel_menu">
-              <div class="menu_wrap">
-                <a href="#">
-                  <div class="carousel_menu_title">오늘 UP</div>
-                </a>
-                <a href="#"><div class="carousel_menu_title">오늘 신작</div></a>
-                <a href="#"><div class="carousel_menu_title">오리지널</div></a>
-                <a href="#"><div class="carousel_menu_title">무료회차 UP</div></a>
-                <a href="#"><div class="carousel_menu_title">독립운동가 웹툰</div></a>
-                <a href="#"><div class="carousel_menu_title">오늘 랭킹</div></a>
-              </div>
-            </div>
-            <div class="event_menu">이벤트 메뉴</div>
-            <div class="day_webtoon">요일 연재 TOP</div> 
-            <div class="top new">기대 신작</div>
-            <div class="top romance">로맨스 TOP</div>
-            <div class="top rofan">로판 TOP</div>
-            <div class="top drama">드라마 TOP</div>
-            <div class="top blgl">BL/GL TOP</div>
-            <div class="top boy">소년 TOP</div>
-            <div class="top action">액션/무협 TOP</div>
-            <div class="day_top">일간 랭킹 TOP</div>
-            <div class="recommend_event">추천 이벤트</div>
-                <div class="app_download">
-              <img src="https://static-page.kakao.com/static/pc/appDownload.png?ec8ae2e191ce28a0a4eaa59d5577fa8b" alt="다운로드 링크">
-            </div>
+        <div class="carousel_menu">
+          <div class="menu_wrap">
+            <a href="#">
+              <div class="carousel_menu_title">오늘 UP</div>
+            </a>
+            <a href="#"><div class="carousel_menu_title">오늘 신작</div></a>
+            <a href="#"><div class="carousel_menu_title">오리지널</div></a>
+            <a href="#"><div class="carousel_menu_title">무료회차 UP</div></a>
+            <a href="#"><div class="carousel_menu_title">독립운동가 웹툰</div></a>
+            <a href="#"><div class="carousel_menu_title">오늘 랭킹</div></a>
           </div>
-        </section>
-        <footer>
-            <div class="left_box">
-            <ul>
-              <li>회사소개</li>
-              <li> • 이용약관</li>
-              <li> • 개인정보처리방침</li>
-              <li> • 청소년보호정책</li>
-              <li> • 공지사항</li>
-            </ul>
-                <div class="company_info_rap">
-                    <p class="company_info off">
-              <span class="separator">|</span>
-                    <div class="company_info_url">사업자 정보 확인</div>
-            </div>
-                <span class="copyright_area">ⓒ Kakao Entertainment Corp.</span>
-          </div>
-            <div class="right_box">
-            <img src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af" alt="copyright" />
-            <p>저작권 ok</p>
-          </div>
-        </footer>
-        <script src="/javascripts/index.js"></script>
-    </body>
+        </div>
+        <div class="event_menu">이벤트 메뉴</div>
+        <div class="day_webtoon">요일 연재 TOP</div>
+        <div class="top new">기대 신작</div>
+        <div class="top romance">로맨스 TOP</div>
+        <div class="top rofan">로판 TOP</div>
+        <div class="top drama">드라마 TOP</div>
+        <div class="top blgl">BL/GL TOP</div>
+        <div class="top boy">소년 TOP</div>
+        <div class="top action">액션/무협 TOP</div>
+        <div class="day_top">일간 랭킹 TOP</div>
+        <div class="recommend_event">추천 이벤트</div>
+        <div class="app_download">
+          <img src="https://static-page.kakao.com/static/pc/appDownload.png?ec8ae2e191ce28a0a4eaa59d5577fa8b" alt="다운로드 링크" />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="left_box">
+        <ul>
+          <li>회사소개</li>
+          <li>• 이용약관</li>
+          <li>• 개인정보처리방침</li>
+          <li>• 청소년보호정책</li>
+          <li>• 공지사항</li>
+        </ul>
+        <div class="company_info_rap">
+          <p class="company_info off">
+            <span class="separator">|</span>
+          </p>
+
+          <div class="company_info_url">사업자 정보 확인</div>
+        </div>
+        <span class="copyright_area">ⓒ Kakao Entertainment Corp.</span>
+      </div>
+      <div class="right_box">
+        <img src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af" alt="copyright" />
+        <p>저작권 ok</p>
+      </div>
+    </footer>
+    <script src="/javascripts/index.js"></script>
+  </body>
 </html>
