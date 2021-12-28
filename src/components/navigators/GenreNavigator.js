@@ -6,7 +6,10 @@ export const GenreNavigator = () => {
   const { genre } = Object.fromEntries(urlSearchParams.entries());
 
   const isSelected = (str) => {
-    return genre === new URLSearchParams(str).get("genre");
+    const target = new URLSearchParams(str).get("genre");
+    if (!genre && target === "홈") return true;
+
+    return genre === target;
   };
 
   $root.innerHTML = `
