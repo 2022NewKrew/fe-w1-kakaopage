@@ -64,6 +64,9 @@ table {
   display: flex;
   justify-content: center;
   border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .header-content {
@@ -169,6 +172,7 @@ table {
   justify-content: center;
   padding: 20px;
   background-color: #EEEEEE;
+  margin-top: 142px;
 }
 
 .webtoon-content {
@@ -178,11 +182,18 @@ table {
 .content-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .content-nav-item {
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 0 15px 0;
+  font-size: 1.2rem;
+  color: #BBBBBB;
+}
+
+.selected-content-nav-item {
+  color: #333333;
 }
