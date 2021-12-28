@@ -1,8 +1,10 @@
+const RANDOM_OFFSET = 100;
+
 export const ContentRowListItem = () => {
   const $root = document.createElement("li");
   $root.className = "contentRowListItem";
 
-  const random = Math.floor(Math.random() * 100);
+  const random = Math.floor(Math.random() * RANDOM_OFFSET);
 
   $root.innerHTML = `
     <img
