@@ -214,10 +214,12 @@ table {
 .carousel {
   position: relative;
   width: 720px;
+  overflow: hidden;
 }
 
 .carousel-banner-part {
-
+  display: flex;
+  position: relative;
 }
 
 .carousel-banner {
@@ -252,11 +254,28 @@ table {
 
 .carousel-description-box {
   display: flex;
+  align-items: center;
   margin-top: 10px;
+}
+
+.carousel-description-box > * {
+  margin-right: 10px;
 }
 
 .carousel-category-text {
   color: #FFFFFF;
+  font-size: 1.2rem;
+}
+
+.carousel-separator-bar {
+  width: 2px;
+  height: 16px;
+  background-color: #AAAAAA;
+}
+
+.carousel-number-of-reader-text {
+  color: #FFFFFF;
+  font-size: 1.2rem;
 }
 
 .carousel-subtitle {

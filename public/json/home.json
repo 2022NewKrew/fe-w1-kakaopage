@@ -1,0 +1,23 @@
+homeJson = [
+  {
+    "type": "carousel",
+    "content": [
+      {
+        "title": "학사귀환",
+        "subtitle": "학사 마현, 중원으로 돌아오다!",
+        "bannerImgSrc": "images/banner/banner-img-1.png",
+        "badgeIconSrc": "images/icon/badge-up.svg",
+        "category": "웹툰",
+        "nReader": "47.1만명"
+      },
+      {
+        "title": "ㅋㅋㅋ웹툰 아카데미<br>카카페 데뷔반 2기 모집중",
+        "subtitle": "카카오페이지 데뷔반 2월 7일 오픈!",
+        "bannerImgSrc": "images/banner/banner-img-5.png",
+        "badgeIconSrc": "images/icon/badge-competition.svg",
+        "category": "",
+        "nReader": ""
+      }
+    ]
+  }
+]
