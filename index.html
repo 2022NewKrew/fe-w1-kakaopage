@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <!-- header -->
+        <header>
+            <div>
+                <img src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954" alt="kakaopage logo"/>
+                <div class="header-right">
+                    <div class="search">
+                        <input/>
+                        <img src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a" alt="search icon"/>
+                    </div>
+                    <div>
+                        <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="STAGE" />
+                    </div>
+                    <div class="header-text">
+                        <div>캐시충전</div>
+                        <div class="separator"></div>
+                        <div>로그인</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- navbar -->
+        <nav>
+            <ul class="menus">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">웹툰·<i class="fas fa-clock"></i></a></li>
+                <li><a href="#">웹소설·<i class="fas fa-clock"></i><a></li>
+                <li><a href="#">영화</a></li>
+                <li><a href="#">방송</a></li>
+                <li><a href="#">책</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <!-- webtoon menu selection -->
+        <section> 
+            <div class="webtoon-genres">
+                <ul class="webtoon-genres">
+                    <li>홈</li>
+                    <li>요일연재</li>
+                    <li>웹툰</li>
+                    <li>소년</li>
+                    <li>드라마</li>
+                    <li>로맨스</li>
+                    <li>로판</li>
+                    <li>액션무협</li>
+                    <li>BL</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- carousel -->
+        <section class="carousel"> 
+            <img src="	https://dn-img-page.kakao.com/download/resource?kid=dwoBM/hySXGzOHzE/LfRetkWwVjkn1fBP3vN6I1" alt="황제의 연인 이미지"/>
+            <div class="carousel-button previous-button">
+                <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" alt="previous button">
+            </div>
+            <div class="carousel-button next-button">
+                <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="next button"/>
+            </div>
+            <div class="carousel-info">
+                <h2 class="carousel-title">황제의 연인</h2>
+                <div class="carousel-detail">
+                    <img class="event-img" src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b" alt="이벤트"/>
+                    <div>
+                        <img src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858" alt="time"/>
+                        웹툰
+                    </div>
+                    <div class="separator"></div>
+                    <div>
+                        <img src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e" alt="조회수"/>
+                        27.4만명
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-number">
+                1 / 5
+            </div>
+            <div class="carousel-description">
+                인연인지 악연인지, 얽혀버린 두 사람
+            </div>
+        </section>
+
+        <!-- Webtoon menus (오늘 UP, 오늘 신작, 오늘 랭킹 등) -->
+        <section class="webtoon-menus">
+            <div class="webtoon-menus-container"> 
+                <a class="webtoon-menu-top-left">
+                    <div class="webtoon-menu">
+                        <p>오늘 UP</p>
+                        <p>178</p>
+                    </div>
+                </a>
+                <a>  
+                    <div class="webtoon-menu">
+                        <p>오늘 신작</p>
+                        <p>3</p>
+                    </div>
+                </a>
+                <a class="webtoon-menu-top-right">
+                    <div class="webtoon-menu">
+                        <p>오리지널</p>
+                        <p>2,184</p>
+                    </div>
+                </a>
+                <a class="webtoon-menu-bottom-left"> 
+                    <div class="webtoon-menu">
+                        <p>무료회차 UP</p>
+                        <p>178</p>
+                    </div>
+                </a>
+                <a>
+                    <div class="webtoon-menu">
+                        <p>독립운동가 웹툰</p>
+                        <p>178</p>
+                    </div>
+                </a>
+                <a class="webtoon-menu-bottom-right"> 
+                    <div class="webtoon-menu">
+                        <p>오늘 랭킹</p>
+                        <p>1위</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Banner Carousel -->
+        <section class="banner">
+            <div class="banner-container">
+                <button class="banner-btn prevBtn" onClick="plusSlides(-1)">
+                    <img src="https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c" alt="prev button"/>
+                </button>
+                <div class="slide_box">
+                    <div class="slide_list">
+                        <div class="slide_item slide">
+                            <img src="https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" alt="웹툰아카데미 카카페 데뷔반 2기 모집중"/>
+                        </div>
+                        <div class="slide_item slide">
+                            <img src="https://dn-img-page.kakao.com/download/resource?kid=cMpCSI/hzhOjtLbZm/SwgdtoDvZpAKHuHncIwKm1" alt="이기어검을 초원하는 이기어시! 웹툰 궁귀검신"/>
+                        </div>
+                        <div class="slide_item slide">
+                            <img src="	https://dn-img-page.kakao.com/download/resource?kid=bon01c/hzb7AOMmrH/6o7xFMRGpBITlZ5VhfMkK1" alt="제19회 대한민국창작만화공모전 발표"/>
+                        </div>
+                        <div class="slide_item slide">
+                            <img src="https://dn-img-page.kakao.com/download/resource?kid=PdCSa/hyEdiGIeqE/aUixLKtx06WhG8eDVgcQu1" alt="12시간마다 무료 전체 보기 (만화/소설/VOD)"/>
+                        </div>
+                    </div>
+                </div>
+                <button class="banner-btn nextBtn" onClick="plusSlides(1)">
+                    <img src="https://static-page.kakao.com/static/pc/ic-paging-next-nor.svg?b76f34a1b77e59514735b92464295b7c" alt="next button"/>
+                </button>
+            </div>
+        </section>
+        
+        <!-- 요일 연재 TOP -->
+        <section class="daily-ranking">
+            <div class="daily-ranking-header">
+                <div class="daily-ranking-top">
+                    <p>요일 연재 TOP</p>
+                    <p>(1,553)</p>
+                </div>
+                <div class="daily-ranking-more">
+                    <p>더보기</p>
+                    <img src="https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e" alt="button for more webtoons"/>
+                </div>
+            </div>
+            <div class="daily-ranking-tabs">
+                <ul class="daily-ranking-tabs-container">
+                    <li>월</li>
+                    <li>화</li>
+                    <li>수</li>
+                    <li>목</li>
+                    <li>금</li>
+                    <li>토</li>
+                    <li>일</li>
+                    <li>완결</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+<script type="text/javascript" src="main.js"></script>
+<script src="https://kit.fontawesome.com/e47ffc1d6a.js" crossorigin="anonymous"></script>
+</html>
