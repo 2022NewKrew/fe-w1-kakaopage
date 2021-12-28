@@ -290,7 +290,7 @@ main {
     align-items: center;
 }
 
-.webtoon-menu > p {
+.webtoon-menu > p:first-child {
     font-weight: 500;
     text-overflow: ellipsis;
     white-space: nowrap;  
@@ -298,7 +298,7 @@ main {
     font-size: 18px;
 }
 
-.webtoon-menu > div {
+.webtoon-menu > p:last-child {
     background-color: #ffd200;
     height: 24px;
     padding: 0 8px; 
@@ -306,3 +306,66 @@ main {
     font-size: 16px; 
     border-radius: 13px;
 }
+
+/* 배너 캐루셀 */
+.banner {
+    /* display: flex; 
+    width: 720px;
+    margin: 11px auto 0 auto;
+    background-color: white; */
+    width: 720px;
+    margin: 0 auto; 
+    padding: 22px 0;
+}
+
+.banner-container {
+    display: flex; 
+    align-items: center;
+    background-color: white;
+    position: relative; 
+}
+
+.slide_box {
+    width: 550x; 
+    height: 140px; 
+}
+
+.slide_list {
+    overflow: hidden;
+}
+
+.slide_item {
+    height: 140px;
+    display: none;
+}
+
+.slide_item > img {
+    width: 550px; 
+    height: 100px; 
+}
+
+.banner-btn {
+    width: 85px;
+    height: 100px;
+    border-style: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+/* Fading animation */
+.slide {
+    animation-name: slidein;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
