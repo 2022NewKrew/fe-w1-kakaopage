@@ -2,5 +2,5 @@
 
 export default function init() {
     const mainContentDiv = document.getElementById("main-contents");
-    mainContentDiv.innerHTML = "<p>toon</p>";
+    //mainContentDiv.innerHTML = "<p>toon</p>";
 }
