@@ -1,106 +1,103 @@
-(async () => {
-  let currNavActiveIndex = 0;
-  const webtoonNavIndex = 1;
+/********* common logic  **********/
+// get element function
+const $ = (selector, parentNode = document) => {
+  return parentNode.querySelector(selector);
+};
 
-  const navParent = $(".nav-container");
-  const main = $(".main");
+const getAPI = async (url) => {
+  try {
+    const response = await fetch(url);
+    return await response.json();
+  } catch (e) {
+    throw e;
+  }
+};
 
-  /********* common logic  **********/
-  // get element function
-  const $ = (selector, parentNode = document) => {
-    return parentNode.querySelector(selector);
-  };
+const isActive = (index, targetActiveIndex) => {
+  return index === targetActiveIndex ? " active" : "";
+};
+/********* common logic  **********/
 
-  const getAPI = async (url) => {
-    try {
-      const response = await fetch(url);
-      return await response.json();
-    } catch (e) {
-      throw e;
-    }
-  };
-  /********* common logic  **********/
+/********* create navbar html  **********/
+const navParent = $(".nav-container");
 
-  /********* create navbar html  **********/
-  const createNavEle = (title, index) => {
-    return `<li class="nav-list ${isActive(index)}" 
+let currNavActiveIndex = 0;
+
+const createNavEle = (title, index) => {
+  return `<li class="nav-list${isActive(index, currNavActiveIndex)}" 
       data-idx=${index}>${title}</li>`;
-  };
+};
 
-  const initializeNavBar = async () => {
-    try {
-      const navData = await getAPI("./data/nav.json");
-      const navElements = navData
-        .map((nav, index) => createNavEle(nav.title, index))
-        .join("");
+const initializeNavBar = async () => {
+  try {
+    const navData = await getAPI("./data/nav.json");
+    const navElements = navData
+      .map((nav, index) => createNavEle(nav.title, index))
+      .join("");
 
-      navParent.innerHTML = navElements;
-    } catch (e) {
-      alert(e);
-    }
-  };
-  initializeNavBar();
+    navParent.innerHTML = navElements;
+  } catch (e) {
+    alert(e);
+  }
+};
+initializeNavBar();
 
-  const isActive = (index) => {
-    return index === currNavActiveIndex ? "active" : "";
-  };
-  /********* create navbar  **********/
+/********* create navbar  **********/
 
-  /********* navbar click event  **********/
-  const changeMainContent = (e) => {
+/********* navbar click event  **********/
+const webtoonNavIndex = 1;
+const main = $(".main");
+
+const changeMainContent = async (e) => {
+  if (Number(e.target.dataset.idx) === currNavActiveIndex) return;
+  try {
     main.innerHTML =
       Number(e.target.dataset.idx) === webtoonNavIndex
-        ? createWebtoonPage()
+        ? await createWebtoonPage()
         : createEmptyPage();
-  };
+  } catch (e) {
+    alert(e);
+  }
+};
 
-  const changeCssActiveIndex = (e) => {
-    if (Number(e.target.dataset.idx) === currNavActiveIndex) return;
+navParent.addEventListener("click", changeMainContent);
+/********* navbar click event  **********/
 
-    navParent.childNodes[currNavActiveIndex].classList.remove("active");
-    currNavActiveIndex = Number(e.target.dataset.idx);
-    navParent.childNodes[currNavActiveIndex].classList.add("active");
-  };
-
-  navParent.addEventListener("click", changeMainContent);
-  navParent.addEventListener("click", changeCssActiveIndex);
-  /********* navbar click event  **********/
-
-  /********* page template except for webtoon  **********/
-  const createEmptyPage = () => {
-    return `
+/********* page template except for webtoon  **********/
+const createEmptyPage = () => {
+  return `
           <div class='empty-page-container'>
-              <h2>🔥🔥🔥EMPTY PAGE🔥🔥🔥</h2>
               <img src='./images/not-content.gif' />
           </div>
       `;
-  };
-  main.innerHTML = createEmptyPage();
-  /********* page template except for webtoon  **********/
+};
+main.innerHTML = createEmptyPage();
+/********* page template except for webtoon  **********/
 
-  /********* webtoon page template **********/
-  const createMenuBar = async () => {
-    const menuContainer = document.createElement("ul");
-    menuContainer.className = "menu-container";
+/********* menubar template in webtoon page  **********/
+let currMenuActiveIndex = 0;
 
+const createMenuBar = async () => {
+  try {
     const menuData = await getAPI("./data/menu.json");
     const menuElements = menuData
       .map((menu, index) => createMenuEle(menu.title, index))
       .join("");
+    return menuElements;
+  } catch (e) {
+    alert(e);
+  }
+};
 
-    menuContainer.innerHTML = menuElements;
-    main.appendChild(menuContainer);
-  };
-
-  const createMenuEle = (title, index) => {
-    return `<li class="menu-list ${isActive(index)}" 
+const createMenuEle = (title, index) => {
+  return `<li class="menu-list ${isActive(index, currMenuActiveIndex)}" 
       data-idx=${index}>${title}</li>`;
-  };
+};
+/********* menubar template in webtoon page  **********/
 
-  const createWebtoonPage = async () => {
-    return `
-     ${await createMenuBar()}
-   
+const createWebtoonPage = async () => {
+  return `
+     <ul class="menu-container">${await createMenuBar()}</ul>
       <div class="day-outer-container">
         <ul class="day-container">
           <li class="day active">
@@ -248,5 +245,32 @@
     
       </div>
       `;
-  };
-})();
+};
+
+/********* body event  **********/
+document.body.addEventListener("click", (e) => {
+  if (e.target.classList.contains("nav-list")) {
+    changeActiveStaus(e, currNavActiveIndex, navParent);
+  } else if (e.target.classList.contains("menu-list")) {
+    const menuParent = $(".menu-container");
+    changeActiveStaus(e, currMenuActiveIndex, menuParent);
+  }
+});
+
+const changeActiveStaus = (e, currActiveIndex, parentEle) => {
+  if (Number(e.target.dataset.idx) === currActiveIndex) return;
+  parentEle.childNodes[currActiveIndex].classList.remove("active");
+  const targetIndex = Number(e.target.dataset.idx);
+  const newActiveIndex = getNewActiveIndex(parentEle, targetIndex);
+  parentEle.childNodes[newActiveIndex].classList.add("active");
+};
+
+const getNewActiveIndex = (parentEle, targetIndex) => {
+  if (parentEle === $(".nav-container")) {
+    currNavActiveIndex = targetIndex;
+    return currNavActiveIndex;
+  } else if (parentEle === $(".menu-container")) {
+    currMenuActiveIndex = targetIndex;
+    return currMenuActiveIndex;
+  }
+};
