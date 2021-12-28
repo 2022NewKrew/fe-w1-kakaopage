@@ -1,5 +1,5 @@
 * {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   line-height: 1.4;
 }
 body {
@@ -18,4 +18,11 @@ header {
 button {
   border: none;
   background-color: white;
+}
+main {
+  width: 720px;
+  margin: 0 auto;
+}
+button {
+  cursor: pointer;
 }

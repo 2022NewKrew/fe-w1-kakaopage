@@ -1,8 +1,6 @@
 .genres {
   display: flex;
-  width: 720px;
   height: 67px;
-  margin: 0 auto;
   justify-content: space-evenly;
   background-color: white;
   margin-bottom: 10px;

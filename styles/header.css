@@ -64,11 +64,12 @@
 }
 .tab-menu > a {
   text-decoration: none;
-  color: rgba(128, 128, 128, 0.5);
+  color: rgba(128, 128, 128, 0.6);
 }
-.tab-menu > span:nth-child(2) {
+.tab-menu > span {
+  background-image: url("../images/Seperator.png");
   width: 1px;
+  height: 12px;
   background-color: rgba(128, 128, 128, 0.4);
-  height: 14px;
-  line-height: 14px;
+  margin-top: 2px;
 }

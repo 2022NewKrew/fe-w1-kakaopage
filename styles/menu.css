@@ -1,6 +1,4 @@
 .menu {
-  width: 720px;
-  margin: 0 auto;
   border-bottom: 1px solid #e6e6e6;
   background-color: white;
   margin-top: 11px;
@@ -22,6 +20,7 @@
   color: #3a3a3a;
   padding: 0 10px;
   display: flex;
+  cursor: pointer;
 }
 
 .menu-wrapper > a > div:first-child {
@@ -39,9 +38,10 @@
   margin-left: 10px;
   padding: 0 8px;
   height: 24px;
-  align-items: flex-end;
+  align-items: center;
   font-size: 16px;
   background-color: #ffd200;
-  padding-bottom: 2px;
+  line-height: 24px;
   display: flex;
+  padding-top: 3px;
 }
