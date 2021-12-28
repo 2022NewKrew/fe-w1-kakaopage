@@ -1,0 +1,136 @@
+.toon-home-weekly-top {
+    margin-top: 11px;
+    padding: 22px 19px 0 19px;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+
+.toon-home-weekly-top-title {
+    display: flex;
+}
+
+.toon-home-weekly-top-title .name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.toon-home-weekly-top-title .name .number {
+    font-size: 14px;
+    color: #999;
+    margin-left: 4px;
+}
+
+.toon-home-weekly-top-title .more-button {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #999;
+}
+
+.toon-home-weekly-top-title .more-button > img {
+    width: 8px;
+    height: 14px;
+    margin: 2px 0 0 4px;
+}
+
+.toon-home-weekday-nav {
+    margin-top: 15px;
+    display: flex;
+}
+
+.toon-home-weekday-nav > li {
+    flex: 1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.toon-home-weekday-nav > li.selected {
+    border-bottom: 2px solid #ffd200;
+    color: #333;
+}
+
+.toon-home-weekly-top-webtoon-container {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.webtoon-item-box {
+    width: 120.4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.webtoon-item-box .webtoon-image {
+    border-radius: 8px;
+    border: 1px solid #0000001a;
+    overflow: hidden;
+}
+
+.webtoon-item-box .webtoon-image > img {
+    display: block;
+    width: 120.4px;
+    height: 120.4px;
+}
+
+.webtoon-item-box .webtoon-image-info {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    background-color: #242526;
+    height: 30px;
+}
+
+.webtoon-item-box .webtoon-image-info .left {
+    line-height: 1;
+    font-size: 16px;
+    color: #ffd200;
+} 
+
+.webtoon-item-box .webtoon-image-info .seperator {
+    flex: 1;
+}
+
+.webtoon-item-box .webtoon-image-info .right {
+    display: block;
+    margin-top: 2px;
+    height: 16px;
+}
+
+.webtoon-item-box .webtoon-title {
+    margin: 9px 0 7px 0;
+    color: #333;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.webtoon-item-box .webtoon-tags {
+    font-weight: 350;
+    font-size: 14px;
+    color: #9c9c9c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.webtoon-item-box .webtoon-tags .icon-up {
+    display: block;
+    height: 13px;
+    margin-right: 4px;
+}
+
+.webtoon-item-box .webtoon-tags .icon-read-count {
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+}
