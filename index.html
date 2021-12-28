@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>홈 - 웹툰 | 카카오페이지</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/search-bar.css">
     <link rel="stylesheet" href="css/header-category.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header id="kpw-header">
@@ -78,7 +79,35 @@
         </nav>
     </header>
     <div id="root"></div>
-    <footer></footer>
-    <script src="js/header-generate.js"></script>
+    <footer id="kpw-footer">
+        <button class="app-download-btn">
+            <img src="https://static-page.kakao.com/static/pc/appDownload.png"
+                alt="download link">
+        </button>
+        <div class="footer">
+            <div class="left-box">
+                <ul class="policy">
+                    <li><a href="http://www.kakaopagecorp.com" target="_blank" rel="noopener noreferrer">회사소개</a></li>
+                    <li><a href="/policy?type=terms"> • 이용약관</a></li>
+                    <li><a href="/policy?type=privacy">• <span class="medium">개인정보처리방침</span></a></li>
+                    <li><a href="/policy?type=safeguard"> • 청소년보호정책</a></li>
+                    <li><a href="/policy?type=notice&amp;noticePage=1"> • 공지사항</a></li>
+                </ul>
+                <div class="company-info">
+                    <span>(주) 카카오엔터테인먼트 사업자 정보 </span>
+                    <span class="separator">|</span>
+                    <a class="underline" href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208802594" target="_blank" rel="noopener noreferrer">사업자 정보 확인</a>
+                </div>
+                <span class="copyright-area">ⓒ Kakao Entertainment Corp.</span>
+            </div>
+            <div class="right-box">
+                <a href="https://www.kcopa.or.kr/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af" alt="ok mark">
+                    <p>저작권 ok</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/category-change.js"></script>
 </body>
 </html>

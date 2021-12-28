@@ -1,24 +1,25 @@
 #kpw-header {
     position: sticky;
     top: 0;
+    background-color: #fff;
     border-bottom: 1px solid #dfdfdf;
 }
 
-#kpw-header > .header-top {
+.header-top {
     display: flex;
     height: 80px;
     width: 720px;
     margin: 0px auto;
 }
 
-.header-top h1.logo {
-    flex-shrink: 0;
-    margin: 30px 0 22px 0;
+.header-top h1.logo > img {
+    display: block;
+    margin: 30px 0 22px;
     height: 29px;
     width: 130px;
 }
 
-#kpw-header .header-ui {
+.header-ui {
     display: flex;
     justify-content: flex-end;
     flex-basis: auto;
@@ -26,8 +27,7 @@
 }
 
 .header-ui .search-div {
-    margin-top: 27px;
-    margin-bottom: 19px;
+    margin: 27px 0 19px;
 }
 
 .header-ui .stage-div {
