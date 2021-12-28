@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>main</title>
   <link rel="stylesheet" type="text/css" href="main.css" />
+  <link rel="stylesheet" type="text/css" href="tab.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -52,63 +53,36 @@
     </nav>
   </header>
 
-  <section id="contents">
-    <object data="home.html" id="contents-container" class="contents-container"></object>
+  <section class="contents" id="contents">
+    
   </section>
 
   <footer>
-    footer
+    <button class="download-app">
+      <img src="https://static-page.kakao.com/static/pc/appDownload.png?ec8ae2e191ce28a0a4eaa59d5577fa8b" alt="download link">
+    </button>
+    <div class="footer-info">
+      <div>
+        <ul class="footer-info-ul">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">• 이용약관</a></li>
+          <li><a href="">• 개인정보처리방침</a></li>
+          <li><a href="">• 청소년보호정책</a></li>
+          <li><a href="">• 공지사항</a></li>
+        </ul>
+        <div>
+          <span>(주)카카오엔터테인먼트 사업자 정보 </span><span>|</span>
+          <span><a href="https://kakao.com">사업자 정보 확인</a></span>
+        </div>
+        <div class="kakao-ent"><strong>ⓒ Kakao Entertainment Corp.</strong>
+        </div>
+      </div>
+      <div>
+        <img src="https://static-page.kakao.com/static/common/okMark.png?861290e3393cbb3c93e6d3056d6905af">
+        <div>저작권 OK</div>
+      </div>
+    </div>
   </footer>
-
-  <script>
-     function add_tab_active(tab){
-      let tabs=document.getElementById("header-tabs");
-      Array.from(tabs.children).some((ele)=>{
-        if(ele.classList.contains("header-tab-active")){
-          ele.classList.remove("header-tab-active");
-          return true;
-        }
-        return false;
-      });
-      tab.classList.add("header-tab-active");
-    }
-    function home_tab(e){
-      add_tab_active(document.getElementById("home-tab"));      
-      let container=document.getElementById("contents-container");
-      container.data="home.html";
-    }
-    function webtoon_tab(){
-      add_tab_active(document.getElementById("webtoon-tab"));      
-      let container=document.getElementById("contents-container");
-      container.data="webtoon.html";
-    }
-    function webfic_tab(){
-      add_tab_active(document.getElementById("webfic-tab"));      
-      let container=document.getElementById("contents-container");
-      container.data="webfic.html";
-    }
-    function movie_tab(){
-      add_tab_active(document.getElementById("movie-tab"));      
-      let container=document.getElementById("contents-container");
-      container.data="movie.html";
-    }
-    function broadcast_tab(){
-      add_tab_active(document.getElementById("broadcast-tab"));      
-      let container=document.getElementById("contents-container");
-      container.data="broadcast.html";
-    }
-    function book_tab(){
-      add_tab_active(document.getElementById("book-tab"));      
-      let container=document.getElementById("contents-container");
-      container.data="book.html";
-    }
-    document.getElementById("home-tab").onclick=home_tab;
-    document.getElementById("webtoon-tab").onclick=webtoon_tab;
-    document.getElementById("webfic-tab").onclick=webfic_tab;
-    document.getElementById("movie-tab").onclick=movie_tab;
-    document.getElementById("broadcast-tab").onclick=broadcast_tab;
-    document.getElementById("book-tab").onclick=book_tab;
-
-  </script>
+  <script src="main.js" type="text/javascript"></script>
 </body>
 </html>
