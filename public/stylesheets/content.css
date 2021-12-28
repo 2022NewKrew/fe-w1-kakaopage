@@ -1,0 +1,159 @@
+nav.content_nav {
+    position: fixed;
+    top: 80px;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+}
+div.content_sub_nav {
+    background-color: white;
+    color: darkgray;
+}
+div.content_sub_nav > ul li {
+    justify-content: center;
+    padding: 22px 0px;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+nav.content_nav > ul,
+div.content_sub_nav > ul {
+    display: flex;
+    width: 720px;
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+nav.content_nav > ul > li {
+    text-align: center;
+    list-style: none;
+    flex: 1 1 auto;
+    padding: 30px 0 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+nav.content_nav > ul > li.clicked {
+    border-bottom-color: #ffd200;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+}
+nav.content_nav > ul > li > img {
+    box-sizing: border-box;
+    margin: 0;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+}
+div.main_content {
+    width: 720px;
+    margin: 167px auto;
+}
+
+div.content_sub_nav {
+    width: 720px;
+    margin: 0px auto;
+}
+
+li.selected {
+    color: black;
+}
+div.carousel {
+    width: 720px;
+    height: 480px;
+    margin: 11px auto;
+    background: white;
+}
+div.carousel_menu {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 720px;
+    height: 160px;
+    margin: 11px auto;
+    background: white;
+}
+div.carousel_menu > .menu_wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    background: #f1f1f1;
+}
+div.carousel_menu > .menu_wrap a {
+    width: 33%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+div.carousel_menu > .menu_wrap a:nth-of-type(3n) {
+    border-right: none;
+}
+div.carousel_menu .carousel_menu_title {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+div.event_menu {
+    width: 720px;
+    height: 140px;
+    margin: 11px auto;
+    background: white;
+}
+
+div.day_webtoon {
+    width: 720px;
+    height: 610px; /*임시*/
+    margin: 11px auto;
+    background: white;
+}
+div.top {
+    width: 720px;
+    height: 300px;
+    margin: 11px auto;
+    background: white;
+}
+div.day_top {
+    width: 720px;
+    margin: 11px auto;
+    height: 490px;
+    background: white;
+}
+div.recommend_event {
+    width: 720px;
+    margin: 11px auto;
+    height: 430px;
+    background: white;
+}
+div.appDownload {
+    width: 720px;
+    height: 70px;
+    background: #fecc2e;
+    margin: 11px auto;
+}
+div.appDownload > img {
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+
+/* 임시 */
+.main_content div {
+    color: darkgray;
+    box-sizing: border-box;
+    font-size: large;
+    text-align: center;
+}
+.main_content .appDownload {
+    padding-top: 0px;
+}
