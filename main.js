@@ -2,26 +2,25 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function updateSlides(slideNum) {
+  showSlides((slideIndex += slideNum));
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function currentSlide(slideNum) {
+  showSlides((slideIndex = slideNum));
 }
 
-function showSlides(n) {
-  let i;
+function showSlides(slideNum) {
   let slides = document.getElementsByClassName("slide_item");
-  if (n > slides.length) {
+  if (slideNum > slides.length) {
     slideIndex = 1;
   }
-  if (n < 1) {
+  if (slideNum < 1) {
     slideIndex = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+  Array.from(slides).forEach(function (slide) {
+    slide.style.display = "none";
+  });
   slides[slideIndex - 1].style.display = "flex";
   slides[slideIndex - 1].style.alignItems = "center";
 }
