@@ -8,17 +8,17 @@ const port = process.env.PORT || 8080
 
 // 화면 engine을 ejs로 설정
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+app.engine('html', require('ejs').renderFile)
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/',function (req, res) {
-    res.redirect('/main');
-});
+    res.redirect('/main')
+})
 
 app.use('/main', indexRouter)
 
