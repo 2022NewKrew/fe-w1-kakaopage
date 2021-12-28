@@ -41,7 +41,7 @@ export function createCarousel(data) {
     const leftBtnEl = btnEls[0]
     const rightBtnEl = btnEls[1]
     
-    let idx = 1
+    let bannerIdx = 1
     
     pageNumberEl.innerText = `1 / ${data.length}`
     
@@ -52,32 +52,32 @@ export function createCarousel(data) {
     newCarouselBannerPartEl.appendChild(createBanner(data[0]))
     
     newCarouselBannerPartEl.style.width = (data.length + 2) * BANNER_WIDTH + 'px'
-    newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
+    newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
     
     leftBtnEl.addEventListener('click', () => {
-        if (idx > 0) {
-            idx--
-            newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
+        if (bannerIdx > 0) {
+            bannerIdx--
+            newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
             newCarouselBannerPartEl.style.transitionDuration = '500ms'
     
-            if (idx === 0) {
+            if (bannerIdx === 0) {
                 pageNumberEl.innerText = `${data.length} / ${data.length}`
             } else {
-                pageNumberEl.innerText = `${idx} / ${data.length}`
+                pageNumberEl.innerText = `${bannerIdx} / ${data.length}`
             }
         }
     })
     
     rightBtnEl.addEventListener('click', () => {
-        if (idx < data.length + 1) {
-            idx++
-            newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
+        if (bannerIdx < data.length + 1) {
+            bannerIdx++
+            newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
             newCarouselBannerPartEl.style.transitionDuration = '500ms'
     
-            if (idx === data.length + 1) {
+            if (bannerIdx === data.length + 1) {
                 pageNumberEl.innerText = `1 / ${data.length}`
             } else {
-                pageNumberEl.innerText = `${idx} / ${data.length}`
+                pageNumberEl.innerText = `${bannerIdx} / ${data.length}`
             }
         }
     })
@@ -85,13 +85,13 @@ export function createCarousel(data) {
     newCarouselBannerPartEl.addEventListener('transitionend', () => {
         newCarouselBannerPartEl.style.transitionDuration = '0ms'
         
-        if (idx <= 0) {
-            idx = data.length
-        } else if (idx >= data.length + 1) {
-            idx = 1
+        if (bannerIdx <= 0) {
+            bannerIdx = data.length
+        } else if (bannerIdx >= data.length + 1) {
+            bannerIdx = 1
         }
     
-        newCarouselBannerPartEl.style.transform = `translateX(-${idx * BANNER_WIDTH}px)`
+        newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
     })
     
     return newCarouselEl
