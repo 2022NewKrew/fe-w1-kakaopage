@@ -1,0 +1,30 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cfcfcf;
+    border-radius: 30px;
+    padding: 2px;
+}
+
+.search-bar > form {
+    padding: 2px 3px 2px 11px;
+}
+
+.search-bar > form > input {
+    padding: 0;
+    width: 136px;
+    height: 100%;
+    border: 0;
+    font-size: 100%;
+}
+
+.search-bar > form > input:focus {
+    outline: none;
+}
+
+.search-bar > .search-submit-btn {
+    padding-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
