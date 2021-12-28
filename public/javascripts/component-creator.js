@@ -1,16 +1,11 @@
 import { createCarousel } from './carousel.js'
+import { removeAllChild } from './common.js'
 
 const homeData = JSON.parse(JSON.stringify(homeJson));
 
 window.addEventListener('DOMContentLoaded', () => {
     drawComponent(homeData)
 })
-
-function removeAllChild(element) {
-    while (element.hasChildNodes()) {
-        element.removeChild(element.firstChild)
-    }
-}
 
 function drawComponent(data) {
     const componentBoxEl = document.querySelector('.component-box')
