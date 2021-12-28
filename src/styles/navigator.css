@@ -1,3 +1,5 @@
+/* ---- header navigator ---- */
+
 .headerNav__item {
   box-sizing: border-box;
   position: relative;
@@ -26,7 +28,7 @@
   background-color: rgb(255, 210, 0);
 }
 
-/* ---- ---- */
+/* ---- day navigator ---- */
 
 .dayNav {
   padding: 0px 15px;
@@ -48,7 +50,7 @@
   background-image: url(https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b11…);
 }
 
-/* ----  ---- */
+/* ----  genre navigator ---- */
 
 .genreNav__item {
   text-decoration: none;

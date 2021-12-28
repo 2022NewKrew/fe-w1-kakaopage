@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-/* headerActionBox */
+/* ---- headerActionBox ---- */
 
 .headerActionBox {
   padding-top: 30px;
@@ -62,4 +62,32 @@
   width: 137px;
   height: 33px;
   max-width: none;
+}
+
+/* ---- section header ---- */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  padding: 22px 20px 0px;
+}
+
+.sectionHeader__title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0px;
+}
+
+.sectionHeader__subTitle {
+  box-sizing: border-box;
+  margin: 0px 0px 0px 4px;
+  min-width: 0px;
+  color: rgb(153, 153, 153);
+  font-size: 14px;
+  flex: 0 0 auto;
+}
+
+.sectionHeader .showMoreBtn {
+  margin-left: auto;
 }
