@@ -67,7 +67,7 @@ table {
 }
 
 .header-content {
-  width: 800px;
+  width: 720px;
 }
 
 .top-header {
@@ -115,6 +115,11 @@ table {
 .search-btn {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+}
+
+.stage-btn {
+  cursor: pointer;
 }
 
 .login-btn {
@@ -167,7 +172,7 @@ table {
 }
 
 .webtoon-content {
-  width: 800px;
+  width: 720px;
 }
 
 .content-nav {
