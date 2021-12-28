@@ -11,6 +11,7 @@
 .content-wrapper{
     position:absolute;
     width: 720px;
+    display: block;
 }
 
 .toon-genre-nav-group{
@@ -38,6 +39,5 @@ toon-genre-nav-group li {
     font-weight: 350;
     text-align: center;
     margin: 0 17px 0 17px;
-    text-decoration: none;
     font-size: 20px;
 }
