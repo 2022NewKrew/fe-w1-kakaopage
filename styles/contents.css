@@ -9,12 +9,47 @@
 }
 
 .content-wrapper{
+    position:absolute;
     width: 720px;
 }
 
 .toon-genre-nav-group{
     width: 100%;
-    height: 80px;
     background-color: white;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.toon-genre-nav-group > ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+toon-genre-nav-group li {
+    height: 100%;
+}
+
+.toon-genre-nav-group a {
+    color: rgb(187, 187, 187);
+    font-weight: 350;
+    text-align: center;
+    margin: 0 17px 0 17px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.carousel{
+    position: absolute;
+    width: 100%;
+    height: 480px;
     margin-top: 10px;
+}
+
+.carousel img {
+    height: 100%;
+    width: 100%;
 }

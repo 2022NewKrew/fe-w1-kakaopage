@@ -14,10 +14,6 @@ body {
     margin: 0;
 }
 
-
-
-
-/* common style */
 button {
     cursor: pointer;
 }
@@ -25,4 +21,5 @@ button {
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }

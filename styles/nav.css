@@ -18,6 +18,12 @@
 }
 
 .contents-nav-group li{
-    padding: 15px 0 10px;
-    text-align: center;
+    padding: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.contents-nav-group a {
+    display: flex;
+    align-items: center;
 }
