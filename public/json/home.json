@@ -5,15 +5,39 @@ homeJson = [
       {
         "title": "학사귀환",
         "subtitle": "학사 마현, 중원으로 돌아오다!",
-        "bannerImgSrc": "images/banner/banner-img-1.png",
+        "bannerImgSrc": "images/banner/home-banner-img-1.png",
         "badgeIconSrc": "images/icon/badge-up.svg",
         "category": "웹툰",
         "nReader": "47.1만명"
       },
       {
+        "title": "네 곁에도 어쩌면",
+        "subtitle": "죽은 그 사람, 네 옆에 있어",
+        "bannerImgSrc": "images/banner/home-banner-img-2.png",
+        "badgeIconSrc": "images/icon/badge-up.svg",
+        "category": "웹툰",
+        "nReader": "32만명"
+      },
+      {
+        "title": "로열 셰프 영애님",
+        "subtitle": "요리만 했을 뿐인데 왜 이러세요?",
+        "bannerImgSrc": "images/banner/home-banner-img-3.png",
+        "badgeIconSrc": "images/icon/badge-up.svg",
+        "category": "웹툰",
+        "nReader": "84.8만명"
+      },
+      {
+        "title": "은빛마계왕",
+        "subtitle": "눈 떠보니 재수 없는 마왕님?!",
+        "bannerImgSrc": "images/banner/home-banner-img-4.png",
+        "badgeIconSrc": "images/icon/badge-up.svg",
+        "category": "웹툰",
+        "nReader": "52.9만명"
+      },
+      {
         "title": "ㅋㅋㅋ웹툰 아카데미<br>카카페 데뷔반 2기 모집중",
         "subtitle": "카카오페이지 데뷔반 2월 7일 오픈!",
-        "bannerImgSrc": "images/banner/banner-img-5.png",
+        "bannerImgSrc": "images/banner/home-banner-img-5.png",
         "badgeIconSrc": "images/icon/badge-competition.svg",
         "category": "",
         "nReader": ""
