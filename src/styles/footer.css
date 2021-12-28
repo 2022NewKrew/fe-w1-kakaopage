@@ -1,0 +1,47 @@
+.appFooter {
+  font-size: 14px;
+  width: 720px;
+  margin: 0 auto;
+}
+
+.appFooter__leftBox {
+  float: left;
+}
+
+.appFooter__rightBox {
+  float: right;
+  margin-top: 60px;
+}
+
+.appFooter__policy {
+  padding: 60px 0px 0px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.appFooter__companyInfo {
+  margin-top: 5px;
+  color: #bdbdbd;
+}
+
+.appFooter__copyright {
+  display: block;
+  color: #cdcdcd;
+  text-align: left;
+  margin-top: 9px;
+  padding-bottom: 50px;
+}
+
+.appFooter__copyrightImg {
+  width: 55px;
+  height: 55px;
+}
+
+.appFooter__copyrightOK {
+  color: #a8a8a8;
+  margin: 3px 0 0 0;
+  text-align: center;
+  font-size: 12px;
+}
