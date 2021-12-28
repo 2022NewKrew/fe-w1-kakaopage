@@ -1,0 +1,122 @@
+.content {
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  margin-top: 11px;
+  padding: 22px 19px;
+}
+.content__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content__title > div {
+  display: flex;
+  align-items: center;
+}
+.content__title > div > h3 {
+  font-size: 20px;
+  color: #333;
+}
+.content__title > div > span {
+  color: #999;
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+.content__title > div > img {
+  width: 8px;
+  height: 14px;
+  margin-left: 4px;
+}
+.content__list {
+  display: flex;
+  margin-top: 15px;
+}
+.content__list > li {
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+  flex: 1;
+  background-color: #ffffff;
+  color: #bbbbbb;
+  /* border-bottom: 2px solid #ffd200; */
+  /* color: #333; */
+}
+.content__list > li > div {
+  padding: 15px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.content__item {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.week > .content__item > article.upper {
+  margin-bottom: 20px;
+}
+.content__item__post {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.content__item__post > img {
+  width: 120.4px;
+  height: 120.4px;
+  display: block;
+}
+.content__item__post > div {
+  height: 30px;
+  background-color: #242526;
+  padding: 0 8px;
+  align-items: center;
+  display: flex;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffd200;
+  justify-content: space-between;
+}
+.content__item__post > div > div {
+  display: flex;
+  align-items: center;
+}
+
+.content__item__post > div > div > span {
+  margin-left: 4px;
+}
+
+.content__item__post > div > img {
+  width: 16px;
+  height: 16px;
+}
+.content__item__title {
+  margin-top: 9px;
+  margin-bottom: 7px;
+  width: 120.4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content__item__title > div:nth-child(2) {
+  cursor: pointer;
+}
+.content__item__info {
+  display: flex;
+  align-items: center;
+  font-weight: 350;
+  font-size: 14px;
+  color: #9c9c9c;
+}
+.content__item__info > img {
+  margin-right: 4px;
+}
+
+.content__item__info > img:first-child {
+  width: 19px;
+  height: 13px;
+}
+.content__item__info > img:nth-child(2) {
+  width: 11px;
+  height: 11px;
+}

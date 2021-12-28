@@ -1,0 +1,28 @@
+* {
+  /* border: 1px solid gray; */
+  line-height: 1.4;
+}
+body {
+  background-color: #eee;
+  height: 200vh;
+  position: relative;
+  margin-top: 170px;
+}
+header {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+button {
+  border: none;
+  background-color: white;
+}
+main {
+  width: 720px;
+  margin: 0 auto;
+}
+button {
+  cursor: pointer;
+}

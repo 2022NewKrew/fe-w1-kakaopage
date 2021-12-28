@@ -1,0 +1,47 @@
+.menu {
+  border-bottom: 1px solid #e6e6e6;
+  background-color: white;
+  margin-top: 11px;
+  padding: 20px;
+}
+.menu-wrapper {
+  border-radius: 8px;
+  flex-wrap: wrap;
+  background-color: #f3f3f3;
+  display: flex;
+}
+.menu-wrapper > a {
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  width: 33.33333333333333%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  color: #3a3a3a;
+  padding: 0 10px;
+  display: flex;
+  cursor: pointer;
+}
+
+.menu-wrapper > a > div:first-child {
+  text-overflow: ellipsis;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 18px;
+  margin-bottom: 1px;
+}
+
+.menu-wrapper > a > div:nth-child(2) {
+  border-radius: 13px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  padding: 0 8px;
+  height: 24px;
+  align-items: center;
+  font-size: 16px;
+  background-color: #ffd200;
+  line-height: 24px;
+  display: flex;
+  padding-top: 3px;
+}
