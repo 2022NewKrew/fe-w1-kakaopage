@@ -1,19 +1,19 @@
-.header-nav li {
+.headerNav__item {
   box-sizing: border-box;
   position: relative;
   padding: 30px 0 15px;
   border-bottom: 3px solid transparent;
 }
 
-.header-nav a {
+.headerNav__item a {
   height: 20px;
 }
 
-.header-nav .selected {
+.headerNav__item--selected {
   border-bottom: 3px solid #ffd200;
 }
 
-.header-nav .dot {
+.headerNav__dot {
   box-sizing: border-box;
   margin: 0px;
   min-width: 0px;
@@ -28,11 +28,11 @@
 
 /* ---- ---- */
 
-.day-nav {
+.dayNav {
   padding: 0px 15px;
 }
 
-.day-nav li {
+.dayNav__item {
   cursor: pointer;
   padding: 20px 0px;
   color: #bbb;
@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-.day-nav .selected {
+.dayNav__item--selected {
   color: #1e1e1e;
   background-size: 44px;
   background-repeat: no-repeat;
@@ -50,14 +50,14 @@
 
 /* ----  ---- */
 
-.genre-nav a {
+.genreNav__item {
   text-decoration: none;
   color: rgb(187, 187, 187);
   font-weight: 350;
   line-height: 1.15;
 }
 
-.genre-nav .selected {
+.genreNav__item--selected {
   color: #333;
   font-weight: 500;
 }

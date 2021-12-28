@@ -1,6 +1,6 @@
 export const HeaderNavigator = () => {
   const $root = document.createElement("nav");
-  $root.className = "header-nav";
+  $root.className = "headerNav";
 
   const visitedList = JSON.parse(sessionStorage.getItem("visitedPath")) || [];
   const currentPath = decodeURI(window.location.pathname).substring(1);
@@ -9,19 +9,25 @@ export const HeaderNavigator = () => {
 
   const render = () => {
     $root.innerHTML = `
-        <nav class="header-nav">
+        <nav class="headerNav">
             <ul>
                 ${pathList
                   .map(
                     ({ path, img }) => `
-                    <li class="${path === currentPath && "selected"}">
+                    <li class="headerNav__item ${
+                      path === currentPath ? "headerNav__item--selected" : ""
+                    }">
                         <a href="/${path}">
                             <img
                                 src="${img}"
                                 alt="${path}"
                             />
                         </a>
-                        ${visitedPath.has(path) ? "" : '<div class="dot" />'}
+                        ${
+                          visitedPath.has(path)
+                            ? ""
+                            : '<div class="headerNav__dot" />'
+                        }
                     </li>
                 `
                   )

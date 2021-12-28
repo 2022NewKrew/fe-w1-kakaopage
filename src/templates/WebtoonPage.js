@@ -52,7 +52,7 @@ const TmpSectionHeader = () => {
     <h5>🔥HOT 최근 프로모션 진행작</h5>
     <a
       href="https://page.kakao.com/theme/list?themeId=24424"
-      class="show-more-btn"
+      class="showMoreBtn"
     >
       <span>더보기</span>
       <img

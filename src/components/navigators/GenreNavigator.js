@@ -1,6 +1,6 @@
 export const GenreNavigator = () => {
   const $root = document.createElement("nav");
-  $root.className = "genre-nav";
+  $root.className = "genreNav";
 
   const urlSearchParams = new URLSearchParams(window.location.search);
   const { genre } = Object.fromEntries(urlSearchParams.entries());
@@ -14,12 +14,14 @@ export const GenreNavigator = () => {
         ${genreList
           .map(
             ({ text, url }) => `
-            <li>
-                <a class="${isSelected(url) && "selected"}" href="?${url}">
-                    ${text}
+              <li>
+                <a class="genreNav__item ${
+                  isSelected(url) ? "genreNav__item--selected" : ""
+                }" href="?${url}">
+                  ${text}
                 </a>
-            </li>
-        `
+              </li>
+            `
           )
           .join("")}
     </ul>

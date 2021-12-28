@@ -5,7 +5,7 @@ export const DummyPage = () => {
 
   $root.innerHTML = `
         <section>
-            <div class="contents-wrapper">
+            <div class="contentRowListBox">
                 <h3>${currentPath}을 보고싶으신가요?</h3>
 
                 <p>기다리지 마세요. 이를 구현할 생각이 없거든요 ^^</p>

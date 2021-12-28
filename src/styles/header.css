@@ -1,4 +1,4 @@
-.app-header {
+.appHeader {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -14,24 +14,16 @@
   border-bottom: 1px solid #dfdfdf;
 }
 
-.app-header > * {
+.appHeader > * {
   width: 720px;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
 
-/* header-action-wrapper */
+/* headerActionBox */
 
-.logo {
-  margin-right: auto;
-}
-
-.pagestage-wapper {
-  position: relative;
-}
-
-.header-action-wrapper {
+.headerActionBox {
   padding-top: 30px;
   height: 80px;
   box-sizing: border-box;
@@ -40,11 +32,27 @@
   justify-content: flex-end;
 }
 
-.header-action-wrapper > :not(:first-of-type) {
+.headerActionBox > :not(:first-of-type) {
   margin-left: 24px;
 }
 
-.header-action-wrapper .tool-tip {
+.headerActionBox__logo {
+  margin-right: auto;
+}
+
+.headerActionBox__separator {
+  box-sizing: border-box;
+  margin: auto 10px;
+  width: 1px;
+  height: 12px;
+  background-color: #e2e2e2;
+}
+
+.pagestageBox {
+  position: relative;
+}
+
+.pagestageBox__toolTip {
   box-sizing: border-box;
   margin: 0px;
   min-width: 0px;
@@ -54,12 +62,4 @@
   width: 137px;
   height: 33px;
   max-width: none;
-}
-
-.header-action-wrapper .separator {
-  box-sizing: border-box;
-  margin: auto 10px;
-  width: 1px;
-  height: 12px;
-  background-color: #e2e2e2;
 }
