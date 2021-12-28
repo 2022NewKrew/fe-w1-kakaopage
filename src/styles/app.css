@@ -123,47 +123,29 @@
 
 /* ---- appDownloadWrap ---- */
 
-.appDownloadWrap {
+.app-download-wrap {
   background: #fecc2e;
   cursor: pointer;
   display: flex;
 }
 
-.appDownloadWrap > img {
+.app-download-wrap > img {
   width: 70%;
   margin: 0 auto;
 }
 
-/* ---- app ---- */
+/* ---- show more btn  */
 
-.genre-nav a {
-  text-decoration: none;
-  color: rgb(187, 187, 187);
-  font-weight: 350;
-  line-height: 1.15;
+.show-more-btn {
+  margin-left: auto;
+  color: #999999;
+  display: flex;
+  align-items: center;
 }
 
-.genre-nav .selected {
-  color: #333;
-  font-weight: 500;
-}
-
-.day-nav {
-  padding: 0px 15px;
-}
-
-.day-nav li {
-  cursor: pointer;
-  padding: 20px 0px;
-  color: #bbb;
-  font-size: 17px;
-  text-align: center;
-}
-
-.day-nav .selected {
-  color: #1e1e1e;
-  background-size: 44px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url(https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b11…);
+.show-more-btn > img {
+  margin-left: 4px;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 14px;
 }

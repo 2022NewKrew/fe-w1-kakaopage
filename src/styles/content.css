@@ -82,17 +82,3 @@
   height: 11px;
   background-color: #d9d9d9;
 }
-
-.show-more-btn {
-  margin-left: auto;
-  color: #999999;
-  display: flex;
-  align-items: center;
-}
-
-.show-more-btn > img {
-  margin-left: 4px;
-  margin-bottom: 2px;
-  width: 8px;
-  height: 14px;
-}
