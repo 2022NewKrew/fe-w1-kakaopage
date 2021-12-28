@@ -1,4 +1,9 @@
 @import url("reset.css");
 @import url("common.css");
-@import url("./layout/style.css");
-@import url("./content/style.css");
+@import url("header.css");
+@import url("nav.css");
+@import url("genres.css");
+@import url("banner.css");
+@import url("menu.css");
+@import url("event.css");
+@import url("content.css");

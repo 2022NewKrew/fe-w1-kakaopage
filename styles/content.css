@@ -1,38 +1,38 @@
-.week {
+.content {
   border-bottom: 1px solid #e6e6e6;
   background-color: #ffffff;
   margin-top: 11px;
   padding: 22px 19px;
 }
-.week__title {
+.content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.week__title > div {
+.content__title > div {
   display: flex;
   align-items: center;
 }
-.week__title > div > h3 {
+.content__title > div > h3 {
   font-size: 20px;
   color: #333;
 }
-.week__title > div > span {
+.content__title > div > span {
   color: #999;
   font-size: 16px;
   margin-left: 4px;
 }
 
-.week__title > div > img {
+.content__title > div > img {
   width: 8px;
   height: 14px;
   margin-left: 4px;
 }
-.week__list {
+.content__list {
   display: flex;
   margin-top: 15px;
 }
-.week__list > li {
+.content__list > li {
   border-bottom: 1px solid #f1f1f1;
   cursor: pointer;
   flex: 1;
@@ -41,32 +41,32 @@
   /* border-bottom: 2px solid #ffd200; */
   /* color: #333; */
 }
-.week__list > li > div {
+.content__list > li > div {
   padding: 15px 0;
   font-size: 20px;
   text-align: center;
 }
 
-.week__content {
+.content__item {
   margin-top: 22px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.week__content > article {
+.week > .content__item > article.upper {
   margin-bottom: 20px;
 }
-.week__post {
+.content__item__post {
   border-radius: 8px;
   overflow: hidden;
 }
 
-.week__post > img {
+.content__item__post > img {
   width: 120.4px;
   height: 120.4px;
   display: block;
 }
-.week__post > div {
+.content__item__post > div {
   height: 30px;
   background-color: #242526;
   padding: 0 8px;
@@ -77,34 +77,46 @@
   color: #ffd200;
   justify-content: space-between;
 }
+.content__item__post > div > div {
+  display: flex;
+  align-items: center;
+}
 
-.week__post > div > img {
+.content__item__post > div > div > span {
+  margin-left: 4px;
+}
+
+.content__item__post > div > img {
   width: 16px;
   height: 16px;
 }
-.week__title {
+.content__item__title {
   margin-top: 9px;
   margin-bottom: 7px;
+  width: 120.4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.week__title > div:nth-child(2) {
+.content__item__title > div:nth-child(2) {
   cursor: pointer;
 }
-.week__info {
+.content__item__info {
   display: flex;
   align-items: center;
   font-weight: 350;
   font-size: 14px;
   color: #9c9c9c;
 }
-.week__info > img {
+.content__item__info > img {
   margin-right: 4px;
 }
 
-.week__info > img:first-child {
+.content__item__info > img:first-child {
   width: 19px;
   height: 13px;
 }
-.week__info > img:nth-child(2) {
+.content__item__info > img:nth-child(2) {
   width: 11px;
   height: 11px;
 }
