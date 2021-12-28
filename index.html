@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/search-bar.css">
     <link rel="stylesheet" href="css/header-category.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/toon.css">
 </head>
 <body>
     <header id="kpw-header">
@@ -45,32 +46,32 @@
         </div>
         <nav id="header-category">
             <ul>
-                <li class="category-element">
+                <li class="category-element" data-num="home">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_home.svg">
                     </a>
                 </li>
-                <li class="category-element selected">
+                <li class="category-element selected" data-num="toon">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_toon.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="category-element" data-num="novel">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_novel.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="category-element" data-num="vod">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_vod.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="category-element" data-num="broadcast">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_broadcast.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="category-element" data-num="book">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_book.svg">
                     </a>
@@ -78,7 +79,21 @@
             </ul>
         </nav>
     </header>
-    <div id="root"></div>
+    <section id="main-contents">
+        <nav class="toon-category">
+            <ul>
+                <li><a>홈</a></li>
+                <li class="selected"><a>요일연재</a></li>
+                <li><a>웹툰</a></li>
+                <li><a>소년</a></li>
+                <li><a>드라마</a></li>
+                <li><a>로맨스</a></li>
+                <li><a>로판</a></li>
+                <li><a>액션무협</a></li>
+                <li><a>BL</a></li>
+            </ul>
+        </nav>
+    </section>
     <footer id="kpw-footer">
         <button class="app-download-btn">
             <img src="https://static-page.kakao.com/static/pc/appDownload.png"
@@ -108,6 +123,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/category-change.js"></script>
+    <script type="module" src="js/init.js"></script>
 </body>
 </html>

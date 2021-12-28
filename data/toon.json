@@ -1,0 +1,36 @@
+{
+    "category": [
+        {
+            "id": "toon-home",
+            "name": "홈"
+        },
+        {
+            "id": "toon-week",
+            "name": "요일연재"
+        },
+        {
+            "id": "toon-teen",
+            "name": "소년"
+        },
+        {
+            "id": "toon-drama",
+            "name": "드라마"
+        },
+        {
+            "id": "toon-romance",
+            "name": "로맨스"
+        },
+        {
+            "id": "toon-lovefantasy",
+            "name": "로판"
+        },
+        {
+            "id": "toon-action",
+            "name": "액션무협"
+        },
+        {
+            "id": "toon-bl",
+            "name": "BL"
+        }
+    ]
+}
