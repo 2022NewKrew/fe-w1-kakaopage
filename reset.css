@@ -36,6 +36,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+input {
+  outline: none;
+  border: none;
+}
 input:focus {
   outline: none;
 }
