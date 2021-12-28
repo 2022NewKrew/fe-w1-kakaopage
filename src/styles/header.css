@@ -4,7 +4,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin: 0;
   min-width: 0;
   z-index: 201;
   box-sizing: border-box;
@@ -22,8 +21,14 @@
   align-items: center;
 }
 
+/* header-action-wrapper */
+
 .logo {
   margin-right: auto;
+}
+
+.pagestage-wapper {
+  position: relative;
 }
 
 .header-action-wrapper {
@@ -39,10 +44,6 @@
   margin-left: 24px;
 }
 
-.pagestage-wapper {
-  position: relative;
-}
-
 .header-action-wrapper .tool-tip {
   box-sizing: border-box;
   margin: 0px;
@@ -53,4 +54,12 @@
   width: 137px;
   height: 33px;
   max-width: none;
+}
+
+.header-action-wrapper .separator {
+  box-sizing: border-box;
+  margin: auto 10px;
+  width: 1px;
+  height: 12px;
+  background-color: #e2e2e2;
 }

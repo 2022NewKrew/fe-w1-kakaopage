@@ -22,14 +22,6 @@
   cursor: pointer;
 }
 
-.separator {
-  box-sizing: border-box;
-  margin: auto 10px;
-  width: 1px;
-  height: 12px;
-  background-color: #e2e2e2;
-}
-
 /* ---- topBannerBox ---- */
 
 .topBannerBox {
@@ -63,7 +55,6 @@
   font-size: 28px;
   font-weight: 500;
   line-height: 1;
-  margin: 0px;
   margin-top: 6px;
 }
 

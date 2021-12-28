@@ -1,6 +1,7 @@
 * {
   font-family: NotoSans;
   line-height: 1.4;
+  margin: 0px;
 }
 
 html {
@@ -8,7 +9,6 @@ html {
 }
 
 body {
-  margin: 0;
   background: #eee;
   user-select: none;
 }
@@ -16,6 +16,17 @@ body {
 main {
   margin-top: 167px;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* section */
 
 section {
   display: flex;
@@ -35,6 +46,8 @@ section header h5 {
   line-height: 28px;
   margin: 0px;
 }
+
+/* nav */
 
 nav {
   box-sizing: border-box;
@@ -57,7 +70,6 @@ nav ul {
 
 nav ul > li {
   box-sizing: border-box;
-  margin: 0px;
   min-width: 0px;
   text-align: center;
   flex: 1 1 auto;
@@ -72,12 +84,37 @@ nav ul > li > * {
   cursor: pointer;
 }
 
-ul,
-li {
-  list-style: none;
-  margin: 0px;
+/* footer */
+
+footer {
+  font-size: 14px;
+  width: 720px;
+  margin: 0 auto;
 }
 
-a {
+footer ul {
+  padding: 60px 0px 0px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer a {
+  cursor: pointer;
+  color: #bdbdbd;
   text-decoration: none;
+}
+
+footer .companyInfo {
+  margin-top: 5px;
+  color: #bdbdbd;
+}
+
+footer .copyright {
+  display: block;
+  color: #cdcdcd;
+  text-align: left;
+  margin-top: 9px;
+  padding-bottom: 50px;
 }
