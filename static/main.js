@@ -61,4 +61,6 @@ document.getElementById("webfic-tab").onclick=webfic_tab;
 document.getElementById("movie-tab").onclick=movie_tab;
 document.getElementById("broadcast-tab").onclick=broadcast_tab;
 document.getElementById("book-tab").onclick=book_tab;
-home_tab();
+// home_tab();
+// NOTE Temporarily set webtoon tab as default for convenience :)
+webtoon_tab();

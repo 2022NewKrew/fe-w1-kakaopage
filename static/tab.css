@@ -7,6 +7,7 @@
   margin: 10px 0;
   position: relative;
 }
+
 .banner-img {
   width: 720px;
 }
@@ -55,4 +56,50 @@
   font-size: 20px;
   margin-left: auto;
   margin-right: 0;
+}
+
+.tab-nav {
+  display: flex;
+  width: 720px;
+}
+.tab-nav ul {
+  width: 720px;
+  display: flex;
+  padding: 0;
+}
+.tab-nav li {
+  list-style-type: none;
+  flex: 1 1 auto;
+  text-align: center;
+}
+.tab-nav button {
+  border: none;
+  cursor: pointer;
+  background-color: #0000;
+  font-size: 20px;
+  color: #a1a1a1;
+}
+
+.section-featuring {
+  padding: 20px;
+}
+.featuring-tabs {
+  overflow: hidden;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.featuring-tab {
+  background-color: #f3f3f3;
+  margin: 1px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
