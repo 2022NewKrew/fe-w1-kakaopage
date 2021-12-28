@@ -8,7 +8,8 @@ const __dirname = path.resolve();
 app.use(express.static("src"));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/src/index.html");
+    console.log("GET /");
+    res.sendFile(__dirname + "/index");
 })
 
 app.listen(PORT, () => {
