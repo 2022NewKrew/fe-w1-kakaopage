@@ -1,3 +1,29 @@
+function makeMenuYellow(menu) {
+  const menus = document.getElementsByClassName("menu");
+  Array.from(menus).forEach((e) => {
+    if (e.classList.contains("active-menu")) {
+      e.classList.remove("active-menu");
+      return;
+    }
+  });
+  menu.classList.add("active-menu");
+}
+
+function menuNavigation() {
+  const menus = document.getElementById("navigation");
+  menus.addEventListener("click", (e) => {
+    const menuId = e.target.getAttribute("data-tab-id");
+    if (menuId) {
+      const menu = document.getElementById(menuId).parentNode;
+      makeMenuYellow(menu);
+    } else {
+      return;
+    }
+  });
+}
+
+menuNavigation();
+
 // banner carousel
 let slideIndex = 1;
 showSlides(slideIndex);
