@@ -16,7 +16,7 @@ export const DayNavigator = () => {
   const $weekdayList = $root.querySelector("ul").children;
 
   let currentDay = new Date().getDay() || 7;
-  $weekdayList[currentDay - 1].className = "dayNav__item--selected";
+  $weekdayList[currentDay - 1].classList.add("dayNav__item--selected");
 
   $root.addEventListener("click", (e) => {
     currentDay = e.target.dataset.weekday;
