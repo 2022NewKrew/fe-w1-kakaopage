@@ -1,0 +1,98 @@
+* {
+  font-family: '카카오';
+}
+
+.header-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+.body-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(153, 153, 153);
+}
+
+.header-container {
+  min-width: 750px;
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-container {
+  display: flex;
+  position: relative;
+}
+
+.search-input {
+  padding: 10px 15px;
+  height: 15px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 20px;
+}
+
+.search-button {
+  position: absolute;
+  width: 20px;
+  right: 10px;
+  top: 50%;
+  cursor: pointer;
+  transform: translate(0%, -50%);
+}
+
+.stage-img {
+  margin-left: 24px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.header-right-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-text {
+  margin-left: 12px;
+  color: rgb(153, 153, 153);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-text-div {
+  margin-left: 12px;
+  height: 15px;
+  width: 1px;
+  background-color: rgb(153, 153, 153);
+  border-color: rgb(153, 153, 153);
+  cursor: pointer;
+}
+
+.stage-container {
+  position: relative;
+}
+
+.stage-explain {
+  position: absolute;
+  top: 31px;
+  left: -13px;
+}
+
+.navbar {
+  margin-top: 48px;
+  display: flex;
+}
+
+.nav-menu {
+  margin: 30px;
+  cursor: pointer;
+}
