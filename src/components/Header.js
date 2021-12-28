@@ -6,7 +6,6 @@ export const Header = function({ $app }) {
 
     this.render = () => {
         this.$target.innerHTML = `
-        <div class="fix first">
             <header>
                 <h1>
                     <div class="vertical-center">
@@ -26,7 +25,6 @@ export const Header = function({ $app }) {
                     </div>
                 </h1>
             </header>
-        </div>
         `
     }
     this.render();
