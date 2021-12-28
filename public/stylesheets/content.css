@@ -77,12 +77,40 @@ div.carousel_menu {
     margin: 11px auto;
     background: white;
 }
+div.carousel_menu > .menu_wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    background: #f1f1f1;
+}
+div.carousel_menu > .menu_wrap a {
+    width: 33%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+div.carousel_menu > .menu_wrap a:nth-of-type(3n) {
+    border-right: none;
+}
+div.carousel_menu .carousel_menu_title {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
 div.event_menu {
     width: 720px;
     height: 140px;
     margin: 11px auto;
     background: white;
 }
+
 div.day_webtoon {
     width: 720px;
     height: 610px; /*임시*/
@@ -125,7 +153,7 @@ div.appDownload > img {
     box-sizing: border-box;
     font-size: large;
     text-align: center;
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 .main_content .appDownload {
     padding-top: 0px;
