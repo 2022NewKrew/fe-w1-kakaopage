@@ -1,3 +1,5 @@
+/* ---- contentRowListBox ---- */
+
 .contentRowListBox {
   flex-direction: column;
   padding: 20px;
@@ -84,4 +86,96 @@
   width: 1px;
   height: 11px;
   background-color: #d9d9d9;
+}
+
+/* ---- contentGridListBox ---- */
+
+.contentGridListBox {
+  padding: 20px;
+}
+
+.contentGridListItem {
+  box-sizing: border-box;
+  width: 120px;
+  margin: 0px 0px 21px;
+}
+
+.contentGridListItem__thumb {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contentGridListItem__thumbWrapper {
+  position: relative;
+}
+
+.contentGridListItem__thumbImg {
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+
+.contentGridListItem__thumbOutline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contentGridListItem__thumbFooter {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0px 8px;
+  background-color: #242526;
+}
+
+.contentGridListItem__thumbStar {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+.contentGridListItem__thumbText {
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffd200;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.contentGridListItem__thumbClock {
+  height: 16px;
+  margin-left: auto;
+}
+
+.contentGridListItem__contentTitle {
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+
+.contentGridListItem__contentInfo {
+  display: flex;
+  align-items: center;
+  color: #9c9c9c;
+  font-weight: 350;
+  font-size: 14px;
+}
+
+.contentGridListItem__contentNew {
+  height: 13px;
+  margin-right: 4px;
+}
+
+.contentGridListItem__contentPerson {
+  width: 11px;
+  height: 11px;
+  margin-right: 4px;
 }
