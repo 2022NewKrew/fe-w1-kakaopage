@@ -288,6 +288,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 60px;
 }
 
 .webtoon-menu > p:first-child {
