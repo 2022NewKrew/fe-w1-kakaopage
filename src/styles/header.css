@@ -1,0 +1,65 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 0;
+  z-index: 201;
+  box-sizing: border-box;
+  border-bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  backface-visibility: hidden;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.app-header > * {
+  width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* header-action-wrapper */
+
+.logo {
+  margin-right: auto;
+}
+
+.pagestage-wapper {
+  position: relative;
+}
+
+.header-action-wrapper {
+  padding-top: 30px;
+  height: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.header-action-wrapper > :not(:first-of-type) {
+  margin-left: 24px;
+}
+
+.header-action-wrapper .tool-tip {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  position: absolute;
+  top: 29px;
+  left: -37px;
+  width: 137px;
+  height: 33px;
+  max-width: none;
+}
+
+.header-action-wrapper .separator {
+  box-sizing: border-box;
+  margin: auto 10px;
+  width: 1px;
+  height: 12px;
+  background-color: #e2e2e2;
+}
