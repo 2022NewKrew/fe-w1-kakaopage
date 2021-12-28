@@ -1,3 +1,7 @@
+:root {
+  --content-width: 720px; /* content width 값 (720px 고정) */
+  --slider-title-second-height: 40px;
+}
 nav.content_nav {
   position: fixed;
   top: 80px;
@@ -24,7 +28,7 @@ div.content_sub_nav > ul li {
 nav.content_nav > ul,
 div.content_sub_nav > ul {
   display: flex;
-  width: 720px;
+  width: var(--content-width);
   margin: 0px auto;
   box-sizing: border-box;
 }
@@ -51,12 +55,12 @@ nav.content_nav > ul > li > img {
   height: 20px;
 }
 div.main_content {
-  width: 720px;
+  width: var(--content-width);
   margin: 167px auto;
 }
 
 div.content_sub_nav {
-  width: 720px;
+  width: var(--content-width);
   margin: 0px auto;
 }
 
@@ -64,22 +68,25 @@ li.selected {
   color: black;
 }
 div.carousel {
-  width: 720px;
+  width: var(--content-width);
   height: 480px;
   margin: 11px auto;
   background: white;
   position: relative;
 }
-div.carousel > .click_prev {
+div.carousel > .carousel_click_wrap {
   position: absolute;
-  top: 50%;
-  left: 0px;
+  top: 0;
+  width: 100%;
+  display: flex;
+  height: calc(100% - var(--slider-title-second-height));
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel_click_wrap > .click_prev {
   margin-left: 20px;
 }
-div.carousel > .click_next {
-  position: absolute;
-  top: 50%;
-  right: 0px;
+.carousel_click_wrap > .click_next {
   margin-right: 20px;
 }
 div.carousel > .page_loc {
@@ -127,7 +134,7 @@ img.division {
 
 div.carousel .slide_title_second {
   width: 100%;
-  height: 40px;
+  height: val(--slider-title-second-height);
   background-color: #ffd200;
   display: flex;
   justify-content: center;
@@ -159,7 +166,7 @@ div.slide_title_wrap {
 div.carousel_menu {
   box-sizing: border-box;
   padding: 20px;
-  width: 720px;
+  width: var(--content-width);
   height: 160px;
   margin: 11px auto;
   background: white;
@@ -192,38 +199,38 @@ div.carousel_menu .carousel_menu_title {
 }
 
 div.event_menu {
-  width: 720px;
+  width: var(--content-width);
   height: 140px;
   margin: 11px auto;
   background: white;
 }
 
 div.day_webtoon {
-  width: 720px;
+  width: var(--content-width);
   height: 610px; /*임시*/
   margin: 11px auto;
   background: white;
 }
 div.top {
-  width: 720px;
+  width: var(--content-width);
   height: 300px;
   margin: 11px auto;
   background: white;
 }
 div.day_top {
-  width: 720px;
+  width: var(--content-width);
   margin: 11px auto;
   height: 490px;
   background: white;
 }
 div.recommend_event {
-  width: 720px;
+  width: var(--content-width);
   margin: 11px auto;
   height: 430px;
   background: white;
 }
 div.app_download {
-  width: 720px;
+  width: var(--content-width);
   height: 70px;
   background: #fecc2e;
   margin: 11px auto;
