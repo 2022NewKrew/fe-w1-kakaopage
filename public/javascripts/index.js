@@ -7,8 +7,6 @@ function init() {
         "div.content_sub_nav>ul"
     );
     const kakao_footer_companyInfo = document.querySelector("p.companyInfo");
-    let cur_content_nav_li = document.querySelector("li.clicked") || null;
-    let cur_content_sub_nav_li = document.querySelector("li.selected") || null;
 
     kakao_content_nav_ul.addEventListener("click", nav_list_toggle_clicked, {
         capture: true,
@@ -25,6 +23,7 @@ function init() {
 }
 
 function nav_list_toggle_clicked(e) {
+    let cur_content_nav_li = document.querySelector("li.clicked") || null;
     if (e.target.parentNode.tagName !== "LI") return;
     if (cur_content_nav_li) {
         cur_content_nav_li.classList.remove("clicked");
@@ -34,7 +33,7 @@ function nav_list_toggle_clicked(e) {
 }
 
 function nav_list_toggle_selected(e) {
-    console.log(e.target);
+    let cur_content_sub_nav_li = document.querySelector("li.selected") || null;
     if (e.target.tagName !== "LI") return;
     if (cur_content_sub_nav_li) {
         cur_content_sub_nav_li.classList.remove("selected");
