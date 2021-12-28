@@ -4,8 +4,18 @@ const __dirname = path.resolve();
 
 const router = express.Router();
 
-router.get("/*", (req, res, next) => {
-  res.sendFile(__dirname + "/src/app.html");
+router.use("/", (req, res, next) => {
+  req.url = decodeURIComponent(req.url);
+  next();
+});
+
+router.get("/웹툰", (req, res) => {
+  console.log(__dirname);
+  res.sendFile(__dirname + "/src/pages/webtoon.html");
+});
+
+router.get("/*", (req, res) => {
+  res.sendFile(__dirname + "/src/pages/dummy.html");
 });
 
 export default router;

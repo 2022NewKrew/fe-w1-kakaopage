@@ -7,8 +7,6 @@ export const HeaderNavigator = () => {
   const visitedPath = new Set([...visitedList, currentPath]);
   sessionStorage.setItem("visitedPath", JSON.stringify([...visitedPath]));
 
-  console.log(visitedPath);
-
   const render = () => {
     $root.innerHTML = `
         <nav class="header-nav">
