@@ -3,7 +3,7 @@
     line-height: 1.4; 
 }
 
-body, ul {
+body, ul, p {
     margin: 0; 
     padding: 0;
 }
@@ -369,3 +369,60 @@ main {
       width: 100%;
     }
   }
+
+/**
+ 요일 연재 TOP 
+*/
+/* title 및 더보기  */
+.daily-ranking {
+    box-sizing: border-box;
+    width: 720px;
+    margin: 11px auto 0 auto; 
+    padding: 22px 19px;
+    background-color: #ffffff;
+}
+
+.daily-ranking-header, .daily-ranking-top, .daily-ranking-more {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.daily-ranking-top > p:first-child {
+    margin: 0; 
+    font-size: 20px; 
+    color: #333;
+}
+
+.daily-ranking-top > p:last-child {
+    color: #999; 
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.daily-ranking-more > p {
+    color: rgb(153, 153, 153); 
+    font-size: 16px;
+}
+
+.daily-ranking-more > img {
+    margin-left: 4px;
+    margin-top: 2px;
+    width: 8px;
+    height: 14px;
+}
+
+.daily-ranking-tabs {
+    margin-top: 15px;
+}
+
+.daily-ranking-tabs-container {
+    display: flex;
+}
+
+.daily-ranking-tabs-container > li {
+    padding: 15px 0; 
+    font-size: 20px;
+    text-align: center;
+    color: #bbbbbb;
+}
