@@ -14,7 +14,7 @@ const getAPI = async (url) => {
 };
 
 const isActive = (index, targetActiveIndex) => {
-  return index === targetActiveIndex ? " active" : "";
+  return index === targetActiveIndex ? "active" : "";
 };
 /********* common logic  **********/
 
@@ -24,7 +24,7 @@ const navParent = $(".nav-container");
 let currNavActiveIndex = 0;
 
 const createNavEle = (title, index) => {
-  return `<li class="nav-list${isActive(index, currNavActiveIndex)}" 
+  return `<li class="nav-list ${isActive(index, currNavActiveIndex)}" 
       data-idx=${index}>${title}</li>`;
 };
 
@@ -95,45 +95,38 @@ const createMenuEle = (title, index) => {
 };
 /********* menubar template in webtoon page  **********/
 
+/********* daybar template in webtoon page  **********/
+let currDayActiveIndex = 0;
+let currDayCircleIndex = 0;
+const dayClassList = ["day-circle", "day-span", "day"];
+const createDayBar = async () => {
+  try {
+    const dayData = await getAPI("./data/day.json");
+    const dayElements = dayData
+      .map((day, index) => createDayEle(day.name, index))
+      .join("");
+    return dayElements;
+  } catch (e) {
+    alert(e);
+  }
+};
+
+const createDayEle = (name, index) => {
+  return `<li class="day ${isActive(
+    index,
+    currDayActiveIndex
+  )}" data-idx=${index}><div class="day-circle ${isActive(
+    index,
+    currDayActiveIndex
+  )}" data-idx=${index}></div><span class="day-span" data-idx=${index}>${name}</span></li>`;
+};
+
+/********* day template in webtoon page  **********/
 const createWebtoonPage = async () => {
   return `
-     <ul class="menu-container">${await createMenuBar()}</ul>
+      <ul class="menu-container">${await createMenuBar()}</ul>
       <div class="day-outer-container">
-        <ul class="day-container">
-          <li class="day active">
-            <div class="day-circle active"></div>
-            <span class="day-span">월</span>
-          </li>
-          <li class="day">
-            <div class="day-circle"></div>
-            <span class="day-span">화</span>
-          </li>
-          <li class="day">
-            <div class="day-circle"></div>
-            <span class="day-span">수</span>
-          </li>
-          <li class="day">
-            <div class="day-circle"></div>
-            <span class="day-span">목</span>
-          </li>
-          <li class="day">
-            <div class="day-circle"></div>
-            <span class="day-span">금</span>
-          </li>
-          <li class="day">
-            <div class="day-circle"></div>
-            <span class="day-span">토</span>
-          </li>
-          <li class="day">
-            <div class="day-circle"></div>
-            <span class="day-span">일</span>
-          </li>
-          <li class="day">
-            <div class="day-circle"></div>
-            <span class="day-span">완결</span>
-          </li>
-        </ul>
-
+        <ul class="day-container">${await createDayBar()}</ul>
         <div class="category-container">
             <div class="category-left">
                 <span class="category active">전체</span>
@@ -250,15 +243,36 @@ const createWebtoonPage = async () => {
 /********* body event  **********/
 document.body.addEventListener("click", (e) => {
   if (e.target.classList.contains("nav-list")) {
-    changeActiveStaus(e, currNavActiveIndex, navParent);
+    changeActiveStatus(e, currNavActiveIndex, navParent);
   } else if (e.target.classList.contains("menu-list")) {
     const menuParent = $(".menu-container");
-    changeActiveStaus(e, currMenuActiveIndex, menuParent);
+    changeActiveStatus(e, currMenuActiveIndex, menuParent);
+  } else if (dayClassList.includes(e.target.classList[0])) {
+    const dayParent = $(".day-container");
+    changeActiveStatus(e, currDayActiveIndex, dayParent);
   }
 });
 
-const changeActiveStaus = (e, currActiveIndex, parentEle) => {
+const changeActiveStatus = (e, currActiveIndex, parentEle) => {
   if (Number(e.target.dataset.idx) === currActiveIndex) return;
+
+  if (parentEle === $(".day-container")) {
+    const currIdxOfdayCircleEle =
+      parentEle.childNodes[currActiveIndex].childNodes[0];
+    const currIdxOfdayEle = parentEle.childNodes[currActiveIndex];
+
+    currIdxOfdayCircleEle.classList.remove("active");
+    currIdxOfdayEle.classList.remove("active");
+    const targetIndex = Number(e.target.dataset.idx);
+    const newActiveIndex = getNewActiveIndex(parentEle, targetIndex);
+    const newIdxOfdayCircleEle =
+      parentEle.childNodes[newActiveIndex].childNodes[0];
+    const newIdxOfdayEle = parentEle.childNodes[newActiveIndex];
+    newIdxOfdayCircleEle.classList.add("active");
+    newIdxOfdayEle.classList.add("active");
+    return;
+  }
+
   parentEle.childNodes[currActiveIndex].classList.remove("active");
   const targetIndex = Number(e.target.dataset.idx);
   const newActiveIndex = getNewActiveIndex(parentEle, targetIndex);
@@ -272,5 +286,8 @@ const getNewActiveIndex = (parentEle, targetIndex) => {
   } else if (parentEle === $(".menu-container")) {
     currMenuActiveIndex = targetIndex;
     return currMenuActiveIndex;
+  } else if (parentEle === $(".day-container")) {
+    currDayActiveIndex = targetIndex;
+    return currDayActiveIndex;
   }
 };
