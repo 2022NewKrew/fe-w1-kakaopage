@@ -31,6 +31,7 @@ function createBanner(content) {
     return newBannerEl
 }
 
+// TODO: 반복된 연산 리팩토링하기
 export function createCarousel(data) {
     const newCarouselEl = carouselEl.cloneNode(true)
     const newCarouselBannerPartEl = newCarouselEl.querySelector('.carousel-banner-part')
@@ -49,6 +50,7 @@ export function createCarousel(data) {
     })
     newCarouselBannerPartEl.appendChild(createBanner(data[0]))
     
+    // TODO: 상수 변수로 관리하기
     newCarouselBannerPartEl.style.width = (data.length + 2) * 720 + 'px'
     newCarouselBannerPartEl.style.transform = `translateX(-${idx * 720}px)`
     

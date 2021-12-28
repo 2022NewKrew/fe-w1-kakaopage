@@ -1,10 +1,12 @@
 import { createCarousel } from './carousel.js'
 
-const homeData = JSON.parse(JSON.stringify(homeJson));
-
-window.addEventListener('DOMContentLoaded', () => {
-
-})
+(() => {
+    const homeData = JSON.parse(JSON.stringify(homeJson));
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        drawComponent(homeData)
+    })
+})()
 
 function removeAllChild(element) {
     while (element.hasChildNodes()) {
@@ -17,7 +19,7 @@ function drawComponent(data) {
     
     removeAllChild(componentBoxEl)
     
-    homeData.forEach((component, idx) => {
+    data.forEach((component, idx) => {
         switch (component.type) {
             case 'carousel':
                 componentBoxEl.appendChild(createCarousel(component.content))
