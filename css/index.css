@@ -1,0 +1,568 @@
+@charset "UTF-8";
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dd,
+p,
+fieldset,
+legend,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: NotoSans, "나눔 고딕", NanumGothic, "돋움", Dotum, sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  vertical-align: top;
+}
+
+fieldset {
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.u_skip,
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.wrap {
+  min-width: 720px;
+  background-color: #ebebeb;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.header_inner_wrap {
+  width: 720px;
+  margin: 0 auto; 
+  padding-top: 30px;
+}
+
+.header_inner_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.main_header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.logo {
+  float: left;
+}
+  
+.logo::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954) no-repeat;
+  background-size: 130px 29px;
+  width: 130px;
+  height: 29px;
+}
+
+.search_wrap {
+  margin-left: 160px;
+  width: 176px;
+  display: inline-block;
+  border: 1px solid #cfcfcf;
+  border-radius: 13px;
+  padding: 4px;
+}
+
+.search_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.search_input {
+  border: 0;
+  padding: 2px 4px;
+  height: 16px;
+}
+
+.search_input:focus {
+  outline: none;
+}
+
+.search_button {
+  float: right;
+  background-color: transparent;
+  border: 0;
+}
+
+.search_button::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a) no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.pagestage_link {
+  position: relative;
+  padding: 0 18px;
+}
+
+.pagestage_link::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: -16px;
+  background: url(https://static-page.kakao.com/static/common/stage-tooltip.svg?e37d1bc523d4daad835b7ea0620ec658) no-repeat;
+  background-size: 137px 33px;
+  width: 137px;
+  height: 33px;
+}
+
+.pagestage_link::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f) no-repeat;
+  background-size: 62px 26px;
+  width: 62px;
+  height: 26px;
+}
+
+.header_buttons_wrap {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header_buttons_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.header_buttons {
+  float: left;
+  color: #999;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  border: 0;
+  background-color: transparent;
+}
+
+.header_buttons + .header_buttons::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin: 8px 8px 0 8px;
+  width: 1px;
+  height: 12px;
+  background-color: #e2e2e2;    
+}
+
+.sub_header {
+  margin-top: 30px;
+}
+
+.sub_header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.sub_header_link {
+  float: left;
+  position: relative;
+  padding: 16px 39px 16px;
+}
+
+.sub_header_link::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sub_header_link.home::after {
+  background: url(https://static-page.kakao.com/static/pc/menu_home.svg?156813c20605e12311c90bae39f38c31) no-repeat;
+  background-size: 18px 20px;
+  width: 18px;
+  height: 20px;
+}
+
+.sub_header_link.webtoon::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/menu_toon.svg?fd6837bff2e823e13c693320961cc5a8) no-repeat;
+  background-size: 65px 20px;
+  width: 65px;
+  height: 20px;
+}
+
+.sub_header_link.web_novel::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/menu_novel.svg?417f894a74c6cd5334b4a84cfa470d55) no-repeat;
+  background-size: 82px 20px;
+  width: 82px;
+  height: 20px;
+}
+
+.sub_header_link.movie::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/menu_vod.svg?549a6831d63d4b27a463c6cc2be7044f) no-repeat;
+  background-size: 35px 20px;
+  width: 35px;
+  height: 20px;
+}
+
+.sub_header_link.broadcast::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/menu_broadcast.svg?549cf0553505cda3d418aa684f358c18) no-repeat;
+  background-size: 35px 20px;
+  width: 35px;
+  height: 20px;
+}
+
+.sub_header_link.book::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/menu_book.svg?eb9b97c2528955f1e6cf788c6fe7e504) no-repeat;
+  background-size: 17px 20px;
+  width: 17px;
+  height: 20px;
+}
+
+.sub_header_link.active {
+  border-bottom: 3px solid #ffd200;
+}
+
+.main {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.webtoon_category_link_wrap {
+  margin-top: 20px;
+  padding: 22px 0;
+  background-color: #fff;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 350;
+  color: #bbb;
+}
+
+.webtoon_category_link {
+  padding: 0 14px;
+}
+
+.webtoon_category_link.active {
+  color: #333;
+  font-weight: 550;
+}
+
+.carousel_wrap {
+  margin-top: 10px;
+  display: block;
+  position: relative;
+}
+
+.carousel_button {
+  position: absolute;
+  top: 210px;
+  border: 0;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel_button::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.prev::after {
+  background: url(https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56) no-repeat;
+}
+
+.next::after {
+  background: url(https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93) no-repeat;
+}
+
+.carousel_title {
+  position: absolute;
+  left: 20px;
+  top: 350px;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 550;
+  color: #fff;
+}
+
+.carousel_sub_information_wrap {
+  position: absolute;
+  top: 395px;
+  left: 20px;
+}
+
+.carousel_sub_information_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.badge_image {
+  float: left;
+  margin-top: 2px;
+}
+
+.carousel_category::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858) no-repeat;
+  background-size: 18px 20px;
+  width: 18px;
+  height: 20px;
+  margin: 2px 4px 0 8px;
+}
+
+.carousel_category::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 1px;
+  height: 15px;
+  background-color: #eee;
+  margin: 4px 8px 0;
+}
+
+.carousel_category,
+.readers_num {
+  float: left;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.readers_num::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e) no-repeat;
+  background-size: 16px 20px;
+  width: 16px;
+  height: 20px;
+  margin: 2px 4px 0 0;
+}
+
+.carousel_description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 18px;
+  line-height: 40px;
+  background-color: #ffd200;
+  text-align: center;
+}
+
+.webtoon_list_wrap {
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.weekdays_buttons_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.weekdays_button {
+  float: left;
+  border: 0;
+  background-color: transparent;
+  padding: 21px 0;
+  width: 90px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #bbb;
+}
+
+.weekdays_button.active {
+  background: url(https://static-page.kakao.com/static/pc/back_circle_new.png?e9d1b1196d71c665932558051a894132) no-repeat center;
+  background-size: 44px;
+  color: #333;
+}
+
+.weekdays_category_buttons_wrap {
+  padding: 20px 15px;
+}
+
+.weekdays_category_buttons_wrap {
+  border-top: 1px solid #f1f1f1;
+}
+
+.weekdays_category_buttons_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.weekdays_category_button {
+  float: left;
+  border: 0;
+  background-color: transparent;
+  color: #bbb;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.weekdays_category_button.separate::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin: 8px 12px 0;
+  width: 1px;
+  height: 12px;
+  background-color: #bbb;
+}
+
+.weekdays_category_button.clock::before {
+  content: "";
+  margin: 4px 4px 0 0;
+  display: inline-block;
+  vertical-align: top;
+  background: url(https://static-page.kakao.com/static/common/ico_wait-off.svg?cb16228c070950e8b1bb33d712ac8b7a) no-repeat;
+  background-size: 19px;
+  width: 19px;
+  height: 19px;
+}
+
+.weekdays_category_button.active {
+  color: #333;
+}
+
+.show_categories_button {
+  float: right;
+  background-color: transparent;
+  border: 0;
+  color: #999;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.show_categories_button::after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0 0 6px;
+  background: url(https://static-page.kakao.com/static/common/ico_sorting_arrow.svg?167b1295f93ba9f9d84cac7a5b830345) no-repeat;
+  background-size: 10px 7px;
+  width: 10px;
+  height: 7px;
+}
+
+.webtoon_list_outer_wrap {
+  padding: 10px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.webtoon_list_outer_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.webtoon_list_inner_wrap {
+  float: left;
+  padding: 10px;
+}
+
+.webtoon_main_image {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.webtoon_main_image_banner {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 120px;
+  background-color: #242526;
+}
+
+.webtoon_main_image_banner_text {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0 8px;
+  color: #ffd200
+}
