@@ -1,4 +1,3 @@
-import toonData from "../../data/toon.json" assert { type: "json" };
 import homeInit from "./home.js";
 import weekInit from "./week.js";
 
@@ -24,13 +23,14 @@ function categoryNavigationClick(event) {
             break;
         default:
             defaultInit(contentDiv);
-            break;
     }
 }
 
-function categoryNavigationComponent() {
+async function categoryNavigationComponent() {
+    const fetchedData = await fetch("data/toon.json").then(res => res.json());
+
     const elementUl = document.createElement("ul");
-    elementUl.innerHTML = toonData.category.map(item => 
+    elementUl.innerHTML = fetchedData.category.map(item => 
         `<li data-category="${item.id}"><a>${item.name}</a></li>`
     ).join("");
     elementUl.firstChild.classList.add("selected");
@@ -43,12 +43,12 @@ function categoryNavigationComponent() {
     return elementNav;
 }
 
-export default function init() {
+export default async function init() {
     const mainContentDiv = document.getElementById("main-contents");
     mainContentDiv.innerHTML = "";
 
     // 상단 네비게이션 추가
-    mainContentDiv.appendChild(categoryNavigationComponent());
+    mainContentDiv.appendChild(await categoryNavigationComponent());
     mainContentDiv.insertAdjacentHTML("beforeend", `<section id="contents"></section>`);
 
     // 초기 페이지 출력

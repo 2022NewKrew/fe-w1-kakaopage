@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        margin: 0;
+      }
+      .slider {
+        width: 100%;
+        position: relative;
+      }
+      .slider__item {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        transform: scale(0.9);
+      }
+      .slider__item:nth-child(odd) {
+        background-color: violet;
+      }
+      .slider__item:nth-child(even) {
+        background-color: yellowgreen;
+      }
+      .showing {
+        z-index: 1;
+        opacity: 1;
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slider">
+      <div class="slider__item"><h1>1</h1></div>
+      <div class="slider__item"><h1>2</h1></div>
+      <div class="slider__item"><h1>3</h1></div>
+      <div class="slider__item"><h1>4</h1></div>
+      <div class="slider__item"><h1>5</h1></div>
+      <div class="slider__item"><h1>6</h1></div>
+      <div class="slider__item"><h1>7</h1></div>
+      <div class="slider__item"><h1>8</h1></div>
+    </div>
+    <script>
+      const SHOWING_CLASS = "showing";
+      const firstSlide = document.querySelector(".slider__item:first-child");
+      const Slide = () => {
+        const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+        if (currentSlide) {
+          currentSlide.classList.remove(SHOWING_CLASS);
+          const nextSlide = currentSlide.nextElementSibling;
+          if (nextSlide) {
+            nextSlide.classList.add(SHOWING_CLASS);
+          } else {
+            firstSlide.classList.add(SHOWING_CLASS);
+          }
+        } else {
+          firstSlide.classList.add(SHOWING_CLASS);
+        }
+      };
+      setInterval(Slide, 1500);
+    </script>
+  </body>
+  <script type="text/template">
+    <div class="carousel-item">
+        <img src="//dn-img-page.kakao.com/download/resource?kid=bAYteK/hyLjeklaKq/3MkwMK6CJ1zOUfgAw7JbyK">
+        <div class="item-info">
+            <div class="img-inside">
+                <div class="title">트리거</div>
+                <div class="tag">
+                    <img src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg" class="badge">
+                    <img src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg" class="ico-bigthum-wait">
+                    <div class="css-10tchww">웹툰</div>
+                    <img src="https://static-page.kakao.com/static/common/line_top_banner.png" alt="Seperator" class="seperator">
+                    <img src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg" class="ico-bigthum-person">
+                    <div class="css-13yoxln">53.8만명</div>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>내 안의 화끈한 방아쇠를 당겨라!</span>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="//dn-img-page.kakao.com/download/resource?kid=p9CGi/hynayeFKRk/FeIdMBN6IGYs627dkBxczK">
+        <div class="item-info">
+            <div class="img-inside">
+                <div class="title">트리거</div>
+                <div class="tag">
+                    <img src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg" class="badge">
+                    <img src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg" class="ico-bigthum-wait">
+                    <div class="css-10tchww">웹툰</div>
+                    <img src="https://static-page.kakao.com/static/common/line_top_banner.png" alt="Seperator" class="seperator">
+                    <img src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg" class="ico-bigthum-person">
+                    <div class="css-13yoxln">53.8만명</div>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>내 안의 화끈한 방아쇠를 당겨라!</span>
+            </div>
+        </div>
+    </div>
+  </script>
+</html>

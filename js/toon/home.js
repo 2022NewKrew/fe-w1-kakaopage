@@ -1,8 +1,8 @@
 import { topBannerComponent, weeklyTopComponent } from "./components.js";
 
-export default function init(contentDiv) {
+export default async function init(contentDiv) {
     contentDiv.innerHTML = "";
     
     contentDiv.appendChild(topBannerComponent());
-    contentDiv.appendChild(weeklyTopComponent());
+    contentDiv.appendChild(await weeklyTopComponent());
 }

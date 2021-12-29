@@ -1,4 +1,3 @@
-import toonData from "../../data/toon.json" assert { type: "json" };
 import { topBannerComponent } from "./components.js";
 
 function weekdayNavComponent() {

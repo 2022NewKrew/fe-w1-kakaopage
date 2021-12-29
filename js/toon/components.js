@@ -1,5 +1,3 @@
-import jsonWeekdayTop from "../../data/weekday-top.json" assert { type: "json" };
-
 // carousel (현재는 더미 출력)
 export function topBannerComponent(jsonData) {
     const div = document.createElement("div");
@@ -31,8 +29,11 @@ export function topBannerComponent(jsonData) {
 }
 
 // 요일별로 웹툰 컨텐츠 업데이트
-function contentUpdate(dom, weekday) {
-    const fetchedData = jsonWeekdayTop["weekday-items"][weekday];
+async function contentUpdate(dom, weekday) {
+    const fetchedData = await fetch("data/weekday-top.json")
+        .then(res => res.json())
+        .then(json => json["weekday-items"][weekday]);
+    
     dom.innerHTML = fetchedData.map(item => 
         `<a href="${item.anchorUrl}">
             <li class="webtoon-item-box">
@@ -73,8 +74,9 @@ function weekDayNavigationClick(event) {
     contentUpdate(document.querySelector(".toon-home-weekly-top-webtoon-container"), target.dataset.weekday);
 }
 
-export function weeklyTopComponent() {
-    const fetchedData = jsonWeekdayTop;
+export async function weeklyTopComponent() {
+    const fetchedData = await fetch("data/weekday-top.json")
+        .then(res => res.json())
     const div = document.createElement("div");
     div.classList.add("toon-home-top");
     div.innerHTML = 
