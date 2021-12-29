@@ -167,7 +167,7 @@ div.slide_title_wrap {
 div.new {
   padding: 0.1px;
 }
-div.new > .top_new_title_wrap {
+.top_title_wrap {
   display: flex;
   justify-content: space-between;
   padding-top: 22px;
@@ -175,19 +175,19 @@ div.new > .top_new_title_wrap {
   padding-left: 20px;
   box-sizing: border-box;
 }
-div.new > .top_new_title_wrap > .top_new_title {
+.top_title_wrap > .top_title {
   font-size: 20px;
   color: #333;
   font-weight: normal;
 }
-div.new > .top_new_title_wrap > a {
+.top_title_wrap > a {
   display: flex;
   text-decoration: none;
 }
-div.new > .top_new_title_wrap > a > img {
+.top_title_wrap > a > img {
   margin-left: 4px;
 }
-div.new > .top_new_title_wrap > a > .new_title_more {
+.top_title_wrap > a > .title_more {
   word-break: keep-all;
   line-height: 24px;
 }
