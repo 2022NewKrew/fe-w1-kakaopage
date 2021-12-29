@@ -1,19 +1,23 @@
-export const BigCarousel = () => {
+export const BigCarousel = ({ data }) => {
+
     const target = document.createElement("div");
     target.className = "white-wrapper"
 
     const render = () => {
+        if (!data || data.length === 0) return target;
+
+        const { thumbnail, description_title, tag_img, category, viewer, under_title} = data[0];
         target.innerHTML = `
             <div class="carousel">
                 <div>
-                    <img class="carousel-big-image" src="https://dn-img-page.kakao.com/download/resource?kid=bIkRze/hzmU03aZdy/nOK6kDHHj1mcGtoRR0eDik" alt="" />
+                    <img class="carousel-big-image" src=${thumbnail} alt=${description_title} />
                     <div class="big-image-info">
                         <div class="big-image-description">
-                            <div>ㅋㅋㅋ웹툰 아카데미</div>
-                            <div>이벤트 | 웹툰 | 23.7만명</div>
+                            <div>${description_title}</div>
+                            <div> 이벤트 | ${category} | ${viewer}만명</div>
                         </div>
                         <div class="big-image-title">
-                            <span>카카오 페이지 데뷔반 2월 7일 오픈</span>
+                            <span>${under_title}</span>
                         </div>
                     </div>
                 </div>
