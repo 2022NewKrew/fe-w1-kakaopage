@@ -8,16 +8,51 @@
   position: relative;
 }
 
-.banner-img {
+.tab-nav {
+  display: flex;
   width: 720px;
 }
-.banner-overlay {
+.second-tabs {
+  width: 720px;
+  display: flex;
+}
+.second-tabs li {
+  list-style-type: none;
+  flex: 1 1 auto;
+  text-align: center;
+}
+.second-tabs button {
+  border: none;
+  cursor: pointer;
+  background-color: #0000;
+  font-size: 20px;
+  font-weight: 500;
+  color: #a1a1a1;
+}
+.second-tabs .second-tab-active {
+  color: #000;
+}
+
+.big-carousel-img {
+  width: 720px;
+}
+.big-carousel-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 720px;
 }
-.banner-title {
+.big-carousel-overlay > *:nth-child(1) {
+  padding-left: 20px;
+}
+.big-carousel-title {
+  width: 320px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  word-break: keep-all;
+}
+.big-carousel-desc {
   display: flex;
   font-size: 18px;
   padding-top: 6px;
@@ -28,18 +63,7 @@
   color: #000;
   background-color: #ffd200;
 }
-.banner-desc {
-  width: 720px;
-}
-.banner-desc-title {
-  padding-left: 20px;
-  color: white;
-}
-.banner-desc-title > div {
-  font-size: 25px;
-  font-weight: bold;
-}
-.banner-desc-desc {
+.big-carousel-desc-desc {
   width: 720px;
   display: flex;
   color: #bbb;
@@ -48,47 +72,26 @@
   padding: 20px;
   padding-top: 10px;
 }
-.banner-desc-desc > :first-child {
+.big-carousel-desc-desc > :first-child {
   margin-left: 0;
   margin-right: auto;
 }
-.banner-desc-desc > :last-child {
+.big-carousel-desc-desc > :last-child {
   font-size: 20px;
   margin-left: auto;
   margin-right: 0;
 }
 
-.tab-nav {
-  display: flex;
-  width: 720px;
-}
-.tab-nav ul {
-  width: 720px;
-  display: flex;
-}
-.tab-nav li {
-  list-style-type: none;
-  flex: 1 1 auto;
-  text-align: center;
-}
-.tab-nav button {
-  border: none;
-  cursor: pointer;
-  background-color: #0000;
-  font-size: 20px;
-  color: #a1a1a1;
-}
-
 .section-featuring {
   padding: 20px;
 }
-.featuring-tabs {
+.featuring-items {
   overflow: hidden;
   border-radius: 8px;
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
-.featuring-tab {
+.featuring-item {
   background-color: #f3f3f3;
   margin: 1px;
   padding: 20px;
