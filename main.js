@@ -9,20 +9,39 @@ function makeMenuYellow(menu) {
   menu.classList.add("active-menu");
 }
 
-function menuNavigation() {
+async function loadMenu(menu) {
+  const main = document.getElementById("hello");
+  let tab = "webtoon.html";
+  if (menu === "webtoon-tab") {
+    tab = "webtoon.html";
+  } else {
+    tab = "dummy.html";
+  }
+  const menuFile = await fetch(tab);
+  const text = await menuFile.text();
+  main.innerHTML = text;
+}
+
+function init() {
   const menus = document.getElementById("navigation");
+
+  // 초기 페이지
+  loadMenu("webtoon-tab");
+
+  // 각 메뉴별 이벤트리스너 추가
   menus.addEventListener("click", (e) => {
     const menuId = e.target.getAttribute("data-tab-id");
     if (menuId) {
       const menu = document.getElementById(menuId).parentNode;
       makeMenuYellow(menu);
+      loadMenu(menuId);
     } else {
       return;
     }
   });
 }
 
-menuNavigation();
+init();
 
 // banner carousel
 let slideIndex = 1;

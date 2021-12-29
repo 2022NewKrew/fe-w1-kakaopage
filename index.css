@@ -24,6 +24,18 @@ a:active {
   color: black;
 }
 
+/* dummy page */
+#dummy {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.highlight {
+  color: #ffd200;
+  text-shadow: black 1px 0 5px;
+}
+
 /** 
     header + navigation 고정 
 */
