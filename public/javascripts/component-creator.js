@@ -1,4 +1,5 @@
 import { createCarousel } from './carousel.js'
+import { createGridBtn } from './grid-btn.js'
 
 export function drawComponents(data) {
     const componentObjects = []
@@ -9,9 +10,13 @@ export function drawComponents(data) {
         switch (component.type) {
             case 'carousel':
                 newComponentObject = createCarousel(component.content)
-                break;
+                break
+            
+            case 'grid-btn':
+                newComponentObject = createGridBtn(component.content)
+                break
         }
-    
+        
         componentObjects.push(newComponentObject)
     })
     

@@ -203,6 +203,10 @@ table {
   margin-top: 10px;
 }
 
+.content-container > div {
+  margin-bottom: 10px;
+}
+
 .component-box {
   background-color: #FFFFFF;
   margin-bottom: 10px;
@@ -314,4 +318,74 @@ table {
   bottom: 55px;
   font-size: 1.3rem;
   color: #CCCCCC;
+}
+
+
+/* ==== grid-collection ==== */
+.grid-btn {
+  background-color: #FFFFFF;
+  padding: 20px;
+  width: 100%;
+}
+
+.grid-btn > .grid-row {
+  margin-bottom: 2px;
+}
+
+.grid-btn > .grid-row:last-child {
+  margin-bottom: 0;
+}
+
+.grid-row {
+  display: flex;
+}
+
+.grid-row > .grid-col {
+  margin-right: 2px;
+}
+
+.grid-row > .grid-col:last-child {
+  margin-right: 0;
+}
+
+.grid-row:first-child > .grid-col:first-child {
+  border-top-left-radius: 10px;
+}
+
+.grid-row:first-child > .grid-col:last-child {
+  border-top-right-radius: 10px;
+}
+
+.grid-row:last-child > .grid-col:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.grid-row:last-child > .grid-col:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.grid-top-row {
+
+}
+
+.grid-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #F5F5F5;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.grid-col-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.grid-col-highlight {
+  margin-left: 10px;
+  background-color: #FFD500;
+  border-radius: 1rem;
+  padding: 0 0.5rem 2px 0.5rem;
 }

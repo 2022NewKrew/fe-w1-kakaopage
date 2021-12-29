@@ -1,5 +1,5 @@
 const BANNER_WIDTH = 720
-const AUTO_SLIDE_PERIOD = 3000
+const AUTO_SLIDE_PERIOD = 4000
 const ANIMATION_DURATION = 500
 
 let carouselEl
