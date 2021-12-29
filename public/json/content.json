@@ -1,0 +1,396 @@
+[
+  {
+    "name": "홈",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "학사귀환",
+            "subtitle": "학사 마현, 중원으로 돌아오다!",
+            "bannerImgSrc": "images/banner/학사귀환.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "47.1만명"
+          },
+          {
+            "title": "네 곁에도 어쩌면",
+            "subtitle": "죽은 그 사람, 네 옆에 있어",
+            "bannerImgSrc": "images/banner/네 곁에도 어쩌면.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "32만명"
+          },
+          {
+            "title": "로열 셰프 영애님",
+            "subtitle": "요리만 했을 뿐인데 왜 이러세요?",
+            "bannerImgSrc": "images/banner/로열 셰프 영애님.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "84.8만명"
+          },
+          {
+            "title": "은빛마계왕",
+            "subtitle": "눈 떠보니 재수 없는 마왕님?!",
+            "bannerImgSrc": "images/banner/은빛마계왕.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "52.9만명"
+          },
+          {
+            "title": "ㅋㅋㅋ웹툰 아카데미\n카카페 데뷔반 2기 모집중",
+            "subtitle": "카카오페이지 데뷔반 2월 7일 오픈!",
+            "bannerImgSrc": "images/banner/카카오데뷔반.png",
+            "badgeIconSrc": "images/icon/badge-competition.svg",
+            "category": "",
+            "nReader": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "요일연재",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "왕좌고 제패기",
+            "subtitle": "강자들에게 도전장을 내밀다!",
+            "bannerImgSrc": "images/banner/왕좌고 제패기.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "7.1만명"
+          },
+          {
+            "title": "정령왕의 딸",
+            "subtitle": "우리 아빠가 정령왕이라구?!",
+            "bannerImgSrc": "images/banner/정령왕의 딸.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "71.8만명"
+          },
+          {
+            "title": "탐식의 재림",
+            "subtitle": "의문의 초대, '낙원'에 가다!",
+            "bannerImgSrc": "images/banner/탐식의 재림.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "48.7만명"
+          },
+          {
+            "title": "ㅋㅋㅋ웹툰 아카데미\n카카페 데뷔반 2기 모집중",
+            "subtitle": "카카오페이지 데뷔반 2월 7일 오픈!",
+            "bannerImgSrc": "images/banner/카카오데뷔반.png",
+            "badgeIconSrc": "images/icon/badge-competition.svg",
+            "category": "",
+            "nReader": ""
+          },
+          {
+            "title": "제 19회\n대한민국 창작 만화 공모전",
+            "subtitle": "영광의 수상작을 만나보세요!",
+            "bannerImgSrc": "images/banner/만화 공모전.png",
+            "badgeIconSrc": "images/icon/badge-competition.svg",
+            "category": "웹툰",
+            "nReader": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "웹툰",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "가짜 공녀님\n만렙 토끼",
+            "subtitle": "귀여운 토끼가 사실 영웅 대공?!",
+            "bannerImgSrc": "images/banner/가짜 공녀님의 만렙 토끼.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": "48.9만명"
+          },
+          {
+            "title": "남주와 그리는 로맨스",
+            "subtitle": "썸 비스무리한 것이 시작된다?!",
+            "bannerImgSrc": "images/banner/남주와 그리는 로맨스.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": ""
+          },
+          {
+            "title": "조국이 당신을 원한다",
+            "subtitle": "조까치의 슬기로운 군대생활!",
+            "bannerImgSrc": "images/banner/조국이 당신을 원한다.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "35.1만명"
+          },
+          {
+            "title": "말하지 말까",
+            "subtitle": "너에게 뿜어 나오는 첫사랑의 향기!",
+            "bannerImgSrc": "images/banner/말하지 말까.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "38.1만명"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "소년",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "가짜 공녀님\n만렙 토끼",
+            "subtitle": "귀여운 토끼가 사실 영웅 대공?!",
+            "bannerImgSrc": "images/banner/가짜 공녀님의 만렙 토끼.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": "48.9만명"
+          },
+          {
+            "title": "남주와 그리는 로맨스",
+            "subtitle": "썸 비스무리한 것이 시작된다?!",
+            "bannerImgSrc": "images/banner/남주와 그리는 로맨스.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": ""
+          },
+          {
+            "title": "조국이 당신을 원한다",
+            "subtitle": "조까치의 슬기로운 군대생활!",
+            "bannerImgSrc": "images/banner/조국이 당신을 원한다.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "35.1만명"
+          },
+          {
+            "title": "말하지 말까",
+            "subtitle": "너에게 뿜어 나오는 첫사랑의 향기!",
+            "bannerImgSrc": "images/banner/말하지 말까.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "38.1만명"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "드라마",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "가짜 공녀님\n만렙 토끼",
+            "subtitle": "귀여운 토끼가 사실 영웅 대공?!",
+            "bannerImgSrc": "images/banner/가짜 공녀님의 만렙 토끼.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": "48.9만명"
+          },
+          {
+            "title": "남주와 그리는 로맨스",
+            "subtitle": "썸 비스무리한 것이 시작된다?!",
+            "bannerImgSrc": "images/banner/남주와 그리는 로맨스.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": ""
+          },
+          {
+            "title": "조국이 당신을 원한다",
+            "subtitle": "조까치의 슬기로운 군대생활!",
+            "bannerImgSrc": "images/banner/조국이 당신을 원한다.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "35.1만명"
+          },
+          {
+            "title": "말하지 말까",
+            "subtitle": "너에게 뿜어 나오는 첫사랑의 향기!",
+            "bannerImgSrc": "images/banner/말하지 말까.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "38.1만명"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "로맨스",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "가짜 공녀님\n만렙 토끼",
+            "subtitle": "귀여운 토끼가 사실 영웅 대공?!",
+            "bannerImgSrc": "images/banner/가짜 공녀님의 만렙 토끼.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": "48.9만명"
+          },
+          {
+            "title": "남주와 그리는 로맨스",
+            "subtitle": "썸 비스무리한 것이 시작된다?!",
+            "bannerImgSrc": "images/banner/남주와 그리는 로맨스.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": ""
+          },
+          {
+            "title": "조국이 당신을 원한다",
+            "subtitle": "조까치의 슬기로운 군대생활!",
+            "bannerImgSrc": "images/banner/조국이 당신을 원한다.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "35.1만명"
+          },
+          {
+            "title": "말하지 말까",
+            "subtitle": "너에게 뿜어 나오는 첫사랑의 향기!",
+            "bannerImgSrc": "images/banner/말하지 말까.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "38.1만명"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "로판",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "가짜 공녀님\n만렙 토끼",
+            "subtitle": "귀여운 토끼가 사실 영웅 대공?!",
+            "bannerImgSrc": "images/banner/가짜 공녀님의 만렙 토끼.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": "48.9만명"
+          },
+          {
+            "title": "남주와 그리는 로맨스",
+            "subtitle": "썸 비스무리한 것이 시작된다?!",
+            "bannerImgSrc": "images/banner/남주와 그리는 로맨스.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": ""
+          },
+          {
+            "title": "조국이 당신을 원한다",
+            "subtitle": "조까치의 슬기로운 군대생활!",
+            "bannerImgSrc": "images/banner/조국이 당신을 원한다.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "35.1만명"
+          },
+          {
+            "title": "말하지 말까",
+            "subtitle": "너에게 뿜어 나오는 첫사랑의 향기!",
+            "bannerImgSrc": "images/banner/말하지 말까.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "38.1만명"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "액션무협",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "가짜 공녀님\n만렙 토끼",
+            "subtitle": "귀여운 토끼가 사실 영웅 대공?!",
+            "bannerImgSrc": "images/banner/가짜 공녀님의 만렙 토끼.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": "48.9만명"
+          },
+          {
+            "title": "남주와 그리는 로맨스",
+            "subtitle": "썸 비스무리한 것이 시작된다?!",
+            "bannerImgSrc": "images/banner/남주와 그리는 로맨스.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": ""
+          },
+          {
+            "title": "조국이 당신을 원한다",
+            "subtitle": "조까치의 슬기로운 군대생활!",
+            "bannerImgSrc": "images/banner/조국이 당신을 원한다.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "35.1만명"
+          },
+          {
+            "title": "말하지 말까",
+            "subtitle": "너에게 뿜어 나오는 첫사랑의 향기!",
+            "bannerImgSrc": "images/banner/말하지 말까.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "38.1만명"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BL",
+    "content": [
+      {
+        "type": "carousel",
+        "content": [
+          {
+            "title": "가짜 공녀님\n만렙 토끼",
+            "subtitle": "귀여운 토끼가 사실 영웅 대공?!",
+            "bannerImgSrc": "images/banner/가짜 공녀님의 만렙 토끼.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": "48.9만명"
+          },
+          {
+            "title": "남주와 그리는 로맨스",
+            "subtitle": "썸 비스무리한 것이 시작된다?!",
+            "bannerImgSrc": "images/banner/남주와 그리는 로맨스.png",
+            "badgeIconSrc": "images/icon/badge-hot.svg",
+            "category": "웹툰",
+            "nReader": ""
+          },
+          {
+            "title": "조국이 당신을 원한다",
+            "subtitle": "조까치의 슬기로운 군대생활!",
+            "bannerImgSrc": "images/banner/조국이 당신을 원한다.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "35.1만명"
+          },
+          {
+            "title": "말하지 말까",
+            "subtitle": "너에게 뿜어 나오는 첫사랑의 향기!",
+            "bannerImgSrc": "images/banner/말하지 말까.png",
+            "badgeIconSrc": "images/icon/badge-up.svg",
+            "category": "웹툰",
+            "nReader": "38.1만명"
+          }
+        ]
+      }
+    ]
+  }
+]
