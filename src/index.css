@@ -162,7 +162,7 @@ nav ul {
     color: #BBBBBB;
 }
 
-.genre-link:active {
+.genre-link.selected {
     color: #000000;
 }
 

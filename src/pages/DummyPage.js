@@ -1,11 +1,11 @@
-import { img_src_array } from "../lists.js";
+import { nav_list } from "../lists.js";
 
 export const DummyPage = ({ nav_id }) => {
     const target = document.createElement("div");
     target.className = "white-wrapper genre";
 
     const render = () => {
-        target.innerText = img_src_array[nav_id][1]
+        target.innerText = nav_list[nav_id].title
         return target;
     }
 
