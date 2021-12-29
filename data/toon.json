@@ -9,6 +9,10 @@
             "name": "요일연재"
         },
         {
+            "id": "toon-webtoon",
+            "name": "웹툰"
+        },
+        {
             "id": "toon-teen",
             "name": "소년"
         },
