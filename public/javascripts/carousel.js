@@ -1,3 +1,7 @@
+const BANNER_WIDTH = 720
+const AUTO_SLIDE_PERIOD = 3000
+const ANIMATION_DURATION = 500
+
 let carouselEl
 let carouselBannerEl
 
@@ -31,11 +35,15 @@ function createBanner(content) {
     return newBannerEl
 }
 
-function moveLeft(bannerIdxObject, bannerPartEl, pageNumberEl, bannerWidth, maxPageNumber) {
+function getTranslateX(bannerIdx) {
+    return `translateX(-${bannerIdx * BANNER_WIDTH}px)`
+}
+
+function moveLeft(bannerIdxObject, bannerPartEl, pageNumberEl, maxPageNumber) {
     if (bannerIdxObject.bannerIdx > 0) {
         bannerIdxObject.bannerIdx--
-        bannerPartEl.style.transform = `translateX(-${bannerIdxObject.bannerIdx * bannerWidth}px)`
-        bannerPartEl.style.transitionDuration = '500ms'
+        bannerPartEl.style.transform = getTranslateX(bannerIdxObject.bannerIdx)
+        bannerPartEl.style.transitionDuration = `${ANIMATION_DURATION}ms`
         
         if (bannerIdxObject.bannerIdx === 0) {
             pageNumberEl.innerText = `${maxPageNumber} / ${maxPageNumber}`
@@ -45,11 +53,11 @@ function moveLeft(bannerIdxObject, bannerPartEl, pageNumberEl, bannerWidth, maxP
     }
 }
 
-function moveRight(bannerIdxObject, bannerPartEl, pageNumberEl, bannerWidth, maxPageNumber) {
+function moveRight(bannerIdxObject, bannerPartEl, pageNumberEl, maxPageNumber) {
     if (bannerIdxObject.bannerIdx < maxPageNumber + 1) {
         bannerIdxObject.bannerIdx++
-        bannerPartEl.style.transform = `translateX(-${bannerIdxObject.bannerIdx * bannerWidth}px)`
-        bannerPartEl.style.transitionDuration = '500ms'
+        bannerPartEl.style.transform = getTranslateX(bannerIdxObject.bannerIdx)
+        bannerPartEl.style.transitionDuration = `${ANIMATION_DURATION}ms`
         
         if (bannerIdxObject.bannerIdx === maxPageNumber + 1) {
             pageNumberEl.innerText = `1 / ${maxPageNumber}`
@@ -60,9 +68,6 @@ function moveRight(bannerIdxObject, bannerPartEl, pageNumberEl, bannerWidth, max
 }
 
 export function createCarousel(data) {
-    const BANNER_WIDTH = 720
-    const AUTO_SLIDE_PERIOD = 3000
-    
     const newCarouselEl = carouselEl.cloneNode(true)
     const newCarouselBannerPartEl = newCarouselEl.querySelector('.carousel-banner-part')
     const pageNumberEl = newCarouselEl.querySelector('.carousel-page-number')
@@ -111,7 +116,7 @@ export function createCarousel(data) {
             bannerIdxObject.bannerIdx = 1
         }
     
-        newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdxObject.bannerIdx * BANNER_WIDTH}px)`
+        newCarouselBannerPartEl.style.transform = getTranslateX(bannerIdxObject.bannerIdx)
     })
     
     return newCarouselEl
