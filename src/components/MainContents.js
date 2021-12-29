@@ -1,10 +1,17 @@
-import { DummyPage } from "./pages/DummyPage.js";
-import { WebtoonPage } from "./pages/WebtoonPage.js";
+import { BigCarousel } from "../components/BigCarousel.js";
+import { LinkGrid } from "./LinkGrid.js";
+import { BannerCarousel } from "./BannerCarousel.js";
+import { ToonGrid } from "./ToonGrid.js";
 
-export const MainContents = ({ parent, nav_id }) => {
-
+export const MainContents = () => {
+    const target = document.createElement("div");
+    
     const render = () => {
-        return nav_id === 1 ? WebtoonPage() : DummyPage({ nav_id });
+        target.appendChild(BigCarousel());
+        target.appendChild(LinkGrid());
+        target.appendChild(BannerCarousel());
+        target.appendChild(ToonGrid());
+        return target;
     }
 
     return render();

@@ -1,6 +1,6 @@
 import { Header } from './components/Header.js';
 import { Navigator } from './components/Navigator/Navigator.js';
-import { MainContents } from './components/MainContents.js';
+import { MainTemplate } from './components/MainTemplate.js';
 
 export const App = (app) => {
     let state = {
@@ -19,13 +19,11 @@ export const App = (app) => {
 
     const render = () => {
         page.innerHTML = "";
-        const navigator = Navigator({ 
+        page.appendChild(Navigator({ 
             selected_id: state.nav_id, 
             selectCallback : (new_id) => setState({nav_id: new_id})
-        });
-        const main_contents = MainContents({ parent: page, nav_id: state.nav_id })
-        page.appendChild(navigator);
-        page.appendChild(main_contents);
+        }));
+        page.appendChild(MainTemplate({ parent: page, nav_id: state.nav_id }));
     }
 
     render();
