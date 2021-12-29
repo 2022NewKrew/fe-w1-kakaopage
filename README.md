@@ -43,41 +43,41 @@ main.html
   │ 
   └ BL
 
-홈
-└─┬ 배너
+홈 (json/home.json)
+└─┬ 배너 (type: "banner")
   │
-  ├ 피처링
+  ├ 피처링 (type: "featuring")
   │ 
-  ├ 카로셀
+  ├ 카로셀 (type: "carousel")
   │ 
-  ├ 요일 연재 TOP
+  ├ 요일 연재 TOP (type:"weekly-top")
   │ 
-  ├ 기대신작 TOP
+  ├ 기대신작 TOP (type: "big-item-section")
   │ 
-  ├ 로맨스 TOP
+  ├ 로맨스 TOP (type: "small-item-section")
   │ 
-  ├ 로판 TOP
+  ├ 로판 TOP (type: "small-item-section")
   │ 
-  ├ 드라마 TOP
+  ├ 드라마 TOP (type: "small-item-section")
   │ 
-  ├ BL/GL TOP
+  ├ BL/GL TOP (type: "small-item-section")
   │ 
-  ├ 소년 TOP
+  ├ 소년 TOP (type: "small-item-section")
   │ 
-  ├ 액션무협 TOP
+  ├ 액션무협 TOP (type: "small-item-section")
   │ 
-  ├ 일간 랭킹 TOP
+  ├ 일간 랭킹 TOP (type: "list-item-section")
   │ 
-  └ 추천 이벤트
+  └ 추천 이벤트 (type: "banner-item-section")
 
-요일연재
+요일연재 (json/weekly.json)
 └─┬ 배너
   │ 
   ├ 요일별 만화
   │
   └ 추천 이벤트
 
-웹툰
+웹툰 (json/webtoon.json)
 └─┬ 요일
   │ 
   └ 요일별 만화
