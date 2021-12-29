@@ -91,7 +91,7 @@ main.html
     {
       "image": "<url>",
       "title": "<string>",
-      "desc": ["<string>", "<string>"],
+      "desc": "<string>"
     }
   ]
 }
