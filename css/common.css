@@ -47,11 +47,8 @@ a {
 
 #main-contents > * {
     width: 720px;
-    margin: 0 auto;
-}
-
-#contents {
-    margin-top: 11px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #dummy {

@@ -1,4 +1,6 @@
-
+.carousel {
+    margin-top: 11px;
+}
 
 .carousel-item {
     position: relative;

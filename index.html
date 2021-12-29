@@ -50,12 +50,12 @@
         </div>
         <nav id="header-category">
             <ul>
-                <li class="category-element" data-num="home">
+                <li class="category-element selected" data-num="home">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_home.svg">
                     </a>
                 </li>
-                <li class="category-element selected" data-num="toon">
+                <li class="category-element" data-num="toon">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_toon.svg">
                     </a>
@@ -86,8 +86,8 @@
     <section id="main-contents">
         <nav class="content-category">
             <ul>
-                <li><a>홈</a></li>
-                <li class="selected"><a>요일연재</a></li>
+                <li class="selected"><a>홈</a></li>
+                <li><a>요일연재</a></li>
                 <li><a>웹툰</a></li>
                 <li><a>소년</a></li>
                 <li><a>드라마</a></li>
@@ -99,7 +99,7 @@
         </nav>
         <section id="contents">
             <div class="carousel">
-                <div class="carousel-container">
+                <div class="carousel-item-container">
                     <div class="carousel-item">
                         <img src="//dn-img-page.kakao.com/download/resource?kid=bAYteK/hyLjeklaKq/3MkwMK6CJ1zOUfgAw7JbyK">
                         <div class="item-info">
@@ -148,8 +148,8 @@
                     </a>
                 </div>
             </div>
-            <div class="toon-home-weekly-top">
-                <div class="toon-home-weekly-top-title">
+            <div class="toon-home-top">
+                <div class="toon-home-top-title">
                     <div class="name">
                         <h3 class="toon-h3">요일 연재 TOP</h3>
                         <div class="number">(1,554)</div>
@@ -427,4 +427,42 @@
     </footer>
     <script type="module" src="js/init.js"></script>
 </body>
+<script id="toon-home-top-template" type="text/template">
+    <!-- TOP template -->
+    <div class="toon-home-top">
+        <div class="toon-home-top-title">
+            <div class="name">
+                <h3 class="toon-h3">{title}</h3>
+                <div class="number">({number})</div>
+            </div>
+            <div class="more-button">
+                <div>더보기</div>
+                <img src="https://static-page.kakao.com/static/common/ic-more-gray.svg">
+            </div>
+        </div>
+        <nav class="toon-home-top-nav">{nav}</nav>
+        <div class="toon-home-top-content">{content}</div>
+    </div>
+</script>
+<script id="carousel-template" type="text/template">
+    <div class="carousel">
+        <div class="carousel-item-container">
+            {items}
+        </div>
+    </div>
+</script>
+<script id="carousel-item-template" type="text/template">
+    <div class="carousel-item">
+        <img src="{images}">
+        <div class="item-info">
+            <div class="img-inside">
+                <div class="title">{title}</div>
+                <div class="tag">{tag}</div>
+            </div>
+            <div class="bottom">
+                <span>{setence}</span>
+            </div>
+        </div>
+    </div>
+</script>
 </html>

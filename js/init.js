@@ -1,15 +1,15 @@
-import toonInit from "./toonPage.js";
+import toonInit from "./toon/toon.js";
 
 function defaultInit() {
     const mainContentDiv = document.getElementById("main-contents");
     mainContentDiv.innerHTML = `<p class="dummy">dummy</p>`;
 }
 
-function categoryOnClick(event) {
+function categoryNavigationClick(event) {
     const target = event.path.find(element => element.tagName === "LI");
     if (target.classList.contains("selected")) return; // 현재 페이지
 
-    // css 변경
+    // navigation css 변경
     const liList = document.querySelectorAll(".category-element");
     liList.forEach(element => {
         if(element.classList.contains("selected")) element.classList.remove("selected");
@@ -24,11 +24,11 @@ function categoryOnClick(event) {
 
 export default function init() {
     // 초기 페이지 구성
-    toonInit();
+    // defaultInit();
 
-    // 카테고리 이동
+    // 카테고리 이동 이벤트 리스너 삽입
     const ul = document.querySelector("#header-category > ul");
-    ul.addEventListener("click", categoryOnClick);
+    ul.addEventListener("click", categoryNavigationClick);
 }
 
 init();
