@@ -98,6 +98,7 @@
 }
 
 .contentGridListItem {
+  cursor: pointer;
   box-sizing: border-box;
   width: 120px;
   margin: 0px 0px 21px;
@@ -150,8 +151,7 @@
   font-weight: 400;
   font-size: 16px;
   color: #ffd200;
-  line-height: 1;
-  vertical-align: middle;
+  margin-top: 4px;
 }
 
 .contentGridListItem__thumbClock {

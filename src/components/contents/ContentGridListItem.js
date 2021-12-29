@@ -10,7 +10,7 @@ export const ContentGridListItem = () => {
         </div>
         <div class="contentGridListItem__thumbFooter">
             <img class="contentGridListItem__thumbStar" alt="star" src="https://static-page.kakao.com/static/common/badge-thumbnail-star.svg?c4d2181b65253b0259cfa219fe4506ac">
-            <span class="contentGridListItem__thumbText">TOP</span>
+            <p class="contentGridListItem__thumbText">TOP</p>
             <img class="contentGridListItem__thumbClock" alt="clock" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf">
         </div>
         </div>
