@@ -16,7 +16,7 @@ const createContentTop = (data, title) => {
             <img src="assets/images/bmbadge_waitfree.svg"/>
           </div>
         </div>
-        <div class="content__item__title>${ele.title}</div>
+        <div class="content__item__title">${ele.title}</div>
         <div class="content__item__info">
           <img src="assets/images/업데이트.svg" />
           <img src="assets/images/icon_read_count.png" />
