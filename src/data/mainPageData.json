@@ -71,6 +71,10 @@
                 { "title": "독점 신작🎉", "path": "/"},
                 { "title": "이벤트로 달리자", "path": "/"},
                 { "title": "ㄴㅎㄹ 완결!", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
             ]
         },
         "드라마" : {
@@ -88,6 +92,10 @@
                 { "title": "믿고보는#독점!", "path": "/"},
                 { "title": "#이벤트로 달리자", "path": "/"},
                 { "title": "#기다무플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
             ]
         },
         "로맨스" : {
@@ -105,6 +113,10 @@
                 { "title": "눈이 즐거워❤️", "path": "/"},
                 { "title": "인기완결작", "path": "/"},
                 { "title": "기다무플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
             ]
         },
         "로판" : {
@@ -122,6 +134,10 @@
                 { "title": "월간 베스트", "path": "/"},
                 { "title": "인기완결작", "path": "/"},
                 { "title": "#기다무 플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
             ]
         },
         "액션무협" : {
@@ -139,6 +155,10 @@
                 { "title": "독점 신작🔥", "path": "/"},
                 { "title": "이벤트로 달리자", "path": "/"},
                 { "title": "기다무 플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
             ]
         },
         "BL" : {
@@ -160,6 +180,10 @@
                 { "title": "BL소설", "path": "/"},
                 { "title": "오늘의 이벤트", "path": "/"}
             ]
-        }
+        },
+        "banner_carousel": [
+            { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+            { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+        ]
     }
 }
