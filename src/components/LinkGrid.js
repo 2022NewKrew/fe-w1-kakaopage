@@ -1,42 +1,26 @@
-export const LinkGrid = () => {
+const renderUl = (link_items) => {
+    const ul = document.createElement("ul");
+    ul.className = "link-grid";
+    link_items.forEach(({title, path}) => {
+        const target = document.createElement('li');
+        target.innerHTML = `
+            <a href=${path}>
+                <div><span>${title}</span></div>
+            </a
+        `;
+        ul.appendChild(target);
+    });
+    return ul;
+}
+
+export const LinkGrid = ({ data }) => {
     const target = document.createElement("div");
+    if (!data || data.length === 0) return target;
     target.className = "white-wrapper padding-wrapper";
 
     const render = () => {
-        target.innerHTML = `
-            <div class="link-grid">
-                <a href="">
-                    <div>
-                        <span>오늘 UP</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <span>오늘 신작</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <span>오리지널</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <span>무료회차 UP</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <span>독립운동가 웹툰</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <span>오늘 랭킹</span>
-                    </div>
-                </a>
-            </div>
-        `
+        target.innerHTML = "";
+        target.appendChild(renderUl(data));
         return target;
     }
     

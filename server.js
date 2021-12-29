@@ -13,9 +13,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index");
 })
 
-app.get('/bigCarousel', (req, res) => {
+app.get('/mainPageData', (req, res) => {
     const data = database[req.query.nav][req.query.genre];
-    console.log(data);
     res.send(data);
 })
 
