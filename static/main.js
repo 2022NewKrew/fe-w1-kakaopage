@@ -16,19 +16,10 @@ async function loadTab(url){
   container.innerHTML=text;
 }
 function init(){
-  const tabIdToHtml={
-    "home-tab": "dummy.html",
-    "webtoon-tab": "webtoon.html",
-    "webfic-tab": "dummy.html",
-    "movie-tab": "dummy.html",
-    "broadcast-tab": "dummy.html",
-    "book-tab": "dummy.html"
-  };
   tabs.addEventListener('click', (e)=>{
-    const tabId=e.target.getAttribute("data-tab-id");
-    const tab=document.getElementById(tabId);
-    markTabActive(tab);
-    loadTab(tabIdToHtml[tabId]);
+    const tabHtml=e.target.getAttribute("data-tab-html");
+    markTabActive(e.target);
+    loadTab(tabHtml);
   });
   // NOTE Temporarily set webtoon tab as default for convenience :)
   // document.getElementById("home-tab").click();
