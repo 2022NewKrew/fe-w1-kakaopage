@@ -3,13 +3,16 @@ export const SlideBannerBox = () => {
   $root.className = "slideBannerBox";
 
   $root.innerHTML = `
-    <img
-      src="//dn-img-page.kakao.com/download/resource?kid=bxer2r/hzhOhiglp7/6XVB5RgYtBsV1zz7MxoeX1"
-      data-src="//dn-img-page.kakao.com/download/resource?kid=bxer2r/hzhOhiglp7/6XVB5RgYtBsV1zz7MxoeX1"
-      alt="ㅋㅋㅋ웹툰아카데미 카카페 데뷔반 2기"
-      draggable="false"
-      style="width: 720px; display: block"
-    />
+    <div>
+      <img
+        class="slideBannerBox__img"
+        src="//dn-img-page.kakao.com/download/resource?kid=bxer2r/hzhOhiglp7/6XVB5RgYtBsV1zz7MxoeX1"
+        data-src="//dn-img-page.kakao.com/download/resource?kid=bxer2r/hzhOhiglp7/6XVB5RgYtBsV1zz7MxoeX1"
+        alt="ㅋㅋㅋ웹툰아카데미 카카페 데뷔반 2기"
+        draggable="false"
+      />
+      <div class="slideBannerBox__shadow"></div>
+    </div>
     <div>
       <div class="slideBannerBox__content">
         <p>ㅋㅋㅋ웹툰 아카데미</p>
