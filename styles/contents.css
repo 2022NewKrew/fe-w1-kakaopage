@@ -30,14 +30,15 @@
     align-items: center;
 }
 
-toon-genre-nav-group li {
-    height: 100%;
-}
-
 .toon-genre-nav-group a {
     color: rgb(187, 187, 187);
-    font-weight: 350;
+    font-weight: 400;
     text-align: center;
     margin: 0 17px 0 17px;
     font-size: 20px;
+}
+
+.toon-genre-nav-group .toon-nav-selected {
+    color: rgb(51, 51, 51);
+    font-weight: 450;
 }
