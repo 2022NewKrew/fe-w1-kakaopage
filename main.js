@@ -32,10 +32,11 @@ function makeMenuActive(menu) {
   menu.classList.add("active-menu");
 }
 
+// 메뉴 기반 html 페이지 불러오기
 async function loadMenu(menu) {
   const home = document.getElementById("home");
-
   let tab = "webtoon.html";
+
   if (menu === "webtoon-tab") {
     tab = "webtoon.html";
   } else {
@@ -45,7 +46,9 @@ async function loadMenu(menu) {
   const file = await fetch(tab);
   const text = await file.text();
   home.innerHTML = "";
+
   await home.insertAdjacentHTML("afterbegin", text);
+
   if (menu === "webtoon-tab") {
     webtoonInit();
   }
@@ -55,15 +58,15 @@ async function loadMenu(menu) {
 function webtoonInit() {
   // 장르 setup
   const genres = document.getElementById("genres");
-  makeGenre(genres);
+  createGenre(genres);
 
-  makeTopRanking();
+  createTopRanking();
 
   showSlides(1);
 }
 
-// 장르 관련
-async function makeGenre(genres) {
+// 장르 탭 생성
+async function createGenre(genres) {
   const genreFile = await fetch("data/genres.json");
   const genreList = (await genreFile.json()).genres;
   await genreList.forEach((data) => {
@@ -75,13 +78,13 @@ async function makeGenre(genres) {
   // 각 장르별 이벤트리스너 추가
   genres.addEventListener("click", (e) => {
     const genre = e.target;
-    makeGenreActive(genre);
+    createGenreActive(genre);
   });
   genres.firstElementChild.classList.add("active-genre");
 }
 
 // 장르 메뉴 선택시 색 변경
-function makeGenreActive(genre) {
+function createGenreActive(genre) {
   const genres = document.getElementsByClassName("genre");
   Array.from(genres).forEach((e) => {
     if (e.classList.contains("active-genre")) {
@@ -93,7 +96,7 @@ function makeGenreActive(genre) {
 }
 
 // 요일 연재 TOP 컴포넌트
-async function makeTopRanking() {
+async function createTopRanking() {
   const weekTab = document.getElementById("daily-ranking-tabs-container");
   const weekFile = await fetch("data/week.json");
   const weekList = (await weekFile.json()).week;
@@ -120,8 +123,6 @@ async function makeTopRanking() {
   weekTab.firstChild.classList.add("active-weekday");
   fetchTopRankingWebtoons("monday");
 }
-
-async function makeWeekTabs() {}
 
 async function fetchTopRankingWebtoons(weekday) {
   let dailyContainer = document.getElementsByClassName(
