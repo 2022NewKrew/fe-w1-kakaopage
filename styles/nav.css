@@ -18,12 +18,20 @@
 }
 
 .contents-nav-group li{
+    box-sizing: border-box;
     padding: 20px 0 10px;
     display: flex;
     justify-content: center;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
 }
 
 .contents-nav-group a {
     display: flex;
     align-items: center;
+}
+
+.contents-nav-group .nav-selected {
+    border-bottom-color: #ffd200;
 }

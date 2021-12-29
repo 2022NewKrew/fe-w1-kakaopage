@@ -34,12 +34,17 @@
     color: #ffd200;
 }
 
+.anchor-row-normal-star-badge{
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
 .anchor-row-normal-wait-badge{
     height: 16px;
     margin-top: 2px;
 }
-
-
 
 .anchor-row-normal-title{
     margin-top: 9px;
@@ -80,4 +85,5 @@
     font-size: 14px;
     color: #9c9c9c;
 }
+
 
