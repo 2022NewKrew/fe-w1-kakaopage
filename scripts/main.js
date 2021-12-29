@@ -102,10 +102,10 @@ const dayClassList = ["day-circle", "day-span", "day"];
 const createDayBar = async () => {
   try {
     const dayData = await getAPI("./data/day.json");
-    const dayElements = dayData
+    const result = dayData
       .map((day, index) => createDayEle(day.name, index))
       .join("");
-    return dayElements;
+    return `<ul class="day-container">${result}</ul>`;
   } catch (e) {
     alert(e);
   }
@@ -120,122 +120,70 @@ const createDayEle = (name, index) => {
     currDayActiveIndex
   )}" data-idx=${index}></div><span class="day-span" data-idx=${index}>${name}</span></li>`;
 };
+/********* daybar template in webtoon page  **********/
 
-/********* day template in webtoon page  **********/
+/********* category template in webtoon page  **********/
+const createCategoryLeftBar = () => {
+  const categoryList = ["전체", "웹툰", "🌗웹툰"];
+  const result = categoryList
+    .map((category, index) => {
+      return `<span class="category ${
+        index === 0 ? "active" : ""
+      }">${category}</span>`;
+    })
+    .join("");
+
+  return `<div class="category-left">${result}</div>`;
+};
+
+const createCategoryRightBar = () => {
+  return `<div class="category-right">
+            <span>전체(135)</span>
+            <img 
+            src='https://static-page.kakao.com/static/common/ico_sorting_arrow.svg?167b1295f93ba9f9d84cac7a5b830345'
+            alt='카테고리 선택'/>
+          </div>`;
+};
+
+const createCategoryBar = () => {
+  return `<div class="category-container">
+            ${createCategoryLeftBar()}
+            ${createCategoryRightBar()}
+          </div>`;
+};
+/********* category template in webtoon page  **********/
+
+/********* webtoon template in webtoon page  **********/
+const createWebtoon = () => {
+  const temp = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  return temp
+    .map(() => {
+      return `<article class="webtoon">
+    <img
+        class='webtoon-thumbnail' 
+        src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
+    <div class="webtoon-title">
+        Title
+    </div>
+    <div class="webtoon-viewer-container">
+        <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
+        <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
+        <span class="webtoon-viewer-count">77.7만명</span>
+    </div>
+  </article>`;
+    })
+    .join("");
+};
+/********* webtoon template in webtoon page  **********/
 const createWebtoonPage = async () => {
   return `
       <ul class="menu-container">${await createMenuBar()}</ul>
       <div class="day-outer-container">
-        <ul class="day-container">${await createDayBar()}</ul>
-        <div class="category-container">
-            <div class="category-left">
-                <span class="category active">전체</span>
-                <span class="category">웹툰</span>
-                <span class="category">🌗웹툰</span>
-            </div>
-            <div class="category-right">
-                <span>전체(135)</span>
-                <img 
-                src='https://static-page.kakao.com/static/common/ico_sorting_arrow.svg?167b1295f93ba9f9d84cac7a5b830345'
-                alt='카테고리 선택'/>
-            </div>
-        </div>
-
+        ${await createDayBar()}
+        ${createCategoryBar()}
         <section class="webtoon-container">
-            <article class="webtoon">
-                <img
-                    class='webtoon-thumbnail' 
-                    src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
-                <div class="webtoon-title">
-                    Title
-                </div>
-                <div class="webtoon-viewer-container">
-                    <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
-                    <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
-                    <span class="webtoon-viewer-count">77.7만명</span>
-                </div>
-            </article>
-            <article class="webtoon">
-                <img
-                    class='webtoon-thumbnail' 
-                    src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
-                <div class="webtoon-title">
-                    Title
-                </div>
-                <div class="webtoon-viewer-container">
-                    <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
-                    <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
-                    <span class="webtoon-viewer-count">77.7만명</span>
-                </div>
-            </article> <article class="webtoon">
-                <img
-                    class='webtoon-thumbnail' 
-                    src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
-                <div class="webtoon-title">
-                    Title
-                </div>
-                <div class="webtoon-viewer-container">
-                    <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
-                    <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
-                    <span class="webtoon-viewer-count">77.7만명</span>
-                </div>
-            </article> <article class="webtoon">
-                <img
-                    class='webtoon-thumbnail' 
-                    src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
-                <div class="webtoon-title">
-                    Title
-                </div>
-                <div class="webtoon-viewer-container">
-                    <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
-                    <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
-                    <span class="webtoon-viewer-count">77.7만명</span>
-                </div>
-            </article> <article class="webtoon">
-                <img
-                    class='webtoon-thumbnail' 
-                    src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
-                <div class="webtoon-title">
-                    Title
-                </div>
-                <div class="webtoon-viewer-container">
-                    <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
-                    <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
-                    <span class="webtoon-viewer-count">77.7만명</span>
-                </div>
-            </article> <article class="webtoon">
-                <img
-                    class='webtoon-thumbnail' 
-                    src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
-                <div class="webtoon-title">
-                    Title
-                </div>
-                <div class="webtoon-viewer-container">
-                    <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
-                    <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
-                    <span class="webtoon-viewer-count">77.7만명</span>
-                </div>
-            </article> <article class="webtoon">
-                <img
-                    class='webtoon-thumbnail' 
-                    src='https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2'/>
-                <div class="webtoon-title">
-                    Title
-                </div>
-                <div class="webtoon-viewer-container">
-                    <img src='https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f'>
-                    <img src='https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871'>
-                    <span class="webtoon-viewer-count">77.7만명</span>
-                </div>
-            </article>
-          
-
-       
-
+            ${createWebtoon()}
         </section>
-      </div>
-
-    
       </div>
       `;
 };
