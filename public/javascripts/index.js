@@ -6,16 +6,19 @@ function init() {
   const kakao_header = document.querySelector("header");
   const kakao_content_nav_ul = document.querySelector("nav.content_nav>ul");
   const kakao_content_sub_nav_ul = document.querySelector("div.content_sub_nav>ul");
-  const kakao_footer_companyInfo = document.querySelector("p.companyInfo");
+  const kakao_footer_companyInfo = document.querySelector("p.company_info");
 
   kakao_content_nav_ul.addEventListener("click", nav_list_toggle_clicked);
   kakao_content_sub_nav_ul.addEventListener("click", nav_list_toggle_selected);
   kakao_footer_companyInfo.addEventListener("click", footer_company_info_onoff);
 }
 
+function check_LI_tag(tag) {
+  return tag === "LI";
+}
 function nav_list_toggle_clicked(e) {
   let cur_content_nav_li = document.querySelector("li.clicked");
-  if (e.target.parentNode.tagName !== "LI") return;
+  if (!check_li_tag(e.target.parentNode.tagName)) return;
   if (cur_content_nav_li) {
     cur_content_nav_li.classList.remove(clicked);
   }
