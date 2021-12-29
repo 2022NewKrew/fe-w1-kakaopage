@@ -12,15 +12,18 @@ export const App = function ($app) {
         this.render();
     }
 
+    const header = new Header({ $app })
+    const $page = document.createElement("div");
+    $app.appendChild($page);
+
     this.render = () => {
-        $app.innerHTML = "";
-        const header = new Header({ $app })
+        $page.innerHTML = "";
         const navigator = new Navigator({ 
-            $app, 
+            $page, 
             selected: this.state.nav_id, 
             selectCallback : (new_id) => this.setState({nav_id: new_id})
         });
-        const main_contents = new MainContents({ $app, nav_id: this.state.nav_id })
+        const main_contents = new MainContents({ $page, nav_id: this.state.nav_id })
     }
 
     this.render();
