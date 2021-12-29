@@ -1,4 +1,4 @@
-import { ContentGridListBox } from "../components/contents/contentGridListBox.js";
+import { ContentGridListBox } from "../components/contents/ContentGridListBox.js";
 import { ContentToolbar } from "../components/contents/ContentToolbar.js";
 import { SlideBannerBox } from "../components/contents/SlideBannerBox.js";
 import { DayNavigator } from "../components/navigators/DayNavigator.js";
