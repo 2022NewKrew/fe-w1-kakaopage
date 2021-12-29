@@ -133,7 +133,7 @@ main {
 .day-circle {
   display: none;
   position: absolute;
-  left: 21%;
+  left: 20%;
   top: 8%;
   border-radius: 50%;
   width: 50px;
@@ -160,6 +160,10 @@ main {
 
 .day-span {
   z-index: 2;
+}
+
+.day:last-child {
+  padding-left: 4px;
 }
 
 .day.active {
