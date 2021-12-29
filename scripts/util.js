@@ -1,5 +1,5 @@
 import { createEmptyPage } from "./empty.js";
-import { createWebtoonPage } from "./webtoon.js";
+import { createWebtoonDayTabPage, createWebtoonPage } from "./webtoon.js";
 
 // extract element func
 export const $ = (selector, parentNode = document) => {
@@ -11,6 +11,7 @@ export const isActive = (index, targetActiveIndex) => {
   return index === targetActiveIndex ? "active" : "";
 };
 
+/********** Event handler **********/
 const dayClassList = ["day-circle", "day-span", "day"];
 const webtoonNavIndex = 1;
 let currNavActiveIndex = 0;
@@ -74,6 +75,9 @@ export const changeMainContent = async (e) => {
   try {
     if (Number(e.target.dataset.idx) === currNavActiveIndex) return;
 
+    currMenuActiveIndex = 0;
+    currDayActiveIndex = 0;
+
     $(".main").innerHTML =
       Number(e.target.dataset.idx) === webtoonNavIndex
         ? await createWebtoonPage()
@@ -82,3 +86,20 @@ export const changeMainContent = async (e) => {
     alert(e);
   }
 };
+
+export const changeWebtoonDetailContent = async (e) => {
+  try {
+    if (!e.target.classList.contains("menu-list")) return;
+    if (Number(e.target.dataset.idx) === currMenuActiveIndex) return;
+
+    currDayActiveIndex = 0;
+
+    $(".webtoon-main").innerHTML =
+      Number(e.target.dataset.idx) === webtoonNavIndex
+        ? await createWebtoonDayTabPage()
+        : createEmptyPage();
+  } catch (e) {
+    alert(e);
+  }
+};
+/********** Event handler **********/
