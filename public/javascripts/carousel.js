@@ -21,7 +21,7 @@ function createBanner(content) {
     const categoryEl = newBannerEl.querySelector('.carousel-category-text')
     const nReaderEl = newBannerEl.querySelector('.carousel-number-of-reader-text')
     
-    titleEl.innerHTML = content.title
+    titleEl.innerText = content.title
     subtitleEl.innerText = content.subtitle
     bannerImgEl.src = content.bannerImgSrc
     badgeIconEl.src = content.badgeIconSrc
@@ -31,8 +31,37 @@ function createBanner(content) {
     return newBannerEl
 }
 
+function moveLeft(bannerIdxObject, bannerPartEl, pageNumberEl, bannerWidth, maxPageNumber) {
+    if (bannerIdxObject.bannerIdx > 0) {
+        bannerIdxObject.bannerIdx--
+        bannerPartEl.style.transform = `translateX(-${bannerIdxObject.bannerIdx * bannerWidth}px)`
+        bannerPartEl.style.transitionDuration = '500ms'
+        
+        if (bannerIdxObject.bannerIdx === 0) {
+            pageNumberEl.innerText = `${maxPageNumber} / ${maxPageNumber}`
+        } else {
+            pageNumberEl.innerText = `${bannerIdxObject.bannerIdx} / ${maxPageNumber}`
+        }
+    }
+}
+
+function moveRight(bannerIdxObject, bannerPartEl, pageNumberEl, bannerWidth, maxPageNumber) {
+    if (bannerIdxObject.bannerIdx < maxPageNumber + 1) {
+        bannerIdxObject.bannerIdx++
+        bannerPartEl.style.transform = `translateX(-${bannerIdxObject.bannerIdx * bannerWidth}px)`
+        bannerPartEl.style.transitionDuration = '500ms'
+        
+        if (bannerIdxObject.bannerIdx === maxPageNumber + 1) {
+            pageNumberEl.innerText = `1 / ${maxPageNumber}`
+        } else {
+            pageNumberEl.innerText = `${bannerIdxObject.bannerIdx} / ${maxPageNumber}`
+        }
+    }
+}
+
 export function createCarousel(data) {
     const BANNER_WIDTH = 720
+    const AUTO_SLIDE_PERIOD = 3000
     
     const newCarouselEl = carouselEl.cloneNode(true)
     const newCarouselBannerPartEl = newCarouselEl.querySelector('.carousel-banner-part')
@@ -41,7 +70,10 @@ export function createCarousel(data) {
     const leftBtnEl = btnEls[0]
     const rightBtnEl = btnEls[1]
     
-    let bannerIdx = 1
+    let bannerIdxObject = { bannerIdx: 1 }
+    let timeId = setInterval(() => {
+        moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, BANNER_WIDTH, data.length)
+    }, AUTO_SLIDE_PERIOD)
     
     pageNumberEl.innerText = `1 / ${data.length}`
     
@@ -52,46 +84,34 @@ export function createCarousel(data) {
     newCarouselBannerPartEl.appendChild(createBanner(data[0]))
     
     newCarouselBannerPartEl.style.width = (data.length + 2) * BANNER_WIDTH + 'px'
-    newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
+    newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdxObject.bannerIdx * BANNER_WIDTH}px)`
     
     leftBtnEl.addEventListener('click', () => {
-        if (bannerIdx > 0) {
-            bannerIdx--
-            newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
-            newCarouselBannerPartEl.style.transitionDuration = '500ms'
-    
-            if (bannerIdx === 0) {
-                pageNumberEl.innerText = `${data.length} / ${data.length}`
-            } else {
-                pageNumberEl.innerText = `${bannerIdx} / ${data.length}`
-            }
-        }
+        moveLeft(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, BANNER_WIDTH, data.length)
+        clearInterval(timeId)
+        timeId = setInterval(() => {
+            moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, BANNER_WIDTH, data.length)
+        }, AUTO_SLIDE_PERIOD)
     })
     
     rightBtnEl.addEventListener('click', () => {
-        if (bannerIdx < data.length + 1) {
-            bannerIdx++
-            newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
-            newCarouselBannerPartEl.style.transitionDuration = '500ms'
-    
-            if (bannerIdx === data.length + 1) {
-                pageNumberEl.innerText = `1 / ${data.length}`
-            } else {
-                pageNumberEl.innerText = `${bannerIdx} / ${data.length}`
-            }
-        }
+        moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, BANNER_WIDTH, data.length)
+        clearInterval(timeId)
+        timeId = setInterval(() => {
+            moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, BANNER_WIDTH, data.length)
+        }, AUTO_SLIDE_PERIOD)
     })
     
     newCarouselBannerPartEl.addEventListener('transitionend', () => {
         newCarouselBannerPartEl.style.transitionDuration = '0ms'
         
-        if (bannerIdx <= 0) {
-            bannerIdx = data.length
-        } else if (bannerIdx >= data.length + 1) {
-            bannerIdx = 1
+        if (bannerIdxObject.bannerIdx <= 0) {
+            bannerIdxObject.bannerIdx = data.length
+        } else if (bannerIdxObject.bannerIdx >= data.length + 1) {
+            bannerIdxObject.bannerIdx = 1
         }
     
-        newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
+        newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdxObject.bannerIdx * BANNER_WIDTH}px)`
     })
     
     return newCarouselEl

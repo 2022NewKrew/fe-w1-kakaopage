@@ -270,7 +270,7 @@ table {
 .carousel-separator-bar {
   width: 2px;
   height: 16px;
-  background-color: #AAAAAA;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .carousel-number-of-reader-text {
