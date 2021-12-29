@@ -92,6 +92,9 @@
 
 .contentGridListBox {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .contentGridListItem {
@@ -178,4 +181,74 @@
   width: 11px;
   height: 11px;
   margin-right: 4px;
+}
+
+/* contentToolbar */
+
+.contentToolbar {
+  display: flex;
+  border-top: 1px solid rgb(241, 241, 241);
+  border-bottom: 1px solid rgb(241, 241, 241);
+  padding: 0px 5px;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+.contentToolbar__nav {
+  display: flex;
+  align-items: center;
+}
+
+.contentToolbar__navItem {
+  cursor: pointer;
+  display: flex;
+  padding: 20px 10px;
+}
+
+.contentToolbar__text {
+  box-sizing: border-box;
+  color: rgb(187, 187, 187);
+  font-size: 20px;
+  text-align: center;
+}
+
+.contentToolbar__text--selected {
+  color: #333333;
+}
+
+.contentToolbar__separator {
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin: 0px 5px 1px;
+  min-width: 1px;
+  width: 1px;
+  height: 12px;
+  background-color: rgb(217, 217, 217);
+}
+
+.contentToolbar__clock {
+  margin-right: 4px;
+  width: 19px;
+}
+
+.contentToolbar__dropdown {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999999;
+  padding: 26px 10px 13px 13px;
+}
+
+.contentToolbar__dropdownText {
+  font-size: 18px;
+  color: #999999;
+}
+
+.contentToolbar__dropdownIcon {
+  margin: 4px 0px 0px 7px;
+  width: 10px;
+  height: 7px;
 }
