@@ -31,15 +31,13 @@
 .content__list {
   display: flex;
   margin-top: 15px;
+  border-bottom: 1px solid #f1f1f1;
+  color: #bbbbbb;
 }
 .content__list > li {
-  border-bottom: 1px solid #f1f1f1;
   cursor: pointer;
   flex: 1;
   background-color: #ffffff;
-  color: #bbbbbb;
-  /* border-bottom: 2px solid #ffd200; */
-  /* color: #333; */
 }
 .content__list > li > div {
   padding: 15px 0;
@@ -53,7 +51,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.week > .content__item > article.upper {
+.week > .content__item > article.upper:first-child {
   margin-bottom: 20px;
 }
 .content__item__post {

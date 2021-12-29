@@ -9,3 +9,10 @@
 @import url("content.css");
 @import url("downlink.css");
 @import url("footer.css");
+
+.selected {
+  border-bottom-color: #ffd200;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  color: #333;
+}

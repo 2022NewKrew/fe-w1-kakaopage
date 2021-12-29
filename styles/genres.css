@@ -13,13 +13,13 @@
   padding: 22px 0px;
   font-size: 20px;
   display: flex;
+  color: rgb(187, 187, 187);
 }
 .genres > li > a {
-  text-decoration: none;
-  color: rgb(187, 187, 187);
   font-weight: 350;
   line-height: 1.15;
 }
-.genres > li:first-child > a {
+.genres > li.selected {
   color: rgb(51, 51, 51);
+  border-bottom: none;
 }
