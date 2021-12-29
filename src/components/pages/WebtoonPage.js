@@ -1,6 +1,8 @@
-export const WebtoonPage = function ({ $parent }) {
-    this.render = () => {
-        $parent.innerHTML = `
+export const WebtoonPage = () => {
+    const target = document.createElement("article");
+
+    const render = () => {
+        target.innerHTML = `
             <div class="center-container">
                 <div class="column-container">
                     <div class="white-wrapper genre">
@@ -349,6 +351,8 @@ export const WebtoonPage = function ({ $parent }) {
                 </div>
             </div>
         `
+        return target;
     }
-    this.render();
+    
+    return render();
 }

@@ -1,3 +1,3 @@
 import { App } from './App.js';
 
-const app = new App(document.querySelector('#app'));
+const app = App(document.querySelector('#app'));

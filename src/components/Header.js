@@ -1,11 +1,9 @@
-export const Header = function({ $app }) {
+export const Header = () => {
+    const target = document.createElement("div");
+    target.className = "fix first";
 
-    this.$target = document.createElement("div");
-    this.$target.className = "fix first";
-    $app.appendChild(this.$target);
-
-    this.render = () => {
-        this.$target.innerHTML = `
+    const render = () => {
+        target.innerHTML = `
             <header>
                 <h1>
                     <div class="vertical-center">
@@ -26,6 +24,8 @@ export const Header = function({ $app }) {
                 </h1>
             </header>
         `
+        return target;
     }
-    this.render();
+
+    return render();
 }

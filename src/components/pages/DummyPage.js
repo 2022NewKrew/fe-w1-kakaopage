@@ -1,10 +1,10 @@
 import { img_src_array } from "../../lists.js";
 
-export const DummyPage = function ({ $parent, nav_id }) {
+export const DummyPage = ({ nav_id }) => {
+    const target = document.createElement("article");
 
-    this.render = () => {
-        console.log("dummy page render()")
-        $parent.innerHTML = `
+    const render = () => {
+        target.innerHTML = `
             <div class="center-container">
                 <div class="column-container">
                     <div class="white-wrapper genre">
@@ -13,6 +13,8 @@ export const DummyPage = function ({ $parent, nav_id }) {
                 </div>
             </div>
         `
+        return target;
     }
-    this.render();
+
+    return render();
 }
