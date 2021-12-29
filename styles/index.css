@@ -1,0 +1,25 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    height: 2000px;
+    overflow-y: scroll;
+    background-color: #eee;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

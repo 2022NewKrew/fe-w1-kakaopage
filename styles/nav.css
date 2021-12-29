@@ -1,0 +1,29 @@
+.contents-nav-group{
+    z-index: 201;
+    top: 80px;
+    left: 0;
+    position:fixed;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
+    height: 70px;
+}
+
+.contents-nav-group ul{
+    display: grid;
+    grid-template-columns: 95px 140px 160px 115px 115px 95px;
+    min-width: 720px;
+}
+
+.contents-nav-group li{
+    padding: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.contents-nav-group a {
+    display: flex;
+    align-items: center;
+}
