@@ -15,10 +15,10 @@ const renderUl = (link_items) => {
 
 export const LinkGrid = ({ data }) => {
     const target = document.createElement("div");
-    if (!data || data.length === 0) return target;
-    target.className = "white-wrapper padding-wrapper";
 
     const render = () => {
+        if (!data || data.length === 0) return target;
+        target.className = "white-wrapper padding-wrapper";
         target.innerHTML = "";
         target.appendChild(renderUl(data));
         return target;

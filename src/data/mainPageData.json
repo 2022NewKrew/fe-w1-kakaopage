@@ -26,6 +26,10 @@
                 { "title": "무료회차 UP", "path": "/"},
                 { "title": "독립운동가 웹툰", "path": "/"},
                 { "title": "오늘 랭킹", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
             ]
         },
         "요일연재" : {

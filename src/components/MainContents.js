@@ -31,7 +31,7 @@ export const MainContents = ({ genre_id }) => {
         if (!state.data) return target;
         target.appendChild(BigCarousel({ data: state.data.big_carousel }));
         target.appendChild(LinkGrid({ data: state.data.link_grid }));
-        target.appendChild(BannerCarousel());
+        target.appendChild(BannerCarousel({ data: state.data.banner_carousel }));
         target.appendChild(ToonGrid());
         return target;
     }
