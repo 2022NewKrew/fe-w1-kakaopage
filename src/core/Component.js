@@ -9,10 +9,6 @@ export const Component = ({
   let _state = state;
   const _props = props;
 
-  init();
-  bindEvent();
-  render();
-
   // 화면을 그려준다.
   const render = () => {
     $target.innerHTML = this.htmlTemplate();
@@ -25,5 +21,12 @@ export const Component = ({
     this.render();
   };
 
-  return {};
+  init();
+  bindEvent();
+  render();
+
+  return {
+
+    render()
+  };
 };

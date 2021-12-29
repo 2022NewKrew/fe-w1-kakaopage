@@ -2,6 +2,7 @@ import { ContentGridListBox } from "../components/contents/ContentGridListBox.js
 import { ContentToolbar } from "../components/contents/ContentToolbar.js";
 import { SlideBannerBox } from "../components/contents/SlideBannerBox.js";
 import { DayNavigator } from "../components/navigators/DayNavigator.js";
+import { State } from "../core/State.js";
 
 export const WebtoonDaliyTab = () => {
   const $root = document.createElement("div");
@@ -20,10 +21,11 @@ const TopBannerSection = () => {
 
 const ContentSection = () => {
   const $root = document.createElement("section");
+  const state = State({ day: new Date().getDay() || 7, type: "전체" });
 
-  $root.appendChild(DayNavigator().$root);
-  $root.appendChild(ContentToolbar().$root);
-  $root.appendChild(ContentGridListBox().$root);
+  $root.appendChild(DayNavigator({ state }));
+  $root.appendChild(ContentToolbar({ state }));
+  $root.appendChild(ContentGridListBox({ state }));
 
   return $root;
 };

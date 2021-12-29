@@ -17,7 +17,7 @@ const TobBannerSection = () => {
   const $root = document.createElement("section");
 
   $root.appendChild(SlideBannerBox().$root);
-  $root.appendChild(DayNavigator().$root);
+  // $root.appendChild(DayNavigator().$root);
 
   return $root;
 };

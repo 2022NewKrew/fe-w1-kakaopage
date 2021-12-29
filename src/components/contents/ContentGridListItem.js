@@ -1,7 +1,6 @@
 export const ContentGridListItem = () => {
   const $root = document.createElement("div");
   $root.className = "contentGridListItem";
-
   $root.innerHTML = `
       <div class="contentGridListItem__thumb">
         <div class="contentGridListItem__thumbWrapper">
@@ -25,5 +24,5 @@ export const ContentGridListItem = () => {
       </div>
     `;
 
-  return { $root };
+  return $root;
 };

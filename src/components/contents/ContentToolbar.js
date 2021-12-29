@@ -1,18 +1,17 @@
-export const ContentToolbar = () => {
-    const $root = document.createElement("div");
-    $root.className = "contentToolbar";
-  
-    $root.innerHTML = `
+export const ContentToolbar = ({ state }) => {
+  const $root = document.createElement("div");
+  $root.className = "contentToolbar";
+  $root.innerHTML = `
       <ul class="contentToolbar__nav">
-        <li class="contentToolbar__navItem">
-          <p class="contentToolbar__text contentToolbar__text--selected">전체</p>
+        <li class="contentToolbar__navItem" data-type="전체">
+          <p class="contentToolbar__text">전체</p>
         </li>
-        <div class="contentToolbar__separator"></div>
-        <li class="contentToolbar__navItem">
+        <div class="contentToolbar__separator" ></div>
+        <li class="contentToolbar__navItem" data-type="웹툰">
           <p class="contentToolbar__text">웹툰</p>
         </li>
         <div class="contentToolbar__separator"></div>
-        <li class="contentToolbar__navItem">
+        <li class="contentToolbar__navItem" data-type="실시간">
           <img class="contentToolbar__clock" alt="실시간" src="https://static-page.kakao.com/static/common/ico_wait-off.svg?cb16228c070950e8b1bb33d712ac8b7a">
           <p class="contentToolbar__text">웹툰</p>
         </li>
@@ -23,7 +22,27 @@ export const ContentToolbar = () => {
         <img class="contentToolbar__dropdownIcon" alt="버튼다운" src="https://static-page.kakao.com/static/common/ico_sorting_arrow.svg?167b1295f93ba9f9d84cac7a5b830345">
       </div>
     `;
-  
-    return { $root };
+  const $itemList = $root.querySelectorAll(".contentToolbar__navItem");
+
+  $root.addEventListener("click", (e) => {
+    const $navItem = e.target.closest(".contentToolbar__navItem");
+    if (!$navItem) return;
+
+    state.type = $navItem.dataset.type;
+  });
+
+  const render = () => {
+    $itemList.forEach((el) => {
+      const $text = el.querySelector(".contentToolbar__text");
+
+      if (state.type === el.dataset.type)
+        $text.classList.add("contentToolbar__text--selected");
+      else $text.classList.remove("contentToolbar__text--selected");
+    });
   };
-  
+
+  state.subscribe(render);
+  render();
+
+  return $root;
+};

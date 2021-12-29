@@ -1,12 +1,22 @@
 import { ContentGridListItem } from "./ContentGridListItem.js";
 
-export const ContentGridListBox = () => {
+export const ContentGridListBox = ({ state }) => {
   const $root = document.createElement("div");
   $root.className = "contentGridListBox";
 
-  [...Array(20)].forEach((_) => {
-    $root.appendChild(ContentGridListItem().$root);
-  });
+  const render = () => {
+    $root.innerHTML = "";
 
-  return { $root };
+    // console.log(currentDay.getValue(), webtoonType.getValue());
+
+    [...Array(20)].forEach((_) => {
+      $root.appendChild(ContentGridListItem());
+    });
+  };
+
+  // init
+  state.subscribe(render);
+  render();
+
+  return $root;
 };
