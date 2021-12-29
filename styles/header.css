@@ -39,7 +39,7 @@
 }
 .searchbar > span {
   margin-right: 15px;
-  background-image: url("../images/검색\ 버튼.png");
+  background-image: url("../assets/images/검색\ 버튼.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 18px;
@@ -67,7 +67,7 @@
   color: rgba(128, 128, 128, 0.6);
 }
 .tab-menu > span {
-  background-image: url("../images/Seperator.png");
+  background-image: url("../assets/images/Seperator.png");
   width: 1px;
   height: 12px;
   background-color: rgba(128, 128, 128, 0.4);

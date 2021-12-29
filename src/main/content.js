@@ -1,4 +1,4 @@
-import data from "../../../json/contentTop.json" assert { type: "json" };
+import data from "../../assets/json/contentTop.json" assert { type: "json" };
 
 const createContentTop = (data, title) => {
   const section = document.createElement("section");
@@ -13,13 +13,13 @@ const createContentTop = (data, title) => {
           <img src="${ele.poster}" />
           <div>
             <div>TOP</div>
-            <img src="images/bmbadge_waitfree.svg"/>
+            <img src="assets/images/bmbadge_waitfree.svg"/>
           </div>
         </div>
         <div class="content__item__title>${ele.title}</div>
         <div class="content__item__info">
-          <img src="./images/업데이트.svg" />
-          <img src="./images/icon_read_count.png" />
+          <img src="assets/images/업데이트.svg" />
+          <img src="assets/images/icon_read_count.png" />
           <span>${ele.count}</span>
         </div>
       </a>
@@ -32,7 +32,7 @@ const createContentTop = (data, title) => {
       <div><h3>${title} TOP</h3></div>
       <div>
         <span>더보기</span>
-        <img src="images/ic-more-gray.svg"/>
+        <img src="assets/images/ic-more-gray.svg"/>
       </div>
     </div>
     <div class="content__item">

@@ -1,31 +1,31 @@
 {
   "romance": [
     {
-      "poster": "images/쓰라는 글은 안 쓰고.png",
+      "poster": "assets/images/쓰라는 글은 안 쓰고.png",
       "star": "9.9",
       "title": "쓰라는 글은 안 쓰고",
       "count": "20.1만명"
     },
     {
-      "poster": "images/인별당.png",
+      "poster": "assets/images/인별당.png",
       "star": "9.8",
       "title": "인별당",
       "count": "17.9만명"
     },
     {
-      "poster": "images/스마트폰 중독자.png",
+      "poster": "assets/images/스마트폰 중독자.png",
       "star": "9.9",
       "title": "스마트폰 중독자",
       "count": "26만명"
     },
     {
-      "poster": "images/열세 번째 밤.png",
+      "poster": "assets/images/열세 번째 밤.png",
       "star": "9.8",
       "title": "열세 번째 밤",
       "count": "42.2만명"
     },
     {
-      "poster": "./images/그곳에_ 네가[독점연재].png",
+      "poster": "assets/images/그곳에_ 네가[독점연재].png",
       "star": "9.8",
       "title": "그곳에, 네가[독점연재]",
       "count": "16만명"
@@ -33,31 +33,31 @@
   ],
   "rofan": [
     {
-      "poster": "images/집으로 돌려보내 주세요.png",
+      "poster": "assets/images/집으로 돌려보내 주세요.png",
       "star": "9.9",
       "title": "집으로 돌려보내 주세요",
       "count": "29.5만명"
     },
     {
-      "poster": "images/다정한 그대를 지키는 방법.png",
+      "poster": "assets/images/다정한 그대를 지키는 방법.png",
       "star": "10.0",
       "title": "다정한 그대를 지키는 방법",
       "count": "83.2만명"
     },
     {
-      "poster": "images/아이리스 - 스마트폰을 든 레이디.png",
+      "poster": "assets/images/아이리스 - 스마트폰을 든 레이디.png",
       "star": "10.0",
       "title": "아이리스 - 스마트폰을 든 레이디",
       "count": "104.8만명"
     },
     {
-      "poster": "images/마른 가지의 라가.png",
+      "poster": "assets/images/마른 가지의 라가.png",
       "star": "10.0",
       "title": "마른 가지의 라가",
       "count": "47.7만명"
     },
     {
-      "poster": "./images/나는 남주의 전 여친이었다.png",
+      "poster": "assets/images/나는 남주의 전 여친이었다.png",
       "star": "9.9",
       "title": "나는 남주의 전 여친이었다",
       "count": "45.2만명"
@@ -65,31 +65,31 @@
   ],
   "drama": [
     {
-      "poster": "images/빅 라이프.png",
+      "poster": "assets/images/빅 라이프.png",
       "star": "9.9",
       "title": "빅 라이프",
       "count": "58.2만명"
     },
     {
-      "poster": "images/네 곁에도 어쩌면.png",
+      "poster": "assets/images/네 곁에도 어쩌면.png",
       "star": "9.9",
       "title": "네 곁에도 어쩌면",
       "count": "32만명"
     },
     {
-      "poster": "images/로드 오브 머니.png",
+      "poster": "assets/images/로드 오브 머니.png",
       "star": "9.9",
       "title": "로드 오브 머니",
       "count": "46.1만명"
     },
     {
-      "poster": "images/프로야구생존기.png",
+      "poster": "assets/images/프로야구생존기.png",
       "star": "9.9",
       "title": "프로야구생존기",
       "count": "17.3만명"
     },
     {
-      "poster": "./images/극락왕생.png",
+      "poster": "assets/images/극락왕생.png",
       "star": "9.9",
       "title": "극락왕생",
       "count": "19.5만명"
@@ -97,31 +97,31 @@
   ],
   "BL_GL": [
     {
-      "poster": "images/용이 비를 내리는 나라.png",
+      "poster": "assets/images/용이 비를 내리는 나라.png",
       "star": "10.0",
       "title": "용이 비를 내리는 나라",
       "count": "104.8만명"
     },
     {
-      "poster": "images/화우요 [BL].png",
+      "poster": "assets/images/화우요 [BL].png",
       "star": "9.8",
       "title": "화우요 [BL]",
       "count": "19.8만명"
     },
     {
-      "poster": "images/사랑이 아니다 웹툰판.png",
+      "poster": "assets/images/사랑이 아니다 웹툰판.png",
       "star": "9.8",
       "title": "사랑이 아니다 웹툰판",
       "count": "6.6만명"
     },
     {
-      "poster": "images/가족이 되는 방법.png",
+      "poster": "assets/images/가족이 되는 방법.png",
       "star": "10.0",
       "title": "가족이 되는 방법",
       "count": "19.1만명"
     },
     {
-      "poster": "./images/당근 있어요_.png",
+      "poster": "assets/images/당근 있어요_.png",
       "star": "9.5",
       "title": "당근 있어요",
       "count": "8.4만명"
@@ -129,31 +129,31 @@
   ],
   "boy": [
     {
-      "poster": "images/만렙 영웅님께서 귀환하신다_.png",
+      "poster": "assets/images/만렙 영웅님께서 귀환하신다_.png",
       "star": "9.9",
       "title": "만렙 영웅님께서 귀환하신다",
       "count": "62.2만명"
     },
     {
-      "poster": "images/던전 리셋.png",
+      "poster": "assets/images/던전 리셋.png",
       "star": "9.9",
       "title": "던전 리셋",
       "count": "66.3만명"
     },
     {
-      "poster": "images/대군으로 살어리랏다.png",
+      "poster": "assets/images/대군으로 살어리랏다.png",
       "star": "9.9",
       "title": "대군으로 살어리랏다",
       "count": "51.2만명"
     },
     {
-      "poster": "images/던전 마제스티.png",
+      "poster": "assets/images/던전 마제스티.png",
       "star": "9.8",
       "title": "던전 마제스티",
       "count": "34.2만명"
     },
     {
-      "poster": "./images/먹을수록 강해짐.png",
+      "poster": "assets/images/먹을수록 강해짐.png",
       "star": "9.8",
       "title": "먹을수록 강해짐",
       "count": "39.8만명"
@@ -161,31 +161,31 @@
   ],
   "action": [
     {
-      "poster": "images/궁귀검신.png",
+      "poster": "assets/images/궁귀검신.png",
       "star": "9.8",
       "title": "궁귀검신",
       "count": "45.6만명"
     },
     {
-      "poster": "images/학사귀환.png",
+      "poster": "assets/images/학사귀환.png",
       "star": "9.6",
       "title": "학사귀환",
       "count": "47.1만명"
     },
     {
-      "poster": "images/무인이곽.png",
+      "poster": "assets/images/무인이곽.png",
       "star": "9.7",
       "title": "무인이곽",
       "count": "24만명"
     },
     {
-      "poster": "images/아비무쌍.png",
+      "poster": "assets/images/아비무쌍.png",
       "star": "10.0",
       "title": "아비무쌍",
       "count": "73만명"
     },
     {
-      "poster": "./images/고교최강.png",
+      "poster": "assets/images/고교최강.png",
       "star": "6.5",
       "title": "고교최강",
       "count": "5.1만명"

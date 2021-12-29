@@ -3,7 +3,7 @@ export default () => {
   div.className = "downlink";
 
   div.innerHTML = `
-    <img src="images/download link.png" />
+    <img src="assets/images/download link.png" />
     `;
 
   document.body.appendChild(div);

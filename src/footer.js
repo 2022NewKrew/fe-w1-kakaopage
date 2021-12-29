@@ -14,7 +14,7 @@ export default () => {
         <div class="copyright">ⓒ Kakao Entertainment Corp.</div>
     </div>
     <div>
-        <img src="./images/ok mark.png"/>
+        <img src="assets/images/ok mark.png"/>
         <span>저작권 ok</span>
     </div>
     `;

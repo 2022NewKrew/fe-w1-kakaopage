@@ -5,7 +5,7 @@ export default () => {
     <div class="header-wrapper">
         <div>
             <h1 class="logo">
-            <img src="./images/kakaopage logo.svg" />
+            <img src="assets/images/kakaopage logo.svg" />
             </h1>
             <div class="tap">
             <div class="tap-wrapper">
@@ -15,9 +15,9 @@ export default () => {
                 </div>
                 <div class="stage-wrapper">
                 <a href="#">
-                    <img src="./images/스테이지.svg" />
+                    <img src="assets/images/스테이지.svg" />
                 </a>
-                <img src="./images/stage-tooltip.svg" />
+                <img src="assets/images/stage-tooltip.svg" />
                 </div>
                 <div class="tab-menu">
                 <a href="#">캐쉬충전</a>

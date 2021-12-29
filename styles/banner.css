@@ -14,7 +14,7 @@
 }
 
 .banner-wrapper {
-  background-image: url("../../images/천하제일\ 표사.png");
+  background-image: url("../assets/images/천하제일\ 표사.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 720px;
@@ -42,28 +42,28 @@
   margin-top: 17px;
 }
 .banner__subtitle > span:nth-child(1) {
-  background-image: url("../images/badge-bigthum-up.svg");
+  background-image: url("../assets/images/badge-bigthum-up.svg");
   width: 32px;
   height: 20px;
 }
 .banner__subtitle > span:nth-child(2) {
-  background-image: url("../images/ico-bigthum-wait.svg");
+  background-image: url("../assets/images/ico-bigthum-wait.svg");
   width: 18px;
   height: 20px;
 }
 
 .banner__subtitle > span:nth-child(3) {
-  background-image: url("../images/bmbadge_webtoon.svg");
+  background-image: url("../assets/images/bmbadge_webtoon.svg");
   width: 39px;
   height: 24px;
 }
 .banner__subtitle > span:nth-child(4) {
-  background-image: url("../images/Seperator.png");
+  background-image: url("../assets/images/Seperator.png");
   width: 2px;
   height: 20px;
 }
 .banner__subtitle > span:nth-child(5) {
-  background-image: url("../images/ico-bigthum-person.svg");
+  background-image: url("../assets/images/ico-bigthum-person.svg");
   width: 14px;
   height: 16px;
 }
