@@ -1,15 +1,19 @@
 import { createCarousel } from './carousel.js'
 
-export function drawComponent(data) {
-    const contentWrapperEl = document.createElement('div')
+export function drawComponents(data) {
+    const componentObjects = []
     
     data.forEach((component, idx) => {
+        let newComponentObject
+        
         switch (component.type) {
             case 'carousel':
-                contentWrapperEl.appendChild(createCarousel(component.content))
+                newComponentObject = createCarousel(component.content)
                 break;
         }
+    
+        componentObjects.push(newComponentObject)
     })
     
-    return contentWrapperEl
+    return componentObjects
 }

@@ -76,9 +76,27 @@ export function createCarousel(data) {
     const rightBtnEl = btnEls[1]
     
     let bannerIdxObject = { bannerIdx: 1 }
-    let timeId = setInterval(() => {
-        moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, data.length)
-    }, AUTO_SLIDE_PERIOD)
+    let timeId
+    
+    const stopAutoSlide = () => {
+        clearInterval(timeId)
+    }
+    
+    const startAutoSlide = () => {
+        timeId = setInterval(() => {
+            moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, data.length)
+        }, AUTO_SLIDE_PERIOD)
+    }
+    
+    const carouselObject = {
+        element: newCarouselEl,
+        stopEl: () => {
+            stopAutoSlide()
+        },
+        startEl: () => {
+            startAutoSlide()
+        }
+    }
     
     pageNumberEl.innerText = `1 / ${data.length}`
     
@@ -93,18 +111,14 @@ export function createCarousel(data) {
     
     leftBtnEl.addEventListener('click', () => {
         moveLeft(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, data.length)
-        clearInterval(timeId)
-        timeId = setInterval(() => {
-            moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, data.length)
-        }, AUTO_SLIDE_PERIOD)
+        stopAutoSlide()
+        startAutoSlide()
     })
     
     rightBtnEl.addEventListener('click', () => {
         moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, data.length)
-        clearInterval(timeId)
-        timeId = setInterval(() => {
-            moveRight(bannerIdxObject, newCarouselBannerPartEl, pageNumberEl, data.length)
-        }, AUTO_SLIDE_PERIOD)
+        stopAutoSlide()
+        startAutoSlide()
     })
     
     newCarouselBannerPartEl.addEventListener('transitionend', () => {
@@ -119,5 +133,5 @@ export function createCarousel(data) {
         newCarouselBannerPartEl.style.transform = getTranslateX(bannerIdxObject.bannerIdx)
     })
     
-    return newCarouselEl
+    return carouselObject
 }

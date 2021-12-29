@@ -1,22 +1,41 @@
 import contentJson from '../json/content.json' assert { type: 'json' }
-import { drawComponent } from './component-creator.js'
+import { drawComponents } from './component-creator.js'
 import { removeAllChild } from './common.js'
 
-const contentData = JSON.parse(JSON.stringify(contentJson))
+const categoryDatas = JSON.parse(JSON.stringify(contentJson))
 
 window.addEventListener('DOMContentLoaded', () => {
     const contentContainerEl = document.querySelector('.content-container')
     const contentNavEl = document.querySelector('.content-nav')
     const contentNavItemEls = []
-    const wrapperElObject = {}
+    const contentObjects = {}
     
-    function showTab(navItemEl, categoryData) {
-        if (wrapperElObject[categoryData.name] === undefined) {
-            wrapperElObject[categoryData.name] = drawComponent(categoryData.content)
+    let currentShowedObjects
+    
+    const showTab = (navItemEl, categoryData) => {
+        if (contentObjects[categoryData.name] === undefined) {
+            contentObjects[categoryData.name] = drawComponents(categoryData.content)
         }
     
-        removeAllChild(contentContainerEl)
-        contentContainerEl.appendChild(wrapperElObject[categoryData.name])
+        if (currentShowedObjects !== undefined) {
+            removeAllChild(contentContainerEl)
+            currentShowedObjects.forEach((componentObject) => {
+                console.log(componentObject)
+        
+                if (componentObject.stopEl !== undefined) {
+                    componentObject.stopEl()
+                }
+            })
+        }
+    
+        currentShowedObjects = contentObjects[categoryData.name]
+        currentShowedObjects.forEach((componentObject) => {
+            contentContainerEl.appendChild(componentObject.element)
+    
+            if (componentObject.startEl !== undefined) {
+                componentObject.startEl()
+            }
+        })
     
         contentNavItemEls.forEach((navItemEl) => {
             navItemEl.classList.remove('selected-content-nav-item')
@@ -25,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
         navItemEl.classList.add('selected-content-nav-item')
     }
     
-    contentData.forEach((categoryData) => {
+    categoryDatas.forEach((categoryData) => {
         const contentNavItemEl = document.createElement('li')
         
         contentNavItemEl.classList.add('content-nav-item')
@@ -39,5 +58,5 @@ window.addEventListener('DOMContentLoaded', () => {
         contentNavItemEls.push(contentNavItemEl)
     })
     
-    showTab(contentNavItemEls[0], contentData[0])
+    showTab(contentNavItemEls[0], categoryDatas[0])
 })
