@@ -12,7 +12,8 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "start": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "npm i --save & node src/index.js"
   },
   "type": "module"
 }
