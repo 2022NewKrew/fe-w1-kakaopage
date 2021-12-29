@@ -1,4 +1,4 @@
-function makeMenuYellow(menu) {
+function makeMenuActive(menu) {
   const menus = document.getElementsByClassName("menu");
   Array.from(menus).forEach((e) => {
     if (e.classList.contains("active-menu")) {
@@ -10,16 +10,21 @@ function makeMenuYellow(menu) {
 }
 
 async function loadMenu(menu) {
-  const main = document.getElementById("hello");
+  const home = document.getElementById("home");
+
   let tab = "webtoon.html";
   if (menu === "webtoon-tab") {
     tab = "webtoon.html";
   } else {
     tab = "dummy.html";
   }
-  const menuFile = await fetch(tab);
-  const text = await menuFile.text();
-  main.innerHTML = text;
+
+  const file = await fetch(tab);
+  const text = await file.text();
+  home.innerHTML = "";
+  await home.insertAdjacentHTML("afterbegin", text);
+
+  webtoonInit();
 }
 
 function init() {
@@ -33,7 +38,7 @@ function init() {
     const menuId = e.target.getAttribute("data-tab-id");
     if (menuId) {
       const menu = document.getElementById(menuId).parentNode;
-      makeMenuYellow(menu);
+      makeMenuActive(menu);
       loadMenu(menuId);
     } else {
       return;
@@ -43,9 +48,21 @@ function init() {
 
 init();
 
+function webtoonInit() {
+  // 각 장르별 이벤트리스너 추가
+  const genres = document.getElementById("genres");
+  genres.addEventListener("click", (e) => {
+    const genre = e.target;
+    makeGenreActive(genre);
+  });
+
+  topRanking();
+
+  showSlides(1);
+}
+
 // banner carousel
 let slideIndex = 1;
-showSlides(slideIndex);
 
 function updateSlides(slideNum) {
   showSlides((slideIndex += slideNum));
@@ -70,13 +87,26 @@ function showSlides(slideNum) {
   slides[slideIndex - 1].style.alignItems = "center";
 }
 
-// 요일 연재 TOP
-// 웹툰 복제하기
-let dailyContainer = document.getElementsByClassName(
-  "daily-ranking-contents-container"
-)[0];
+// 장르 메뉴 선택시 색 변경
+function makeGenreActive(genre) {
+  const genres = document.getElementsByClassName("genre");
+  Array.from(genres).forEach((e) => {
+    if (e.classList.contains("active-genre")) {
+      e.classList.remove("active-genre");
+      return;
+    }
+  });
+  genre.classList.add("active-genre");
+}
 
-for (i = 0; i < 9; i++) {
-  let dailytop = document.getElementsByClassName("daily-ranking-content")[0];
-  dailyContainer.appendChild(dailytop.cloneNode(true));
+// 요일 연재 TOP 컴포넌트 추가
+function topRanking() {
+  let dailyContainer = document.getElementsByClassName(
+    "daily-ranking-contents-container"
+  )[0];
+
+  for (i = 0; i < 9; i++) {
+    let dailytop = document.getElementsByClassName("daily-ranking-content")[0];
+    dailyContainer.appendChild(dailytop.cloneNode(true));
+  }
 }

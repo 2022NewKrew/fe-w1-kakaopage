@@ -166,9 +166,10 @@ main {
   align-items: center;
   font-size: 1.3rem;
   color: rgb(187, 187, 187);
+  cursor: pointer;
 }
 
-.webtoon-genres > ul > li:first-child {
+.active-genre {
   color: black;
 }
 

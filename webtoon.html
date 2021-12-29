@@ -1,16 +1,16 @@
 <!-- webtoon menu selection -->
 <section>
   <div class="webtoon-genres">
-    <ul class="webtoon-genres">
-      <li>홈</li>
-      <li>요일연재</li>
-      <li>웹툰</li>
-      <li>소년</li>
-      <li>드라마</li>
-      <li>로맨스</li>
-      <li>로판</li>
-      <li>액션무협</li>
-      <li>BL</li>
+    <ul class="webtoon-genres" id="genres">
+      <li class="genre active-genre">홈</li>
+      <li class="genre">요일연재</li>
+      <li class="genre">웹툰</li>
+      <li class="genre">소년</li>
+      <li class="genre">드라마</li>
+      <li class="genre">로맨스</li>
+      <li class="genre">로판</li>
+      <li class="genre">액션무협</li>
+      <li class="genre">BL</li>
     </ul>
   </div>
 </section>
@@ -107,7 +107,7 @@
 <!-- Banner Carousel -->
 <section class="banner">
   <div class="banner-container">
-    <button class="banner-btn prevBtn" onClick="plusSlides(-1)">
+    <button class="banner-btn prevBtn" onClick="updateSlides(-1)">
       <img
         src="https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c"
         alt="prev button"
@@ -141,7 +141,7 @@
         </div>
       </div>
     </div>
-    <button class="banner-btn nextBtn" onClick="plusSlides(1)">
+    <button class="banner-btn nextBtn" onClick="updateSlides(1)">
       <img
         src="https://static-page.kakao.com/static/pc/ic-paging-next-nor.svg?b76f34a1b77e59514735b92464295b7c"
         alt="next button"
