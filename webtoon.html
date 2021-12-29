@@ -1,17 +1,7 @@
 <!-- webtoon menu selection -->
 <section>
   <div class="webtoon-genres">
-    <ul class="webtoon-genres" id="genres">
-      <li class="genre active-genre">홈</li>
-      <li class="genre">요일연재</li>
-      <li class="genre">웹툰</li>
-      <li class="genre">소년</li>
-      <li class="genre">드라마</li>
-      <li class="genre">로맨스</li>
-      <li class="genre">로판</li>
-      <li class="genre">액션무협</li>
-      <li class="genre">BL</li>
-    </ul>
+    <ul class="webtoon-genres" id="genres"></ul>
   </div>
 </section>
 
@@ -65,7 +55,7 @@
 <!-- Webtoon menus (오늘 UP, 오늘 신작, 오늘 랭킹 등) -->
 <section class="webtoon-menus">
   <div class="webtoon-menus-container">
-    <a class="webtoon-menu-top-left">
+    <a>
       <div class="webtoon-menu">
         <p>오늘 UP</p>
         <p>178</p>
@@ -77,13 +67,13 @@
         <p>3</p>
       </div>
     </a>
-    <a class="webtoon-menu-top-right">
+    <a>
       <div class="webtoon-menu">
         <p>오리지널</p>
         <p>2,184</p>
       </div>
     </a>
-    <a class="webtoon-menu-bottom-left">
+    <a>
       <div class="webtoon-menu">
         <p>무료회차 UP</p>
         <p>178</p>
@@ -95,7 +85,7 @@
         <p>178</p>
       </div>
     </a>
-    <a class="webtoon-menu-bottom-right">
+    <a>
       <div class="webtoon-menu">
         <p>오늘 랭킹</p>
         <p>1위</p>
@@ -155,7 +145,7 @@
   <div class="daily-ranking-header">
     <div class="daily-ranking-top">
       <p>요일 연재 TOP</p>
-      <p>(1,553)</p>
+      <p>(1,555)</p>
     </div>
     <div class="daily-ranking-more">
       <p>더보기</p>
@@ -166,43 +156,12 @@
     </div>
   </div>
   <div class="daily-ranking-tabs">
-    <ul class="daily-ranking-tabs-container">
-      <li>월</li>
-      <li>화</li>
-      <li>수</li>
-      <li>목</li>
-      <li>금</li>
-      <li>토</li>
-      <li>일</li>
-      <li>완결</li>
-    </ul>
+    <ul
+      class="daily-ranking-tabs-container"
+      id="daily-ranking-tabs-container"
+    ></ul>
   </div>
   <div class="daily-ranking-contents">
-    <div class="daily-ranking-contents-container">
-      <a href="#" class="daily-ranking-content">
-        <div class="daily-ranking-content-container">
-          <div class="daily-ranking-image-container">
-            <img
-              src="https://dn-img-page.kakao.com/download/resource?kid=9Eoo5/hyATyGp2En/pYYjRkJJIrpHEvDible6T0&filename=th2"
-              alt="묵향 다크레이디"
-            />
-          </div>
-          <div class="daily-ranking-box">
-            <p>TOP</p>
-            <img
-              src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf"
-            />
-          </div>
-        </div>
-        <div>
-          <p class="daily-ranking-title">묵향 다크레이디</p>
-          <div class="daily-ranking-people">
-            <img
-              src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-            />129.5민명
-          </div>
-        </div>
-      </a>
-    </div>
+    <div class="daily-ranking-contents-container" id="daily-contents"></div>
   </div>
 </section>

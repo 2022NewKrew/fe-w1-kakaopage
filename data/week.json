@@ -1,0 +1,36 @@
+{
+  "week": [
+    {
+      "weekday": "월",
+      "english": "monday"
+    },
+    {
+      "weekday": "화",
+      "english": "tuesday"
+    },
+    {
+      "weekday": "수",
+      "english": "wednesday"
+    },
+    {
+      "weekday": "목",
+      "english": "thursday"
+    },
+    {
+      "weekday": "금",
+      "english": "friday"
+    },
+    {
+      "weekday": "토",
+      "english": "saturday"
+    },
+    {
+      "weekday": "일",
+      "english": "sunday"
+    },
+    {
+      "weekday": "완결",
+      "english": "finished"
+    }
+  ]
+}

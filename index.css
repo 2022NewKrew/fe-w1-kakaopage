@@ -278,32 +278,14 @@ main {
   display: flex;
   box-sizing: border-box;
   flex-wrap: wrap;
-  /* 왜 적용이 안될까 ㅜ  
-    border-radius: 8px; 
-    */
-}
-
-/* 비효율적인 방법이지만.. 일단 border-radius 아래 방법으로 해결
-더 좋은 방법 찾아보기  */
-.webtoon-menu-top-left {
-  border-top-left-radius: 8px;
-}
-
-.webtoon-menu-top-right {
-  border-top-right-radius: 8px;
-}
-
-.webtoon-menu-bottom-left {
-  border-bottom-left-radius: 8px;
-}
-
-.webtoon-menu-bottom-right {
-  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 /* 각 메뉴 styling */
 .webtoon-menus-container > a {
-  width: 30%;
+  box-sizing: border-box;
+  width: 33.33333%;
   padding: 0 10px;
   height: 60px;
   background-color: #f3f3f3;
@@ -451,11 +433,17 @@ main {
   display: flex;
 }
 
-.daily-ranking-tabs-container > li {
+.daily-ranking-tab {
   padding: 15px 0;
   font-size: 20px;
   text-align: center;
   color: #bbbbbb;
+  cursor: pointer;
+}
+
+.active-weekday {
+  color: black;
+  border-bottom: 2px solid #ffd200;
 }
 
 /* 요일 연재 개별 웹툰 css */
@@ -502,9 +490,14 @@ main {
   background-color: #242526;
 }
 
-.daily-ranking-box > p {
+.daily-ranking-box-left {
   font-size: 16px;
   color: #ffd200;
+}
+
+.daily-ranking-box-right {
+  font-size: 16px;
+  color: #999;
 }
 
 .daily-ranking-box > img {
