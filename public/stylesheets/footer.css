@@ -1,57 +1,54 @@
 footer {
-    width: 720px;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
+  width: 720px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
 }
-
 footer > div.left_box > ul {
-    display: flex;
+  display: flex;
 }
 footer > div.left_box > ul li {
-    list-style: none;
+  list-style: none;
 }
 .company_info.on::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background: no-repeat center
-        url("https://page.kakao.com/static/common/icon_trace_on.png");
-    background-size: 100%;
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: no-repeat center url("https://page.kakao.com/static/common/icon_trace_on.png");
+  background-size: 100%;
 }
 .company_info.off::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background: no-repeat center
-        url("https://page.kakao.com/static/common/icon_trace_off.png");
-    background-size: 100%;
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: no-repeat center url("https://page.kakao.com/static/common/icon_trace_off.png");
+  background-size: 100%;
 }
 span.separator {
-    padding: 0px 10px;
+  padding: 0px 10px;
 }
 div.left_box,
 div.right_box {
-    color: #cdcdcd;
+  color: #cdcdcd;
 }
 div.left_box > .company_info_wrap {
-    display: flex;
+  display: flex;
 }
 footer .company_info_url {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 div.left_box > .copyright_area {
-    line-height: 24px;
-    padding-bottom: 50px;
+  line-height: 24px;
+  padding-bottom: 50px;
 }
 
 div.right_box > img {
-    width: 55px;
-    height: 55px;
+  width: 55px;
+  height: 55px;
 }
 div.right_box > p {
-    font-size: small;
-    text-align: center;
+  font-size: small;
+  text-align: center;
 }

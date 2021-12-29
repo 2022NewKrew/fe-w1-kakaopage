@@ -203,6 +203,13 @@ div.event_menu {
   height: 140px;
   margin: 11px auto;
   background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+div.event_menu > img {
+  width: calc(var(--content-width) - 170px);
+  height: 100px;
 }
 
 div.day_webtoon {
