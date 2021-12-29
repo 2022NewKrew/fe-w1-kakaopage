@@ -1,0 +1,14 @@
+{
+  "name": "fe-w1-kakaopage",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -e . app.js"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "nunjucks": "^3.2.3"
+  }
+}

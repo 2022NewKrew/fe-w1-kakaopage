@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>카카오페이지</title>
+    <meta name="author" content="701b">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="json/home.json"></script>
+    <script src="javascripts/carousel.js" type="module"></script>
+    <script src="javascripts/component-creator.js" type="module"></script>
+    <script src="javascripts/header-tab.js" type="module"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="top-header">
+                <div class="logo">
+                    <img src="images/icon/logo-kakaopage.svg" alt="kakaopage logo">
+                </div>
+                <ul class="top-header-nav">
+                    <li class="top-header-nav-item">
+                        <div class="search">
+                            <form action="">
+                                <input type="text">
+                            </form>
+                            <img class="search-btn" src="images/icon/search-icon.svg" alt="search button">
+                        </div>
+                    </li>
+                    <li class="top-header-nav-item">
+                        <img class="stage-btn" src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f" alt="stage button">
+                    </li>
+                    <li class="top-header-nav-item">
+                        <div class="login-btn">
+                            <div>캐시충전</div>
+                            <div class="separator-bar"></div>
+                            <div>로그인</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="low-header">
+                <ul class="low-header-nav">
+                    <li class="low-header-nav-item">홈</li>
+                    <li class="low-header-nav-item">웹툰</li>
+                    <li class="low-header-nav-item">웹소설</li>
+                    <li class="low-header-nav-item">영화</li>
+                    <li class="low-header-nav-item">방송</li>
+                    <li class="low-header-nav-item">책</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="content home-content">
+            HOME
+        </div>
+        <div class="content webtoon-content">
+            <ul class="content-nav">
+                <li class="content-nav-item">홈</li>
+                <li class="content-nav-item">요일연재</li>
+                <li class="content-nav-item">웹툰</li>
+                <li class="content-nav-item">소년</li>
+                <li class="content-nav-item">드라마</li>
+                <li class="content-nav-item">로맨스</li>
+                <li class="content-nav-item">로판</li>
+                <li class="content-nav-item">액션무협</li>
+                <li class="content-nav-item">BL</li>
+            </ul>
+            <div class="content-container">
+                <div class="component-box">
+                </div>
+            </div>
+        </div>
+        <div class="content webnovel-content">
+            WEBNOVEL
+        </div>
+        <div class="content movie-content">
+            MOVIE
+        </div>
+        <div class="content broadcast-content">
+            BROADCAST
+        </div>
+        <div class="content book-content">
+            BOOK
+        </div>
+    </div>
+    <div class="component-container">
+        <div class="carousel">
+            <div class="carousel-banner-part">
+                <div class="carousel-banner">
+                    <img class="carousel-banner-img" alt="banner image">
+                    <div class="carousel-detail-box">
+                        <div class="carousel-title-box">
+                            <div class="carousel-title"></div>
+                            <div class="carousel-description-box">
+                                <img class="carousel-badge-img" alt="badge icon">
+                                <div class="carousel-category-text"></div>
+                                <div class="carousel-separator-bar"></div>
+                                <div class="carousel-number-of-reader-text"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-subtitle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-absolute-part">
+                <div class="carousel-side-btn-box">
+                    <img class="carousel-side-btn" src="images/icon/ic-banner-left-btn.svg" alt="left button">
+                    <img class="carousel-side-btn" src="images/icon/ic-banner-right-btn.svg" alt="right button">
+                </div>
+                <div class="carousel-page-number"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
