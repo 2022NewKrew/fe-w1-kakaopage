@@ -44,7 +44,7 @@ main.html
   └ BL
 
 홈 (json/home.json)
-└─┬ 배너 (type: "banner")
+└─┬ 큰 카로셀 (type: "big-carousel")
   │
   ├ 피처링 (type: "featuring")
   │ 
@@ -54,21 +54,21 @@ main.html
   │ 
   ├ 기대신작 TOP (type: "big-item-section")
   │ 
-  ├ 로맨스 TOP (type: "small-item-section")
+  ├ 로맨스 TOP (type: "item-section")
   │ 
-  ├ 로판 TOP (type: "small-item-section")
+  ├ 로판 TOP (type: "item-section")
   │ 
-  ├ 드라마 TOP (type: "small-item-section")
+  ├ 드라마 TOP (type: "item-section")
   │ 
-  ├ BL/GL TOP (type: "small-item-section")
+  ├ BL/GL TOP (type: "item-section")
   │ 
-  ├ 소년 TOP (type: "small-item-section")
+  ├ 소년 TOP (type: "item-section")
   │ 
-  ├ 액션무협 TOP (type: "small-item-section")
+  ├ 액션무협 TOP (type: "item-section")
   │ 
   ├ 일간 랭킹 TOP (type: "list-item-section")
   │ 
-  └ 추천 이벤트 (type: "banner-item-section")
+  └ 추천 이벤트 (type: "banner")
 
 요일연재 (json/weekly.json)
 └─┬ 배너
@@ -81,6 +81,70 @@ main.html
 └─┬ 요일
   │ 
   └ 요일별 만화
+```
 
+## Sections
+``` json
+{
+  "type": "big-carousel",
+  "items": [
+    {
+      "image": "<url>",
+      "title": "<string>",
+      "desc": ["<string>", "<string>"],
+    }
+  ]
+}
 
+{
+  "type": "featuring",
+  "items": ["<string>", "<string>"]
+}
+
+{
+  "type": "carousel",
+  "items": [
+    {
+      "image": "<url>"
+    }
+  ]
+}
+
+{
+  "type": "weekly-top",
+  "title": "<string>",
+  "items": {
+    "mon": ["<item>", "<item>"],
+    "tue": ["<item>", "<item>"],
+    "wed": ["<item>", "<item>"],
+    "thr": ["<item>", "<item>"],
+    "fri": ["<item>", "<item>"],
+    "sat": ["<item>", "<item>"],
+    "sun": ["<item>", "<item>"]
+  }
+}
+
+{
+  "type": "big-item-section",
+  "title": "<string>",
+  "items": ["<item>", "<item>"]
+}
+
+{
+  "type": "item-section",
+  "title": "<string>",
+  "items": ["<item>", "<item>"]
+}
+```
+
+## item
+```json
+{
+  "image": "<url>",
+  "title": "<string>",
+  "views": "<string>",
+  "desc": "<string>",
+  "star": "<string>",
+  "tags": ["<url>", "<url>"]
+}
 ```
