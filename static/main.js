@@ -34,6 +34,8 @@
   function init(){
     tabs.addEventListener('click', (e)=>{
       const tabHtml=e.target.getAttribute("data-tab-html");
+      if(tabHtml===null)
+        return;
       markTabActive(e.target);
       loadTab(tabHtml);
     });
