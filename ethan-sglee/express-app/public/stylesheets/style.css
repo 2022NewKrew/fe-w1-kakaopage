@@ -103,6 +103,13 @@ body {
   padding: 30px 0px 15px;
 }
 
+.li-content {
+  list-style: none;
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 22px 0px;
+}
+
 .li-side {
   list-style: none;
   flex: 1 1 auto;
