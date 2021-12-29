@@ -1,5 +1,11 @@
+import { getAPI } from "./api.js";
 import { createEmptyPage } from "./empty.js";
-import { createWebtoonDayTabPage, createWebtoonPage } from "./webtoon.js";
+import {
+  createCategoryRightBarDetail,
+  createWebtoon,
+  createWebtoonDayTabPage,
+  createWebtoonPage,
+} from "./webtoon.js";
 
 // extract element func
 export const $ = (selector, parentNode = document) => {
@@ -98,6 +104,32 @@ export const changeWebtoonDetailContent = async (e) => {
       Number(e.target.dataset.idx) === webtoonNavIndex
         ? await createWebtoonDayTabPage()
         : createEmptyPage();
+  } catch (e) {
+    alert(e);
+  }
+};
+
+const dayOfIdxObj = {
+  0: "mon",
+  1: "tue",
+  2: "wed",
+  3: "thur",
+  4: "fri",
+  5: "sat",
+  6: "sun",
+  7: "finish",
+};
+
+export const changeContentOfDay = async (e) => {
+  try {
+    if (!dayClassList.includes(e.target.classList[0])) return;
+    if (Number(e.target.dataset.idx) === currDayActiveIndex) return;
+    const index = Number(e.target.dataset.idx);
+    const webtoons = await getAPI(`data/webtoon/${dayOfIdxObj[index]}.json`);
+    $(".webtoon-container").innerHTML = await createWebtoon(webtoons);
+    $(".category-right").innerHTML = createCategoryRightBarDetail(
+      webtoons.length
+    );
   } catch (e) {
     alert(e);
   }
