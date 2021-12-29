@@ -30,33 +30,36 @@ export function topBannerComponent(jsonData) {
     return div.firstChild;
 }
 
+// 요일별로 웹툰 컨텐츠 업데이트
 function contentUpdate(dom, weekday) {
     const fetchedData = jsonWeekdayTop["weekday-items"][weekday];
     dom.innerHTML = fetchedData.map(item => 
-        `<li class="webtoon-item-box">
-            <div class="webtoon-image">
-                <img src="${item.imageUrl}"
-                    alt="${item.title}">
-                <div class="webtoon-image-info">
-                    <div class="left">${item.leftTag}</div>
-                    <div class="seperator"></div>
-                    <img class="right"
-                        src="https://static-page.kakao.com/static/common/bmbadge_${ item.waitfree ? "waitfree" : "webtoon"}.svg">
+        `<a href="${item.anchorUrl}">
+            <li class="webtoon-item-box">
+                <div class="webtoon-image">
+                    <img src="${item.imageUrl}"
+                        alt="${item.title}">
+                    <div class="webtoon-image-info">
+                        <div class="left">${item.leftTag}</div>
+                        <div class="seperator"></div>
+                        <img class="right"
+                            src="https://static-page.kakao.com/static/common/bmbadge_${ item.waitfree ? "waitfree" : "webtoon"}.svg">
+                    </div>
                 </div>
-            </div>
-            <div class="webtoon-title">${item.title}</div>
-            <div class="webtoon-tags">
-                ${ item.up
-                    ? `<img class="icon-up"
-                            src="https://static-page.kakao.com/static/common/icon_up.svg"
-                            alt="업데이트">`
-                    : ""
-                }
-                <img class="icon-read-count"
-                    src="https://static-page.kakao.com/static/common/icon_read_count.png">
-                <div>${item.number}</div>
-            </div>
-        </li>`
+                <div class="webtoon-title">${item.title}</div>
+                <div class="webtoon-tags">
+                    ${ item.up
+                        ? `<img class="icon-up"
+                                src="https://static-page.kakao.com/static/common/icon_up.svg"
+                                alt="업데이트">`
+                        : ""
+                    }
+                    <img class="icon-read-count"
+                        src="https://static-page.kakao.com/static/common/icon_read_count.png">
+                    <div>${item.number}</div>
+                </div>
+            </li>
+        </a>`
     ).join("");
 }
 
