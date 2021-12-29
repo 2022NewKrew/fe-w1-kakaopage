@@ -1,0 +1,155 @@
+.weekdays-top-ranking{
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    margin-top: 11px;
+    padding: 22px 19px;
+    width: 100%;
+}
+
+.weekdays-header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weekdays-title-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.weekdays-title{
+    font-size: 20px;
+    color: #333;
+}
+
+.weekdays-total-count {
+    color: #999;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.show-more-wrapper{
+    align-items: center;
+    font-size: 16px;
+    color: rgb(153, 153, 153);
+    display: flex;
+    cursor: pointer;
+}
+
+.show-more-img{
+    margin-left: 4px;
+    margin-top: 2px;
+    width: 8px;
+    height: 14px;
+}
+
+.weekdays-nav {
+    margin-top: 15px;
+    display: flex;
+}
+
+.weekdays-wrapper{
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    flex: 1;
+    background-color: #ffffff;
+}
+
+.weekdays {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #bbbbbb;
+}
+
+.weekdays-content-main{
+    margin-top:22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.weekdays-content-wrapper{
+    margin-bottom: 20px;
+    width: 120px;
+    background-color: white;
+}
+
+.weekdays-content-image-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.weekdays-content-image{
+    height: 120px;
+    width: 100%;
+}
+
+.weekdays-content-image-tag-wrapper{
+    position: relative;
+    height: 30px;
+    background-color: #242526;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays-content-image-tag{
+    line-height: 1;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffd200;
+}
+
+.weekdays-content-wait-badge{
+    height: 16px;
+    margin-top: 2px;
+}
+
+
+
+.weekdays-content-title{
+    margin-top: 9px;
+    margin-bottom: 7px;
+    color: #333333;
+    font-size: 16px;
+    height: 1.4em;
+}
+
+.weekdays-content-detail{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.weekdays-content-tag-wrapper{
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.weekdays-content-tag{
+    height:13px;
+}
+
+.age-15{
+    margin-left:2px;
+}
+
+.weekdays-content-person{
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+}
+
+.weekdays-content-detail div{
+    font-weight: 350;
+    font-size: 14px;
+    color: #9c9c9c;
+}
+
