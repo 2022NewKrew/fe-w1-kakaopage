@@ -1,5 +1,6 @@
 body {
   background-color: #eee;
+  width: 100vw;
 }
 
 main {
@@ -88,6 +89,7 @@ main {
 }
 
 .nav-list.active {
+  padding-top: 23px;
   border-bottom: 3px solid #ffd200;
 }
 
