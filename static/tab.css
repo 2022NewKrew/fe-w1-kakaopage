@@ -15,6 +15,7 @@
 .second-tabs {
   width: 720px;
   display: flex;
+  padding: 15px 0;
 }
 .second-tabs li {
   list-style-type: none;

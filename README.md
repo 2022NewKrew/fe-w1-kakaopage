@@ -71,11 +71,9 @@ main.html
   └ 추천 이벤트 (type: "banner-item-section")
 
 요일연재 (json/weekly.json)
-└─┬ 배너
+└─┬ 배너 (type: "big-carousel")
   │ 
-  ├ 요일별 만화
-  │
-  └ 추천 이벤트
+  └ 요일별 만화 (type: "weekly")
 
 웹툰 (json/webtoon.json)
 └─┬ 요일

@@ -9,6 +9,7 @@
     "item-section": createItemSection,
     "list-item-section": createListItemSection,
     "banner-item-section": createBanner,
+    "weekly": createWeekly
   }
   
   function markTabActive(tab, tabContainer){
@@ -121,7 +122,7 @@
     section.appendChild(weeklyTabs);
 
     const weeklyTabsNav=document.createElement("nav");
-    weeklyTabsNav.classList.add("weekly-tabs-nav");
+    weeklyTabsNav.classList.add("weekly-top-tabs-nav");
     weeklyTabs.appendChild(weeklyTabsNav);
 
     const navUl=document.createElement('ul');
@@ -133,16 +134,15 @@
 
     const dayArray=["mon", "tue", "wed", "thu", "fri", "sat", "sun", "fin"];
     const tabTextArray=["월", "화", "수", "목", "금", "토", "일", "완결"];
-    const tabsHtml=dayArray.map((data, index)=>{
-      const innerHtml=`
+    const tabsHtml=dayArray.map((data, index)=>(
+      `
       <li class="weekly-tab">
         <button data-tab="${data}">
           ${tabTextArray[index]}
         </button>
       </li>
-      `;
-      return innerHtml;
-    }).join("");
+      `
+      )).join("");
     navUl.innerHTML=tabsHtml;
 
     navUl.addEventListener("click", (e)=>{
@@ -295,6 +295,84 @@
     )).join("");
 
     itemContainer.innerHTML=itemsHtml;
+  }
+  function createWeekly(data){
+    const section=createSection(["item-section"]);
+    container.appendChild(section);
+
+    const weeklyTabs=document.createElement("div");
+    weeklyTabs.classList.add("weekly-tabs");
+    section.appendChild(weeklyTabs);
+
+    const weeklyTabsNav=document.createElement("nav");
+    weeklyTabsNav.classList.add("weekly-tabs-nav");
+    weeklyTabs.appendChild(weeklyTabsNav);
+
+    const navUl=document.createElement('ul');
+    weeklyTabsNav.appendChild(navUl);
+
+    const innerTabBar=document.createElement("div");
+    innerTabBar.classList.add("weekly-inner-tab-bar");
+    innerTabBar.innerHTML=`
+    <div>
+      전체
+    </div>
+    <div class="weekly-inner-tab-second">
+      
+    </div>
+    `;
+    section.appendChild(innerTabBar);
+
+    const itemContainer=document.createElement("div");
+    itemContainer.classList.add("item-container");
+    section.appendChild(itemContainer);
+
+    const dayArray=["mon", "tue", "wed", "thu", "fri", "sat", "sun", "fin"];
+    const tabTextArray=["월", "화", "수", "목", "금", "토", "일", "완결"];
+    const tabsHtml=dayArray.map((data, index)=>{
+      const innerHtml=`
+      <li class="weekly-tab">
+        <button data-tab="${data}">
+          ${tabTextArray[index]}
+        </button>
+      </li>
+      `;
+      return innerHtml;
+    }).join("");
+    navUl.innerHTML=tabsHtml;
+
+    navUl.addEventListener("click", (e)=>{
+      const day=e.target.getAttribute("data-tab");
+      if(day===null)
+        return;
+      markTabActive(e.target, navUl);
+      const dayItems=data.items[day];
+      const dayItemsHtml=dayItems.map((item)=>{
+        const itemHtml=`
+          <div class="item-card">
+            <div class="item-image-holder">
+              <img class="item-image" src="${item.image}" alt="item-image">
+              <div class="item-overlay">
+                ${item.desc}
+              </div>
+            </div>
+            <div class="item-title">
+              ${item.title}
+            </div>
+            <div class="item-info">
+              <img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="views">
+              ${item.views}
+            </div>
+          </div>
+        `;
+        return itemHtml;
+      }).join("");
+      itemContainer.innerHTML=dayItemsHtml;
+
+      const innerTabSecond=innerTabBar.querySelector(".weekly-inner-tab-second");
+      innerTabSecond.innerHTML=`전체 (${Object.keys(data.items[day]).length})`;
+    });
+    navUl.querySelector("button").click();
   }
 
   async function loadTab(url){
