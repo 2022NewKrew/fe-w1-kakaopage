@@ -8,6 +8,7 @@
     cursor: pointer;
     flex: 1;
     background-color: #ffffff;
+    color: #bbbbbb;
 }
 
 .weekdays {
@@ -15,10 +16,9 @@
     padding-bottom: 15px;
     font-size: 20px;
     text-align: center;
-    color: #bbbbbb;
 }
 
-.weekdays-nav-group .selected{
+.weekdays-nav-group > .selected{
     color: #333333;
     border-bottom-color: #ffd200;
 }

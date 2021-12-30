@@ -60,6 +60,9 @@ export default async function Webtoon () {
                         case "banner":
                             $contentFragment.appendChild(Banner(data));
                             break;
+                        case "weekdays":
+                            $contentFragment.appendChild(WeekDays(data));
+                            break;
                     }
                 })
 
