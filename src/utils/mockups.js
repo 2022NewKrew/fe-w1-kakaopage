@@ -1,19 +1,24 @@
 export const setupContentsMockups = (cnt = 163) => {
-  return [...Array(cnt)].map((_) => {
-    return {
-      title: getRandomTitle(),
-      isUpdate: getRandomBoolean(0.5),
-      isNew: getRandomBoolean(0.3),
-      isEnd: getRandomBoolean(0.4),
-      isFree: getRandomBoolean(0.5),
-      description: getRandomDescription(),
-      auther: [...Array(getRandomNum(4))].map((_) => getRandomName()),
-      subscripers: getRandomNum(100, 1),
-      stars: getRandomNum(10, 1),
-      updateDay: getRandomNum(8),
-      img: getRandomImg(),
-    };
-  });
+  return [...Array(cnt)]
+    .map((_) => {
+      return {
+        title: getRandomTitle(),
+        isUpdate: getRandomBoolean(0.5),
+        isNew: getRandomBoolean(0.3),
+        isEnd: getRandomBoolean(0.4),
+        isFree: getRandomBoolean(0.5),
+        description: getRandomDescription(),
+        auther: [...Array(getRandomNum(4))].map((_) => getRandomName()),
+        subscripers: getRandomNum(100, 1),
+        stars: getRandomNum(10, 1),
+        updateDay: getRandomNum(8),
+        img: getRandomImg(),
+      };
+    })
+    .sort((a, b) => {
+      if (b.stars === a.stars) return b.subscripers - a.subscripers;
+      return b.stars - a.stars;
+    });
 };
 
 const getRandomBoolean = (percent) => Math.random() < percent;
