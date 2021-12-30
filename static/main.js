@@ -17,20 +17,8 @@ import {init as webtoonInit} from "./webtoon.js";
     const text=await (await fetch(url)).text();
     const container=document.getElementById("contents");
     container.innerHTML=text;
-    if(url.includes("webtoon.html")){
+    if(url.includes("webtoon.html"))
       webtoonInit();
-      // const scripts=container.querySelectorAll("script");
-      // Array.from(scripts).forEach((script)=>{
-      //   if(script.src.includes("webtoon.js"))
-      //     script.remove();
-      // });
-    
-      // const newScript=document.createElement("script");
-      // newScript.src="webtoon.js";
-      // newScript.type="module";
-      // container.appendChild(newScript);
-
-    }
   }
 
   function init(){
@@ -42,8 +30,8 @@ import {init as webtoonInit} from "./webtoon.js";
       loadTab(tabHtml);
     });
     // NOTE Temporarily set webtoon tab as default for convenience :)
-    document.getElementById("home-tab").click();
-    // document.getElementById("webtoon-tab").click();
+    // document.getElementById("home-tab").click();
+    document.getElementById("webtoon-tab").click();
   }
 
   init();

@@ -9,7 +9,8 @@ const sectionMap={
   "item-section": createItemSection,
   "list-item-section": createListItemSection,
   "banner-item-section": createBanner,
-  "weekly": createWeekly
+  "weekly": createWeekly,
+  "weekly-webtoon": createWeeklyWebtoon
 }
 
 function markTabActive(tab, tabContainer){
@@ -371,6 +372,69 @@ function createWeekly(data){
 
     const innerTabSecond=innerTabBar.querySelector(".weekly-inner-tab-second");
     innerTabSecond.innerHTML=`전체 (${Object.keys(data.items[day]).length})`;
+  });
+  navUl.querySelector("button").click();
+}
+function createWeeklyWebtoon(data){
+  const sectionFirst=createSection(["weekly-webtoon"]);
+  sectionContainer.appendChild(sectionFirst);
+
+  const weeklyTabsNav=document.createElement("nav");
+  weeklyTabsNav.classList.add("weekly-webtoon-nav");
+  sectionFirst.appendChild(weeklyTabsNav);
+
+  const navUl=document.createElement('ul');
+  weeklyTabsNav.appendChild(navUl);
+
+  const dayArray=["mon", "tue", "wed", "thu", "fri", "sat", "sun", "all"];
+  const tabTextArray=["월", "화", "수", "목", "금", "토", "일", "전체"];
+  const tabsHtml=dayArray.map((data, index)=>{
+    const innerHtml=`
+    <li class="weekly-tab">
+      <button data-tab="${data}">
+        ${tabTextArray[index]}
+      </button>
+    </li>
+    `;
+    return innerHtml;
+  }).join("");
+  navUl.innerHTML=tabsHtml;
+
+  
+  const sectionSecond=createSection(["weekly-webtoon"]);
+  sectionContainer.appendChild(sectionSecond);
+  
+  const itemContainer=document.createElement("div");
+  itemContainer.classList.add("weekly-webtoon-item-container");
+  sectionSecond.appendChild(itemContainer);
+  
+  navUl.addEventListener("click", (e)=>{
+    const day=e.target.getAttribute("data-tab");
+    if(day===null)
+      return;
+    markTabActive(e.target, navUl);
+    const dayItems=data.items[day];
+    const dayItemsHtml=dayItems.map((item)=>{
+      const itemHtml=`
+        <div class="weekly-webtoon-item-card">
+          <img class="weekly-webtoon-item-image" src="${item.image}" alt="item-image">
+          <div class="weekly-webtoon-item-info">
+            <div>
+              ${item.title}
+            </div>
+            <div>
+              ${item.desc}
+            </div>
+            <div>
+              <img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="views">
+              ${item.views}
+            </div>
+          </div>
+        </div>
+      `;
+      return itemHtml;
+    }).join("");
+    itemContainer.innerHTML=dayItemsHtml;
   });
   navUl.querySelector("button").click();
 }

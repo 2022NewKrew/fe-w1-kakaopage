@@ -26,7 +26,7 @@ let sectionContainer=document.getElementById("section-container");
     markTabActive(e.target, secondTabContainer);
     loadTab("/json/"+tabJson);
   });
-  secondTabs[0].click(); 
+  secondTabs[2].click(); 
 }
   // init();
 // })();

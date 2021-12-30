@@ -264,3 +264,62 @@
   margin-left: auto;
   margin-right: 0;
 }
+
+.weekly-webtoon {
+  padding: 20px;
+}
+.weekly-webtoon:nth-child(2) {
+  margin-top: -10px;
+  padding: 0 20px;
+}
+.weekly-webtoon-nav ul {
+  display: flex;
+}
+.weekly-webtoon-nav button {
+  border-radius: 50%;
+  padding: 1px;
+  border: none;
+  background-color: #0000;
+  aspect-ratio: 1;
+  width: 50%;
+}
+.weekly-webtoon-nav .active button {
+  background-color: #ffd200;
+  color: #000;
+}
+.weekly-webtoon-nav button {
+  border: none;
+  background-color: #fff;
+}
+.weekly-webtoon-item-container {
+  display: flex;
+  flex-direction: column;
+}
+.weekly-webtoon-item-card {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+}
+.weekly-webtoon-item-image {
+  width: 142px;
+  border-radius: 8px;
+  border: 1px solid #9c9c9c;
+  margin-right: 20px;
+}
+.weekly-webtoon-item-info > *:nth-child(1) {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.weekly-webtoon-item-info > *:nth-child(2) {
+  color: #a1a1a1;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.weekly-webtoon-item-info > *:nth-child(3) {
+  color: #a1a1a1;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.weekly-webtoon-item-info img {
+  width: 12px;
+}

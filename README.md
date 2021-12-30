@@ -31,17 +31,17 @@ main.html
   │ 
   ├ 웹툰
   │ 
-  ├ 소년
+  ├ 소년 (X)
   │ 
-  ├ 드라마
+  ├ 드라마 (X)
   │ 
-  ├ 로맨스
+  ├ 로맨스 (X)
   │ 
-  ├ 로판
+  ├ 로판 (X)
   │ 
-  ├ 액션무협
+  ├ 액션무협 (X)
   │ 
-  └ BL
+  └ BL (X)
 
 홈 (json/home.json)
 └─┬ 큰 카로셀 (type: "big-carousel")
@@ -71,14 +71,14 @@ main.html
   └ 추천 이벤트 (type: "banner-item-section")
 
 요일연재 (json/weekly.json)
-└─┬ 배너 (type: "big-carousel")
+└─┬ 큰 카로셀 (type: "big-carousel")
   │ 
   └ 요일별 만화 (type: "weekly")
 
 웹툰 (json/webtoon.json)
-└─┬ 요일
+└─┬ 큰 카로셀 (type: "big-carousel")
   │ 
-  └ 요일별 만화
+  └ 요일별 만화 (type: "weekly-webtoon")
 ```
 
 ## Sections
