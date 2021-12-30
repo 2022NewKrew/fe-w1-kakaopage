@@ -1,429 +1,551 @@
 * {
-    font-family: 'Noto Sans KR', sans-serif;
-    line-height: 1.4; 
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.4;
 }
 
-body, ul, p {
-    margin: 0; 
-    padding: 0;
+body,
+ul,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style: none;
-    width: 100%;
-    text-align: center;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited,
+a:active {
+  color: black;
+}
+
+/* dummy page */
+#dummy {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.highlight {
+  color: #ffd200;
+  text-shadow: black 1px 0 5px;
 }
 
 /** 
     header + navigation 고정 
 */
 .top {
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    z-index: 100;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
 }
-
 
 /**
  header 
 */
 header {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 header > div {
-    display: flex;
-    justify-content: space-between;
-    width: 720px;
-    margin: 0 auto; 
+  display: flex;
+  justify-content: space-between;
+  width: 720px;
+  margin: 0 auto;
 }
 
 .header-right {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-right > * + * {
-    margin-left: 24px;
+  margin-left: 24px;
 }
 
 /* search bar  */
 .search {
-    border: 1px solid #cfcfcf;
-    border-radius: 30px;
-    line-height: 23px;
-    width: 180px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+  border: 1px solid #cfcfcf;
+  border-radius: 30px;
+  line-height: 23px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search > input {
-    border-style: none;
-    width: 136px;
-    padding: 0; 
+  border-style: none;
+  width: 136px;
+  padding: 0;
 }
 
 .search > input:focus-visible {
-    outline-style: none;
+  outline-style: none;
 }
 
 .search > img {
-    width: 20px; 
-    height: 20px;
-    cursor: pointer;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 /* header-text (캐시충전/로그인 부분) */
 .header-text {
-    display: flex; 
-    align-items: center;
-    color: #999;
-    font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-size: 18px;
 }
 
 .header-text > * + * {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .header-text > .separator {
-    display: block;
-    box-sizing: border-box;
-    background-color: #e2e2e2; 
-    width: 1px;
-    height: 12px; 
-    margin: 0 10px;
+  display: block;
+  box-sizing: border-box;
+  background-color: #e2e2e2;
+  width: 1px;
+  height: 12px;
+  margin: 0 10px;
 }
 
 /**
    navigation
 */
 .menus {
-    display: flex;
-    align-items: center;
-    margin: 0px auto;
-    padding: 30px 0 15px;
-    width: 720px;
+  display: flex;
+  align-items: center;
+  margin: 0px auto;
+  width: 720px;
 }
 
-.menus > li > a {
-    text-decoration: none;   
-    color: black;
-    height: 20px; 
-    max-width: 100%;
-    margin: 0 auto;
-    font-size: 1.3rem;
+.menu {
+  margin: 0 auto;
+  padding: 30px 0 15px;
+}
+
+.menu > a {
+  color: black;
+  height: 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.active-menu {
+  border-bottom: 3px solid #ffd200;
 }
 
 /**
     webtoon menu
 */
 main {
-    background: #eee;
-    padding-top: 165px;
-    height: 200vh;
+  background: #eee;
+  padding-top: 165px;
+  height: 200vh;
 }
 
 .webtoon-genres {
-    width: 720px;
-    margin: 0 auto; 
-    padding: 22px 0;
+  width: 720px;
+  margin: 0 auto;
+  padding: 22px 0;
 }
 
 .webtoon-genres > ul {
-    background-color: white;   
-    display: flex;
-    align-items: center;
-    margin: 0px auto;
-    align-items: center;
-    font-size: 1.3rem;
-    color: rgb(187, 187, 187);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin: 0px auto;
+  align-items: center;
+  font-size: 1.3rem;
+  color: rgb(187, 187, 187);
+  cursor: pointer;
 }
 
-.webtoon-genres > ul > li:first-child {
-    color: black;
+.active-genre {
+  color: black;
 }
 
 /**
     carousel
 */
+
 .carousel {
-    width: 720px;
-    margin: 0 auto;
-    position: relative;
+  width: 720px;
+  margin: 0 auto;
 }
 
-.carousel > img {
-    width: 720px;
+.carousel-container {
+  width: 720px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#carousel-list {
+  display: flex;
+  width: 720px;
+  height: 480px;
+}
+
+/* carousel info */
+
+.carousel-info {
+  position: relative;
+}
+
+.carousel-info-container {
+  margin-top: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 720px;
+}
+
+.carousel-main-img {
+  width: 720px;
+}
+
+/* carousel info-detail */
+.carousel-info-detail-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel-info-title {
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.carousel-info-detail {
+  display: flex;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.carousel-info-event-img {
+  margin-right: 10px;
+  height: 22px;
+}
+
+.carousel-info-icons {
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+}
+
+.carousel-number {
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+/* carousel-info-box */
+.carousel-info-box {
+  background-color: #ffd200;
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* carousel buttons */
 
 .carousel-button {
-    position: absolute; 
-    top: 50%; 
-    margin-top: -18px;
-    padding: 0; 
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .previous-button {
-    left: 0;
-    margin-left: 20px;
+  left: 0;
+  margin-left: 20px;
 }
 
 .next-button {
-    right: 0;
-    margin-right: 20px;
+  right: 0;
+  margin-right: 20px;
 }
-
-/* carousel info */
-.carousel-info {
-    padding-left: 30px;
-    position: absolute; 
-    bottom: 60px;
-    left: 0px;
-}
-
-.carousel-info > h2 {
-    color: white;
-    font-size: 28px;
-    line-height: 1;
-}
-
-.carousel-detail {
-    display: flex;
-    font-weight: 400; 
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-
-.event-img {
-    margin-right: 10px;
-    height: 22px;
-}
-
-.carousel-detail > div {
-    display: flex;
-    align-items: center;
-}
-
-.carousel-detail > div > img {
-    margin: 0 4px;
-}
-
-/* carousel number */
-.carousel-number {
-    position: absolute; 
-    bottom: 60px;
-    right: 15px;
-    color: #ffffff;
-    font-size: 20px;
-    opacity: 0.6;
-}
-
-/* carousel description */
-.carousel-description {
-    position: absolute;
-    left: 0; 
-    bottom: 0;
-    background-color: #ffd200;
-    height: 40px;
-    width: 100%; 
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* webtoon menus */
 .webtoon-menus {
-    width: 720px;
-    margin: 11px auto 0 auto;
-    background-color: white;
-    box-sizing: border-box;
-    padding: 20px;
+  width: 720px;
+  margin: 11px auto 0 auto;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .webtoon-menus-container {
-    display: flex; 
-    box-sizing: border-box;
-    flex-wrap: wrap; 
-    /* 왜 적용이 안될까 ㅜ  
-    border-radius: 8px; 
-    */
-}
-
-
-/* 비효율적인 방법이지만.. 일단 border-radius 아래 방법으로 해결
-더 좋은 방법 찾아보기  */
-.webtoon-menu-top-left {
-    border-top-left-radius: 8px;
-}
-
-.webtoon-menu-top-right {
-    border-top-right-radius: 8px;
-}
-
-.webtoon-menu-bottom-left {
-    border-bottom-left-radius: 8px;
-}
-
-.webtoon-menu-bottom-right {
-    border-bottom-right-radius: 8px;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 /* 각 메뉴 styling */
 .webtoon-menus-container > a {
-    width: 30%;
-    padding: 0 10px;
-    height: 60px;
-    background-color: #f3f3f3;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+  box-sizing: border-box;
+  width: 33.33333%;
+  padding: 0 10px;
+  height: 60px;
+  background-color: #f3f3f3;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .webtoon-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
 
 .webtoon-menu > p:first-child {
-    font-weight: 500;
-    text-overflow: ellipsis;
-    white-space: nowrap;  
-    overflow: hidden; 
-    font-size: 18px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 18px;
 }
 
 .webtoon-menu > p:last-child {
-    background-color: #ffd200;
-    height: 24px;
-    padding: 0 8px; 
-    margin-left: 10px;
-    font-size: 16px; 
-    border-radius: 13px;
+  background-color: #ffd200;
+  height: 24px;
+  padding: 0 8px;
+  margin-left: 10px;
+  font-size: 16px;
+  border-radius: 13px;
 }
 
 /* 배너 캐루셀 */
 .banner {
-    /* display: flex; 
+  /* display: flex; 
     width: 720px;
     margin: 11px auto 0 auto;
     background-color: white; */
-    width: 720px;
-    margin: 0 auto; 
-    padding: 22px 0;
+  width: 720px;
+  margin: 0 auto;
+  padding: 22px 0;
 }
 
 .banner-container {
-    display: flex; 
-    align-items: center;
-    background-color: white;
-    position: relative; 
+  display: flex;
+  align-items: center;
+  background-color: white;
+  position: relative;
 }
 
 .slide_box {
-    width: 550x; 
-    height: 140px; 
+  width: 550px;
+  height: 140px;
+  overflow: hidden;
 }
 
 .slide_list {
-    overflow: hidden;
+  /* overflow: hidden; */
+  width: 550px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  /* flex-direction: column; */
 }
-
 .slide_item {
-    height: 140px;
-    display: none;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  /* display: none; */
 }
 
 .slide_item > img {
-    width: 550px; 
-    height: 100px; 
+  width: 550px;
+  height: 100px;
 }
 
 .banner-btn {
-    width: 85px;
-    height: 100px;
-    border-style: none;
-    background-color: inherit;
-    cursor: pointer;
+  width: 85px;
+  height: 100px;
+  border-style: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 /* Fading animation */
-.slide {
-    animation-name: slidein;
-    animation-duration: 0.5s;
+/* .slide {
+  animation-name: slidein;
+  animation-duration: 0.5s;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
   }
-  
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
+} */
 
 /**
  요일 연재 TOP 
 */
 /* title 및 더보기  */
 .daily-ranking {
-    box-sizing: border-box;
-    width: 720px;
-    margin: 11px auto 0 auto; 
-    padding: 22px 19px;
-    background-color: #ffffff;
+  box-sizing: border-box;
+  width: 720px;
+  margin: 11px auto 0 auto;
+  padding: 22px 19px;
+  background-color: #ffffff;
 }
 
-.daily-ranking-header, .daily-ranking-top, .daily-ranking-more {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
+.daily-ranking-header,
+.daily-ranking-top,
+.daily-ranking-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .daily-ranking-top > p:first-child {
-    margin: 0; 
-    font-size: 20px; 
-    color: #333;
+  margin: 0;
+  font-size: 20px;
+  color: #333;
 }
 
 .daily-ranking-top > p:last-child {
-    color: #999; 
-    font-size: 14px;
-    margin-left: 4px;
+  color: #999;
+  font-size: 14px;
+  margin-left: 4px;
 }
 
 .daily-ranking-more > p {
-    color: rgb(153, 153, 153); 
-    font-size: 16px;
+  color: rgb(153, 153, 153);
+  font-size: 16px;
 }
 
 .daily-ranking-more > img {
-    margin-left: 4px;
-    margin-top: 2px;
-    width: 8px;
-    height: 14px;
+  margin-left: 4px;
+  margin-top: 2px;
+  width: 8px;
+  height: 14px;
 }
 
+/* 월화수목금토일 */
 .daily-ranking-tabs {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .daily-ranking-tabs-container {
-    display: flex;
+  display: flex;
 }
 
-.daily-ranking-tabs-container > li {
-    padding: 15px 0; 
-    font-size: 20px;
-    text-align: center;
-    color: #bbbbbb;
+.daily-ranking-tab {
+  padding: 15px 0;
+  font-size: 20px;
+  text-align: center;
+  color: #bbbbbb;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.active-weekday {
+  color: black;
+  border-bottom: 2px solid #ffd200;
+}
+
+/* 요일 연재 개별 웹툰 css */
+.daily-ranking-contents {
+  box-sizing: border-box;
+  margin-top: 22px;
+  width: 100%;
+}
+
+.daily-ranking-contents-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.daily-ranking-content {
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  width: 120px;
+}
+
+.daily-ranking-content-container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.daily-ranking-image-container {
+  width: 120px;
+  height: 120px;
+}
+
+.daily-ranking-image-container > img {
+  width: 120px;
+  height: 120px;
+}
+
+.daily-ranking-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 0 8px;
+  background-color: #242526;
+}
+
+.daily-ranking-box-left {
+  font-size: 16px;
+  color: #ffd200;
+}
+
+.daily-ranking-box-right {
+  font-size: 16px;
+  color: #999;
+}
+
+.daily-ranking-box > img {
+  width: 16px;
+  margin: 0;
+}
+
+.daily-ranking-title {
+  font-size: 16px;
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+
+.daily-ranking-people {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #9c9c9c;
+}
+
+.daily-ranking-people > img {
+  width: 11px;
+  height: 11px;
+  margin-right: 4px;
 }
