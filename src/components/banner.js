@@ -1,25 +1,48 @@
-export default () => {
+import carouselEvent from "../utils/carousel.js";
+
+export default (data) => {
   const main = document.querySelector("main");
 
   const section = document.createElement("section");
   section.className = "banner";
 
   section.innerHTML = `
-    <div class="banner-wrapper">
-        <div class="banner__content">
-            <div class="banner__title">천하제일 표사</div>
-            <div class="banner__subtitle">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span>29.7만명</span>
-            </div>
-        </div>
+  <div class="carousel">
+    <div class="container">
+      <div class="slide">
+        ${data
+          .map(
+            ({ poster, title, count, link }) => `
+          <div class="banner-wrapper">
+            <div class="banner-poster">
+              <img src="${poster}" />
+              <div class="banner__content">
+                <div class="banner__title">${title}</div>
+                <div class="banner__subtitle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span>${count}</span>
+                </div>
+              </div>
+            <div class="banner-link"><a href="#">${link}</a></div>
+          </div>  
+        </div>       
+        `
+          )
+          .join("")}
     </div>
-    <a href="#">최강 표국을 세우기 위해 뭉쳤다!</a>
+    </div>
+    <button class="prev prev-black"></button>
+    <button class="next next-black"></button>
+  </div>
+
+    
     `;
 
   main.appendChild(section);
+
+  carouselEvent(section, 5, 720);
 };

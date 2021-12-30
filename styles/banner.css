@@ -4,31 +4,49 @@
   cursor: pointer;
   margin-bottom: 11px;
 }
-.banner > a {
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background-color: #ffd200;
-  text-decoration: none;
-  color: black;
-}
-
 .banner-wrapper {
-  background-image: url("../assets/images/천하제일\ 표사.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
   width: 720px;
   height: 480px;
-  color: white;
+  flex-direction: column;
+  position: relative;
+}
+.banner-poster {
+  width: 720px;
+  height: 480px;
+}
+
+.banner-poster > img {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 480px;
+}
+.banner-link {
+  background-color: #ffd200;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.banner-wrapper > .carousel {
+  width: 720px;
+  height: 520px;
+}
+.banner-wrapper > .carousel > .container > .slide > div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
 }
 .banner__content {
   position: absolute;
-  bottom: 24px;
+  bottom: 60px;
   left: 20px;
+  color: white;
 }
 .banner__title {
   font-size: 2rem;
@@ -39,7 +57,7 @@
   align-items: center;
   width: 190px;
   justify-content: space-between;
-  margin-top: 17px;
+  margin-top: 5px;
 }
 .banner__subtitle > span:nth-child(1) {
   background-image: url("../assets/images/badge-bigthum-up.svg");

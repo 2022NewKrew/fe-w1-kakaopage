@@ -1,6 +1,6 @@
 import carouselEvent from "../utils/carousel.js";
 
-export default () => {
+export default (data) => {
   const main = document.querySelector("main");
 
   const section = document.createElement("section");
@@ -10,13 +10,11 @@ export default () => {
     <div class="carousel">
         <div class="container">
             <div class="slide">
-                <img src="assets/images/event1.png" >
-                <img src="assets/images/event2.png" >
-                <img src="assets/images/event3.png" >
+              ${data.map((ele) => `<img src="${ele}"/>`).join("")}
             </div>
         </div>
-        <button class="prev"></button>
-        <button class="next"></button>
+        <button class="prev prev-white"></button>
+        <button class="next next-white"></button>
     </div>
     `;
 

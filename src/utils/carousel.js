@@ -19,6 +19,7 @@ export default (htmlEl, totalImages, imageWidth) => {
     if (curPos <= TOTAL_IMAGES) {
       slide.style.transition = "500ms";
       slide.style.transform = `translateX(-${IMAGE_WIDTH * (curPos + 2)}px)`;
+      console.log(curPos);
       curPos += 1;
     }
     if (curPos == TOTAL_IMAGES) {
@@ -31,10 +32,17 @@ export default (htmlEl, totalImages, imageWidth) => {
   }
 
   function prev() {
-    if (curPos > 0) {
-      positonValue += IMAGE_WIDTH;
-      slide.style.transform = `translateX(${positonValue}px)`;
+    if (curPos >= 0) {
+      slide.style.transition = "500ms";
+      slide.style.transform = `translateX(-${IMAGE_WIDTH * curPos}px)`;
       curPos -= 1;
+    }
+    if (curPos == 0) {
+      setTimeout(() => {
+        slide.style.transition = "0ms";
+        slide.style.transform = `translateX(-${IMAGE_WIDTH * TOTAL_IMAGES}px)`;
+      }, 500);
+      curPos = TOTAL_IMAGES;
     }
   }
 

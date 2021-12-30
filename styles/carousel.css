@@ -9,7 +9,6 @@
 }
 .slide {
   display: flex;
-  height: 100px;
   transition: transform 0.5s;
 }
 .slide > img {
@@ -20,12 +19,24 @@
   position: absolute;
   width: 40px;
   height: 40px;
+  background-color: transparent;
+  z-index: 1;
 }
 .prev {
-  background-image: url("../assets/images/ic-paging-back-nor.svg");
   left: 20px;
 }
+.prev-white {
+  background-image: url("../assets/images/ic-paging-back-nor.svg");
+}
+.prev-black {
+  background-image: url("../assets/images/previous\ button.svg");
+}
 .next {
-  background-image: url("../assets/images/ic-paging-next-nor.svg");
   right: 20px;
+}
+.next-white {
+  background-image: url("../assets/images/ic-paging-next-nor.svg");
+}
+.next-black {
+  background-image: url("../assets/images/next\ button.svg");
 }
