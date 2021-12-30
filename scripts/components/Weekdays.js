@@ -2,18 +2,13 @@ import { ContentsBox, Anchor } from "../templates";
 
 export default function Weekdays (data) {
     const {title, total, contents} = data;
+    const $contentsBox = ContentsBox({title, total});
+    const $weekdaysNavGroup = document.createElement('ul'),
+        $contentsBoxMain = document.createElement('div');
 
     let $currentNav;
 
-    const $contentsBox = ContentsBox({title, total});
-
-    const $weekdaysNavGroup = document.createElement('ul');
-    $weekdaysNavGroup.classList.add('weekdays-nav-group');
-
-    const $contentsBoxMain = document.createElement('div');
-    $contentsBoxMain.classList.add('content-box-main');
-
-    const clickLi = ($li, anchors) => {
+    const clickWeekday = ($li, anchors) => {
         $currentNav?.classList.remove('selected');
         $currentNav = $li;
         $currentNav.classList.add('selected');
@@ -24,6 +19,9 @@ export default function Weekdays (data) {
         $contentsBoxMain.appendChild($fragment);
     }
 
+    $weekdaysNavGroup.classList.add('weekdays-nav-group');
+    $contentsBoxMain.classList.add('content-box-main');
+
     contents.map((content, i) => {
         const {day, contents: anchors} = content;
         const $li = document.createElement('li');
@@ -32,10 +30,10 @@ export default function Weekdays (data) {
         $div.classList.add('weekdays');
         $div.textContent = day;
 
-        $li.addEventListener("click", () => {clickLi($li, anchors)});
+        $li.addEventListener("click", () => {clickWeekday($li, anchors)});
 
         if(i === 0){
-            clickLi($li, anchors);
+            clickWeekday($li, anchors);
         }
 
         $li.appendChild($div);

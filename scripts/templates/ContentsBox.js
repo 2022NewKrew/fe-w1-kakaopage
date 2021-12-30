@@ -1,9 +1,8 @@
 export default function ContentsBox (data) {
     const { title, total } = data;
-
     const $contentsBox = document.createElement('div');
-    $contentsBox.classList.add('content-box');
 
+    $contentsBox.classList.add('content-box');
     $contentsBox.innerHTML = `
         <div class="content-box-header">
             <div class="content-box-title-wrapper">

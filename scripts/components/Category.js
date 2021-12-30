@@ -1,9 +1,9 @@
 export default function Category (data) {
     const { contents } = data;
-    const $categoryGroupWrapper = document.createElement("div");
-    $categoryGroupWrapper.classList.add("category-nav-group-wrapper");
+    const $categoryGroupWrapper = document.createElement("div"),
+        $categoryGroup = document.createElement("div");
 
-    const $categoryGroup = document.createElement("div");
+    $categoryGroupWrapper.classList.add("category-nav-group-wrapper");
     $categoryGroup.classList.add("category-nav-group");
 
     $categoryGroup.innerHTML = contents.reduce((html, content) => {

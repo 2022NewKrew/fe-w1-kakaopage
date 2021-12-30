@@ -3,8 +3,8 @@ export default function Banner (data) {
     const { contents } = data;
     const { img } = contents[0];
     const $bannerBlock = document.createElement('div');
-    $bannerBlock.classList.add('banner-block');
 
+    $bannerBlock.classList.add('banner-block');
     $bannerBlock.innerHTML = `
         <div class="banner-content">
             <div class="banner-change-btn-wrapper">

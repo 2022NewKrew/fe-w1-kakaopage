@@ -2,9 +2,9 @@
 export default function Anchor (data) {
     const { img, rate, tag, badge, title, isUp, isNew, is15, viewer } = data;
     const $anchor = document.createElement('a');
+
     $anchor.classList.add('anchor-row-normal-wrapper');
     $anchor.href = "#";
-
     $anchor.innerHTML = `
             <li class="anchor-row-normal">
                 <div class="anchor-row-normal-image-wrapper">
