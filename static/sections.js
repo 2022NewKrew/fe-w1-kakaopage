@@ -1,4 +1,4 @@
-import {container} from "./webtoon.js";
+import { sectionContainer } from "./webtoon.js";
 
 const sectionMap={
   "big-carousel": createBigCarousel,
@@ -11,7 +11,6 @@ const sectionMap={
   "banner-item-section": createBanner,
   "weekly": createWeekly
 }
-// const container=document.getElementById("section-container");
 
 function markTabActive(tab, tabContainer){
   Array.from(tabContainer.querySelectorAll("li")).forEach((ele)=>{
@@ -62,11 +61,11 @@ function createBigCarousel(data){
       <div class="big-carousel-desc">${data.items[0]["desc"]}</div>
     </div>
   </section>`;
-  container.innerHTML+=element;
+  sectionContainer.innerHTML+=element;
 }
 function createFeaturing(data){
   const section=createSection([], "featuring");
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const sectionFeaturing=document.createElement("div");
   sectionFeaturing.classList.add("section-featuring");
@@ -88,7 +87,7 @@ function createFeaturing(data){
 }
 function createCarousel(data){
   const section=createSection(["carousel"]);
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const leftDiv=document.createElement("div");
   const leftImg=createImg("https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c", "carousel left");
@@ -113,7 +112,7 @@ function createCarousel(data){
 }
 function createWeeklyTop(data){
   const section=createSection(["item-section"]);
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const header=createItemSectionHeader(data);
   section.innerHTML=header;
@@ -178,7 +177,7 @@ function createWeeklyTop(data){
 }
 function createBigItemSection(data){
   const section=createSection(["item-section"]);
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const header=createItemSectionHeader(data);
   section.innerHTML=header;
@@ -210,7 +209,7 @@ function createBigItemSection(data){
 }
 function createItemSection(data){
   const section=createSection(["item-section"]);
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const header=createItemSectionHeader(data);
   section.innerHTML=header;
@@ -244,7 +243,7 @@ function createItemSection(data){
 }
 function createListItemSection(data){
   const section=createSection(["item-section"]);
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const header=createItemSectionHeader(data);
   section.innerHTML=header;
@@ -278,7 +277,7 @@ function createListItemSection(data){
 }
 function createBanner(data){
   const section=createSection(["item-section"]);
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const header=createItemSectionHeader(data);
   section.innerHTML=header;
@@ -299,7 +298,7 @@ function createBanner(data){
 }
 function createWeekly(data){
   const section=createSection(["item-section"]);
-  container.appendChild(section);
+  sectionContainer.appendChild(section);
 
   const weeklyTabs=document.createElement("div");
   weeklyTabs.classList.add("weekly-tabs");
@@ -376,4 +375,4 @@ function createWeekly(data){
   navUl.querySelector("button").click();
 }
 
-export { sectionMap, markTabActive, container };
+export { sectionMap, markTabActive };

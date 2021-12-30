@@ -105,6 +105,7 @@ header {
 .contents {
   width: 720px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 footer {
