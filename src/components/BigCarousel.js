@@ -48,9 +48,14 @@ const renderCarousel = (data) => {
     let count = 0;
     const clickCallBack = (direction) => {
         return () => {
-            count = (count + direction) % data.length;
-            container.style.transform = `translateX(${count * 720}px)`;
+            container.style.transform = `translateX(${direction * 720}px)`;
             container.style.transitionDuration = "500ms";
+            container.ontransitionend = () => {
+                container.removeAttribute("style");
+                (direction === 1) 
+                    ?container.insertBefore(container.lastElementChild, container.firstElementChild)
+                    :container.appendChild(container.firstElementChild);
+            }
         }
     }
     prev_btn.addEventListener("click", clickCallBack(1));
