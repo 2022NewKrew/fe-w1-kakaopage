@@ -1,0 +1,325 @@
+.item-section-header {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.item-section-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-section-header > div:first-child {
+  margin-right: auto;
+  font-size: 20px;
+}
+.item-section-header-more {
+  color: #a1a1a1;
+  cursor: pointer;
+}
+.item-section-header-more > img {
+  width: 8px;
+  margin-left: 4px;
+}
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 120px;
+  justify-content: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.item-card > * {
+  margin: 2px;
+  max-width: 120px;
+}
+.item-image-holder {
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.item-image {
+  width: 100%;
+}
+.item-overlay {
+  background-color: #242526;
+  width: 120px;
+  height: 30px;
+  display: flex;
+  padding: 0 8px;
+  align-items: center;
+  font-size: 16px;
+  color: #ffd200;
+}
+.item-overlay > img {
+  margin-right: 4px;
+}
+.item-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #9c9c9c;
+}
+.item-info img {
+  width: 10px;
+  margin-right: 4px;
+}
+.item-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: flex-start;
+}
+.weekly-top-tabs-nav {
+  margin-bottom: 10px;
+}
+.weekly-top-tabs-nav ul {
+  display: flex;
+  justify-content: stretch;
+}
+.weekly-top-tabs-nav .active {
+  border-bottom: 3px solid #ffd200;
+}
+.weekly-top-tabs-nav .active button {
+  color: #000;
+}
+.weekly-top-tab {
+  list-style-type: none;
+  display: flex;
+}
+.weekly-top-tabs-nav button {
+  border: none;
+  background-color: #0000;
+}
+.weekly-tab {
+  flex: 1;
+  padding: 10px 0;
+  border-bottom: 3px solid #0000;
+  margin-top: auto;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weekly-tab > button {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: #a1a1a1;
+}
+
+.big-item-card {
+  margin-right: 10px;
+  width: 335px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.big-item-image {
+  width: 335px;
+}
+.big-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.big-item-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px 15px;
+}
+.big-item-views {
+  color: #fff;
+  padding: 2px 15px;
+}
+.big-item-views > img {
+  width: 10px;
+}
+.big-item-desc {
+  margin-top: 10px;
+  width: 335px;
+  height: 24px;
+  background-color: #ffd200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 350;
+  color: #222;
+}
+
+.list-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.list-item-card {
+  flex: 1;
+  display: flex;
+  padding: 8px;
+  cursor: pointer;
+}
+.list-item-index {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+.list-item-image {
+  height: 114px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.list-item-info {
+  display: flex;
+  flex-direction: column;
+}
+.list-item-info > * {
+  display: flex;
+  align-items: center;
+}
+.list-item-title {
+  flex: 1;
+}
+.list-item-title > img {
+  height: 16px;
+  margin-right: 4px;
+}
+.list-item-views {
+  flex: 1;
+  color: #a1a1a1;
+  font-size: 14px;
+}
+.list-item-views > img {
+  width: 10px;
+  margin-right: 4px;
+}
+.list-item-desc {
+  flex: 3;
+}
+.banner-item-image {
+  max-width: 100%;
+}
+
+.weekly-tabs-nav {
+  margin-bottom: 10px;
+}
+.weekly-tabs-nav ul {
+  display: flex;
+  justify-content: stretch;
+}
+.weekly-tabs-nav .active button {
+  background-color: #ffd200;
+  color: #000;
+}
+.weekly-tabs {
+  height: fit-content;
+  padding: 0;
+}
+.weekly-tab {
+  list-style-type: none;
+  display: flex;
+}
+.weekly-tabs-nav button {
+  border-radius: 50%;
+  padding: 1px;
+  border: none;
+  background-color: #0000;
+  aspect-ratio: 1;
+  width: 50%;
+}
+.weekly-inner-tab-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.weekly-inner-tab-bar div {
+  color: #a1a1a1;
+  font-size: 20px;
+}
+.weekly-inner-tab-bar div:first-child {
+  color: #000;
+  margin-left: 0;
+  margin-right: auto;
+}
+.weekly-inner-tab-second {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.weekly-webtoon {
+  padding: 20px;
+}
+.weekly-webtoon:nth-child(2) {
+  margin-top: -10px;
+  padding: 0 20px;
+}
+.weekly-webtoon-nav ul {
+  display: flex;
+}
+.weekly-webtoon-nav button {
+  border-radius: 50%;
+  padding: 1px;
+  border: none;
+  background-color: #0000;
+  aspect-ratio: 1;
+  width: 50%;
+}
+.weekly-webtoon-nav .active button {
+  background-color: #ffd200;
+  color: #000;
+}
+.weekly-webtoon-nav button {
+  border: none;
+  background-color: #fff;
+}
+.weekly-webtoon-item-container {
+  display: flex;
+  flex-direction: column;
+}
+.weekly-webtoon-item-card {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+}
+.weekly-webtoon-item-image {
+  width: 142px;
+  border-radius: 8px;
+  border: 1px solid #9c9c9c;
+  margin-right: 20px;
+}
+.weekly-webtoon-item-info > *:nth-child(1) {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.weekly-webtoon-item-info > *:nth-child(2) {
+  color: #a1a1a1;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.weekly-webtoon-item-info > *:nth-child(3) {
+  color: #a1a1a1;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.weekly-webtoon-item-info img {
+  width: 12px;
+}

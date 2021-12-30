@@ -8,89 +8,43 @@
   position: relative;
 }
 
-.banner-img {
-  width: 720px;
-}
-.banner-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 720px;
-}
-.banner-title {
-  display: flex;
-  font-size: 18px;
-  padding-top: 6px;
-  padding-bottom: 8px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  color: #000;
-  background-color: #ffd200;
-}
-.banner-desc {
-  width: 720px;
-}
-.banner-desc-title {
-  padding-left: 20px;
-  color: white;
-}
-.banner-desc-title > div {
-  font-size: 25px;
-  font-weight: bold;
-}
-.banner-desc-desc {
-  width: 720px;
-  display: flex;
-  color: #bbb;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  padding-top: 10px;
-}
-.banner-desc-desc > :first-child {
-  margin-left: 0;
-  margin-right: auto;
-}
-.banner-desc-desc > :last-child {
-  font-size: 20px;
-  margin-left: auto;
-  margin-right: 0;
-}
-
 .tab-nav {
   display: flex;
   width: 720px;
 }
-.tab-nav ul {
+.second-tabs {
   width: 720px;
   display: flex;
-  padding: 0;
+  padding: 15px 0;
 }
-.tab-nav li {
+.second-tabs li {
   list-style-type: none;
   flex: 1 1 auto;
   text-align: center;
 }
-.tab-nav button {
+.second-tabs button {
   border: none;
   cursor: pointer;
   background-color: #0000;
   font-size: 20px;
+  font-weight: 500;
   color: #a1a1a1;
 }
+.second-tabs .active * {
+  color: #000;
+}
+
 
 .section-featuring {
   padding: 20px;
 }
-.featuring-tabs {
+.featuring-items {
   overflow: hidden;
   border-radius: 8px;
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
-
-.featuring-tab {
+.featuring-item {
   background-color: #f3f3f3;
   margin: 1px;
   padding: 20px;

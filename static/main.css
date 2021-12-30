@@ -3,6 +3,10 @@
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
 }
+ul {
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
   background-color: #555;
@@ -101,6 +105,7 @@ header {
 .contents {
   width: 720px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 footer {
