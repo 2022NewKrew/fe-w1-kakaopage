@@ -1,5 +1,32 @@
 .carousel {
     margin-top: 11px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel .prev-button {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 20px;
+}
+
+.carousel .next-button {
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 20px;
+}
+
+.carousel .counter {
+    position: absolute;
+    right: 24px;
+    bottom: 57px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.carousel-item-container {
+    display: flex;
 }
 
 .carousel-item {

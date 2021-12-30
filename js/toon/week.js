@@ -16,9 +16,9 @@ function weekdayNavComponent() {
     return element;
 }
 
-export default function weekInit(contentDiv) {
+export default async function weekInit(contentDiv) {
     contentDiv.innerHTML = "";
 
-    contentDiv.appendChild(topBannerComponent());
+    contentDiv.appendChild(await topBannerComponent());
     contentDiv.appendChild(weekdayNavComponent());
 }
