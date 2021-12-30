@@ -99,10 +99,43 @@ const SlideBannerTrack = ({ index, content }) => {
         <div class="slideBannerBox__content">
           ${content.titles.map((v) => `<p>${v}</p>`).join("")}
           <div class="slideBannerBox__info">
-            <img
-                alt="공모전"
-                src="https://static-page.kakao.com/static/pc/badge-bigthum-competition.svg?b9cde8c9848eb67a53c11cf4a3c4944b"
-            />
+            ${
+              content.type === "공모전"
+                ? `
+                <img alt="공모전" src="https://static-page.kakao.com/static/pc/badge-bigthum-competition.svg?b9cde8c9848eb67a53c11cf4a3c4944b">
+              `
+                : content.type === "HOT"
+                ? `
+                <img alt="HOT" src="https://static-page.kakao.com/static/pc/badge-bigthum-hot.svg?a7f7622e9d554d5e0ad1517a53de3ad3">
+              `
+                : content.type === "UP"
+                ? `
+                  <img alt="UP" src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2">
+                `
+                : `
+                <img alt="추천" src="https://static-page.kakao.com/static/pc/badge-bigthum-recommend.svg?9cba9a2bf1ae05f840c588da3ed9d37f">
+                `
+            }
+            <div class="slideBannerBox__infoList">
+              ${
+                content.webtoonType
+                  ? `<div><span>${content.webtoonType}</span></div>`
+                  : ``
+              }
+              ${
+                content.subscribers
+                  ? `
+                  <div>
+                    <img alt="Seperator" src="https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea" >
+                  </div>
+                  <div>
+                    <img alt="people" src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e">
+                    <span>${content.subscribers}만명</span>
+                  </div>
+              `
+                  : ``
+              }
+            </div>
           </div>
         </div>
 

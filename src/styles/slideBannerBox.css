@@ -77,6 +77,30 @@
 
 .slideBannerBox__info {
   margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.slideBannerBox__infoList {
+  display: flex;
+  align-items: center;
+}
+
+.slideBannerBox__infoList > div {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.slideBannerBox__infoList > div > img {
+  margin-right: 4px;
+}
+
+.slideBannerBox__infoList span {
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 .slideBannerBox__footer {
