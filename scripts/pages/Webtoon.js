@@ -1,12 +1,12 @@
 import {Carousel, Category, Banner, WeekDays} from "../components";
 
 const getGenreNavData = () => {
-    const response = fetch("../../data/webtoon/genreNav.json");
+    const response = fetch("../../database/webtoon/genreNav.json");
     return response.then(res => res.json());
 }
 
 const getContentsData = genre => {
-    const response = fetch(`../../data/webtoon/${genre}.json`);
+    const response = fetch(`../../database/webtoon/${genre}.json`);
     return response.then(res => res.json());
 }
 
