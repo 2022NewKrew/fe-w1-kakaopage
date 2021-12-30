@@ -1,4 +1,5 @@
 import { getAPI } from "./api.js";
+import { clearCarouselInterval, createCarouselTemplate } from "./carousel.js";
 import { createEmptyPage } from "./empty.js";
 import {
   createCategoryRightBarDetail,
@@ -83,6 +84,7 @@ export const changeMainContent = async (e) => {
 
     currMenuActiveIndex = 0;
     currDayActiveIndex = 0;
+    clearCarouselInterval();
 
     $(".main").innerHTML =
       Number(e.target.dataset.idx) === webtoonNavIndex
@@ -99,13 +101,34 @@ export const changeWebtoonDetailContent = async (e) => {
     if (Number(e.target.dataset.idx) === currMenuActiveIndex) return;
 
     currDayActiveIndex = 0;
+    clearCarouselInterval();
 
-    $(".webtoon-main").innerHTML =
+    $(".webtoon_main-container").innerHTML =
       Number(e.target.dataset.idx) === webtoonNavIndex
-        ? await createWebtoonDayTabPage()
-        : createEmptyPage();
+        ? await createWebtoonTabPage()
+        : await createOtherTabPage();
   } catch (e) {
     alert(e);
+  }
+};
+
+const createWebtoonTabPage = async () => {
+  try {
+    const carousel = await createCarouselTemplate();
+    const DayTabPage = await createWebtoonDayTabPage();
+    return carousel + DayTabPage;
+  } catch (e) {
+    throw e;
+  }
+};
+
+const createOtherTabPage = async () => {
+  try {
+    const carousel = await createCarouselTemplate();
+    const empty = createEmptyPage();
+    return carousel + empty;
+  } catch (e) {
+    throw e;
   }
 };
 
@@ -125,7 +148,7 @@ export const changeContentOfDay = async (e) => {
     if (!dayClassList.includes(e.target.classList[0])) return;
     if (Number(e.target.dataset.idx) === currDayActiveIndex) return;
     const index = Number(e.target.dataset.idx);
-    const webtoons = await getAPI(`data/webtoon/${dayOfIdxObj[index]}.json`);
+    const webtoons = await getAPI(`webtoon/${dayOfIdxObj[index]}.json`);
     $(".webtoon-container").innerHTML = await createWebtoon(webtoons);
     $(".category-right").innerHTML = createCategoryRightBarDetail(
       webtoons.length
