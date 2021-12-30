@@ -29,9 +29,7 @@ import {init as webtoonInit} from "./webtoon.js";
       markTabActive(e.target);
       loadTab(tabHtml);
     });
-    // NOTE Temporarily set webtoon tab as default for convenience :)
-    // document.getElementById("home-tab").click();
-    document.getElementById("webtoon-tab").click();
+    document.getElementById("home-tab").click();
   }
 
   init();
