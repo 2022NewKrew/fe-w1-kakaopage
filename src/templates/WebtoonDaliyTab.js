@@ -3,6 +3,7 @@ import { ContentToolbar } from "../components/contents/ContentToolbar.js";
 import { SlideBannerBox } from "../components/contents/SlideBannerBox.js";
 import { DayNavigator } from "../components/navigators/DayNavigator.js";
 import { State } from "../core/State.js";
+import { getToday } from "../utils/Time.js";
 
 export const WebtoonDaliyTab = () => {
   const $root = document.createElement("div");
@@ -21,7 +22,7 @@ const TopBannerSection = () => {
 
 const ContentSection = () => {
   const $root = document.createElement("section");
-  const state = State({ day: new Date().getDay() || 7, type: "전체" });
+  const state = State({ day: getToday(), type: "전체" });
 
   $root.appendChild(DayNavigator({ state }));
   $root.appendChild(ContentToolbar({ state }));
