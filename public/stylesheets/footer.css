@@ -1,57 +1,56 @@
 footer {
-    width: 720px;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
+  width: 720px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
 }
-
-footer > div.leftBox > ul {
-    display: flex;
+footer > div.left_box > ul {
+  display: flex;
 }
-footer > div.leftBox > ul li {
-    list-style: none;
+footer > div.left_box > ul li {
+  list-style: none;
 }
-.companyInfo.on::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background: no-repeat center
-        url("https://page.kakao.com/static/common/icon_trace_on.png");
-    background-size: 100%;
+.company_info.on::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  background: no-repeat center url("https://page.kakao.com/static/common/icon_trace_on.png");
+  background-size: 100%;
 }
-.companyInfo.off::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background: no-repeat center
-        url("https://page.kakao.com/static/common/icon_trace_off.png");
-    background-size: 100%;
+.company_info.off::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  background: no-repeat center url("https://page.kakao.com/static/common/icon_trace_off.png");
+  background-size: 100%;
 }
 span.separator {
-    padding: 0px 10px;
+  padding: 0px 10px;
 }
-div.leftBox,
-div.rightBox {
-    color: #cdcdcd;
+div.left_box,
+div.right_box {
+  color: #cdcdcd;
 }
-div.leftBox > .companyInfoWrap {
-    display: flex;
+div.left_box > .company_info_wrap {
+  display: flex;
 }
-footer .companyInfoUrl {
-    text-decoration: underline;
+footer .company_info_url {
+  text-decoration: underline;
 }
-div.leftBox > .copyrightArea {
-    line-height: 24px;
-    padding-bottom: 50px;
+div.left_box > .copyright_area {
+  line-height: 24px;
+  padding-bottom: 50px;
 }
 
-div.rightBox > img {
-    width: 55px;
-    height: 55px;
+div.right_box > img {
+  width: 55px;
+  height: 55px;
 }
-div.rightBox > p {
-    font-size: small;
-    text-align: center;
+div.right_box > p {
+  font-size: small;
+  text-align: center;
 }
