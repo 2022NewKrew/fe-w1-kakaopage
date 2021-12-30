@@ -169,6 +169,18 @@ function day_top_builder() {
 function recommend_event_builder() {
   const recommend_event_title = "추천 이벤트";
   const recommend_event_template = top_title_wrap_template(recommend_event_title);
-
-  kakao_recommend_event_div.innerHTML += recommend_event_template;
+  const recommend_event_content_template = kakao_webtoon_list.recommend_event_list.map(item => {
+    return `
+    <div class="recommend_event_content">
+      <img src="${item.img}" alt="${item.title}" />
+      <div class="controller">
+        <img src="https://static-page.kakao.com/static/pc/icon_topBanner_prev.png?99ff1dd99254e675a8a9d50e8da55753" alt="prev" />
+        <span>${item.order}</span>
+        <img src="https://static-page.kakao.com/static/pc/icon_topBanner_next.png?83092704b1e76d136244e4d55c16694f" alt="next" />
+      </div>
+    </div>
+    `;
+  });
+  kakao_recommend_event_div.querySelector(".recommend_event_content_wrap").innerHTML = recommend_event_content_template;
+  kakao_recommend_event_div.innerHTML = recommend_event_template + kakao_recommend_event_div.innerHTML;
 }

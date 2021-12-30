@@ -420,3 +420,26 @@ div.app_download > img {
   border-bottom: 1px solid #f1f1f1;
   width: -webkit-fill-available;
 }
+.recommend_event > .recommend_event_content_wrap {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.recommend_event > .recommend_event_content_wrap > .recommend_event_content {
+  position: relative;
+}
+.recommend_event > .recommend_event_content_wrap > .recommend_event_content > img {
+  width: 100%;
+}
+.recommend_event > .recommend_event_content_wrap > .recommend_event_content > .controller {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  bottom: 27px;
+}
+.recommend_event > .recommend_event_content_wrap > .recommend_event_content > .controller > span {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  opacity: 0.5;
+  padding-top: 2px;
+  margin: 0px 10px 0px 10px;
+}

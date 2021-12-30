@@ -293,4 +293,11 @@ const kakao_webtoon_list = {
       webtoon_card_meta_count: "58.1만명",
     },
   ],
+  recommend_event_list: [
+    {
+      title: "꽃을 문 짐승",
+      img: "//dn-img-page.kakao.com/download/resource?kid=u2hly/hzmU0I299K/KTyFnJxApOimyk0XbkAkI0",
+      order: "1 / 8",
+    },
+  ],
 };
