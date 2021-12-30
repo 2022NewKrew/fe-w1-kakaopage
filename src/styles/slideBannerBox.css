@@ -6,13 +6,10 @@
   cursor: pointer;
   height: 480px;
   border-bottom: 1px solid #e6e6e6;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.slideBannerBox > div {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+.slideBannerBox__action {
   position: absolute;
   top: 0;
   left: 0;
@@ -22,17 +19,23 @@
   flex-direction: column;
 }
 
+.slideBannerBox__slider {
+  display: flex;
+  position: absolute;
+}
+
 .slideBannerBox__track {
-  transform: translate3d(0px, 0px, 0px);
+  position: relative;
+  width: 720px;
+  height: 480px;
   transition: transform 300ms ease 0s;
 }
 
 .slideBannerBox__background {
-  position: relative;
+  position: absolute;
 }
 
 .slideBannerBox__img {
-  position: absolute;
   width: 720px;
   display: block;
 }
@@ -50,16 +53,24 @@
   );
 }
 
+.slideBannerBox__contentWrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .slideBannerBox__content {
   z-index: 100;
-  margin-top: auto;
+  margin-bottom: 20px;
   padding-left: 20px;
 }
 
 .slideBannerBox__content > p {
   color: white;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   margin-top: 6px;
 }
@@ -72,7 +83,6 @@
   z-index: 100;
   width: 100%;
   height: 40px;
-  margin-top: 20px;
   background-color: #ffd200;
   display: flex;
   align-items: center;
