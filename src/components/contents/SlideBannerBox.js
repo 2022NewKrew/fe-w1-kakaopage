@@ -30,5 +30,5 @@ export const SlideBannerBox = () => {
     </div>
   `;
 
-  return { $root };
+  return $root;
 };

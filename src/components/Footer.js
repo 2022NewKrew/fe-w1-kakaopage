@@ -29,5 +29,5 @@ export const Footer = () => {
     </footer>
   `;
 
-  return { $root };
+  return $root;
 };

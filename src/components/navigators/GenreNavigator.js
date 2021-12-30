@@ -12,26 +12,24 @@ export const GenreNavigator = () => {
     return "";
   };
 
+  const renderGenreItem = (genre) => `
+    <li>
+      <a 
+        class="genreNav__item ${isSelected(genre)}" 
+        href="?${new URLSearchParams({ genre }).toString()}"
+      >
+        ${genre}
+      </a>
+    </li>
+  `;
+
   $root.innerHTML = `
     <ul>
-        ${genreList
-          .map(
-            (genre) => `
-              <li>
-                <a 
-                  class="genreNav__item ${isSelected(genre)}" 
-                  href="?${new URLSearchParams({ genre }).toString()}"
-                >
-                  ${genre}
-                </a>
-              </li>
-            `
-          )
-          .join("")}
+        ${genreList.map(renderGenreItem).join("")}
     </ul>
   `;
 
-  return { $root };
+  return $root;
 };
 
 const genreList = [

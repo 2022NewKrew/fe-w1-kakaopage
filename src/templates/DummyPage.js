@@ -14,5 +14,5 @@ export const DummyPage = () => {
       </section>
     `;
 
-  return { $root };
+  return $root;
 };

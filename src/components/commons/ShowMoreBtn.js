@@ -1,7 +1,6 @@
 export const ShowMoreBtn = ({ url }) => {
   const $root = document.createElement("a");
   $root.className = "showMoreBtn";
-
   $root.innerHTML = `
         <span>더보기</span>
         <img
@@ -10,5 +9,5 @@ export const ShowMoreBtn = ({ url }) => {
         />
     `;
 
-  return { $root };
+  return $root;
 };

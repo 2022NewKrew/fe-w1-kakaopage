@@ -7,39 +7,31 @@ export const HeaderNavigator = () => {
   const visitedPath = new Set([...visitedList, currentPath]);
   sessionStorage.setItem("visitedPath", JSON.stringify([...visitedPath]));
 
+  const renderNavItem = ({ path, img }) => `
+    <li class="headerNav__item ${path === currentPath ? "headerNav__item--selected" : ""}">
+      <a href="/${path}">
+        <img
+          src="${img}"
+          alt="${path}"
+        />
+      </a>
+      ${visitedPath.has(path) ? "" : '<div class="headerNav__dot" />'}
+    </li>
+  `;
+
   const render = () => {
     $root.innerHTML = `
         <nav class="headerNav">
-            <ul>
-                ${pathList
-                  .map(
-                    ({ path, img }) => `
-                    <li class="headerNav__item ${
-                      path === currentPath ? "headerNav__item--selected" : ""
-                    }">
-                        <a href="/${path}">
-                            <img
-                                src="${img}"
-                                alt="${path}"
-                            />
-                        </a>
-                        ${
-                          visitedPath.has(path)
-                            ? ""
-                            : '<div class="headerNav__dot" />'
-                        }
-                    </li>
-                `
-                  )
-                  .join("")}
-            </ul>
-          </nav>
+          <ul>
+            ${pathList.map(renderNavItem).join("")}
+          </ul>
+        </nav>
       `;
   };
 
   render();
 
-  return { $root };
+  return $root;
 };
 
 const pathList = [

@@ -11,12 +11,12 @@ export const WebtoonDaliyTab = () => {
   $root.appendChild(TopBannerSection());
   $root.appendChild(ContentSection());
 
-  return { $root };
+  return $root;
 };
 
 const TopBannerSection = () => {
   const $root = document.createElement("section");
-  $root.appendChild(SlideBannerBox().$root);
+  $root.appendChild(SlideBannerBox());
   return $root;
 };
 

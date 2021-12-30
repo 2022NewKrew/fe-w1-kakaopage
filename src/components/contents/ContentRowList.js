@@ -5,12 +5,11 @@ export const ContentRowList = ({ contentList }) => {
   $root.className = "contentRowListBox";
 
   const render = () => {
-    contentList.forEach((_) => {
-      $root.append(ContentRowListItem().$root);
-    });
+    $root.innerHTML = "";
+    $root.append(...contentList.map((_) => ContentRowListItem()));
   };
 
   render();
 
-  return { $root };
+  return $root;
 };

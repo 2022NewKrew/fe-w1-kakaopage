@@ -36,5 +36,5 @@ export const ContentRowListItem = () => {
     </div>
   `;
 
-  return { $root };
+  return $root;
 };

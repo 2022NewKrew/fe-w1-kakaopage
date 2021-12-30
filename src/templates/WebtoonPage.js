@@ -10,17 +10,17 @@ export const WebtoonPage = () => {
   const urlSearchParams = new URLSearchParams(window.location.search);
   const { genre } = Object.fromEntries(urlSearchParams.entries());
 
-  $root.appendChild(GenreNavigator().$root);
+  $root.appendChild(GenreNavigator());
 
   if (genre === "홈") {
-    $root.appendChild(WebtoonHomeTab().$root);
+    $root.appendChild(WebtoonHomeTab());
   } else if (genre === "요일연재") {
-    $root.appendChild(WebtoonDaliyTab().$root);
+    $root.appendChild(WebtoonDaliyTab());
   } else if (genre === "웹툰") {
-    $root.appendChild(WebtoonWebtoonTab().$root);
+    $root.appendChild(WebtoonWebtoonTab());
   }
 
-  $root.appendChild(AppDownloadSection().$root);
+  $root.appendChild(AppDownloadSection());
 
-  return { $root };
+  return $root;
 };

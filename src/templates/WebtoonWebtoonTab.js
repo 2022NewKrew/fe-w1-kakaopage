@@ -12,7 +12,7 @@ export const WebtoonWebtoonTab = () => {
   $root.appendChild(WebtoonSection());
   $root.appendChild(HotPromotionSection());
 
-  return { $root };
+  return $root;
 };
 
 const TobBannerSection = () => {
@@ -20,7 +20,7 @@ const TobBannerSection = () => {
 
   const state = State({ day: getToday() });
 
-  $root.appendChild(SlideBannerBox().$root);
+  $root.appendChild(SlideBannerBox());
   $root.appendChild(DayNavigator({ state }));
 
   return $root;
@@ -29,7 +29,7 @@ const TobBannerSection = () => {
 const WebtoonSection = () => {
   const $root = document.createElement("section");
 
-  $root.appendChild(ContentRowList({ contentList: [...Array(10)] }).$root);
+  $root.appendChild(ContentRowList({ contentList: [...Array(10)] }));
 
   return $root;
 };
@@ -37,10 +37,8 @@ const WebtoonSection = () => {
 const HotPromotionSection = () => {
   const $root = document.createElement("section");
 
-  $root.appendChild(
-    SectionHeader({ title: "🔥HOT 최근 프로모션 진행작" }).$root
-  );
-  $root.appendChild(ContentRowList({ contentList: [...Array(5)] }).$root);
+  $root.appendChild(SectionHeader({ title: "🔥HOT 최근 프로모션 진행작" }));
+  $root.appendChild(ContentRowList({ contentList: [...Array(5)] }));
 
   return $root;
 };

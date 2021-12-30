@@ -7,14 +7,11 @@ export const SectionHeader = ({
 }) => {
   const $root = document.createElement("header");
   $root.className = "sectionHeader";
-
   $root.innerHTML = `
       <h5 class="sectionHeader__title">${title}</h5>
+      ${subTitle ? `<span class="sectionHeader__subTitle">${subTitle}</span>` : ``}
     `;
-  if (!!subTitle)
-    $root.innerHTML += `<span class="sectionHeader__subTitle">${subTitle}</span>`;
+  $root.appendChild(ShowMoreBtn({ url: showMoreURL }));
 
-  $root.appendChild(ShowMoreBtn({ url: showMoreURL }).$root);
-
-  return { $root };
+  return $root;
 };

@@ -10,5 +10,5 @@ export const AppDownloadSection = () => {
     </div>
 `;
 
-  return { $root };
+  return $root;
 };
