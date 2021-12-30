@@ -1,5 +1,5 @@
 import { getAPI } from "./api.js";
-import { clearCarouselInterval, createCarouselTemplate } from "./carousel.js";
+import { clearCarouselTimer, createCarouselTemplate } from "./carousel.js";
 import { createEmptyPage } from "./empty.js";
 import {
   createCategoryRightBarDetail,
@@ -84,7 +84,7 @@ export const changeMainContent = async (e) => {
 
     currMenuActiveIndex = 0;
     currDayActiveIndex = 0;
-    clearCarouselInterval();
+    clearCarouselTimer();
 
     $(".main").innerHTML =
       Number(e.target.dataset.idx) === webtoonNavIndex
@@ -101,7 +101,7 @@ export const changeWebtoonDetailContent = async (e) => {
     if (Number(e.target.dataset.idx) === currMenuActiveIndex) return;
 
     currDayActiveIndex = 0;
-    clearCarouselInterval();
+    clearCarouselTimer();
 
     $(".webtoon_main-container").innerHTML =
       Number(e.target.dataset.idx) === webtoonNavIndex

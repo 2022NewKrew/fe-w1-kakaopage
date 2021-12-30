@@ -1,8 +1,8 @@
 import { getAPI } from "./api.js";
 import { $ } from "./util.js";
 
-let timer = 0;
-
+let intervalTimer = 0;
+let timeoutTimer = 0;
 /********* carousel template in webtoon page  **********/
 
 const createWebtoonMark = () => {
@@ -62,28 +62,66 @@ const createCarousel = (carousel, index, totalPage) => {
         </div>`;
 };
 
+const createWholeCarousel = (carouselData, totalPage) => {
+  const firstCarouselData = carouselData[0];
+  const firstCarouselIndex = 0;
+  const lastCarouselData = carouselData[carouselData.length - 1];
+  const lastCarouselIndex = carouselData.length - 1;
+
+  const cloneFirstCarousel = createCarousel(
+    firstCarouselData,
+    firstCarouselIndex,
+    totalPage
+  );
+  const cloneLastCarousel = createCarousel(
+    lastCarouselData,
+    lastCarouselIndex,
+    totalPage
+  );
+  const carousels = carouselData
+    .map((carousel, index) => createCarousel(carousel, index, totalPage))
+    .join("");
+
+  return cloneLastCarousel + carousels + cloneFirstCarousel;
+};
+
+const adjustTransition = (carouselInnerContainer, slideX, flag = "") => {
+  if (carouselInnerContainer.style.transition === "none 0s ease 0s")
+    carouselInnerContainer.style.transition = "all 1s ease";
+
+  if (flag === "loop") carouselInnerContainer.style.transition = "none";
+  carouselInnerContainer.style.transform = `translateX(${slideX}px)`;
+};
+
 export const createCarouselTemplate = async () => {
   try {
-    let slideX = 0;
+    let slideX = -720;
+    let currentPage = 1;
+
     const slideAnimationTime = 2000;
+    const timeForLoop = 1000;
     const carouselData = await getAPI("carousel.json");
     const totalPage = carouselData.length;
 
-    timer = setInterval(() => {
+    intervalTimer = setInterval(() => {
+      const carouselInnerContainer = $(".carousel_inner-container");
       slideX += -720;
-      $(
-        ".carousel_inner-container"
-      ).style.transform = `translateX(${slideX}px)`;
+      currentPage += 1;
+      adjustTransition(carouselInnerContainer, slideX);
+
+      if (totalPage + 1 === currentPage) {
+        timeoutTimer = setTimeout(() => {
+          slideX = -720;
+          currentPage = 1;
+          adjustTransition(carouselInnerContainer, slideX, "loop");
+        }, timeForLoop);
+      }
     }, slideAnimationTime);
 
     return `
         <div class="carousel_outer-container">
           <div class="carousel_inner-container">
-            ${carouselData
-              .map((carousel, index) =>
-                createCarousel(carousel, index, totalPage)
-              )
-              .join("")}
+            ${createWholeCarousel(carouselData, totalPage)}
           </div>
        </div>`;
   } catch (e) {
@@ -93,6 +131,7 @@ export const createCarouselTemplate = async () => {
 
 /********* carousel template in webtoon page  **********/
 
-export const clearCarouselInterval = () => {
-  clearInterval(timer);
+export const clearCarouselTimer = () => {
+  clearInterval(intervalTimer);
+  clearTimeout(timeoutTimer);
 };

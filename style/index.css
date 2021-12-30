@@ -285,6 +285,7 @@ main {
   display: flex;
   transition: all 1s ease;
   height: 100%;
+  transform: translateX(-720px);
 }
 
 .carousel {
