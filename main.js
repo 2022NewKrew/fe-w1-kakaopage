@@ -95,7 +95,12 @@ async function createGenre(webtoonPage) {
     // innerHTML을 통해 현재 장르의 내용 모두 지우기...
     // 이것도 안됨..ㅠ
     const genreSection = document.getElementById("genre-section");
-    genreSection.innerHTML = "";
+    // genreSection.innerHTML = "";
+
+    while (genreSection.firstChild) {
+      genreSection.removeChild(genreSection.firstChild);
+    }
+
     loadGenre(e.target.getAttribute("data-genre"));
   });
   genres.firstElementChild.classList.add("active-genre");
@@ -120,18 +125,25 @@ async function loadGenre(genre) {
       homeInit();
     case "요일연재":
       dailyInit();
+      break;
     case "소년":
       boyInit();
+      break;
     case "드라마":
       dramaInit();
+      break;
     case "로맨스":
       romanceInit();
+      break;
     case "로판":
       romanticFantasyInit();
+      break;
     case "액션무협":
       actionInit();
+      break;
     case "BL":
       BLInit();
+      break;
     default:
       homeInit();
   }
@@ -187,6 +199,7 @@ async function BLInit() {
 
 // --------- 메인 캐러셀 만들기---------
 async function createMainCarousel(webtoonPage) {
+  console.log("mainCarousel" + webtoonPage);
   let slideIndex = 1;
 
   const mainCarouselFile = await fetch("data/carousel.json");
