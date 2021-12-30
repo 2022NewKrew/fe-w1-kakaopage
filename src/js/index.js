@@ -1,3 +1,62 @@
+import { webtoonList, weekdaysMap } from "../assets/data/data.js";
+import { $, $$ } from './utils.js'
+
+(function() {
+    const $main = $(".main");
+    let activeTabLink = 0, activeWeekdayTabLink = 0;
+
+    const deleteMainElements = () => {
+        while ($main.firstChild) {
+            $main.removeChild($main.firstChild);
+        }
+    };
+
+    const addMainElements = (target) => {
+        const $target = $(target).content.children;
+        [...$target].forEach(node => {
+            $main.appendChild(node.cloneNode(true));
+        });
+    };
+
+    const chkNotWebtoonTab = (node) => {
+        return node.classList.contains("webtoon")
+            ? false
+            : true;
+    };
+
+    const chkDuplicatedWebtoonTab = () => {
+        return activeTabLink === 1 
+            ? true 
+            : false;
+    };
+
+    const changeActiveTab = (node, idx) => {
+        if (idx === activeTabLink) {
+            return;
+        }
+        node.classList.add("active");
+        $$(".sub_header_link")[activeTabLink].classList.remove("active");
+        activeTabLink = idx;
+    }; 
+
+    const changeActiveWeekdayTab = (node, idx) => {
+        if (idx == activeWeekdayTabLink) {
+            return;
+        }
+        node.classList.add("active");
+        $$(".weekdays_button")[activeWeekdayTabLink].classList.remove("active");
+        activeWeekdayTabLink = idx;
+    };
+
+    const setEventWeekdaysButton = () => {
+        $(".weekdays_buttons_wrap").addEventListener("click", (e) => {
+                const $weekdayButton = e.target.closest("button");
+                const weekday = $weekdayButton.dataset.weekday;
+                changeActiveWeekdayTab($weekdayButton, weekdaysMap[weekday]);
+                addWebtoonList(weekday);
+        });
+    };
+
     const addWebtoonList = (weekday) => {
         const template = webtoonList[weekday].map((webtoon) => {
             return `
@@ -29,6 +88,7 @@
         }).join("");
         $(".webtoon_list_outer_wrap").innerHTML = template;
     };
+
     $(".sub_header").addEventListener("click", (e) => {
         const $navTab = e.target.closest("a")
         const tabID = parseInt(e.target.dataset.tabId);
@@ -47,3 +107,4 @@
         addWebtoonList("월");
         setEventWeekdaysButton();
     });  
+})();
