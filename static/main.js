@@ -15,7 +15,7 @@
     const text=await (await fetch(url)).text();
     const container=document.getElementById("contents");
     container.innerHTML=text;
-    if(url==="webtoon.html")
+    if(url.includes("webtoon.html"))
       appendWebtoonScript();
   }
   function appendWebtoonScript(){
@@ -28,9 +28,10 @@
 
     const newScript=document.createElement("script");
     newScript.src="webtoon.js";
-    newScript.type="text/javascript";
+    newScript.type="module";
     body.appendChild(newScript);
   }
+
   function init(){
     tabs.addEventListener('click', (e)=>{
       const tabHtml=e.target.getAttribute("data-tab-html");
