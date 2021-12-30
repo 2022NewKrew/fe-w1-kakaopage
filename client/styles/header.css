@@ -13,17 +13,17 @@
 .body-container {
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(153, 153, 153);
+  background-color: #eee;
 }
 
 .header-container {
-  min-width: 750px;
-  width: 50%;
+  min-width: 720px;
+  width: 720px;
   margin: auto;
   background-color: white;
   padding-top: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .search-container {
@@ -93,6 +93,6 @@
 }
 
 .nav-menu {
-  margin: 30px;
+  margin: 10px 30px 30px 30px;
   cursor: pointer;
 }

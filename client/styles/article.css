@@ -1,0 +1,55 @@
+.update-list {
+  background: white;
+  box-sizing: border-box;
+  width: 720px;
+  margin: auto;
+  padding: 20px 15px;
+}
+
+.update-list-container {
+  display: grid;
+}
+
+.update-list-container div {
+  display: flex;
+  background-color: #eee;
+}
+
+.update-cnt {
+  border-radius: 30%;
+  background-color: #ffd200;
+}
+
+.days-list {
+  width: 720px;
+  margin: 0 auto;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: rgb(187, 187, 187);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.days-list div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+.checked-date {
+  background-color: #ffd200;
+  color: black;
+}
+
+.days-webtoon-list {
+  background-color: white;
+  width: 720px;
+  margin: 12px auto;
+}
