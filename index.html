@@ -51,6 +51,7 @@
             </div>
         </header>
         <div id="main" class="main" role="main">
+    <template class="main_webtoon">
             <nav class="webtoon_category_link_wrap">
                 <a href="#" class="webtoon_category_link">홈</a>
                 <!-- [D] 클릭 시 active 클래스 추가 -->
@@ -77,14 +78,14 @@
             </a>
             <div class="webtoon_list_wrap">
                 <nav class="weekdays_buttons_wrap">
-                    <button type="button" class="weekdays_button">월<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">화<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">수<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button active">목<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">금<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">토<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">일<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">완결<span class="blind">웹툰 보기</span></button>
+                <button type="button" data-weekday="월" class="weekdays_button active">월<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="화" class="weekdays_button">화<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="수" class="weekdays_button">수<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="목" class="weekdays_button">목<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="금" class="weekdays_button">금<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="토" class="weekdays_button">토<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="일" class="weekdays_button">일<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="완결" class="weekdays_button">완결<span class="blind">웹툰 보기</span></button>
                 </nav>
                 <nav class="weekdays_category_buttons_wrap">
                     <button type="button" class="weekdays_category_button separate active">전체</button>
@@ -92,21 +93,10 @@
                     <button type="button" class="weekdays_category_button clock">웹툰</button>
                     <button type="button" class="show_categories_button">전체 (163)</button>
                 </nav>
-                <ul class="webtoon_list_outer_wrap">
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
+            <ul class="webtoon_list_outer_wrap"></ul>
                             </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
+        <button type="button" class="application_link"><span class="blind">카카오페이지 앱으로 보기</span></button>
+    </template>
                             </div>
                             <div>먹을수록 강해짐</div>
                         </a>
