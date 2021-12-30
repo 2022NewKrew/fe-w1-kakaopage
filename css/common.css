@@ -52,8 +52,15 @@ a {
 }
 
 .dummy-content {
-    height: 2000px;
+    height: 200px;
     margin-top: 11px;
     background-color: #333;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 

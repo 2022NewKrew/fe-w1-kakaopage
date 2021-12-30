@@ -2,7 +2,7 @@ import toonInit from "./toon/init.js";
 
 function defaultInit() {
     const mainContentDiv = document.getElementById("main-contents");
-    mainContentDiv.innerHTML = `<div class="dummy-content"></div>`;
+    mainContentDiv.innerHTML = `<div class="dummy-content">DUMMY</div>`;
 }
 
 function categoryNavigationClick(event) {

@@ -3,7 +3,7 @@ import weekInit from "./week.js";
 
 
 function defaultInit(contentDiv) {
-    contentDiv.innerHTML = `<div class="dummy-content"></div>`;
+    contentDiv.innerHTML = `<div class="dummy-content">DUMMY</div>`;
 }
 
 function categoryNavigationClick(event) {
