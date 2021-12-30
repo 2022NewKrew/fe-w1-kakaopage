@@ -199,8 +199,6 @@ async function BLInit() {
 
 // --------- 메인 캐러셀 만들기---------
 async function createMainCarousel(webtoonPage) {
-  let slideIndex = 1;
-
   const mainCarouselFile = await fetch("data/carousel.json");
   const mainCarouselList = (await mainCarouselFile.json())["webtoon"];
 
@@ -277,7 +275,7 @@ async function createMainCarousel(webtoonPage) {
   </section>
   `
   );
-
+  slideIndex = 1;
   showSlides(1);
 
   const prevBtn = document.getElementById("previousButton");
@@ -452,7 +450,7 @@ async function fetchTopRankingWebtoons(weekday) {
 
 // --------- 하단 캐러셀 ----------
 async function createBannerCarousel(webtoonPage) {
-  let slideIndex = 1;
+  // let slideIndex = 1;
 
   const bannerFile = await fetch("data/banner.json");
   const bannerList = (await bannerFile.json()).banner;
@@ -469,7 +467,7 @@ async function createBannerCarousel(webtoonPage) {
             />
           </button>
           <div class="slide_box">
-            <div class="slide_list">
+            <div class="slide_list" id="slide_list">
               ${bannerList
                 .map(
                   ({ image, description }) => `
@@ -495,32 +493,50 @@ async function createBannerCarousel(webtoonPage) {
   `
   );
 
-  showSlides(1);
+  let curPos = 0;
 
+  IMAGE_WIDTH = 550;
+  TOTAL_IMAGES = 4;
+
+  // showSlides(1);
+  const slide = document.getElementById("slide_list");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
 
-  prevBtn.addEventListener("click", () => {
-    showSlides((slideIndex -= 1));
-  });
+  const clonedFirst = slide.firstElementChild.cloneNode(true);
+  const clonedLast = slide.lastElementChild.cloneNode(true);
+  slide.appendChild(clonedFirst);
+  slide.insertBefore(clonedLast, slide.firstElementChild);
 
-  nextBtn.addEventListener("click", () => {
-    showSlides((slideIndex += 1));
-  });
+  slide.style.transform = `translateX(-${IMAGE_WIDTH})`;
 
-  function showSlides(slideNum) {
-    let slides = document.getElementsByClassName("slide_item");
-
-    if (slideNum > slides.length) {
-      slideIndex = 1;
+  function next() {
+    if (curPos <= TOTAL_IMAGES) {
+      slide.style.transition = "500ms";
+      slide.style.transform = `translateX(-${IMAGE_WIDTH * (curPos + 2)}px)`;
+      curPos += 1;
     }
-    if (slideNum < 1) {
-      slideIndex = slides.length;
+    if (curPos == TOTAL_IMAGES) {
+      setTimeout(() => {
+        slide.style.transition = "0ms";
+        slide.style.transform = `translateX(-${IMAGE_WIDTH}px)`;
+      }, 500);
+      curPos = 0;
     }
-    Array.from(slides).forEach(function (slide) {
-      slide.style.display = "none";
-    });
-    slides[slideIndex - 1].style.display = "flex";
-    slides[slideIndex - 1].style.alignItems = "center";
   }
+
+  function prev() {
+    if (curPos > 0) {
+      positonValue += IMAGE_WIDTH;
+      slide.style.transform = `translateX(${positonValue}px)`;
+      curPos -= 1;
+    }
+  }
+
+  prevBtn.addEventListener("click", prev);
+  nextBtn.addEventListener("click", next);
+
+  setInterval(() => {
+    next();
+  }, 4000);
 }

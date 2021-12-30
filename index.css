@@ -351,17 +351,24 @@ main {
 }
 
 .slide_box {
-  width: 550x;
+  width: 550px;
   height: 140px;
-}
-
-.slide_list {
   overflow: hidden;
 }
 
+.slide_list {
+  /* overflow: hidden; */
+  width: 550px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  /* flex-direction: column; */
+}
 .slide_item {
   height: 140px;
-  display: none;
+  display: flex;
+  align-items: center;
+  /* display: none; */
 }
 
 .slide_item > img {
@@ -378,7 +385,7 @@ main {
 }
 
 /* Fading animation */
-.slide {
+/* .slide {
   animation-name: slidein;
   animation-duration: 0.5s;
 }
@@ -393,7 +400,7 @@ main {
     margin-left: 0%;
     width: 100%;
   }
-}
+} */
 
 /**
  요일 연재 TOP 
