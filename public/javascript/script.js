@@ -62,7 +62,7 @@ function setToonContent(){
     //카테고리 리스트 생성 후 이벤트 넣기 위함
     setTimeout(() => {
         addSubCategoryClickEvent()
-    }, 0);
+    }, 0)
 
 }
 
@@ -113,7 +113,7 @@ async function setSubCategory(){
         subCategoryUl.appendChild(subCategoryLi)
     })
     subCategoryContainer.appendChild(subCategoryUl)
-    console.log(subCategoryContainer);
+    console.log(subCategoryContainer)
     const mainContent = document.getElementById("main-content")
     mainContent.innerText=''
     mainContent.appendChild(subCategoryContainer)
@@ -141,7 +141,7 @@ function setSubCategoryClick(el){
 
 //서브 카테고리별 컨텐츠 불러오기
 async function setSubCategoryContent(categoryId){
-    console.log("setSubCategoryContent",categoryId);
+    console.log("setSubCategoryContent",categoryId)
     //TODO 서버에서 가져와야하나 현재는 하드 코딩값 사용
     const subCategoryFormGroup={
         home:[{
@@ -261,15 +261,15 @@ async function setSubCategoryContent(categoryId){
         switch (content.type) {
             case slideBanner:
                 contentsDiv.appendChild(await makeSlideBanner(content))
-                break;
+                break
             case toonSummary:
                 contentsDiv.appendChild(await makeSummary(content))
-                break;
+                break
             case dailyToon:
                 contentsDiv.appendChild(await makeDailyToon(content))
                 break
             default:
-                break;
+                break
         }
     }
     if(document.querySelector(".contents")!=null){
@@ -293,7 +293,7 @@ function addDailyCategoryEvent(container,content){
     container.querySelector(".daily-toon-day-category").addEventListener("click",(el)=>{
         let target = el.target.closest('LI')
         setCategoryFocus(target,container.querySelectorAll("li"))
-        console.log("addDailyCategoryEvent",content);
+        console.log("addDailyCategoryEvent",content)
 
         setDailyToon(container,content.info[target.dataset["id"]])
     })
@@ -302,15 +302,15 @@ function addDailyCategoryEvent(container,content){
 //TODO 요일 만화 만들기
 //요일 만화 만들기
 async function setDailyToon(container,dailyToon){
-    console.log(container,dailyToon);
+    console.log(container,dailyToon)
     const dailyToonContent = container.querySelector(".daily-toon-content")
     const dailyToonContentClone = dailyToonContent.cloneNode()
     const toonInfoLinkForm = document.createElement("a")
     toonInfoLinkForm.className="toon-info-link"
-    console.log(dailyToonContent);
+    console.log(dailyToonContent)
     await getForm(toonInfoLinkForm,toonInfo)
     dailyToon.forEach(dailyToonInfo=>{
-        console.log(dailyToonInfo);
+        console.log(dailyToonInfo)
         const toonInfoLink = toonInfoLinkForm.cloneNode(true)
         const toonInfoImg = toonInfoLink.querySelector(".toon-info-img > img")
         const toonInfoImgDetailState = toonInfoLink.querySelector(".toon-info-img-detail-state")
@@ -322,12 +322,12 @@ async function setDailyToon(container,dailyToon){
         toonInfoImgDetailTypeImg.src = `/asset/common/bmbadge_${dailyToonInfo.type}.svg`
         toonInfoTitle.innerText = dailyToonInfo.title
         toonInfoViewCount.innerText = `${dailyToonInfo.readCount}만명`
-        console.log(toonInfoLink);
+        console.log(toonInfoLink)
         dailyToonContentClone.appendChild(toonInfoLink)
     })
     const parentNode = dailyToonContent.parentNode
     parentNode.replaceChild(dailyToonContentClone,dailyToonContent)
-    console.log("setDailyToon",container);
+    console.log("setDailyToon",container)
 }
 
 //요약 만들기
@@ -388,12 +388,12 @@ async function TestBanner(){
         summary: "최강 표국을 세우기 위해 뭉쳤다!"
     }
     return await makeBannerForm(testData)
-    // console.log(makeBannerForm(testData));
+    // console.log(makeBannerForm(testData))
 }
 
 //배너 폼 만들기(베너 공통된 부분으로 배너 타입에 따라 디테일 부분은 따로 추가해야함)
 async function makeBannerForm(bannerData){
-    console.log(">> makeBannerForm");
+    console.log(">> makeBannerForm")
 
     const bannerContainer = document.createElement("div")
     bannerContainer.className="banner-container"
@@ -407,7 +407,7 @@ async function makeBannerForm(bannerData){
     bannerContainer.classList.add(bannerData.bannerSize)
     bannerImg.src=bannerData.bannerImgSrc
     bannerImg.className=bannerData.bannerSize
-    // console.log(imageWrapper);
+    // console.log(imageWrapper)
 
     imageWrapper.appendChild(bannerImg)
 
