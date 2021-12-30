@@ -1,46 +1,46 @@
 [
   {
-    "nav": "home",
+    "genre": "home",
     "className": "toon-home",
     "text": "홈"
   },
   {
-    "nav": "daily",
+    "genre": "daily",
     "className": "toon-daily",
     "text": "요일연재"
   },
   {
-    "nav": "total",
+    "genre": "total",
     "className": "toon-total",
     "text": "웹툰"
   },
   {
-    "nav": "boy",
+    "genre": "boy",
     "className": "toon-boy",
     "text": "소년"
   },
   {
-    "nav": "drama",
+    "genre": "drama",
     "className": "toon-drama",
     "text": "드라마"
   },
   {
-    "nav": "romance",
+    "genre": "romance",
     "className": "toon-romance",
     "text": "로맨스"
   },
   {
-    "nav": "rofan",
+    "genre": "rofan",
     "className": "toon-rofan",
     "text": "로판"
   },
   {
-    "nav": "action",
+    "genre": "action",
     "className": "toon-action",
     "text": "액션무협"
   },
   {
-    "nav": "bl",
+    "genre": "bl",
     "className": "toon-bl",
     "text": "BL"
   }
