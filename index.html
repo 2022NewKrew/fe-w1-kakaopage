@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link rel="stylesheet" type="text/css" href="styles/header.css">
     <link rel="stylesheet" type="text/css" href="styles/nav.css">
-    <link rel="stylesheet" type="text/css" href="styles/contents.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/carousel.css">
     <link rel="stylesheet" type="text/css" href="styles/category.css">
     <link rel="stylesheet" type="text/css" href="styles/banner.css">
     <link rel="stylesheet" type="text/css" href="styles/weekdays.css">
+    <link rel="stylesheet" type="text/css" href="styles/contentBox.css">
     <link rel="stylesheet" type="text/css" href="styles/anchor/rowNormal.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>카카오페이지 클론코딩</title>
@@ -29,7 +29,6 @@
             </div>
             <div class="stage-group">
                 <img src="https://static-page.kakao.com/static/common/pc-logo-stage.svg?67473e9acf34aa0425a982b16f882f5f">
-<!--                <img class="stage-description" src="https://static-page.kakao.com/static/common/stage-tooltip.svg?e37d1bc523d4daad835b7ea0620ec658">-->
             </div>
 
             <div class="header-btn-group">
@@ -77,14 +76,14 @@
 </nav>
 
 <div class="main-contents">
-    <div class="content-wrapper">
+    <div class="contents-wrapper">
         <nav class="toon-genre-nav-group">
             <ul>
                 <li>
-                    <a class="toon-home toon-nav-selected"href="#">홈</a>
+                    <a class="toon-home toon-nav-selected" href="#">홈</a>
                 </li>
                 <li>
-                    <a class="toon-weekdays" href="#">요일연재</a>
+                    <a class="toon-daily" href="#">요일연재</a>
                 </li>
                 <li>
                     <a class="toon-total" href="#">웹툰</a>
@@ -171,22 +170,21 @@
                 <div class="banner-change-btn-wrapper">
                     <img src="images/next%20button(white).svg">
                 </div>
-
             </div>
         </div>
 
-        <div class="weekdays-top-ranking">
-            <div class="weekdays-header">
-                <div class="weekdays-title-wrapper">
-                    <div class="weekdays-title">요일 연재 TOP</div>
-                    <span class="weekdays-total-count">(1,533)</span>
+        <div class="content-box">
+            <div class="content-box-header">
+                <div class="content-box-title-wrapper">
+                    <div class="content-box-title">요일 연재 TOP</div>
+                    <span class="content-box-total-count">(1,533)</span>
                 </div>
                 <div class="show-more-wrapper">
                     <div class="show-more-text">더보기</div>
                     <img class="show-more-img" src="images/ic-more-gray.svg">
                 </div>
             </div>
-            <ul class="weekdays-nav">
+            <ul class="weekdays-nav-group">
                 <li class="weekdays-wrapper">
                     <div class="weekdays">월</div>
                 </li>
@@ -209,7 +207,7 @@
                     <div class="weekdays">일</div>
                 </li>
             </ul>
-            <div class="weekdays-content-main">
+            <div class="content-box-main">
                 <a class="anchor-row-normal" href="#">
                     <li class="anchor-row-normal">
                         <div class="anchor-row-normal-image-wrapper">
@@ -425,11 +423,11 @@
             </div>
         </div>
 
-        <div class="weekdays-top-ranking">
-            <div class="weekdays-header">
-                <div class="weekdays-title-wrapper">
-                    <div class="weekdays-title">로판 TOP</div>
-                    <span class="weekdays-total-count"></span>
+        <div class="content-box">
+            <div class="content-box-header">
+                <div class="content-box-title-wrapper">
+                    <div class="content-box-title">로판 TOP</div>
+                    <span class="content-box-total-count"></span>
                 </div>
                 <div class="show-more-wrapper">
                     <div class="show-more-text">더보기</div>
@@ -437,112 +435,114 @@
                 </div>
             </div>
 
-            <div class="weekdays-content-main">
-            <a class="anchor-row-normal-wrapper" href="#">
-                <li class="anchor-row-normal">
-                    <div class="anchor-row-normal-image-wrapper">
-                        <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
-                        <div class="anchor-row-normal-image-tag-wrapper">
-                            <div class="anchor-row-normal-image-tag">TOP</div>
-                            <div style="flex: 1"></div>
-                            <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+            <div class="content-box-main">
+                <a class="anchor-row-normal-wrapper" href="#">
+                    <li class="anchor-row-normal">
+                        <div class="anchor-row-normal-image-wrapper">
+                            <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
+                            <div class="anchor-row-normal-image-tag-wrapper">
+                                <div class="anchor-row-normal-image-tag">TOP</div>
+                                <div style="flex: 1"></div>
+                                <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="anchor-row-normal-title">묵향 다크레이디</div>
-                    <div class="anchor-row-normal-detail">
-                        <div class="anchor-row-normal-tag-wrapper">
+                        <div class="anchor-row-normal-title">묵향 다크레이디</div>
+                        <div class="anchor-row-normal-detail">
+                            <div class="anchor-row-normal-tag-wrapper">
+                            </div>
+    
+                            <img class="anchor-row-normal-person" src="images/icon_read_count.png">
+                            <div>129.1만명</div>
                         </div>
-
-                        <img class="anchor-row-normal-person" src="images/icon_read_count.png">
-                        <div>129.1만명</div>
-                    </div>
-                </li>
-            </a>
-            <a class="anchor-row-normal-wrapper" href="#">
-                <li class="anchor-row-normal">
-                    <div class="anchor-row-normal-image-wrapper">
-                        <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
-                        <div class="anchor-row-normal-image-tag-wrapper">
-                            <div class="anchor-row-normal-image-tag">TOP</div>
-                            <div style="flex: 1"></div>
-                            <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                    </li>
+                </a>
+                <a class="anchor-row-normal-wrapper" href="#">
+                    <li class="anchor-row-normal">
+                        <div class="anchor-row-normal-image-wrapper">
+                            <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
+                            <div class="anchor-row-normal-image-tag-wrapper">
+                                <div class="anchor-row-normal-image-tag">TOP</div>
+                                <div style="flex: 1"></div>
+                                <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="anchor-row-normal-title">묵향 다크레이디</div>
-                    <div class="anchor-row-normal-detail">
-                        <div class="anchor-row-normal-tag-wrapper">
+                        <div class="anchor-row-normal-title">묵향 다크레이디</div>
+                        <div class="anchor-row-normal-detail">
+                            <div class="anchor-row-normal-tag-wrapper">
+                            </div>
+    
+                            <img class="anchor-row-normal-person" src="images/icon_read_count.png">
+                            <div>129.1만명</div>
                         </div>
-
-                        <img class="anchor-row-normal-person" src="images/icon_read_count.png">
-                        <div>129.1만명</div>
-                    </div>
-                </li>
-            </a>
-            <a class="anchor-row-normal-wrapper" href="#">
-                <li class="anchor-row-normal">
-                    <div class="anchor-row-normal-image-wrapper">
-                        <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
-                        <div class="anchor-row-normal-image-tag-wrapper">
-                            <div class="anchor-row-normal-image-tag">TOP</div>
-                            <div style="flex: 1"></div>
-                            <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                    </li>
+                </a>
+                <a class="anchor-row-normal-wrapper" href="#">
+                    <li class="anchor-row-normal">
+                        <div class="anchor-row-normal-image-wrapper">
+                            <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
+                            <div class="anchor-row-normal-image-tag-wrapper">
+                                <div class="anchor-row-normal-image-tag">TOP</div>
+                                <div style="flex: 1"></div>
+                                <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="anchor-row-normal-title">묵향 다크레이디</div>
-                    <div class="anchor-row-normal-detail">
-                        <div class="anchor-row-normal-tag-wrapper">
+                        <div class="anchor-row-normal-title">묵향 다크레이디</div>
+                        <div class="anchor-row-normal-detail">
+                            <div class="anchor-row-normal-tag-wrapper">
+                            </div>
+    
+                            <img class="anchor-row-normal-person" src="images/icon_read_count.png">
+                            <div>129.1만명</div>
                         </div>
-
-                        <img class="anchor-row-normal-person" src="images/icon_read_count.png">
-                        <div>129.1만명</div>
-                    </div>
-                </li>
-            </a>
-            <a class="anchor-row-normal-wrapper" href="#">
-                <li class="anchor-row-normal">
-                    <div class="anchor-row-normal-image-wrapper">
-                        <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
-                        <div class="anchor-row-normal-image-tag-wrapper">
-                            <div class="anchor-row-normal-image-tag">TOP</div>
-                            <div style="flex: 1"></div>
-                            <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                    </li>
+                </a>
+                <a class="anchor-row-normal-wrapper" href="#">
+                    <li class="anchor-row-normal">
+                        <div class="anchor-row-normal-image-wrapper">
+                            <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
+                            <div class="anchor-row-normal-image-tag-wrapper">
+                                <div class="anchor-row-normal-image-tag">TOP</div>
+                                <div style="flex: 1"></div>
+                                <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="anchor-row-normal-title">묵향 다크레이디</div>
-                    <div class="anchor-row-normal-detail">
-                        <div class="anchor-row-normal-tag-wrapper">
+                        <div class="anchor-row-normal-title">묵향 다크레이디</div>
+                        <div class="anchor-row-normal-detail">
+                            <div class="anchor-row-normal-tag-wrapper">
+                            </div>
+    
+                            <img class="anchor-row-normal-person" src="images/icon_read_count.png">
+                            <div>129.1만명</div>
                         </div>
-
-                        <img class="anchor-row-normal-person" src="images/icon_read_count.png">
-                        <div>129.1만명</div>
-                    </div>
-                </li>
-            </a>
-            <a class="anchor-row-normal-wrapper" href="#">
-                <li class="anchor-row-normal">
-                    <div class="anchor-row-normal-image-wrapper">
-                        <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
-                        <div class="anchor-row-normal-image-tag-wrapper">
-                            <img class="anchor-row-normal-star-badge" src="images/badge-thumbnail-star.svg">
-                            <div class="anchor-row-normal-image-tag">9.9</div>
-                            <div style="flex: 1"></div>
-                            <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                    </li>
+                </a>
+                <a class="anchor-row-normal-wrapper" href="#">
+                    <li class="anchor-row-normal">
+                        <div class="anchor-row-normal-image-wrapper">
+                            <img class="anchor-row-normal-image" src="images/마른%20가지의%20라가.png">
+                            <div class="anchor-row-normal-image-tag-wrapper">
+                                <img class="anchor-row-normal-star-badge" src="images/badge-thumbnail-star.svg">
+                                <div class="anchor-row-normal-image-tag">9.9</div>
+                                <div style="flex: 1"></div>
+                                <img class="anchor-row-normal-wait-badge" src="images/bmbadge_waitfree.svg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="anchor-row-normal-title">묵향 다크레이디</div>
-                    <div class="anchor-row-normal-detail">
-                        <div class="anchor-row-normal-tag-wrapper">
+                        <div class="anchor-row-normal-title">묵향 다크레이디</div>
+                        <div class="anchor-row-normal-detail">
+                            <div class="anchor-row-normal-tag-wrapper">
+                            </div>
+    
+                            <img class="anchor-row-normal-person" src="images/icon_read_count.png">
+                            <div>129.1만명</div>
                         </div>
-
-                        <img class="anchor-row-normal-person" src="images/icon_read_count.png">
-                        <div>129.1만명</div>
-                    </div>
-                </li>
-            </a>
-        </div>
+                    </li>
+                </a>
+            </div>
         </div>
     </div>
 </div>
+
+<script type="module" src="scripts/App.js"></script>
 </body>
 
 </html>

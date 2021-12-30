@@ -1,3 +1,36 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    height: 2000px;
+    overflow-y: scroll;
+    background-color: #eee;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .main-contents {
     position: absolute;
     top: 150px;
@@ -8,7 +41,7 @@
     align-items: center;
 }
 
-.content-wrapper{
+.contents-wrapper{
     position:absolute;
     width: 720px;
     display: block;
