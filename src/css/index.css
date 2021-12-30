@@ -1,65 +1,5 @@
 @charset "UTF-8";
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-dl,
-dd,
-p,
-fieldset,
-legend,
-button {
-  margin: 0;
-  padding: 0;
-}
-
-body,
-input,
-textarea,
-select,
-button {
-  font-family: NotoSans, "나눔 고딕", NanumGothic, "돋움", Dotum, sans-serif;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-em {
-  font-style: normal;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-img {
-  vertical-align: top;
-}
-
-fieldset {
-  border: 0;
-}
-
-button {
-  cursor: pointer;
-}
+@import "./reset.css";
 
 .u_skip,
 .blind {
@@ -69,6 +9,12 @@ button {
   height: 1px;
   margin: -1px;
   overflow: hidden;
+}
+
+.elip1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .wrap {
@@ -548,6 +494,10 @@ button {
   padding: 10px;
 }
 
+.webtoon_detail_link:hover {
+  text-decoration: none;
+}
+
 .webtoon_main_image {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -560,9 +510,106 @@ button {
   background-color: #242526;
 }
 
+.webtoon_main_image_banner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .webtoon_main_image_banner_text {
   font-size: 16px;
   line-height: 30px;
   padding: 0 8px;
   color: #ffd200
+}
+
+.webtoon_main_image_banner_image {
+  float: right;
+  margin: 6px 6px 0 0;
+}
+
+.webtoon_title {
+  width: 120px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #333;
+}
+
+.num_webtoon_users::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px 2px 0 0;
+  background: url(https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871) no-repeat;
+  background-size: 11px;
+  width: 11px;
+  height: 11px;
+}
+
+.num_webtoon_users {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -5px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9c9c9c;
+}
+
+.application_link {
+  margin-top: 10px;
+  border: 0;
+  background-color: #fecc2e;
+  width: 100%;
+}
+
+.application_link::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  background: url(https://static-page.kakao.com/static/pc/appDownload.png?ec8ae2e191ce28a0a4eaa59d5577fa8b) no-repeat;
+  background-size: 504px 70px;
+  width: 504px;
+  height: 70px;
+}
+
+.footer {
+  width: 720px;
+  margin: 0 auto;
+  padding: 60px 0;
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.footer_link_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer_link {
+  float: left;
+}
+
+.footer_link + .footer_link::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin: 13px 8px 0;
+  width: 3px;
+  height: 3px;
+  background-color: #bdbdbd;
+  border-radius: 50%;
+}
+
+.main_others_wrap {
+  text-align: center;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 30px 0;
+}
+
+.main_others_title {
+  font-size: 20px;
+  line-height: 28px;
 }

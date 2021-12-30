@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <title>홈 | 카카오페이지</title>
 </head>
 <body>
@@ -29,183 +29,98 @@
                 </div>
                 <nav class="sub_header">
                     <!-- [D] 클릭 시  actuve 클래스 추가 -->
-                    <a href="#" class="sub_header_link home active">
+                    <a href="#" data-tab-id="0" class="sub_header_link home active">
                         <span class="blind">홈으로 가기</span>
                     </a>
-                    <a href="#" class="sub_header_link webtoon">
+                    <a href="#" data-tab-id="1" class="sub_header_link webtoon">
                         <span class="blind">웹툰으로 가기</span>
                     </a>
-                    <a href="#" class="sub_header_link web_novel">
+                    <a href="#" data-tab-id="2" class="sub_header_link web_novel">
                         <span class="blind">웹소설로 가기</span>
                     </a>
-                    <a href="#" class="sub_header_link movie">
+                    <a href="#" data-tab-id="3" class="sub_header_link movie">
                         <span class="blind">영화로 가기</span>
                     </a>
-                    <a href="#" class="sub_header_link broadcast">
+                    <a href="#" data-tab-id="4" class="sub_header_link broadcast">
                         <span class="blind">방송으로 가기</span>
                     </a>
-                    <a href="#" class="sub_header_link book">
+                    <a href="#" data-tab-id="5" class="sub_header_link book">
                         <span class="blind">책으로 가기</span>
                     </a>
                 </nav>
             </div>
         </header>
         <div id="main" class="main" role="main">
-            <nav class="webtoon_category_link_wrap">
-                <a href="#" class="webtoon_category_link">홈</a>
-                <!-- [D] 클릭 시 active 클래스 추가 -->
-                <a href="#" class="webtoon_category_link active">요일연재</a>
-                <a href="#" class="webtoon_category_link">웹툰</a>
-                <a href="#" class="webtoon_category_link">소년</a>
-                <a href="#" class="webtoon_category_link">드라마</a>
-                <a href="#" class="webtoon_category_link">로맨스</a>
-                <a href="#" class="webtoon_category_link">로판</a>
-                <a href="#" class="webtoon_category_link">액션무협</a>
-                <a href="#" class="webtoon_category_link">BL</a>
-            </nav>
-            <a href="#" class="carousel_wrap">
-                <img src="https://dn-img-page.kakao.com/download/resource?kid=bZ5ZH5/hzhOmxfWNo/aGUJVO49IFLIXsIi1cQcS0" alt="여자주인공이 두 명의 남자주인공 사이에서 책을 읽다 놀라는 모습 - 달아[스토리플러스], 김병관" width="720" height="480">
-                <button class="carousel_button prev"><span class="blind">이전 웹툰으로 가기</span></button>
-                <button class="carousel_button next"><span class="blind">다음 웹툰으로 가기</span></button>
-                <div class="carousel_title">쓰라는 글은 안 쓰고</div>
-                <div class="carousel_sub_information_wrap">
-                    <img src="https://static-page.kakao.com/static/pc/badge-bigthum-hot.svg?a7f7622e9d554d5e0ad1517a53de3ad3" alt="HOT" width="51" height="22" class="badge_image">
-                    <span class="carousel_category">웹툰</span>
-                    <span class="readers_num">20.1만명</span>
-                </div>
-                <div class="carousel_description">작가인데 소설을 쓸 수가 없다!</div>
-            </a>
-            <div class="webtoon_list_wrap">
-                <nav class="weekdays_buttons_wrap">
-                    <button type="button" class="weekdays_button">월<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">화<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">수<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button active">목<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">금<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">토<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">일<span class="blind">요일 웹툰 보기</span></button>
-                    <button type="button" class="weekdays_button">완결<span class="blind">웹툰 보기</span></button>
-                </nav>
-                <nav class="weekdays_category_buttons_wrap">
-                    <button type="button" class="weekdays_category_button separate active">전체</button>
-                    <button type="button" class="weekdays_category_button separate">웹툰</button>
-                    <button type="button" class="weekdays_category_button clock">웹툰</button>
-                    <button type="button" class="show_categories_button">전체 (163)</button>
-                </nav>
-                <ul class="webtoon_list_outer_wrap">
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                    <li class="webtoon_list_inner_wrap">
-                        <a href="#">
-                            <img src="https://dn-img-page.kakao.com/download/resource?kid=bfX1rP/hyZ8yn61br/1chxAoU3qzkhQjtcCK0yOk&filename=th2" alt="" width="120" height="120" class="webtoon_main_image">
-                            <div class="webtoon_main_image_banner">
-                                <span class="webtoon_main_image_banner_text">TOP</span>
-                            </div>
-                            <div>먹을수록 강해짐</div>
-                        </a>
-                    </li>
-                </ul>
+            <div class="main_others_wrap">
+                <span class="main_others_title">웹툰 페이지만 사용 가능합니다!!!</span>
             </div>
         </div>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer_link_wrap">
+                <a href="#" class="footer_link">회사소개</a>
+                <a href="#" class="footer_link">이용약관</a>
+                <a href="#" class="footer_link">개인정보처리방침</a>
+                <a href="#" class="footer_link">청소년보호정책</a>
+                <a href="#" class="footer_link">공지사항</a>
+            </div>
+            <div>
+                <span>(주)카카오엔터테인먼트 사업자 정보</span>
+                <a href="#">사업자 정보 확인</ㅁ>
+            </div>
+            <small>ⓒ Kakao Entertainment Corp.</small>
+        </footer>
     </div>
-    <!-- <script src="./main.js"></script> -->
+    <template class="main_webtoon">
+        <nav class="webtoon_category_link_wrap">
+            <a href="#" class="webtoon_category_link">홈</a>
+            <!-- [D] 클릭 시 active 클래스 추가 -->
+            <a href="#" class="webtoon_category_link active">요일연재</a>
+            <a href="#" class="webtoon_category_link">웹툰</a>
+            <a href="#" class="webtoon_category_link">소년</a>
+            <a href="#" class="webtoon_category_link">드라마</a>
+            <a href="#" class="webtoon_category_link">로맨스</a>
+            <a href="#" class="webtoon_category_link">로판</a>
+            <a href="#" class="webtoon_category_link">액션무협</a>
+            <a href="#" class="webtoon_category_link">BL</a>
+        </nav>
+        <a href="#" class="carousel_wrap">
+            <img src="https://dn-img-page.kakao.com/download/resource?kid=bZ5ZH5/hzhOmxfWNo/aGUJVO49IFLIXsIi1cQcS0" alt="여자주인공이 두 명의 남자주인공 사이에서 책을 읽다 놀라는 모습 - 달아[스토리플러스], 김병관" width="720" height="480">
+            <button class="carousel_button prev"><span class="blind">이전 웹툰으로 가기</span></button>
+            <button class="carousel_button next"><span class="blind">다음 웹툰으로 가기</span></button>
+            <div class="carousel_title">쓰라는 글은 안 쓰고</div>
+            <div class="carousel_sub_information_wrap">
+                <img src="https://static-page.kakao.com/static/pc/badge-bigthum-hot.svg?a7f7622e9d554d5e0ad1517a53de3ad3" alt="HOT" width="51" height="22" class="badge_image">
+                <span class="carousel_category">웹툰</span>
+                <span class="readers_num">20.1만명</span>
+            </div>
+            <div class="carousel_description">작가인데 소설을 쓸 수가 없다!</div>
+        </a>
+        <div class="webtoon_list_wrap">
+            <nav class="weekdays_buttons_wrap">
+                <button type="button" data-weekday="월" class="weekdays_button active">월<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="화" class="weekdays_button">화<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="수" class="weekdays_button">수<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="목" class="weekdays_button">목<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="금" class="weekdays_button">금<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="토" class="weekdays_button">토<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="일" class="weekdays_button">일<span class="blind">요일 웹툰 보기</span></button>
+                <button type="button" data-weekday="완결" class="weekdays_button">완결<span class="blind">웹툰 보기</span></button>
+            </nav>
+            <nav class="weekdays_category_buttons_wrap">
+                <button type="button" class="weekdays_category_button separate active">전체</button>
+                <button type="button" class="weekdays_category_button separate">웹툰</button>
+                <button type="button" class="weekdays_category_button clock">웹툰</button>
+                <button type="button" class="show_categories_button">전체 (163)</button>
+            </nav>
+            <ul class="webtoon_list_outer_wrap"></ul>
+        </div>
+        <button type="button" class="application_link"><span class="blind">카카오페이지 앱으로 보기</span></button>
+    </template>
+    <template class="main_others">
+        <div class="main_others_wrap">
+            <span class="main_others_title">웹툰 페이지만 사용 가능합니다!!!</span>
+        </div>
+    </template>
+    <script defer type="module" src="/js/index.js"></script>
 </body>
 </html>
