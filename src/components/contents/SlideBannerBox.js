@@ -1,5 +1,3 @@
-import { State } from "../../core/State.js";
-
 export const SlideBannerBox = () => {
   const $root = document.createElement("div");
   $root.className = "slideBannerBox";
@@ -13,7 +11,7 @@ export const SlideBannerBox = () => {
     </div>
   `;
 
-  const state = State({ currentIndex: 0 });
+  let currentIndex = 0;
   const bannerList = getBannerList();
   const MAX_INDEX = bannerList.length - 1;
 
@@ -33,28 +31,36 @@ export const SlideBannerBox = () => {
   // set event
   $action.addEventListener("click", (e) => {
     const { className } = e.target;
-    const { currentIndex: idx } = state;
 
-    if (className === "slideBannerBox__pervBtn") {
-      state.currentIndex = idx === 0 ? MAX_INDEX : idx - 1;
-    } else if (className === "slideBannerBox__nextBtn") {
-      state.currentIndex = idx === MAX_INDEX ? 0 : idx + 1;
-    }
+    $slider.style.transition = "transform 400ms ease-in-out";
+    if (className === "slideBannerBox__pervBtn") currentIndex--;
+    else if (className === "slideBannerBox__nextBtn") currentIndex++;
+
+    moveTrack();
   });
-  // $slider.addEventListener("transitionend", () => {
-  //   $slider.style.transition = "none";
-  // });
+
+  $slider.addEventListener("transitionend", () => {
+    console.log("asdf");
+    if (MAX_INDEX < currentIndex || currentIndex < 0) {
+      $slider.style.transition = "none";
+      currentIndex = currentIndex < 0 ? MAX_INDEX : 0;
+      moveTrack();
+    }
+    renderIndicator();
+  });
 
   // render
   const renderIndicator = () => {
-    $indicator.innerHTML = `${state.currentIndex + 1} / ${MAX_INDEX + 1}`;
+    $indicator.innerHTML = `${currentIndex + 1} / ${MAX_INDEX + 1}`;
   };
-  const moveTrack = () => {};
+  const moveTrack = () => {
+    const x = -720 * (currentIndex + 1);
+    $slider.style.transform = `translateX(${x}px)`;
+  };
 
   // init
-  state.subscribe(renderIndicator);
-  state.subscribe(moveTrack);
   renderIndicator();
+  moveTrack();
 
   return $root;
 };

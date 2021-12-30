@@ -6,7 +6,7 @@
   cursor: pointer;
   height: 480px;
   border-bottom: 1px solid #e6e6e6;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .slideBannerBox__action {
@@ -22,13 +22,13 @@
 .slideBannerBox__slider {
   display: flex;
   position: absolute;
+  transition: transform 400ms ease-in-out;
 }
 
 .slideBannerBox__track {
   position: relative;
   width: 720px;
   height: 480px;
-  transition: transform 300ms ease 0s;
 }
 
 .slideBannerBox__background {
