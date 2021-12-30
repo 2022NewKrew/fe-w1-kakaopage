@@ -1,4 +1,4 @@
-export const DayNavigator = ({ state }) => {
+export const DayNavigator = ({ dayState }) => {
   const $root = document.createElement("nav");
   $root.className = "dayNav";
   $root.innerHTML = `
@@ -17,12 +17,12 @@ export const DayNavigator = ({ state }) => {
 
   $root.addEventListener("click", (e) => {
     const { weekday } = e.target.dataset;
-    state.day = +weekday;
+    dayState.day = +weekday;
   });
 
   // method
   const render = () => {
-    const _currentDay = state.day;
+    const _currentDay = dayState.day;
 
     for (let i = 0; i < $weekdayList.length; i++) {
       const el = $weekdayList[i];
@@ -36,7 +36,7 @@ export const DayNavigator = ({ state }) => {
   };
 
   // init
-  state.subscribe(render);
+  dayState.subscribe(render);
   render();
 
   return $root;

@@ -1,4 +1,4 @@
-export const ContentToolbar = ({ state }) => {
+export const ContentToolbar = ({ typeState }) => {
   const $root = document.createElement("div");
   $root.className = "contentToolbar";
   $root.innerHTML = `
@@ -28,20 +28,20 @@ export const ContentToolbar = ({ state }) => {
     const $navItem = e.target.closest(".contentToolbar__navItem");
     if (!$navItem) return;
 
-    state.type = $navItem.dataset.type;
+    typeState.type = $navItem.dataset.type;
   });
 
   const render = () => {
     $itemList.forEach((el) => {
       const $text = el.querySelector(".contentToolbar__text");
 
-      if (state.type === el.dataset.type)
+      if (typeState.type === el.dataset.type)
         $text.classList.add("contentToolbar__text--selected");
       else $text.classList.remove("contentToolbar__text--selected");
     });
   };
 
-  state.subscribe(render);
+  typeState.subscribe(render);
   render();
 
   return $root;
