@@ -42,7 +42,7 @@ a:hover, a:active {
     justify-content: center;
     width: 100%;
     background-color: #FFFFFF;
-    z-index: 1;
+    z-index: 2;
 }
 
 .fix.first {
@@ -166,14 +166,45 @@ nav ul {
     color: #000000;
 }
 
-.carousel {
+/* carousel */
+.carousel-window {
+    width: 720px;
+    height: 480px;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+}
+
+.btn-wrapper {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.btn-wrapper.next {
+    right: 0px;
+}
+
+.btn-wrapper > img {
+    cursor: pointer;
+}
+
+.carousel-cell {
     position: relative;
     width: 720px;
     height: 480px;
 }
 
-.carousel-big-image {
-    width: 100%;
+.carousel-big-image {    
+    width: 720px;
 }
 
 .big-image-info {
@@ -205,6 +236,8 @@ nav ul {
 .big-image-title > span {
     font-size: 18px;
 }
+
+/* link-grid */
 
 .link-grid {
     display: grid;

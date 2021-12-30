@@ -17,6 +17,14 @@
                     "category": "웹툰",
                     "viewer": "23.7",
                     "under_title": "카카오 페이지 데뷔반 2월 7일 오픈"
+                },
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=Ijqw5/hzacdOPpg9/K9nih3Bq9DZEQCrfk6xGlk",
+                    "description_title": "나 혼자만 레벨업",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "406.3",
+                    "under_title": "전세계가 열광하는 최강 헌터!"
                 }
             ],
             "link_grid": [
@@ -179,11 +187,11 @@
                 { "title": "오늘의 BL선물함", "path": "/"},
                 { "title": "BL소설", "path": "/"},
                 { "title": "오늘의 이벤트", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
             ]
-        },
-        "banner_carousel": [
-            { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
-            { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
-        ]
+        }
     }
 }
