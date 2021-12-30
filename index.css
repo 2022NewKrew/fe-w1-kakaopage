@@ -177,9 +177,6 @@ main {
     carousel
 */
 
-.main-slide {
-  display: none;
-}
 .carousel {
   width: 720px;
   margin: 0 auto;
@@ -190,6 +187,12 @@ main {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+}
+
+#carousel-list {
+  display: flex;
+  width: 720px;
+  height: 480px;
 }
 
 /* carousel info */

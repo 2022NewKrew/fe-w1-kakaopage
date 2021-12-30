@@ -206,7 +206,8 @@ async function createMainCarousel(webtoonPage) {
     "afterBegin",
     `
     <section class="carousel">
-    <div class="carousel-container">
+    <div class="carousel-container" id="carousel_container">
+    <div id="carousel-list">
       <!-- repeated part -->
       ${mainCarouselList
         .map(
@@ -255,6 +256,10 @@ async function createMainCarousel(webtoonPage) {
             </div>
           </div>
         </div>
+      `
+        )
+        .join("")}
+        </div>
         <!-- buttons -->
         <div class="carousel-button previous-button" id="previousButton">
           <img
@@ -268,43 +273,57 @@ async function createMainCarousel(webtoonPage) {
             alt="next button"
           />
         </div>
-      `
-        )
-        .join("")}
     </div>
   </section>
   `
   );
-  slideIndex = 1;
-  showSlides(1);
 
+  let curPos = 0;
+
+  const IMAGE_WIDTH = 720;
+  const TOTAL_IMAGES = 5;
+
+  const slide = document.getElementById("carousel-list");
   const prevBtn = document.getElementById("previousButton");
   const nextBtn = document.getElementById("nextButton");
 
-  // 이벤트 리스너가 동작안함.. :(
-  prevBtn.addEventListener("click", () => {
-    showSlides((slideIndex -= 1));
-  });
+  // 처음과 끝 요소를 추가해준다.
+  const clonedFirst = slide.firstElementChild.cloneNode(true);
+  const clonedLast = slide.lastElementChild.cloneNode(true);
+  slide.appendChild(clonedFirst);
+  slide.insertBefore(clonedLast, slide.firstElementChild);
 
-  nextBtn.addEventListener("click", () => {
-    showSlides((slideIndex += 1));
-  });
+  slide.style.transform = `translateX(-${IMAGE_WIDTH})`;
 
-  function showSlides(slideNum) {
-    let slides = document.getElementsByClassName("main-slide");
-
-    if (slideNum > slides.length) {
-      slideIndex = 1;
+  function next() {
+    if (curPos <= TOTAL_IMAGES) {
+      slide.style.transition = "500ms";
+      slide.style.transform = `translateX(-${IMAGE_WIDTH * (curPos + 2)}px)`;
+      curPos += 1;
     }
-    if (slideNum < 1) {
-      slideIndex = slides.length;
+    if (curPos == TOTAL_IMAGES) {
+      setTimeout(() => {
+        slide.style.transition = "0ms";
+        slide.style.transform = `translateX(-${IMAGE_WIDTH}px)`;
+      }, 500);
+      curPos = 0;
     }
-    Array.from(slides).forEach(function (slide) {
-      slide.style.display = "none";
-    });
-    slides[slideIndex - 1].style.display = "flex";
-    slides[slideIndex - 1].style.alignItems = "center";
   }
+
+  function prev() {
+    if (curPos > 0) {
+      positonValue += IMAGE_WIDTH;
+      slide.style.transform = `translateX(${positonValue}px)`;
+      curPos -= 1;
+    }
+  }
+
+  prevBtn.addEventListener("click", prev);
+  nextBtn.addEventListener("click", next);
+
+  setInterval(() => {
+    next();
+  }, 4000);
 }
 
 // --------- 메뉴 (오늘 UP, 오늘 신작, 오늘 랭킹 등..)----------
@@ -535,8 +554,4 @@ async function createBannerCarousel(webtoonPage) {
 
   prevBtn.addEventListener("click", prev);
   nextBtn.addEventListener("click", next);
-
-  setInterval(() => {
-    next();
-  }, 4000);
 }
