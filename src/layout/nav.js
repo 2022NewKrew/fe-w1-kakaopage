@@ -1,5 +1,5 @@
-import data from "../assets/json/nav.json" assert { type: "json" };
-import createMain from "./main/index.js";
+import data from "../../assets/json/nav.json" assert { type: "json" };
+import createMain from "../components/main.js";
 
 const DEFAULT_PAGE = "웹툰_만화";
 

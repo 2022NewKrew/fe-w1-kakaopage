@@ -1,0 +1,31 @@
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  overflow: hidden;
+}
+.slide {
+  display: flex;
+  height: 100px;
+  transition: transform 0.5s;
+}
+.slide > img {
+  height: 100%;
+  cursor: pointer;
+}
+.carousel > button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.prev {
+  background-image: url("../assets/images/ic-paging-back-nor.svg");
+  left: 20px;
+}
+.next {
+  background-image: url("../assets/images/ic-paging-next-nor.svg");
+  right: 20px;
+}

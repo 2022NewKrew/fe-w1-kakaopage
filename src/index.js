@@ -1,8 +1,8 @@
-import createHeader from "./header.js";
-import createNav from "./nav.js";
-import createMain from "./main/index.js";
-import createDownlink from "./downlink.js";
-import createFooter from "./footer.js";
+import createHeader from "./layout/header.js";
+import createNav from "./layout/nav.js";
+import createMain from "./components/main.js";
+import createDownlink from "./layout/downlink.js";
+import createFooter from "./layout/footer.js";
 
 function init() {
   // 헤더 영역

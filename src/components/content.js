@@ -1,7 +1,5 @@
 import data from "../../assets/json/contentTop.json" assert { type: "json" };
 
-const DAYS = ["월", "화", "수", "목", "금", "토", "일", "완결"];
-
 const isWeek = (title) => title === "요일 연재";
 
 const createArticle = ({ poster, title, count }) =>
@@ -23,7 +21,7 @@ const createArticle = ({ poster, title, count }) =>
       </a>
     </article>`;
 
-const createContentTop = (data, title) => {
+const createContentTop = (item, title) => {
   const section = document.createElement("section");
   section.classList.add("content");
   if (isWeek(title)) {
@@ -45,17 +43,19 @@ const createContentTop = (data, title) => {
       isWeek(title)
         ? `
       <ul class="content__list" data-current="월">
-        ${DAYS.map(
-          (day) =>
-            `<li id=${day} ${
-              day === "월" ? `class="selected"` : ""
-            }><div>${day}</div></li>`
-        ).join("")}
+        ${Object.keys(data.week)
+          .map(
+            (day) =>
+              `<li id=${day} ${
+                day === "월" ? `class="selected"` : ""
+              }><div>${day}</div></li>`
+          )
+          .join("")}
       </ul>`
         : ""
     }
     <div class="content__item">
-      ${data.map(createArticle).join("")}
+      ${item.map(createArticle).join("")}
     </div>
   `;
   return section;

@@ -8,7 +8,14 @@ export default () => {
   ul.dataset.current = "홈";
 
   ul.innerHTML = `
-  ${data.genres.map((id) => `<li id=${id}><a href="#">${id}</a></li>`).join("")}
+  ${data.genres
+    .map(
+      (id) =>
+        `<li id=${id} ${
+          id === "홈" ? `class="selected"` : ""
+        }><a href="#">${id}</a></li>`
+    )
+    .join("")}
     `;
 
   main.appendChild(ul);
