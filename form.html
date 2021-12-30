@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카카오 : 회원가입페이지</title>
+    <link rel="stylesheet" href="form.css" />
+    <!-- javascript 유효성을 검증 -->
+    <script defer src="form.js"></script>
+  </head>
+  <body>
+    <header><h1>안녕하세요. 회원가입을 해보세요</h1></header>
+    <div id="main">
+      <!-- form 태그! -->
+      <!-- input 태그! * 2개 <1, 2 input text 타입의 value가 동일한지> -->
+      <form action="" id="my_form">
+        <input
+          type="text"
+          name="first_name"
+          placeholder="아이디를 입력하세요"
+        />
+        <input
+          type="text"
+          name="second_name"
+          placeholder="동일한 아이디를 입력하세요"
+        />
+        <div class="message">jade</div>
+        <input type="submit" value="제출" />
+      </form>
+    </div>
+  </body>
+</html>
