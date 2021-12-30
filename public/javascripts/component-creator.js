@@ -2,23 +2,23 @@ import { createCarousel } from './carousel.js'
 import { createGridBtn } from './grid-btn.js'
 
 export function drawComponents(data) {
-    const componentObjects = []
+    const componentEls = []
     
     data.forEach((component, idx) => {
-        let newComponentObject
+        let newComponentEl
         
         switch (component.type) {
             case 'carousel':
-                newComponentObject = createCarousel(component.content)
+                newComponentEl = createCarousel(component.content)
                 break
             
             case 'grid-btn':
-                newComponentObject = createGridBtn(component.content)
+                newComponentEl = createGridBtn(component.content)
                 break
         }
-        
-        componentObjects.push(newComponentObject)
+    
+        componentEls.push(newComponentEl)
     })
     
-    return componentObjects
+    return componentEls
 }

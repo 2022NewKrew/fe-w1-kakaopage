@@ -1,3 +1,5 @@
+import { addStateChangedEventListener } from './genre-tab.js'
+
 const BANNER_WIDTH = 720
 const AUTO_SLIDE_PERIOD = 4000
 const ANIMATION_DURATION = 500
@@ -88,16 +90,6 @@ export function createCarousel(data) {
         }, AUTO_SLIDE_PERIOD)
     }
     
-    const carouselObject = {
-        element: newCarouselEl,
-        stopEl: () => {
-            stopAutoSlide()
-        },
-        startEl: () => {
-            startAutoSlide()
-        }
-    }
-    
     pageNumberEl.innerText = `1 / ${data.length}`
     
     newCarouselBannerPartEl.appendChild(createBanner(data[data.length - 1]))
@@ -133,5 +125,13 @@ export function createCarousel(data) {
         newCarouselBannerPartEl.style.transform = getTranslateX(bannerIdxObject.bannerIdx)
     })
     
-    return carouselObject
+    addStateChangedEventListener((isSelected) => {
+        if (isSelected) {
+            startAutoSlide()
+        } else {
+            stopAutoSlide()
+        }
+    }, newCarouselEl)
+    
+    return newCarouselEl
 }

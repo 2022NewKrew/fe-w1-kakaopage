@@ -30,5 +30,5 @@ export function createGridBtn(btnContent) {
         })
     })
     
-    return { element: gridBtnEl }
+    return gridBtnEl
 }
