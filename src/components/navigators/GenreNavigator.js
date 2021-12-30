@@ -1,7 +1,7 @@
 export const GenreNavigator = () => {
   const $root = document.createElement("nav");
   $root.className = "genreNav";
-
+  
   const urlSearchParams = new URLSearchParams(window.location.search);
   const { genre } = Object.fromEntries(urlSearchParams.entries());
 
