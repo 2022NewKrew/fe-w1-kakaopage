@@ -1,3 +1,8 @@
+.elip1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .main_others_wrap {
   text-align: center;
   background-color: #fff;
