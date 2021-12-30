@@ -1,0 +1,205 @@
+{
+    "웹툰" : {
+        "홈" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=JKI4F/hzhOd8bqK0/TukjW8nQRkBx0NSpwaDhI0",
+                    "description_title": "황제의 외동딸",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "431.9",
+                    "under_title": "희대의 폭군, 딸바보 되다!"
+                },
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=bIkRze/hzmU03aZdy/nOK6kDHHj1mcGtoRR0eDik",
+                    "description_title": "ㅋㅋㅋ웹툰 아카데미",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "23.7",
+                    "under_title": "카카오 페이지 데뷔반 2월 7일 오픈"
+                },
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=Ijqw5/hzacdOPpg9/K9nih3Bq9DZEQCrfk6xGlk",
+                    "description_title": "나 혼자만 레벨업",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "406.3",
+                    "under_title": "전세계가 열광하는 최강 헌터!"
+                }
+            ],
+            "link_grid": [
+                { "title": "오늘 UP", "path": "/"},
+                { "title": "오늘 신작", "path": "/"},
+                { "title": "오리지널", "path": "/"},
+                { "title": "무료회차 UP", "path": "/"},
+                { "title": "독립운동가 웹툰", "path": "/"},
+                { "title": "오늘 랭킹", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+            ]
+        },
+        "요일연재" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=bIkRze/hzmU03aZdy/nOK6kDHHj1mcGtoRR0eDik",
+                    "description_title": "ㅋㅋㅋ웹툰 아카데미",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "23.7",
+                    "under_title": "카카오 페이지 데뷔반 2월 7일 오픈"
+                },
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=bnhmk3/hyLjbOwfAS/2QxIk5LV223MS7a8S9ZY70",
+                    "description_title": "가장 평범한 이세계",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "28.6",
+                    "under_title": "완결 기념! 정주행하고 경품 받자🎉"
+                }
+            ]
+        },
+        "웹툰" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=bnhmk3/hyLjbOwfAS/2QxIk5LV223MS7a8S9ZY70",
+                    "description_title": "가장 평범한 이세계",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "28.6",
+                    "under_title": "완결 기념! 정주행하고 경품 받자🎉"
+                }
+            ]
+        },
+        "소년" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=Ijqw5/hzacdOPpg9/K9nih3Bq9DZEQCrfk6xGlk",
+                    "description_title": "나 혼자만 레벨업",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "406.3",
+                    "under_title": "전세계가 열광하는 최강 헌터!"
+                }
+            ],
+            "link_grid": [
+                { "title": "독점 신작🎉", "path": "/"},
+                { "title": "이벤트로 달리자", "path": "/"},
+                { "title": "ㄴㅎㄹ 완결!", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+            ]
+        },
+        "드라마" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=btaMCj/hzhOohb2C1/P8DPmBb3S5StM4C9PVaUdK",
+                    "description_title": "딸 바보가 되었습니다",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "48.1",
+                    "under_title": "갑자기 생긴 딸이 너무 귀여워?!"
+                }
+            ],
+            "link_grid": [
+                { "title": "믿고보는#독점!", "path": "/"},
+                { "title": "#이벤트로 달리자", "path": "/"},
+                { "title": "#기다무플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+            ]
+        },
+        "로맨스" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=DBw4j/hzb7r5neZd/QltEJ16kMwBtElQvuFu1Ck",
+                    "description_title": "대리애인",
+                    "img_tag": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "33.6만명",
+                    "under_title": "완결기념, 무료UP+캐시 이벤트!"
+                }
+            ],
+            "link_grid": [
+                { "title": "눈이 즐거워❤️", "path": "/"},
+                { "title": "인기완결작", "path": "/"},
+                { "title": "기다무플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+            ]
+        },
+        "로판" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=dhDfA9/hy41QwWtvB/dUhViIokJhuIysZpu8Vbq0",
+                    "description_title": "꽃을 문 짐승",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "64.7만명",
+                    "under_title": "나는 한 마리의 짐승이다"
+                }
+            ],
+            "link_grid": [
+                { "title": "월간 베스트", "path": "/"},
+                { "title": "인기완결작", "path": "/"},
+                { "title": "#기다무 플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+            ]
+        },
+        "액션무협" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=bTXIVr/hzhOhh2k23/Q9HR8598OKVZTqgxZQGs51",
+                    "description_title": "궁귀검신",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "67만명",
+                    "under_title": "이기어검을 초월하는 이기어시"
+                }
+            ],
+            "link_grid": [
+                { "title": "독점 신작🔥", "path": "/"},
+                { "title": "이벤트로 달리자", "path": "/"},
+                { "title": "기다무 플러스", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+            ]
+        },
+        "BL" : {
+            "big_carousel": [
+                {
+                    "thumbnail": "https://dn-img-page.kakao.com/download/resource?kid=53Vgr/hyZ8vylEwV/iqpv4J9t1akYKS7XjLn5D0",
+                    "description_title": "비밀을 지켜라!",
+                    "tag_img": "https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b",
+                    "category": "웹툰",
+                    "viewer": "8.2만명",
+                    "under_title": "삼시세편 정주행하고 경품 받자💕"
+                }
+            ],
+            "link_grid": [
+                { "title": "독점/선연재", "path": "/"},
+                { "title": "인기 완결작", "path": "/"},
+                { "title": "기다무 플러스", "path": "/"},
+                { "title": "오늘의 BL선물함", "path": "/"},
+                { "title": "BL소설", "path": "/"},
+                { "title": "오늘의 이벤트", "path": "/"}
+            ],
+            "banner_carousel": [
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" },
+                { "img": "https://dn-img-page.kakao.com/download/resource?kid=kHmTV/hzhOfrnWAj/XE2CnwAnQIdlfVhtt2Lv3K" }
+            ]
+        }
+    }
+}
