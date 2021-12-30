@@ -1,0 +1,44 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  background-color: chocolate;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+#main {
+  margin-top: 2rem;
+}
+
+#my_form {
+  width: 400px;
+  margin: 0px auto;
+  border: 1px solid #d6d1d1;
+  text-align: center;
+  padding: 1rem;
+}
+
+input {
+  width: 80%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: chocolate;
+  color: #fff;
+}
+
+.message {
+  color: red;
+  margin: 0px auto;
+  height: 1rem;
+  width: 80%;
+  text-align: left;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+}
