@@ -5,9 +5,9 @@ import { DummyPage } from "../templates/DummyPage.js";
 const app = () => {
   const $app = document.querySelector("#app");
 
-  $app.appendChild(Header().$root);
-  $app.appendChild(DummyPage().$root);
-  $app.appendChild(Footer().$root);
+  $app.appendChild(Header());
+  $app.appendChild(DummyPage());
+  $app.appendChild(Footer());
 };
 
 app();

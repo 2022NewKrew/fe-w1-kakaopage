@@ -1,39 +1,41 @@
-export const ContentRowListItem = () => {
+export const ContentRowListItem = (content) => {
   const $root = document.createElement("li");
-  $root.className = "content";
-
-  const random = Math.floor(Math.random() * 100);
-
+  $root.className = "contentRowListItem";
   $root.innerHTML = `
-    <li class="content">
-        <img
-            src="https://picsum.photos/142/96?random=${random}"
-            draggable="false"
-        />
+    <img
+        class="contentRowListItem__img"
+        src="${content.img}"
+        draggable="false"
+    />
 
-        <div>
-            <div class="title">
-            <img
-                src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
-                alt="업데이트"
-            />
-            <span>후궁계약</span>
-            </div>
-
-            <p class="description">후궁으로 입궁해 다오. 그게 내 의뢰다.</p>
-
-            <div class="flex">
+    <div class="contentRowListItem__content">
+        <div class="contentRowListItem__title">
+        ${
+          content.isUpdate
+            ? `
                 <img
-                    src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
-                    alt="people"
+                    src="https://static-page.kakao.com/static/common/icon_up.svg?51cfaf512283ca0e1eaca53414e35a3f"
+                    alt="업데이트"
                 />
-                <span>91.5만명</span>
-                <div class="separator"></div>
-                <span>무늬랑,NU</span>
-            </div>
+            `
+            : ``
+        }
+        <span>${content.title}</span>
         </div>
-    </li>
+
+        <p class="contentRowListItem__description">${content.description}</p>
+
+        <div class="contentRowListItem__info">
+            <img
+                src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
+                alt="people"
+            />
+            <span>${content.subscribers}만명</span>
+            <div class="contentRowListItem__separator"></div>
+            <span>${content.authers.join(",")}</span>
+        </div>
+    </div>
   `;
 
-  return { $root };
+  return $root;
 };

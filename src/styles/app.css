@@ -5,7 +5,7 @@
 
 /* ---- components ---- */
 
-.text-btn {
+.textBtn {
   box-sizing: border-box;
   appearance: none;
   text-align: center;
@@ -22,62 +22,9 @@
   cursor: pointer;
 }
 
-/* ---- topBannerBox ---- */
-
-.topBannerBox {
-  position: relative;
-  background: #ffffff;
-  cursor: pointer;
-  height: 480px;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.topBannerBox > div {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.topBannerBox-content {
-  margin-top: auto;
-  color: white;
-  padding-left: 20px;
-}
-
-.topBannerBox-content p {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1;
-  margin-top: 6px;
-}
-
-.topBannerBox-content > :last-child {
-  margin-top: 12px;
-}
-
-.topBannerBox-footer {
-  width: 100%;
-  height: 40px;
-  margin-top: 20px;
-  background-color: #ffd200;
-  display: flex;
-  align-items: center;
-}
-.topBannerBox-footer span {
-  margin: 0px auto;
-  font-size: 18px;
-}
-
 /* ---- searchbar ---- */
 
-.searchbar-container {
+.searchBarBox {
   line-height: 23px;
   padding: 2px;
   border: 1px solid #cfcfcf;
@@ -88,7 +35,7 @@
   margin-top: -4px;
 }
 
-.searchbar-container input {
+.searchBarBox input {
   width: 136px;
   height: 100%;
   border: 0;
@@ -100,12 +47,12 @@
   height: 24px;
 }
 
-.searchbar-container > div {
+.searchBarBox > div {
   display: flex;
   align-items: center;
 }
 
-.searchbar-submit-btn {
+.searchBarBox__submitBtn {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -114,27 +61,26 @@
 
 /* ---- appDownloadWrap ---- */
 
-.app-download-wrap {
+.appDownloadBox {
   background: #fecc2e;
   cursor: pointer;
   display: flex;
 }
 
-.app-download-wrap > img {
+.appDownloadBox > img {
   width: 70%;
   margin: 0 auto;
 }
 
-/* show more btn  */
+/* ---- show more btn ---- */
 
-.show-more-btn {
-  margin-left: auto;
+.showMoreBtn {
   color: #999999;
   display: flex;
   align-items: center;
 }
 
-.show-more-btn > img {
+.showMoreBtn > img {
   margin-left: 4px;
   margin-bottom: 2px;
   width: 8px;

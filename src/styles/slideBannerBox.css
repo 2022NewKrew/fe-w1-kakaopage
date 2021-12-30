@@ -1,0 +1,143 @@
+/* ---- slideBannerBox ---- */
+
+.slideBannerBox {
+  position: relative;
+  background: #ffffff;
+  cursor: pointer;
+  height: 480px;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.slideBannerBox__action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideBannerBox__slider {
+  display: flex;
+  position: absolute;
+  transition: transform 400ms ease-in-out;
+}
+
+.slideBannerBox__track {
+  position: relative;
+  width: 720px;
+  height: 480px;
+}
+
+.slideBannerBox__background {
+  position: absolute;
+}
+
+.slideBannerBox__img {
+  width: 720px;
+  display: block;
+}
+
+.slideBannerBox__shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.slideBannerBox__contentWrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideBannerBox__content {
+  z-index: 100;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.slideBannerBox__content > p {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.slideBannerBox__info {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.slideBannerBox__infoList {
+  display: flex;
+  align-items: center;
+}
+
+.slideBannerBox__infoList > div {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.slideBannerBox__infoList > div > img {
+  margin-right: 4px;
+}
+
+.slideBannerBox__infoList span {
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.slideBannerBox__footer {
+  z-index: 100;
+  width: 100%;
+  height: 40px;
+  background-color: #ffd200;
+  display: flex;
+  align-items: center;
+}
+.slideBannerBox__footer > span {
+  margin: 0px auto;
+  font-size: 18px;
+}
+
+:root {
+  --btn-top-position: calc(50% - 20px);
+  --btn-horizontal-position: 20px;
+}
+
+.slideBannerBox__pervBtn {
+  position: absolute;
+  top: var(--btn-top-position);
+  left: var(--btn-horizontal-position);
+}
+
+.slideBannerBox__nextBtn {
+  position: absolute;
+  top: var(--btn-top-position);
+  right: var(--btn-horizontal-position);
+}
+
+.slideBannerBox__indicator {
+  position: absolute;
+  right: 24px;
+  bottom: 57px;
+  color: #ffffff;
+  font-size: 20px;
+  opacity: 0.6;
+}

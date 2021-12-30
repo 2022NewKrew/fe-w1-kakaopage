@@ -5,9 +5,9 @@ import { WebtoonPage } from "../templates/WebtoonPage.js";
 const app = () => {
   const $app = document.querySelector("#app");
 
-  $app.appendChild(Header().$root);
-  $app.appendChild(WebtoonPage().$root);
-  $app.appendChild(Footer().$root);
+  $app.appendChild(Header());
+  $app.appendChild(WebtoonPage());
+  $app.appendChild(Footer());
 };
 
 app();

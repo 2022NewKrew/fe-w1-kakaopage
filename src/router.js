@@ -9,8 +9,11 @@ router.use("/", (req, res, next) => {
   next();
 });
 
+router.get("/", (req, res) => {
+  res.redirect("/웹툰?genre=요일연재");
+});
+
 router.get("/웹툰", (req, res) => {
-  console.log(__dirname);
   res.sendFile(__dirname + "/src/pages/webtoon.html");
 });
 

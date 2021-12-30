@@ -19,14 +19,14 @@ main {
 
 a {
   text-decoration: none;
+  color: #bdbdbd;
 }
 
 ul,
 li {
   list-style: none;
+  padding: 0px;
 }
-
-/* section */
 
 section {
   display: flex;
@@ -34,17 +34,6 @@ section {
   margin: 11px auto 0px;
   width: 720px;
   background-color: white;
-}
-
-section header {
-  padding: 22px 20px 0px;
-}
-
-section header h5 {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  margin: 0px;
 }
 
 /* nav */
@@ -82,39 +71,4 @@ nav ul > li {
 
 nav ul > li > * {
   cursor: pointer;
-}
-
-/* footer */
-
-footer {
-  font-size: 14px;
-  width: 720px;
-  margin: 0 auto;
-}
-
-footer ul {
-  padding: 60px 0px 0px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-}
-
-footer a {
-  cursor: pointer;
-  color: #bdbdbd;
-  text-decoration: none;
-}
-
-footer .companyInfo {
-  margin-top: 5px;
-  color: #bdbdbd;
-}
-
-footer .copyright {
-  display: block;
-  color: #cdcdcd;
-  text-align: left;
-  margin-top: 9px;
-  padding-bottom: 50px;
 }

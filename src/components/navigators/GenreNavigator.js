@@ -1,47 +1,45 @@
 export const GenreNavigator = () => {
   const $root = document.createElement("nav");
-  $root.className = "genre-nav";
-
+  $root.className = "genreNav";
+  
   const urlSearchParams = new URLSearchParams(window.location.search);
   const { genre } = Object.fromEntries(urlSearchParams.entries());
 
   const isSelected = (str) => {
-    return genre === new URLSearchParams(str).get("genre");
+    if ((!genre && str === "홈") || genre === str)
+      return "genreNav__item--selected";
+
+    return "";
   };
+
+  const renderGenreItem = (genre) => `
+    <li>
+      <a 
+        class="genreNav__item ${isSelected(genre)}" 
+        href="?${new URLSearchParams({ genre }).toString()}"
+      >
+        ${genre}
+      </a>
+    </li>
+  `;
 
   $root.innerHTML = `
     <ul>
-        ${genreList
-          .map(
-            ({ text, url }) => `
-            <li>
-                <a class="${isSelected(url) && "selected"}" href="?${url}">
-                    ${text}
-                </a>
-            </li>
-        `
-          )
-          .join("")}
+        ${genreList.map(renderGenreItem).join("")}
     </ul>
   `;
 
-  return { $root };
+  return $root;
 };
 
 const genreList = [
-  { text: "홈", url: new URLSearchParams({ genre: "홈" }).toString() },
-  {
-    text: "요일연재",
-    url: new URLSearchParams({ genre: "요일연재" }).toString(),
-  },
-  { text: "웹툰", url: new URLSearchParams({ genre: "웹툰" }).toString() },
-  { text: "소년", url: new URLSearchParams({ genre: "소년" }).toString() },
-  { text: "드라마", url: new URLSearchParams({ genre: "드라마" }).toString() },
-  { text: "로멘스", url: new URLSearchParams({ genre: "로멘스" }).toString() },
-  { text: "로판", url: new URLSearchParams({ genre: "로판" }).toString() },
-  {
-    text: "액션무협",
-    url: new URLSearchParams({ genre: "액션무협" }).toString(),
-  },
-  { text: "BL", url: new URLSearchParams({ genre: "BL" }).toString() },
+  "홈",
+  "요일연재",
+  "웹툰",
+  "소년",
+  "드라마",
+  "로멘스",
+  "로판",
+  "앤션무협",
+  "BL",
 ];

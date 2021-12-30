@@ -1,16 +1,16 @@
 import { ContentRowListItem } from "./ContentRowListItem.js";
 
-export const ContentRowList = ({ contentList }) => {
+export const ContentRowList = ({ contentsState }) => {
   const $root = document.createElement("ul");
-  $root.className = "contents-wrapper";
+  $root.className = "contentRowListBox";
 
   const render = () => {
-    contentList.forEach((_) => {
-      $root.append(ContentRowListItem().$root);
-    });
+    $root.innerHTML = "";
+    $root.append(...contentsState.list.map(ContentRowListItem));
   };
 
+  contentsState.subscribe(render);
   render();
 
-  return { $root };
+  return $root;
 };
