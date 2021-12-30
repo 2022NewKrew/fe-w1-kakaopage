@@ -14,6 +14,7 @@ footer > div.left_box > ul li {
   content: "";
   width: 10px;
   height: 10px;
+  margin-left: 5px;
   display: inline-block;
   background: no-repeat center url("https://page.kakao.com/static/common/icon_trace_on.png");
   background-size: 100%;
@@ -22,6 +23,7 @@ footer > div.left_box > ul li {
   content: "";
   width: 10px;
   height: 10px;
+  margin-left: 5px;
   display: inline-block;
   background: no-repeat center url("https://page.kakao.com/static/common/icon_trace_off.png");
   background-size: 100%;
