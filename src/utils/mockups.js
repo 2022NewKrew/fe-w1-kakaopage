@@ -8,16 +8,16 @@ export const setupContentsMockups = (cnt = 163) => {
         isEnd: getRandomBoolean(0.4),
         isFree: getRandomBoolean(0.5),
         description: getRandomDescription(),
-        auther: [...Array(getRandomNum(4))].map((_) => getRandomName()),
-        subscripers: getRandomNum(100, 1),
-        stars: getRandomNum(10, 1),
+        authers: [...Array(1 + getRandomNum(3))].map((_) => getRandomName()),
+        subscripers: 1 + getRandomNum(150, 1),
+        stars: 8 + getRandomNum(2, 1),
         updateDay: getRandomNum(8),
         img: getRandomImg(),
       };
     })
     .sort((a, b) => {
-      if (b.stars === a.stars) return b.subscripers - a.subscripers;
-      return b.stars - a.stars;
+      if (b.subscripers === a.subscripers) return b.stars - a.stars;
+      return b.subscripers - a.subscripers;
     });
 };
 
