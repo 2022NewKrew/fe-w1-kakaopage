@@ -20,8 +20,11 @@ const renderContainer = (data) => {
     const container = document.createElement("div");
     container.className = "carousel-container";
     data.forEach(cell_data => container.appendChild(renderCell(cell_data)));
-    // 캐로셀 왼쪽 버튼 동작시 매끄러운 애니메이션을 위해 last를 first로 옮김
-    container.insertBefore(container.lastElementChild, container.firstElementChild);
+    // 양쪽 마지막 페이지를 위해 양끝 노드의 사본을 만듦.
+    const clone_last = container.lastElementChild.cloneNode(true);
+    const clone_first = container.firstElementChild.cloneNode(true);
+    container.insertBefore(clone_last, container.firstElementChild);
+    container.appendChild(clone_first);
     return container;
 }
 
@@ -39,6 +42,25 @@ const renderWindow = () => {
     return carousel_window;
 }
 
+const clickCallBack = (container, direction) => {
+    return () => {
+        container.style.transform = `translateX(${direction * 720}px)`;
+        container.style.transitionDuration = "500ms";
+        container.ontransitionend = () => {
+            container.removeAttribute("style");
+            if (direction === 1) {
+                container.removeChild(container.lastElementChild);
+                const clone = container.children[container.children.length - 2].cloneNode(true);
+                container.insertBefore(clone, container.firstElementChild);
+            } else {
+                container.removeChild(container.firstElementChild);
+                const clone = container.children[1].cloneNode(true);
+                container.appendChild(clone);
+            }
+        }
+    }
+}
+
 const renderCarousel = (data) => {
     const carousel_window = renderWindow();
     const container = renderContainer(data);
@@ -46,21 +68,8 @@ const renderCarousel = (data) => {
     const next_btn = carousel_window.querySelector(".next-btn");
 
     carousel_window.insertBefore(container, carousel_window.children[1]);
-
-    const clickCallBack = (direction) => {
-        return () => {
-            container.style.transform = `translateX(${direction * 720}px)`;
-            container.style.transitionDuration = "500ms";
-            container.ontransitionend = () => {
-                container.removeAttribute("style");
-                (direction === 1) 
-                    ?container.insertBefore(container.lastElementChild, container.firstElementChild)
-                    :container.appendChild(container.firstElementChild);
-            }
-        }
-    }
-    prev_btn.addEventListener("click", clickCallBack(1));
-    next_btn.addEventListener("click", clickCallBack(-1));
+    prev_btn.addEventListener("click", clickCallBack(container, 1));
+    next_btn.addEventListener("click", clickCallBack(container, -1));
     
     return carousel_window;
 }
