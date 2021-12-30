@@ -7,10 +7,10 @@ export const setupContentsMockups = (cnt = 163) => {
       isEnd: getRandomBoolean(0.4),
       isFree: getRandomBoolean(0.5),
       description: getRandomDescription(),
-      auther: [...Array(getRandomNum(3))].map((_) => getRandomName()),
+      auther: [...Array(getRandomNum(4))].map((_) => getRandomName()),
       subscripers: getRandomNum(100, 1),
-      stars: getRandomNum(1000, 1),
-      updateDay: getRandomNum(7),
+      stars: getRandomNum(10, 1),
+      updateDay: getRandomNum(8),
       img: getRandomImg(),
     };
   });
@@ -20,7 +20,7 @@ const getRandomBoolean = (percent) => Math.random() < percent;
 
 const getRandomNum = (최댓값 = 100, 소수점자릿수 = 0) => {
   const 소수오프셋 = Math.pow(10, 소수점자릿수);
-  return Math.floor(Math.random() * (최댓값 + 1) * 소수오프셋) / 소수오프셋;
+  return Math.floor(Math.random() * 최댓값 * 소수오프셋) / 소수오프셋;
 };
 
 // 출처: https://erulabo.com/16
