@@ -1,0 +1,20 @@
+.content-category > ul {
+    display: flex;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.content-category > ul > li {
+    flex: 1 1 auto;
+    padding: 22px 0;
+    text-align: center;
+    font-size: 20px;
+    color: #bbb;
+    display: flex;
+    justify-content: center;
+}
+
+.content-category > ul > li.selected {
+    color: #333;
+    font-weight: 500;
+}

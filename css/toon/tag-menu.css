@@ -1,0 +1,43 @@
+.toon-tag-menu {
+    margin-top: 11px;
+    padding: 20px;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+
+.toon-tag-menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 9px;
+    background-color: #f3f3f3;
+}
+
+.toon-tag-menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    overflow: hidden;
+    height: 60px;
+}
+
+.toon-tag-menu-item > .item-name {
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.toon-tag-menu-item > .item-num {
+    flex-shrink: 0;
+    margin-left: 10px;
+    padding: 0 8px;
+    height: 24px;
+    font-size: 16px;
+    border-radius: 13px;
+    background-color: #ffd200;
+}

@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="css/search-bar.css">
     <link rel="stylesheet" href="css/header-category.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/toon/week.css">
+    <link rel="stylesheet" href="css/toon/tag-menu.css">
+    <link rel="stylesheet" href="css/toon/home.css">
 </head>
 <body>
     <header id="kpw-header">
@@ -45,32 +50,32 @@
         </div>
         <nav id="header-category">
             <ul>
-                <li class="category-element">
+                <li class="header-category-item selected" data-category="home">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_home.svg">
                     </a>
                 </li>
-                <li class="category-element selected">
+                <li class="header-category-item" data-category="toon">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_toon.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="header-category-item" data-category="novel">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_novel.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="header-category-item" data-category="vod">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_vod.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="header-category-item" data-category="broadcast">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_broadcast.svg">
                     </a>
                 </li>
-                <li class="category-element">
+                <li class="header-category-item" data-category="book">
                     <a>
                         <img src="https://static-page.kakao.com/static/pc/menu_book.svg">
                     </a>
@@ -78,7 +83,7 @@
             </ul>
         </nav>
     </header>
-    <div id="root"></div>
+    <section id="main-contents"></section>
     <footer id="kpw-footer">
         <button class="app-download-btn">
             <img src="https://static-page.kakao.com/static/pc/appDownload.png"
@@ -87,11 +92,11 @@
         <div class="footer">
             <div class="left-box">
                 <ul class="policy">
-                    <li><a href="http://www.kakaopagecorp.com" target="_blank" rel="noopener noreferrer">회사소개</a></li>
-                    <li><a href="/policy?type=terms"> • 이용약관</a></li>
-                    <li><a href="/policy?type=privacy">• <span class="medium">개인정보처리방침</span></a></li>
-                    <li><a href="/policy?type=safeguard"> • 청소년보호정책</a></li>
-                    <li><a href="/policy?type=notice&amp;noticePage=1"> • 공지사항</a></li>
+                    <li class="policy-item"><a href="http://www.kakaopagecorp.com" target="_blank" rel="noopener noreferrer">회사소개</a></li>
+                    <li class="policy-item"><a href="/policy?type=terms"> • 이용약관</a></li>
+                    <li class="policy-item"><a href="/policy?type=privacy">• <span class="medium">개인정보처리방침</span></a></li>
+                    <li class="policy-item"><a href="/policy?type=safeguard"> • 청소년보호정책</a></li>
+                    <li class="policy-item"><a href="/policy?type=notice&amp;noticePage=1"> • 공지사항</a></li>
                 </ul>
                 <div class="company-info">
                     <span>(주) 카카오엔터테인먼트 사업자 정보 </span>
@@ -108,6 +113,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/category-change.js"></script>
+    <script type="module" src="js/init.js"></script>
 </body>
 </html>

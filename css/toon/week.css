@@ -1,0 +1,22 @@
+.toon-week-weekday-nav {
+    display: flex;
+    margin-top: 11px;
+    background-color: #fff;
+}
+
+.toon-week-weekday-nav > li {
+    flex: 1;
+    padding: 21px 0;
+    font-size: 20px;
+    text-align: center;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.toon-week-weekday-nav > li.selected {
+    background-image: url(https://static-page.kakao.com/static/pc/back_circle_new.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 44px;
+    color: #333;
+}
