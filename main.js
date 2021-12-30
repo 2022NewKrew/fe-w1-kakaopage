@@ -35,10 +35,10 @@ function makeMenuActive(menu) {
 // 탭 기반 html 페이지 불러오기
 async function loadMenu(menu) {
   const home = document.getElementById("home");
-  let tab = "webtoon.html";
+  let tab = "home.html";
 
   if (menu === "webtoon-tab") {
-    tab = "webtoon.html";
+    tab = "home.html";
   } else {
     tab = "dummy.html";
   }
@@ -50,33 +50,25 @@ async function loadMenu(menu) {
   await home.insertAdjacentHTML("afterbegin", text);
 
   if (menu === "webtoon-tab") {
-    webtoonInit();
+    webtoonTabInit();
   }
 }
 
 // --------- 웹툰 탭 초기화 ----------
-function webtoonInit() {
+async function webtoonTabInit() {
   const webtoonPage = document.getElementById("webtoon");
   // 장르 컴포넌트 추가
-  createGenre(webtoonPage);
-
-  // 메뉴 컴포넌트화 (오늘 UP, 오늘 신작, 오늘 랭킹 등..)
-  createMenu(webtoonPage);
-
-  // 하단 캐러셀 생성
-  createCarousel();
-
-  // 요일 연재 TOP 컴포넌트 추가
-  createTopRanking(webtoonPage);
+  await createGenre(webtoonPage);
+  await homeInit();
 }
 
 // ------ 장르 ----------
 
 // 장르 탭 생성
-async function createGenre(webtooonPage) {
+async function createGenre(webtoonPage) {
   const genreFile = await fetch("data/genres.json");
   const genreList = (await genreFile.json()).genres;
-  webtooonPage.insertAdjacentHTML(
+  webtoonPage.insertAdjacentHTML(
     "afterbegin",
     `
     <section id="genre">
@@ -85,7 +77,7 @@ async function createGenre(webtooonPage) {
         ${genreList
           .map(
             ({ title }) => `
-            <li class="genre">${title}</li>
+            <li class="genre" data-genre=${title}>${title}</li>
           `
           )
           .join("")}
@@ -99,6 +91,12 @@ async function createGenre(webtooonPage) {
   genres.addEventListener("click", (e) => {
     const genre = e.target;
     createGenreActive(genre);
+
+    // innerHTML을 통해 현재 장르의 내용 모두 지우기...
+    // 이것도 안됨..ㅠ
+    const genreSection = document.getElementById("genre-section");
+    genreSection.innerHTML = "";
+    loadGenre(e.target.getAttribute("data-genre"));
   });
   genres.firstElementChild.classList.add("active-genre");
 }
@@ -113,6 +111,190 @@ function createGenreActive(genre) {
     }
   });
   genre.classList.add("active-genre");
+}
+
+// 장르 클릭시, 각 장르 탭별 컴포넌트 추가
+async function loadGenre(genre) {
+  switch (genre) {
+    case "홈":
+      homeInit();
+    case "요일연재":
+      dailyInit();
+    case "소년":
+      boyInit();
+    case "드라마":
+      dramaInit();
+    case "로맨스":
+      romanceInit();
+    case "로판":
+      romanticFantasyInit();
+    case "액션무협":
+      actionInit();
+    case "BL":
+      BLInit();
+    default:
+      homeInit();
+  }
+}
+
+// --------- 각 장르 탭 초기화 ----------
+async function homeInit() {
+  const genreSection = document.getElementById("genre-section");
+  await createMainCarousel(genreSection);
+
+  // 메뉴 컴포넌트화 (오늘 UP, 오늘 신작, 오늘 랭킹 등..)
+  await createMenu(genreSection);
+
+  // 하단 캐러셀 생성
+  await createBannerCarousel(genreSection);
+
+  // 요일 연재 TOP 컴포넌트 추가
+  await createTopRanking(genreSection);
+}
+
+async function dailyInit() {
+  const genreSection = document.getElementById("genre-section");
+  createMainCarousel(genreSection);
+}
+async function boyInit() {
+  const genreSection = document.getElementById("genre-section");
+  createMainCarousel(genreSection);
+}
+
+async function dramaInit() {
+  const genreSection = document.getElementById("genre-section");
+  createMainCarousel(genreSection);
+}
+
+async function romanceInit() {
+  const genreSection = document.getElementById("genre-section");
+  createMainCarousel(genreSection);
+}
+
+async function romanticFantasyInit() {
+  const genreSection = document.getElementById("genre-section");
+  createMainCarousel(genreSection);
+}
+
+async function actionInit() {
+  const genreSection = document.getElementById("genre-section");
+  createMainCarousel(genreSection);
+}
+async function BLInit() {
+  const genreSection = document.getElementById("genre-section");
+  createMainCarousel(genreSection);
+}
+
+// --------- 메인 캐러셀 만들기---------
+async function createMainCarousel(webtoonPage) {
+  let slideIndex = 1;
+
+  const mainCarouselFile = await fetch("data/carousel.json");
+  const mainCarouselList = (await mainCarouselFile.json())["webtoon"];
+
+  await webtoonPage.insertAdjacentHTML(
+    "afterBegin",
+    `
+    <section class="carousel">
+    <div class="carousel-container">
+      <!-- repeated part -->
+      ${mainCarouselList
+        .map(
+          ({ id, title, viewCount, description, image }) => `
+        <div class="main-slide slide">
+          <div class="carousel-info">
+            <img
+              class="carousel-main-img"
+              src=${image}
+              alt="황제의 연인 이미지"
+            />
+            <div class="carousel-info-container">
+              <div class="carousel-info-detail-box">
+                <div>
+                  <h2 class="carousel-info-title">${title}</h2>
+                  <div class="carousel-info-detail">
+                    <img
+                      class="carousel-info-event-img"
+                      src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b"
+                      alt="이벤트"
+                    />
+                    <div class="carousel-info-icons">
+                      <img
+                        src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858"
+                        alt="time"
+                      />
+                      웹툰
+                    </div>
+                    <div class="separator"></div>
+                    <div class="carousel-info-icons">
+                      <img
+                        src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
+                        alt="조회수"
+                      />
+                      ${viewCount}만명
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-number">${id} / 5</div>
+              </div>
+              <div class="carousel-info-box">
+                <div class="carousel-description">
+                  ${description}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- buttons -->
+        <div class="carousel-button previous-button" id="previousButton">
+          <img
+            src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56"
+            alt="previous button"
+          />
+        </div>
+        <div class="carousel-button next-button" id="nextButton">
+          <img
+            src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93"
+            alt="next button"
+          />
+        </div>
+      `
+        )
+        .join("")}
+    </div>
+  </section>
+  `
+  );
+
+  showSlides(1);
+
+  const prevBtn = document.getElementById("previousButton");
+  const nextBtn = document.getElementById("nextButton");
+
+  // 이벤트 리스너가 동작안함.. :(
+  prevBtn.addEventListener("click", () => {
+    showSlides((slideIndex -= 1));
+  });
+
+  nextBtn.addEventListener("click", () => {
+    showSlides((slideIndex += 1));
+  });
+
+  function showSlides(slideNum) {
+    let slides = document.getElementsByClassName("main-slide");
+
+    if (slideNum > slides.length) {
+      slideIndex = 1;
+    }
+    if (slideNum < 1) {
+      slideIndex = slides.length;
+    }
+    Array.from(slides).forEach(function (slide) {
+      slide.style.display = "none";
+    });
+    slides[slideIndex - 1].style.display = "flex";
+    slides[slideIndex - 1].style.alignItems = "center";
+  }
 }
 
 // --------- 메뉴 (오늘 UP, 오늘 신작, 오늘 랭킹 등..)----------
@@ -257,94 +439,62 @@ async function fetchTopRankingWebtoons(weekday) {
 }
 
 // --------- 하단 캐러셀 ----------
-async function createCarousel() {
-  const carouselSection = document.getElementById("banner-carousel");
-  carouselSection.innerHTML = "";
-
+async function createBannerCarousel(webtoonPage) {
   let slideIndex = 1;
 
-  carouselSectionContainerHtml = `<div class="banner-container"></div>`;
-
-  const carouselSectionContainer = new DOMParser().parseFromString(
-    carouselSectionContainerHtml,
-    "text/html"
-  ).body.firstElementChild;
-
-  // previous button을 추가한다.
-  let previousButtonHtml = `
-  <button class="banner-btn prevBtn">
-    <img
-      src="https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c"
-      alt="prev button"
-    />
-  </button>
-  `;
-
-  const previousButton = new DOMParser().parseFromString(
-    previousButtonHtml,
-    "text/html"
-  ).body.firstElementChild;
-
-  previousButton.addEventListener("click", (e) => {
-    showSlides((slideIndex -= 1));
-  });
-
-  carouselSectionContainer.insertAdjacentElement("afterbegin", previousButton);
-
-  // slide 부분을 추가한다.
   const bannerFile = await fetch("data/banner.json");
   const bannerList = (await bannerFile.json()).banner;
 
-  const bannerContainerHtml = `
-  <div class="slide_box">
-    <div class="slide_list">
-    </div>
-  </div>
-  `;
-  const bannerContainer = new DOMParser().parseFromString(
-    bannerContainerHtml,
-    "text/html"
-  ).body.firstChild;
-
-  const slideList = bannerContainer.getElementsByClassName("slide_list")[0];
-
-  bannerList.forEach((data) => {
-    slideList.insertAdjacentHTML(
-      "beforeend",
-      `<div class="slide_item slide">
-          <img
-            src=${data.image}
-            alt=${data.description}
-          />
-        </div>
-      `
-    );
-  });
-
-  carouselSectionContainer.insertAdjacentElement("beforeend", bannerContainer);
-
-  // next button을 추가한다.
-  let nextButtonHtml = `
-    <button class="banner-btn nextBtn">
-      <img
-        src="https://static-page.kakao.com/static/pc/ic-paging-next-nor.svg?b76f34a1b77e59514735b92464295b7c"
-        alt="next button"
-      />
-    </button>
-    `;
-  const nextButton = new DOMParser().parseFromString(
-    nextButtonHtml,
-    "text/html"
-  ).body.firstElementChild;
-
-  nextButton.addEventListener("click", (e) => {
-    showSlides((slideIndex += 1));
-  });
-
-  carouselSectionContainer.insertAdjacentElement("beforeend", nextButton);
-  carouselSection.insertAdjacentElement("beforeEnd", carouselSectionContainer);
+  await webtoonPage.insertAdjacentHTML(
+    "beforeend",
+    `
+      <section id="banner-carousel" class="banner">
+        <div class="banner-container">
+          <button class="banner-btn prevBtn" id="prevBtn">
+            <img
+              src="https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c"
+              alt="prev button"
+            />
+          </button>
+          <div class="slide_box">
+            <div class="slide_list">
+              ${bannerList
+                .map(
+                  ({ image, description }) => `
+                    <div class="slide_item slide">
+                      <img
+                        src=${image}
+                        alt=${description}
+                      />
+                    </div>
+                  `
+                )
+                .join("")}
+            </div>
+          </div>
+          <button class="banner-btn nextBtn" id="nextBtn">
+            <img
+              src="https://static-page.kakao.com/static/pc/ic-paging-next-nor.svg?b76f34a1b77e59514735b92464295b7c"
+              alt="next button"
+            />
+          </button>
+      </div>
+    </section>
+  `
+  );
 
   showSlides(1);
+
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  prevBtn.addEventListener("click", () => {
+    showSlides((slideIndex -= 1));
+  });
+
+  nextBtn.addEventListener("click", () => {
+    showSlides((slideIndex += 1));
+  });
 
   function showSlides(slideNum) {
     let slides = document.getElementsByClassName("slide_item");

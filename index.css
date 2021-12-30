@@ -176,14 +176,89 @@ main {
 /**
     carousel
 */
+
+.main-slide {
+  display: none;
+}
 .carousel {
   width: 720px;
   margin: 0 auto;
+}
+
+.carousel-container {
+  width: 720px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* carousel info */
+
+.carousel-info {
   position: relative;
 }
 
-.carousel > img {
+.carousel-info-container {
+  margin-top: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
   width: 720px;
+}
+
+.carousel-main-img {
+  width: 720px;
+}
+
+/* carousel info-detail */
+.carousel-info-detail-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel-info-title {
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.carousel-info-detail {
+  display: flex;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.carousel-info-event-img {
+  margin-right: 10px;
+  height: 22px;
+}
+
+.carousel-info-icons {
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+}
+
+.carousel-number {
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+/* carousel-info-box */
+.carousel-info-box {
+  background-color: #ffd200;
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* carousel buttons */
@@ -205,66 +280,6 @@ main {
   right: 0;
   margin-right: 20px;
 }
-
-/* carousel info */
-.carousel-info {
-  padding-left: 30px;
-  position: absolute;
-  bottom: 60px;
-  left: 0px;
-}
-
-.carousel-info > h2 {
-  color: white;
-  font-size: 28px;
-  line-height: 1;
-}
-
-.carousel-detail {
-  display: flex;
-  font-weight: 400;
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-}
-
-.event-img {
-  margin-right: 10px;
-  height: 22px;
-}
-
-.carousel-detail > div {
-  display: flex;
-  align-items: center;
-}
-
-.carousel-detail > div > img {
-  margin: 0 4px;
-}
-
-/* carousel number */
-.carousel-number {
-  position: absolute;
-  bottom: 60px;
-  right: 15px;
-  color: #ffffff;
-  font-size: 20px;
-  opacity: 0.6;
-}
-
-/* carousel description */
-.carousel-description {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: #ffd200;
-  height: 40px;
-  width: 100%;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* webtoon menus */
 .webtoon-menus {
   width: 720px;
