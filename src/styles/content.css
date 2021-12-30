@@ -92,9 +92,8 @@
 
 .contentGridListBox {
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .contentGridListItem {
@@ -113,12 +112,14 @@
 
 .contentGridListItem__thumbWrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .contentGridListItem__thumbImg {
   display: block;
   width: 120px;
   height: 120px;
+  object-fit: cover;
 }
 
 .contentGridListItem__thumbOutline {
@@ -154,12 +155,15 @@
   margin-top: 4px;
 }
 
-.contentGridListItem__thumbClock {
+.contentGridListItem__thumbIcon {
   height: 16px;
   margin-left: auto;
 }
 
 .contentGridListItem__contentTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-top: 9px;
   margin-bottom: 7px;
 }

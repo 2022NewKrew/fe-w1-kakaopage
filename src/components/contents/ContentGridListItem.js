@@ -17,8 +17,8 @@ export const ContentGridListItem = (content) => {
             <p class="contentGridListItem__thumbText">${content.stars}</p>
             ${
               content.isFree
-                ? `<img src="https://static-page.kakao.com/static/common/bmbadge_webtoon.svg?f218f9d5ac717abcf43047ff23145119">`
-                : `<img class="contentGridListItem__thumbClock" alt="clock" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf">`
+                ? `<img class="contentGridListItem__thumbIcon" alt="webtton" src="https://static-page.kakao.com/static/common/bmbadge_webtoon.svg?f218f9d5ac717abcf43047ff23145119">`
+                : `<img class="contentGridListItem__thumbIcon" alt="clock" src="https://static-page.kakao.com/static/common/bmbadge_waitfree.svg?53cf25c84253dee8d32e66da7524dbaf">`
             }
             
         </div>
