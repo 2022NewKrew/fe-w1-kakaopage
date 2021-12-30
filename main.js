@@ -199,7 +199,6 @@ async function BLInit() {
 
 // --------- 메인 캐러셀 만들기---------
 async function createMainCarousel(webtoonPage) {
-  console.log("mainCarousel" + webtoonPage);
   let slideIndex = 1;
 
   const mainCarouselFile = await fetch("data/carousel.json");
