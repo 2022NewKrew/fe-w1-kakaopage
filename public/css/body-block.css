@@ -1,9 +1,14 @@
+@import url("banner.css");
+@import url("banner-slide.css");
+@import url("toon-summary.css");
+@import url("daily-toon.css");
+@import url("toon-info.css");
 .content-body{
-    background-color: aqua;
     margin-top: 167px;
 }
 
 .nav-content{
+    z-index: 199;
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
@@ -54,4 +59,40 @@
     display: block;
     margin: 0 auto;
     height: 20px;
+}
+
+.sub-category-container{
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+}
+
+.sub-category-container > ul{
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    margin: 0px auto;
+    width: 720px;
+    display: flex;
+}
+
+.sub-category-container > ul > li{
+    padding: 22px 0px;
+    font-size: 20px;
+    display: flex;
+    list-style: none;
+    text-align: center;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    color: rgb(187, 187, 187);
+    cursor: pointer;
+}
+
+.sub-category-container > ul > li.focus{
+    color: rgb(51, 51, 51);
+}
+
+.contents{
+    width: 720px;
+    margin: 11px auto 0;
 }

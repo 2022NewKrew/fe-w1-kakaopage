@@ -1,0 +1,61 @@
+.toon-summary-wrap{
+    border-radius: 8px;
+    flex-wrap: wrap;
+    background-color: #f3f3f3;
+    display: flex;
+}
+
+.toon-summary-container{
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    margin-top: 11px;
+    padding: 20px;
+}
+
+.toon-summary-wrap > a{
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 33.33333333333333%;
+    height: 60px;
+    box-sizing: border-box;
+    justify-content: center;
+    color: #3a3a3a;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.toon-summary-title{
+    display: flex;
+    align-items: center;
+}
+
+.toon-summary-title > span{
+    text-overflow: ellipsis;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+
+.toon-summary-count{
+    font-weight: 500;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    border-radius: 13px;
+    flex-shrink: 0;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 24px;
+    align-items: center;
+    font-size: 16px;
+    background-color: #ffd200;
+    padding-top: 4px;
+    display: flex;
+}

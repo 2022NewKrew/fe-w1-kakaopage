@@ -1,4 +1,5 @@
 #kpw-header{
+    z-index: 201;
     margin: 0;
     min-width: 0;
     position: fixed;

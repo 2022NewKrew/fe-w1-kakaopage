@@ -1,0 +1,157 @@
+
+.banner-container{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+    width: 720px;
+    height: 480px;
+}
+
+.banner-container.big{
+    width: 720px;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.banner-container.small{
+    width: 335px;
+    height: 223px;
+    border-radius: 6px;
+}
+
+.image-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper > img{
+    width: 720px;
+    display: block;
+}
+
+.image-wrapper > img.small{
+    width: 335px;
+    border-radius: 6px;
+}
+
+.image-shadow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) );
+}
+
+.banner-detail-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-detail-wrapper{
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    height: 100%;
+}
+
+.banner-detail-title{
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 6px;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.banner-detail-title.small{
+    margin-top: 4px;
+    font-size: 18px;
+}
+
+.toon-detail-group{
+    width: 100%;
+    padding-left: 16px;
+}
+
+.toon-detail-content{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.toon-detail-content > small{
+    margin-top: 7px;
+}
+
+.toon-detail-content > div{
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 1px;
+}
+
+.toon-detail-content.small > div{
+    font-size: 14px;
+}
+
+.detail-state{
+    margin-right: 10px;
+    height: 22px;
+}
+
+.detail-wait{
+    margin-right: 4px;
+    width: 18px;
+    height: 20px;
+}
+
+.detail-seperator{
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 16px;
+    width: 2px;
+}
+
+.detail-view{
+    margin-top: 1px;
+    width: 16px;
+    height: 20px;
+}
+
+.detail-view-count{
+    margin-left: 4px;
+}
+
+.toon-detail-summary{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #ffd200;
+    margin-top: 20px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.toon-detail-summary > small{
+    height: 24px;
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.toon-detail-summary > span{
+    color: #222222;
+    font-weight: 350;
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+
+.toon-detail-summary.small > span{
+    font-size: 12px;
+}

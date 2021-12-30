@@ -1,0 +1,128 @@
+.toon-info-link{
+    box-sizing: border-box;
+    margin: 0px 0px 20px;
+    min-width: 0px;
+    width: 120.4px;
+}
+
+.toon-info-wrap{
+    width: 120.4px;
+    background-color: rgb(255, 255, 255);
+}
+
+.toon-info-img-wrap{
+    position: relative;
+    border-radius: 8px;
+    width: 120.4px;
+    overflow: hidden;
+}
+
+.toon-info-img{
+    width: 120.4px;
+    height: 120.4px;
+    overflow: hidden;
+}
+
+.toon-info-img > img{
+    max-width: 120.4px;
+    width: 120.4px;
+    height: 120.4px;
+}
+
+.toon-info-img-shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom: none;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.toon-info-img-detail-wrap{
+    height: 30px;
+    background-color: #242526;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-items: center;
+    display: flex;
+}
+
+.toon-info-img-detail-state{
+    padding-top: 4px;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffd200;
+}
+
+.toon-info-img-detail-separator{
+    flex: 1;
+}
+
+.toon-info-img-detail-type{
+    height: 16px;
+    margin-top: 2px;
+    align-items: center;
+    display: flex;
+}
+
+.toon-info-img-detail-type-img{
+    white-space: nowrap;
+    height: 16px;
+    display: flex;
+}
+
+.toon-info-img-detail-type-img > img{
+    max-width: 100%;
+    height: auto;
+    height: 100%;
+    display: block;
+}
+
+.toon-info-title-wrap{
+    margin-top: 9px;
+    margin-bottom: 7px;
+}
+
+.toon-info-title-box{
+    color: #333333;
+    font-size: 16px;
+}
+
+.toon-info-title-box > span{
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.toon-info-view-wrap{
+    font-weight: 350;
+    font-size: 14px;
+    color: #9c9c9c;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+}
+
+.toon-info-view-img{
+    flex-shrink: 0;
+    align-items: center;
+    margin-right: 4px;
+    display: flex;
+}
+
+.toon-info-view-wrap > img{
+    max-width: 100%;
+    height: auto;
+    width: 11px;
+    height: 11px;
+}
+
+.toon-info-view-count{
+    margin-left: 4px;
+}
