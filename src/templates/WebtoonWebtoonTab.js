@@ -2,6 +2,8 @@ import { SectionHeader } from "../components/commons/SectionHeader.js";
 import { ContentRowList } from "../components/contents/ContentRowList.js";
 import { SlideBannerBox } from "../components/contents/SlideBannerBox.js";
 import { DayNavigator } from "../components/navigators/DayNavigator.js";
+import { State } from "../core/State.js";
+import { getToday } from "../utils/Time.js";
 
 export const WebtoonWebtoonTab = () => {
   const $root = document.createElement("div");
@@ -16,8 +18,10 @@ export const WebtoonWebtoonTab = () => {
 const TobBannerSection = () => {
   const $root = document.createElement("section");
 
+  const state = State({ day: getToday() });
+
   $root.appendChild(SlideBannerBox().$root);
-  // $root.appendChild(DayNavigator().$root);
+  $root.appendChild(DayNavigator({ state }));
 
   return $root;
 };

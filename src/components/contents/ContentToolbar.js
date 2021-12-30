@@ -7,12 +7,12 @@ export const ContentToolbar = ({ state }) => {
           <p class="contentToolbar__text">전체</p>
         </li>
         <div class="contentToolbar__separator" ></div>
-        <li class="contentToolbar__navItem" data-type="웹툰">
+        <li class="contentToolbar__navItem" data-type="무료">
           <p class="contentToolbar__text">웹툰</p>
         </li>
         <div class="contentToolbar__separator"></div>
-        <li class="contentToolbar__navItem" data-type="실시간">
-          <img class="contentToolbar__clock" alt="실시간" src="https://static-page.kakao.com/static/common/ico_wait-off.svg?cb16228c070950e8b1bb33d712ac8b7a">
+        <li class="contentToolbar__navItem" data-type="유료">
+          <img class="contentToolbar__clock" alt="시계" src="https://static-page.kakao.com/static/common/ico_wait-off.svg?cb16228c070950e8b1bb33d712ac8b7a">
           <p class="contentToolbar__text">웹툰</p>
         </li>
       </ul>
