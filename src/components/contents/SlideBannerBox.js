@@ -29,33 +29,47 @@ export const SlideBannerBox = () => {
   );
 
   // set event
+
   $action.addEventListener("click", (e) => {
     const { className } = e.target;
 
-    $slider.style.transition = "transform 400ms ease-in-out";
-    if (className === "slideBannerBox__pervBtn") currentIndex--;
-    else if (className === "slideBannerBox__nextBtn") currentIndex++;
-
-    moveTrack();
+    if (className === "slideBannerBox__pervBtn") {
+      timerId = clearInterval(timerId);
+      onSlide(currentIndex - 1);
+    } else if (className === "slideBannerBox__nextBtn") {
+      timerId = clearInterval(timerId);
+      onSlide(currentIndex + 1);
+    }
   });
 
   $slider.addEventListener("transitionend", () => {
-    console.log("asdf");
     if (MAX_INDEX < currentIndex || currentIndex < 0) {
       $slider.style.transition = "none";
       currentIndex = currentIndex < 0 ? MAX_INDEX : 0;
       moveTrack();
     }
     renderIndicator();
+    if (!timerId) timerId = timerAction();
   });
+
+  const timerAction = () => setInterval(() => onSlide(currentIndex + 1), 3000);
+
+  let timerId = timerAction();
 
   // render
   const renderIndicator = () => {
     $indicator.innerHTML = `${currentIndex + 1} / ${MAX_INDEX + 1}`;
   };
+
   const moveTrack = () => {
     const x = -720 * (currentIndex + 1);
     $slider.style.transform = `translateX(${x}px)`;
+  };
+
+  const onSlide = (index) => {
+    $slider.style.transition = "transform 400ms ease-in-out";
+    currentIndex = index;
+    moveTrack();
   };
 
   // init
@@ -108,25 +122,27 @@ const getBannerList = () => [
     img: "//dn-img-page.kakao.com/download/resource?kid=bxer2r/hzhOhiglp7/6XVB5RgYtBsV1zz7MxoeX1",
   },
   {
+    type: "추천",
+    webtoonType: "유료",
+    subscribers: 48.1,
+    titles: ["공주,", "신비를 탐하다"],
+    footerText: "내 그대에게 부귀영화를 주겠다",
+    img: "//dn-img-page.kakao.com/download/resource?kid=cG5jAk/hy41HfG4tM/ZDWsyf9vT4kx3DlkKYyu1k",
+  },
+  {
+    type: "UP",
+    webtoonType: "무료",
+    subscribers: 106.1,
+    titles: ["샬롯에게는", "다섯명의 제자가 있다"],
+    footerText: "사랑 때문에 인생 2회차 시작?",
+    img: "//dn-img-page.kakao.com/download/resource?kid=Qb2JG/hyEdgh8nAN/YkAG5DKCW6ZmitE9vkaI4K",
+  },
+  {
     type: "HOT",
     webtoonType: "유료",
     subscribers: 48.1,
     titles: ["딸 바보가", "되었습니다."],
-    footerText: "카카오페이지 데뷔반 2월 7일 오픈!",
-    img: "//dn-img-page.kakao.com/download/resource?kid=cG5jAk/hy41HfG4tM/ZDWsyf9vT4kx3DlkKYyu1k",
-  },
-  {
-    type: "공모전",
-    titles: ["ㅋㅋㅋ웹툰 아카데미", "카카페 데뷔반 2기 모집중"],
-    footerText: "카카오페이지 데뷔반 2월 7일 오픈!",
-    img: "//dn-img-page.kakao.com/download/resource?kid=bxer2r/hzhOhiglp7/6XVB5RgYtBsV1zz7MxoeX1",
-  },
-  {
-    type: "HOT",
-    webtoonType: "유료",
-    subscribers: 48.1,
-    titles: ["딸 바보가", "되었습니다."],
-    footerText: "카카오페이지 데뷔반 2월 7일 오픈!",
-    img: "//dn-img-page.kakao.com/download/resource?kid=cG5jAk/hy41HfG4tM/ZDWsyf9vT4kx3DlkKYyu1k",
+    footerText: "갑자기 생긴 딸이 귀여워?!",
+    img: "//dn-img-page.kakao.com/download/resource?kid=NfO9u/hy41PSMsl2/KOnmIlC3bI2q5Lk46RuLL1",
   },
 ];
