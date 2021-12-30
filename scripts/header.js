@@ -11,7 +11,7 @@ const createNavEle = (title, index) => {
 
 const createNavBar = async () => {
   try {
-    const navData = await getAPI("data/nav.json");
+    const navData = await getAPI("nav.json");
     return navData.map((nav, index) => createNavEle(nav.title, index)).join("");
   } catch (e) {
     throw e;
