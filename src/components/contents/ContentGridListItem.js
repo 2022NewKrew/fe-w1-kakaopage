@@ -33,7 +33,7 @@ export const ContentGridListItem = (content) => {
                 : ""
             }
             <img class="contentGridListItem__contentPerson" alt="person" src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871">
-            <span>${content.subscripers}만명</span>
+            <span>${content.subscribers}만명</span>
         </div>
       </div>
     `;

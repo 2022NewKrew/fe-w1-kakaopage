@@ -30,7 +30,7 @@ export const ContentRowListItem = (content) => {
                 src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871"
                 alt="people"
             />
-            <span>${content.subscripers}만명</span>
+            <span>${content.subscribers}만명</span>
             <div class="contentRowListItem__separator"></div>
             <span>${content.authers.join(",")}</span>
         </div>

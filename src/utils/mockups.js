@@ -9,15 +9,15 @@ export const setupContentsMockups = (cnt = 163) => {
         isFree: getRandomBoolean(0.5),
         description: getRandomDescription(),
         authers: [...Array(1 + getRandomNum(3))].map((_) => getRandomName()),
-        subscripers: 1 + getRandomNum(150, 1),
+        subscribers: 1 + getRandomNum(150, 1),
         stars: 8 + getRandomNum(2, 1),
         updateDay: getRandomNum(8),
         img: getRandomImg(),
       };
     })
     .sort((a, b) => {
-      if (b.subscripers === a.subscripers) return b.stars - a.stars;
-      return b.subscripers - a.subscripers;
+      if (b.subscribers === a.subscribers) return b.stars - a.stars;
+      return b.subscribers - a.subscribers;
     });
 };
 
