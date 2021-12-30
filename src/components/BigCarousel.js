@@ -20,6 +20,8 @@ const renderContainer = (data) => {
     const container = document.createElement("div");
     container.className = "carousel-container";
     data.forEach(cell_data => container.appendChild(renderCell(cell_data)));
+    // 캐로셀 왼쪽 버튼 동작시 매끄러운 애니메이션을 위해 last를 first로 옮김
+    container.insertBefore(container.lastElementChild, container.firstElementChild);
     return container;
 }
 
@@ -45,7 +47,6 @@ const renderCarousel = (data) => {
 
     carousel_window.insertBefore(container, carousel_window.children[1]);
 
-    let count = 0;
     const clickCallBack = (direction) => {
         return () => {
             container.style.transform = `translateX(${direction * 720}px)`;

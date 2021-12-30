@@ -208,6 +208,7 @@ nav ul {
     position: relative;
     width: 720px;
     height: 480px;
+    transform: translateX(-720px);
 }
 
 .carousel-big-image {    
