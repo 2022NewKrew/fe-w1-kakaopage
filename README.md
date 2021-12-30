@@ -68,7 +68,7 @@ main.html
   │ 
   ├ 일간 랭킹 TOP (type: "list-item-section")
   │ 
-  └ 추천 이벤트 (type: "banner")
+  └ 추천 이벤트 (type: "banner-item-section")
 
 요일연재 (json/weekly.json)
 └─┬ 배너

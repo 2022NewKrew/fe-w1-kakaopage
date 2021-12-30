@@ -2,6 +2,7 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
+  margin-bottom: 20px;
 }
 .item-section-header > div {
   display: flex;
@@ -56,6 +57,9 @@
   font-size: 16px;
   color: #ffd200;
 }
+.item-overlay > img {
+  margin-right: 4px;
+}
 .item-info {
   display: flex;
   align-items: center;
@@ -72,7 +76,7 @@
   white-space: nowrap;
 }
 
-.weekly-top {
+.item-section {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -84,7 +88,7 @@
 .weekly-tabs-nav .active {
   border-bottom: 3px solid #ffd200;
 }
-.weekly-tabs-nav .active button{
+.weekly-tabs-nav .active button {
   color: #000;
 }
 .weekly-tab {
@@ -114,4 +118,100 @@
 }
 .weekly-tab-active-circle {
   border-bottom: 3px solid #ffd200;
+}
+
+.big-item-card {
+  margin-right: 10px;
+  width: 335px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.big-item-image {
+  width: 335px;
+}
+.big-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.big-item-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px 15px;
+}
+.big-item-views {
+  color: #fff;
+  padding: 2px 15px;
+}
+.big-item-views > img {
+  width: 10px;
+}
+.big-item-desc {
+  margin-top: 10px;
+  width: 335px;
+  height: 24px;
+  background-color: #ffd200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 350;
+  color: #222;
+}
+
+.list-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.list-item-card {
+  flex: 1;
+  display: flex;
+  padding: 8px;
+  cursor: pointer;
+}
+.list-item-index {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+.list-item-image {
+  height: 114px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.list-item-info {
+  display: flex;
+  flex-direction: column;
+}
+.list-item-info > * {
+  display: flex;
+  align-items: center;
+}
+.list-item-title {
+  flex: 1;
+}
+.list-item-title > img {
+  height: 16px;
+  margin-right: 4px;
+}
+.list-item-views {
+  flex: 1;
+  color: #a1a1a1;
+  font-size: 14px;
+}
+.list-item-views > img {
+  width: 10px;
+  margin-right: 4px;
+}
+.list-item-desc {
+  flex: 3;
+}
+.banner-item-image {
+  max-width: 100%;
 }
