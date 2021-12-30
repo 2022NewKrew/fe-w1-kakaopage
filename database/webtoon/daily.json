@@ -1,0 +1,14 @@
+[
+  {
+    "type": "carousel",
+    "contents":[
+      {
+        "img": "../../images/ㅋㅋㅋ웹툰아카데미%20카카페%20데뷔반%202기.png",
+        "title": "ㅋㅋㅋ웹툰아카데미 카카페 데뷔반 2기 모집",
+        "badge": "../../images/badge-bigthum-competition.svg",
+        "isWebtoon": false,
+        "description": "카카오페이지 데뷔반 2월 7일 오픈!"
+      }
+    ]
+  }
+]

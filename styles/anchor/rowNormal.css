@@ -1,0 +1,89 @@
+.anchor-row-normal{
+    margin-bottom: 20px;
+    width: 120px;
+    background-color: white;
+}
+
+.anchor-row-normal-image-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.anchor-row-normal-image{
+    height: 120px;
+    width: 100%;
+}
+
+.anchor-row-normal-image-tag-wrapper{
+    position: relative;
+    height: 30px;
+    background-color: #242526;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.anchor-row-normal-image-tag{
+    line-height: 1;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffd200;
+}
+
+.anchor-row-normal-star-badge{
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.anchor-row-normal-wait-badge{
+    height: 16px;
+    margin-top: 2px;
+}
+
+.anchor-row-normal-title{
+    margin-top: 9px;
+    margin-bottom: 7px;
+    color: #333333;
+    font-size: 16px;
+    height: 1.4em;
+}
+
+.anchor-row-normal-detail{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.anchor-row-normal-tag-wrapper{
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.anchor-row-normal-tag{
+    height:13px;
+}
+
+.anchor-row-normal-age-15{
+    margin-left:2px;
+}
+
+.anchor-row-normal-person{
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+}
+
+.anchor-row-normal-detail div{
+    font-weight: 350;
+    font-size: 14px;
+    color: #9c9c9c;
+}
+
+

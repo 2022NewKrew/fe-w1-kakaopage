@@ -1,0 +1,24 @@
+.weekdays-nav-group {
+    margin-top: 15px;
+    display: flex;
+}
+
+.weekdays-wrapper{
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    flex: 1;
+    background-color: #ffffff;
+    color: #bbbbbb;
+}
+
+.weekdays {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.weekdays-nav-group > .selected{
+    color: #333333;
+    border-bottom-color: #ffd200;
+}

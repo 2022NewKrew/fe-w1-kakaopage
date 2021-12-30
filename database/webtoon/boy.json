@@ -1,0 +1,131 @@
+[
+  {
+    "type": "carousel",
+    "contents":[
+      {
+        "img": "../../images/은빛마계왕(업).jpg",
+        "title": "은빛마계왕",
+        "badge": "../../images/badge-bigthum-up.svg",
+        "isWebtoon": true,
+        "viewers": "91.4",
+        "description": "눈 떠보니 재수없는 마왕님?!"
+      }
+    ]
+  }
+,{
+  "type": "category",
+  "contents": [
+    {
+      "title": "독점 신작🎉"
+    },{
+      "title": "이벤트로 달리자"
+    },{
+      "title": "ㄴㅎㄹ 완결!"
+    }
+  ]
+}
+,{
+  "type": "banner",
+  "contents": [
+    {
+      "img":"../../images/banner.png"
+    }
+  ]
+}
+,{
+  "type": "contents-block",
+  "title": "로맨스 TOP",
+  "contents": [
+    {
+      "img": "../../images/프로야구생존기.png",
+      "rate": "9.9",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "is15": true,
+      "viewer": 58.1
+    },{
+      "img": "../../images/프로야구생존기.png",
+      "rate": "9.9",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "is15": true,
+      "viewer": 58.1
+    },{
+      "img": "../../images/프로야구생존기.png",
+      "rate": "9.9",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "is15": true,
+      "viewer": 58.1
+    },{
+      "img": "../../images/프로야구생존기.png",
+      "rate": "9.9",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "is15": true,
+      "viewer": 58.1
+    },{
+      "img": "../../images/프로야구생존기.png",
+      "rate": "9.9",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "is15": true,
+      "viewer": 58.1
+    }
+  ]
+}
+,{
+  "type": "contents-block",
+  "title": "로판 TOP",
+  "contents": [
+    {
+      "img": "../../images/파멸의%공주님.png",
+      "rate": "9.6",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "viewer": 45.6
+    },{
+      "img": "../../images/파멸의%공주님.png",
+      "rate": "9.6",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "viewer": 45.6
+    },{
+      "img": "../../images/파멸의%공주님.png",
+      "rate": "9.6",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "viewer": 45.6
+    },{
+      "img": "../../images/파멸의%공주님.png",
+      "rate": "9.6",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "viewer": 45.6
+    },{
+      "img": "../../images/파멸의%공주님.png",
+      "rate": "9.6",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "viewer": 45.6
+    },{
+      "img": "../../images/파멸의%공주님.png",
+      "rate": "9.6",
+      "badge": "../../images/bmbadge_waitfree.svg",
+      "title": "프로야구생존기",
+      "isUp": true,
+      "viewer": 45.6
+    }
+  ]
+}
+]

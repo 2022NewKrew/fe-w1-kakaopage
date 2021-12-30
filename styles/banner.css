@@ -1,0 +1,25 @@
+.banner-block{
+    margin-top: 11px;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.banner-content{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-image{
+    width: 550px;
+    height: 100px;
+    margin: 20px 0 20px 0;
+}
+
+.banner-change-btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 140px;
+}

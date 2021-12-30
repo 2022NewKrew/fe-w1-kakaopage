@@ -1,0 +1,15 @@
+[
+  {
+    "type": "carousel",
+    "contents":[
+      {
+        "img": "../../images/인네아드.png",
+        "title": "인네아드",
+        "badge": "../../images/badge-bigthum-up.svg",
+        "isWebtoon": true,
+        "viewers": "91.4",
+        "description": "호루스 X 파라오"
+      }
+    ]
+  }
+]
