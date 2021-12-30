@@ -8,10 +8,12 @@
 </head>
 <style>
   @import url('./styles/header.css');
+  @import url('./styles/section.css');
+  @import url('./styles/article.css');
 </style>
 <body class="body-container">
-  <header class="header-root">
 
+  <header class="header-root">
     <div class="header-container">
       <img 
         src="https://static-page.kakao.com/static/common/logo-kakaopage.svg?e0dffe87c45ca42b47399538391a1954ss" 
@@ -39,15 +41,54 @@
         <div class="header-text">로그인</div>
       </div>
     </div>
-
     <nav class="navbar"></nav>
-    <section>
-      <div class="">
-
-      </div>
-    </section>
-
   </header>
+
+  <section class="section-container">
+    <div class="webtoon-menus"></div>
+    <div class="webtoon-carousel">
+      <div class="carousel-shadow-layer"></div>
+      <div class="webtoon-title">
+        무림세가 전생랭커
+        <div class="webtoon-labels">
+          <img 
+            src="https://static-page.kakao.com/static/pc/badge-bigthum-event.svg?2c00fc6eb18517e8f006adfaf464530b" 
+            alt="이벤트라벨">
+          <img 
+            src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858" 
+            alt="">
+          <div>웹툰</div>
+          <img 
+            src="https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea" 
+            alt="">
+          <img
+            style="height: 60%;"
+            src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e" 
+            alt="">
+          <div>
+            26.6만명
+          </div>
+        </div>
+      </div>
+      <img 
+        src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" 
+        alt="" 
+        class="carousel-left-btn">
+      <img 
+        src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" 
+        alt="" 
+        class="carousel-right-btn">
+    </div>
+    <div class="carousel-description">난이도 : 지옥 종말의 별에 진입합니다.</div>
+  </section>
+
+  <article class="days-list"></article>
+
+  <article class="days-webtoon-list">하이하이</article>
+
+  <footer class="">
+
+  </footer>
 
   <script type="module" src="./scripts/app.js"></script>
 </body>
