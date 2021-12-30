@@ -35,7 +35,7 @@ function init() {
   recommend_event_builder();
 }
 
-function check_LI_tag(tag) {
+function check_li_tag(tag) {
   return tag === "LI";
 }
 function nav_list_toggle_clicked(e) {
@@ -47,7 +47,6 @@ function nav_list_toggle_clicked(e) {
   cur_content_nav_li = e.target.parentNode;
   cur_content_nav_li.classList.add(clicked);
 }
-
 function nav_list_toggle_selected(e) {
   let cur_content_sub_nav_li = document.querySelector("li.selected");
   if (e.target.tagName !== "LI") return;
@@ -57,7 +56,6 @@ function nav_list_toggle_selected(e) {
   cur_content_sub_nav_li = e.target;
   cur_content_sub_nav_li.classList.add(selected);
 }
-
 function footer_company_info_onoff(e) {
   const company_info = e.target;
   if (company_info.classList.contains("on")) {
@@ -80,7 +78,10 @@ function top_title_wrap_template(title) {
 function day_webtoon_builder() {
   const day_webtoon_title = "요일 연재 TOP";
   const day_webtoon_template = top_title_wrap_template(day_webtoon_title);
-  kakao_day_webtoon_div.innerHTML += day_webtoon_template;
+  const day_webtoon_card_template = webtoon_card_div(kakao_webtoon_list.day_webtoon_list.THUR);
+
+  kakao_day_webtoon_div.querySelector(".day_webtoon_list").innerHTML = day_webtoon_card_template;
+  kakao_day_webtoon_div.innerHTML = day_webtoon_template + kakao_day_webtoon_div.innerHTML;
 }
 function top_new_builder() {
   const top_new_title = "기대신작 TOP";
@@ -90,10 +91,9 @@ function top_new_builder() {
 function webtoon_card_div(webtoon_list) {
   const webtoon_card_content = document.createElement("div");
   webtoon_card_content.classList.add("webtoon_card_wrap");
-  let webtoon_template_res = ``;
-
-  webtoon_list.forEach(item => {
-    webtoon_template_res += `
+  let webtoon_template_res = webtoon_list
+    .map(item => {
+      return `
     <a href="#">
       <div class="webtoon_card_content">
         <img src = "${item.webtoon_thumbnail_img}" alt="${item.webtoon_card_title}" />
@@ -119,7 +119,8 @@ function webtoon_card_div(webtoon_list) {
       </div>
     </a>
     `;
-  });
+    })
+    .join(" ");
   webtoon_card_content.innerHTML = webtoon_template_res;
   return webtoon_card_content.outerHTML;
 }

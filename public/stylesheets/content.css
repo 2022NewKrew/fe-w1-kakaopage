@@ -335,9 +335,11 @@ div.app_download > img {
   margin-top: 22px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .webtoon_card_wrap > a {
   text-decoration: none;
+  margin-bottom: 20px;
 }
 .webtoon_card_wrap > a > .webtoon_card_content {
   display: flex;
@@ -403,4 +405,18 @@ div.app_download > img {
 .webtoon_card_wrap > a > .webtoon_card_meta > .webtoon_card_meta_count {
   font-size: 14px;
   white-space: nowrap;
+}
+
+.day_webtoon > .day_webtoon_nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.day_webtoon > .day_webtoon_nav li {
+  list-style: none;
+  height: 60px;
+  font-size: 20px;
+  line-height: 58px;
+  border-bottom: 1px solid #f1f1f1;
+  width: -webkit-fill-available;
 }

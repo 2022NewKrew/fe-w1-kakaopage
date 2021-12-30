@@ -1,4 +1,106 @@
 const kakao_webtoon_list = {
+  day_webtoon_list: {
+    MON: [
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+    ],
+    TUE: [],
+    WED: [],
+    THUR: [
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+      {
+        star_rating: 9.9,
+        webtoon_thumbnail_img: "//dn-img-page.kakao.com/download/resource?kid=wpWSo/hzb7rcFfFA/exZP1f5byThH9Einm31Vb0&filename=th2",
+        webtoon_card_title: "태양의 주인",
+        webtoon_card_meta_count: "58.1만명",
+      },
+    ],
+    FRI: [],
+    SAT: [],
+    SUN: [],
+    ALL: [],
+  },
   top_romance_list: [
     {
       star_rating: 9.9,
