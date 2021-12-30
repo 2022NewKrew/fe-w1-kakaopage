@@ -19,7 +19,6 @@ export default (htmlEl, totalImages, imageWidth) => {
     if (curPos <= TOTAL_IMAGES) {
       slide.style.transition = "500ms";
       slide.style.transform = `translateX(-${IMAGE_WIDTH * (curPos + 2)}px)`;
-      console.log(curPos);
       curPos += 1;
     }
     if (curPos == TOTAL_IMAGES) {
