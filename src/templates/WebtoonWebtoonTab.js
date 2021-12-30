@@ -3,7 +3,7 @@ import { ContentRowList } from "../components/contents/ContentRowList.js";
 import { SlideBannerBox } from "../components/contents/SlideBannerBox.js";
 import { DayNavigator } from "../components/navigators/DayNavigator.js";
 import { State } from "../core/State.js";
-import { getToday } from "../utils/Time.js";
+import { getToday } from "../utils/time.js";
 import { setupContentsMockups } from "../../utils/mockups.js";
 
 export const WebtoonWebtoonTab = () => {
