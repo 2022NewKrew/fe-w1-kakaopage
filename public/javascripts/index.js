@@ -163,14 +163,52 @@ function top_action_builder() {
 function day_top_builder() {
   const day_top_title = "일간 랭킹 TOP";
   const day_top_template = top_title_wrap_template(day_top_title);
-
-  kakao_day_top_div.innerHTML += day_top_template;
+  const day_top_content_template = kakao_webtoon_list.day_top_list
+    .map(item => {
+      return `
+    <li class="day_top_list">
+      <div class="ranking">
+        <span>1</span>
+      </div>
+      <div class="day_top_img">
+        <img src="${item.webtoon_img}" />
+        <img
+          src="//dn-img-page.kakao.com/download/resource?kid=bEDOD9/hzb7xdyn4N/m02Ux6VKUkGsD5xk8jRDSk&filename=th2"
+          alt="${item.webtoon_title}"
+        />
+      </div>
+      <div class="info_wrap">
+        <div class="info_meta">
+          <div class="title_wrap">
+            <img src="${item.webtoon_status_img}" alt="${item.webtoon_status}" />
+            <div class="title">${item.webtoon_title}</div>
+          </div>
+          <div class="meta_wrap">
+            <img src="https://static-page.kakao.com/static/common/icon_read_count.png?817b1f83aa0dd8de232a68ac82efd871" alt="" />
+            <div class="meta_count">${item.webtoon_views}</div>
+            <div class="division">|</div>
+            <div class="meta_type">${item.webtoon_type}</div>
+            <div class="division">|</div>
+            <div class="meta_category">${item.webtoon_category}</div>
+            <div class="division">|</div>
+            <div class="meta_owner">${item.webtoon_owner}</div>
+          </div>
+        </div>
+        <div class="info_day">${item.webtoon_day} 연재</div>
+      </div>
+    </li>
+    `;
+    })
+    .join("");
+  kakao_day_top_div.querySelector(".day_top_wrap ul").innerHTML = day_top_content_template;
+  kakao_day_top_div.innerHTML = day_top_template + kakao_day_top_div.innerHTML;
 }
 function recommend_event_builder() {
   const recommend_event_title = "추천 이벤트";
   const recommend_event_template = top_title_wrap_template(recommend_event_title);
-  const recommend_event_content_template = kakao_webtoon_list.recommend_event_list.map(item => {
-    return `
+  const recommend_event_content_template = kakao_webtoon_list.recommend_event_list
+    .map(item => {
+      return `
     <div class="recommend_event_content">
       <img src="${item.img}" alt="${item.title}" />
       <div class="controller">
@@ -180,7 +218,8 @@ function recommend_event_builder() {
       </div>
     </div>
     `;
-  });
+    })
+    .join("");
   kakao_recommend_event_div.querySelector(".recommend_event_content_wrap").innerHTML = recommend_event_content_template;
   kakao_recommend_event_div.innerHTML = recommend_event_template + kakao_recommend_event_div.innerHTML;
 }
