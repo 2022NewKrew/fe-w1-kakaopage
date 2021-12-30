@@ -3,12 +3,12 @@
     "type": "carousel",
     "contents":[
       {
-        "img": "../../images/은빛마계왕(업).jpg",
-        "title": "은빛마계왕",
+        "img": "../../images/극락왕생.png",
+        "title": "극락왕생",
         "badge": "../../images/badge-bigthum-up.svg",
         "isWebtoon": true,
         "viewers": "91.4",
-        "description": "눈 떠보니 재수없는 마왕님?!"
+        "description": "극락가서 왕생하면.. 너무 좋겠다.."
       }
     ]
   }
@@ -16,29 +16,11 @@
   "type": "category",
   "contents": [
     {
-      "title": "오늘 UP",
-      "tag": 194
+      "title": "믿고보는#독점!"
     },{
-      "title": "오늘 신작",
-      "tag": 2
+      "title": "#이벤트로달리자"
     },{
-      "title": "오리지널",
-      "tag": 2186
-    },{
-      "title": "무료회차 UP"
-    },{
-      "title": "독립운동가 웹툰"
-    },{
-      "title": "오늘 랭킹",
-      "tag": "1위"
-    }
-  ]
-}
-,{
-  "type": "banner",
-  "contents": [
-    {
-      "img":"../../images/banner.png"
+      "title": "#기다무플러스"
     }
   ]
 }

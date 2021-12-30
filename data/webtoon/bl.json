@@ -16,21 +16,17 @@
   "type": "category",
   "contents": [
     {
-      "title": "오늘 UP",
-      "tag": 194
+      "title": "독점/선연재"
     },{
-      "title": "오늘 신작",
-      "tag": 2
+      "title": "인기 완결작"
     },{
-      "title": "오리지널",
-      "tag": 2186
+      "title": "기다무 플러스"
     },{
-      "title": "무료회차 UP"
+      "title": "오늘 BL선물함"
     },{
-      "title": "독립운동가 웹툰"
+      "title": "BL소설"
     },{
-      "title": "오늘 랭킹",
-      "tag": "1위"
+      "title": "오늘의 이벤트"
     }
   ]
 }

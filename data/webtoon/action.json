@@ -3,7 +3,7 @@
     "type": "carousel",
     "contents":[
       {
-        "img": "../../images/천하제일%20표사.jpg",
+        "img": "../../images/천하제일%20표사.png",
         "title": "천하제일 표사",
         "badge": "../../images/badge-bigthum-up.svg",
         "isWebtoon": true,
@@ -16,21 +16,11 @@
   "type": "category",
   "contents": [
     {
-      "title": "오늘 UP",
-      "tag": 194
+      "title": "독점 신작🔥"
     },{
-      "title": "오늘 신작",
-      "tag": 2
+      "title": "이벤트로 달리자"
     },{
-      "title": "오리지널",
-      "tag": 2186
-    },{
-      "title": "무료회차 UP"
-    },{
-      "title": "독립운동가 웹툰"
-    },{
-      "title": "오늘 랭킹",
-      "tag": "1위"
+      "title": "기다무 플러스"
     }
   ]
 }
