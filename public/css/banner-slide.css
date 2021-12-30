@@ -1,0 +1,55 @@
+.top-banner-box{
+    position: relative;
+    background: #ffffff;
+    cursor: pointer;
+    padding-top: 0;
+    height: 480px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.top-banner-wrap{
+    height: 480px;
+}
+
+.slick-slider {
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+.slick-track{
+    width: 10080px;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate3d(-2880px, 0px, 0px);
+}
+.click-area{
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.prev-btn{
+    left: 0;
+    margin-left: 20px;
+}
+
+.next-btn{
+    right: 0;
+    margin-right: 20px;
+}
+
+.current-page{
+    color: #ffffff;
+    position: absolute;
+    right: 24px;
+    bottom: 57px;
+    font-size: 20px;
+    opacity: 0.6;
+}
