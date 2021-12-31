@@ -1,0 +1,28 @@
+{
+  "nav": [
+    {
+      "id": "홈",
+      "url": "assets/images/홈.svg"
+    },
+    {
+      "id": "웹툰_만화",
+      "url": "assets/images/웹툰_만화.svg"
+    },
+    {
+      "id": "웹소설_장르",
+      "url": "assets/images/웹소설_장르.svg"
+    },
+    {
+      "id": "영화",
+      "url": "assets/images/영화.svg"
+    },
+    {
+      "id": "예능_드라마",
+      "url": "assets/images/예능_드라마.svg"
+    },
+    {
+      "id": "책",
+      "url": "assets/images/책.svg"
+    }
+  ]
+}

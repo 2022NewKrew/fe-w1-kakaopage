@@ -2,32 +2,51 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  margin-bottom: 11px;
 }
-.banner > a {
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background-color: #ffd200;
-  text-decoration: none;
-  color: black;
-}
-
 .banner-wrapper {
-  background-image: url("../../images/천하제일\ 표사.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
   width: 720px;
   height: 480px;
-  color: white;
+  flex-direction: column;
+  position: relative;
+}
+.banner-poster {
+  width: 720px;
+  height: 480px;
+}
+
+.banner-poster > img {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 480px;
+}
+.banner-link {
+  background-color: #ffd200;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.banner-wrapper > .carousel {
+  width: 720px;
+  height: 520px;
+}
+.banner-wrapper > .carousel > .container > .slide > div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
 }
 .banner__content {
   position: absolute;
-  bottom: 24px;
+  bottom: 60px;
   left: 20px;
+  color: white;
 }
 .banner__title {
   font-size: 2rem;
@@ -38,31 +57,31 @@
   align-items: center;
   width: 190px;
   justify-content: space-between;
-  margin-top: 17px;
+  margin-top: 5px;
 }
 .banner__subtitle > span:nth-child(1) {
-  background-image: url("../images/badge-bigthum-up.svg");
+  background-image: url("../assets/images/badge-bigthum-up.svg");
   width: 32px;
   height: 20px;
 }
 .banner__subtitle > span:nth-child(2) {
-  background-image: url("../images/ico-bigthum-wait.svg");
+  background-image: url("../assets/images/ico-bigthum-wait.svg");
   width: 18px;
   height: 20px;
 }
 
 .banner__subtitle > span:nth-child(3) {
-  background-image: url("../images/bmbadge_webtoon.svg");
+  background-image: url("../assets/images/bmbadge_webtoon.svg");
   width: 39px;
   height: 24px;
 }
 .banner__subtitle > span:nth-child(4) {
-  background-image: url("../images/Seperator.png");
+  background-image: url("../assets/images/Seperator.png");
   width: 2px;
   height: 20px;
 }
 .banner__subtitle > span:nth-child(5) {
-  background-image: url("../images/ico-bigthum-person.svg");
+  background-image: url("../assets/images/ico-bigthum-person.svg");
   width: 14px;
   height: 16px;
 }

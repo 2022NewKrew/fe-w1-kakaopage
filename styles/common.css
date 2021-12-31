@@ -4,7 +4,6 @@
 }
 body {
   background-color: #eee;
-  height: 200vh;
   position: relative;
   margin-top: 170px;
 }
@@ -25,4 +24,8 @@ main {
 }
 button {
   cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,24 +1,17 @@
 .event {
   background-color: white;
   border-bottom: 1px solid #e6e6e6;
-  margin-top: 11px;
+  margin-bottom: 11px;
   padding: 20px 0;
 }
-
-.event-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.event > .carousel {
+  width: 720px;
 }
-
-.event__img {
+.event > .carousel > .container {
   width: 550px;
   height: 100px;
-  margin: 0 20px;
+  border-radius: 10px;
 }
-.event__img > img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+.event > .carousel > .container > .slide {
+  height: 100px;
 }

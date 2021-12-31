@@ -1,0 +1,12 @@
+.downlink {
+  margin-top: 11px;
+  width: 720px;
+  margin: 0 auto;
+  background: #fecc2e;
+}
+.downlink > img {
+  width: 70%;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+}
