@@ -1,10 +1,12 @@
 body {
   background-color: #eee;
+  width: 100vw;
 }
 
 main {
   width: 720px;
   margin: auto;
+  margin-bottom: 100px;
 }
 /* header css */
 
@@ -88,6 +90,7 @@ main {
 }
 
 .nav-list.active {
+  padding-top: 23px;
   border-bottom: 3px solid #ffd200;
 }
 
@@ -160,6 +163,10 @@ main {
   z-index: 2;
 }
 
+.day:last-child {
+  padding-left: 4px;
+}
+
 .day.active {
   color: black;
 }
@@ -194,6 +201,11 @@ main {
   display: flex;
   align-items: center;
   gap: 7px;
+}
+
+.category-count {
+  color: black;
+  font-weight: bold;
 }
 
 /* webtoon css */
@@ -246,7 +258,7 @@ main {
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin-top: 200px;
+  margin-top: 30px;
   flex-direction: column;
 }
 
@@ -258,4 +270,93 @@ main {
 .empty-page-container img {
   margin-top: 20px;
   border-radius: 20px;
+}
+
+/* carousel */
+.carousel_outer-container {
+  width: 720px;
+  height: 480px;
+  margin-top: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.carousel_inner-container {
+  display: flex;
+  transition: all 1s ease;
+  height: 100%;
+  transform: translateX(-720px);
+}
+
+.carousel {
+  width: 720px;
+  height: 480px;
+  position: relative;
+}
+
+.carousel_img {
+  width: 720px;
+  height: 480px;
+}
+
+.carousel_left-arrow {
+  position: absolute;
+  left: 16px;
+  top: 45%;
+}
+
+.carousel_right-arrow {
+  position: absolute;
+  right: 16px;
+  top: 45%;
+}
+
+.carousel_hot-label {
+  position: absolute;
+  left: 20px;
+  bottom: 60px;
+}
+
+.carousel_description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: #ffd200;
+  font-weight: bold;
+}
+
+.carousel_info {
+  position: absolute;
+  left: 85px;
+  bottom: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 7px;
+  font-size: 1.2rem;
+}
+
+.carousel_title {
+  position: absolute;
+  left: 20px;
+  bottom: 100px;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.carousel_page-num {
+  color: #ffffff;
+  position: absolute;
+  right: 24px;
+  bottom: 57px;
+  font-size: 20px;
+  opacity: 0.8;
+  font-weight: bold;
 }
