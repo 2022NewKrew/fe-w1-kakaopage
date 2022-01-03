@@ -292,7 +292,7 @@ nav {
 .carousel {
     margin-top : 11px;
     height: 480px;
-    background-color: pink;
+    overflow: hidden;
     position: relative;
 }
 
@@ -302,8 +302,10 @@ nav {
 }
 
 .slider-item {
-    position: relative;
+    position: absolute;
     height: 100%;
+    top: 0;
+    transition: left 0.3s;
 }
 
 .slider-item > img {
@@ -401,21 +403,23 @@ nav {
     background: transparent;
     display: flex;
     padding: 0;
+    cursor: pointer;
 }
 
-.prev-btn {
+#carousel-prev {
     top: 50%;
     left: 20px;
     transform: translate(0%, -50%);
+
 }
 
-.next-btn {
+#carousel-next {
     top: 50%;
     right: 20px;
     transform: translate(0%, -50%);
 }
 
-.current-page {
+#current-page {
     color: #ffffff;
     position: absolute;
     right: 24px;
