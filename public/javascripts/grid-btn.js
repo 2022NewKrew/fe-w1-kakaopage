@@ -20,7 +20,7 @@ export function createGridBtn(btnContent) {
             gridColTextEl.innerText = content.text
             gridColEl.appendChild(gridColTextEl)
     
-            if (content.highlight !== undefined && content.highlight !== '') {
+            if (content.highlight) {
                 const gridColHighlightEl = document.createElement('span')
                 
                 gridColHighlightEl.classList.add('grid-col-highlight')
