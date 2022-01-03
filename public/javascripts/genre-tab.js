@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
     let currentShowedComponents
     
-    const showTab = (navItemEl, categoryData) => {
+    const showTab = (navItemToShowEl, categoryData) => {
         if (contentComponents[categoryData.name] === undefined) {
             contentComponents[categoryData.name] = drawComponents(categoryData.content)
         }
@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 navItemEl.classList.remove('selected-content-nav-item')
             })
     
-            navItemEl.classList.add('selected-content-nav-item')
+            navItemToShowEl.classList.add('selected-content-nav-item')
         }
     }
     
