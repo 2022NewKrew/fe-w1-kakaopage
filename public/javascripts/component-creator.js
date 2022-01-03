@@ -1,10 +1,10 @@
 import { createCarousel } from './carousel.js'
 import { createGridBtn } from './grid-btn.js'
 
-export function drawComponents(data) {
+export function drawComponents(componentDataToDraw) {
     const componentEls = []
     
-    data.forEach((component, idx) => {
+    componentDataToDraw.forEach((component, idx) => {
         let newComponentEl
         
         switch (component.type) {
