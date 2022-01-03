@@ -1,27 +1,24 @@
 import { createCarousel } from './carousel.js'
+import { createGridBtn } from './grid-btn.js'
 
-const homeData = JSON.parse(JSON.stringify(homeJson));
-
-window.addEventListener('DOMContentLoaded', () => {
-    drawComponent(homeData)
-})
-
-function removeAllChild(element) {
-    while (element.hasChildNodes()) {
-        element.removeChild(element.firstChild)
-    }
-}
-
-function drawComponent(data) {
-    const componentBoxEl = document.querySelector('.component-box')
+export function drawComponents(componentDataToDraw) {
+    const componentEls = []
     
-    removeAllChild(componentBoxEl)
-    
-    data.forEach((component, idx) => {
+    componentDataToDraw.forEach((component, idx) => {
+        let newComponentEl
+        
         switch (component.type) {
             case 'carousel':
-                componentBoxEl.appendChild(createCarousel(component.content))
-                break;
+                newComponentEl = createCarousel(component.content)
+                break
+            
+            case 'grid-btn':
+                newComponentEl = createGridBtn(component.content)
+                break
         }
+    
+        componentEls.push(newComponentEl)
     })
+    
+    return componentEls
 }

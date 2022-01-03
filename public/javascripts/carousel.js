@@ -1,3 +1,9 @@
+import { addStateChangedEventListener } from './genre-tab.js'
+
+const BANNER_WIDTH = 720
+const AUTO_SLIDE_PERIOD = 4000
+const ANIMATION_DURATION = 500
+
 let carouselEl
 let carouselBannerEl
 
@@ -21,7 +27,7 @@ function createBanner(content) {
     const categoryEl = newBannerEl.querySelector('.carousel-category-text')
     const nReaderEl = newBannerEl.querySelector('.carousel-number-of-reader-text')
     
-    titleEl.innerHTML = content.title
+    titleEl.innerText = content.title
     subtitleEl.innerText = content.subtitle
     bannerImgEl.src = content.bannerImgSrc
     badgeIconEl.src = content.badgeIconSrc
@@ -31,9 +37,11 @@ function createBanner(content) {
     return newBannerEl
 }
 
+function getTranslateX(bannerIdx) {
+    return `translateX(-${bannerIdx * BANNER_WIDTH}px)`
+}
+
 export function createCarousel(data) {
-    const BANNER_WIDTH = 720
-    
     const newCarouselEl = carouselEl.cloneNode(true)
     const newCarouselBannerPartEl = newCarouselEl.querySelector('.carousel-banner-part')
     const pageNumberEl = newCarouselEl.querySelector('.carousel-page-number')
@@ -42,6 +50,45 @@ export function createCarousel(data) {
     const rightBtnEl = btnEls[1]
     
     let bannerIdx = 1
+    let timeId
+    
+    const moveLeft = (bannerPartEl, pageNumberEl, maxPageNumber) => {
+        if (bannerIdx > 0) {
+            bannerIdx--
+            bannerPartEl.style.transform = getTranslateX(bannerIdx)
+            bannerPartEl.style.transitionDuration = `${ANIMATION_DURATION}ms`
+            
+            if (bannerIdx === 0) {
+                pageNumberEl.innerText = `${maxPageNumber} / ${maxPageNumber}`
+            } else {
+                pageNumberEl.innerText = `${bannerIdx} / ${maxPageNumber}`
+            }
+        }
+    }
+    
+    const moveRight = (bannerPartEl, pageNumberEl, maxPageNumber) => {
+        if (bannerIdx < maxPageNumber + 1) {
+            bannerIdx++
+            bannerPartEl.style.transform = getTranslateX(bannerIdx)
+            bannerPartEl.style.transitionDuration = `${ANIMATION_DURATION}ms`
+            
+            if (bannerIdx === maxPageNumber + 1) {
+                pageNumberEl.innerText = `1 / ${maxPageNumber}`
+            } else {
+                pageNumberEl.innerText = `${bannerIdx} / ${maxPageNumber}`
+            }
+        }
+    }
+    
+    const stopAutoSlide = () => {
+        clearInterval(timeId)
+    }
+    
+    const startAutoSlide = () => {
+        timeId = setInterval(() => {
+            moveRight(newCarouselBannerPartEl, pageNumberEl, data.length)
+        }, AUTO_SLIDE_PERIOD)
+    }
     
     pageNumberEl.innerText = `1 / ${data.length}`
     
@@ -55,31 +102,15 @@ export function createCarousel(data) {
     newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
     
     leftBtnEl.addEventListener('click', () => {
-        if (bannerIdx > 0) {
-            bannerIdx--
-            newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
-            newCarouselBannerPartEl.style.transitionDuration = '500ms'
-    
-            if (bannerIdx === 0) {
-                pageNumberEl.innerText = `${data.length} / ${data.length}`
-            } else {
-                pageNumberEl.innerText = `${bannerIdx} / ${data.length}`
-            }
-        }
+        moveLeft(newCarouselBannerPartEl, pageNumberEl, data.length)
+        stopAutoSlide()
+        startAutoSlide()
     })
     
     rightBtnEl.addEventListener('click', () => {
-        if (bannerIdx < data.length + 1) {
-            bannerIdx++
-            newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
-            newCarouselBannerPartEl.style.transitionDuration = '500ms'
-    
-            if (bannerIdx === data.length + 1) {
-                pageNumberEl.innerText = `1 / ${data.length}`
-            } else {
-                pageNumberEl.innerText = `${bannerIdx} / ${data.length}`
-            }
-        }
+        moveRight(newCarouselBannerPartEl, pageNumberEl, data.length)
+        stopAutoSlide()
+        startAutoSlide()
     })
     
     newCarouselBannerPartEl.addEventListener('transitionend', () => {
@@ -91,8 +122,16 @@ export function createCarousel(data) {
             bannerIdx = 1
         }
     
-        newCarouselBannerPartEl.style.transform = `translateX(-${bannerIdx * BANNER_WIDTH}px)`
+        newCarouselBannerPartEl.style.transform = getTranslateX(bannerIdx)
     })
+    
+    addStateChangedEventListener((isSelected) => {
+        if (isSelected) {
+            startAutoSlide()
+        } else {
+            stopAutoSlide()
+        }
+    }, newCarouselEl)
     
     return newCarouselEl
 }

@@ -1,8 +1,4 @@
-function removeAllChild(element) {
-    while (element.hasChildNodes()) {
-        element.removeChild(element.firstChild)
-    }
-}
+import { removeAllChild } from './common.js'
 
 window.addEventListener('DOMContentLoaded', () => {
     const mainContainerEl = document.querySelector('.main-container')
