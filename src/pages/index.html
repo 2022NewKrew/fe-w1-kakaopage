@@ -3,7 +3,7 @@
     <head>
         <meta charset=”utf-8” />
         <title>홈 - 웹툰 | 카카오페이지</title>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="../style.css" />
     </head>
     <body>
         <div class="root">
@@ -111,6 +111,24 @@
                 <div class="carousel">
                     <div class="slider">
                         <div class="slider-item">
+                            <img src="//dn-img-page.kakao.com/download/resource?kid=bF3fg1/hzb7vUring/kBEMrvTWj4Yqjr4QNKyPeK" />
+                            <div class="info">
+                                <div class="title">뒤끝작렬</div>
+                                <div class="detail">
+                                    <img class="up" src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2" alt="up" />
+                                    <img class="clock" src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858" alt="clock" />
+                                    <div>웹툰</div>
+                                    <img class="seperator" src="https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea" alt="seperator"/>
+                                    <img class="person" src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
+                                    alt="person" />
+                                    <div class="num">48만명</div>
+                                </div>
+                                <div class="highlight">
+                                    <p>재벌가 2세, 흙수저로 환생?!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
                             <img src="//dn-img-page.kakao.com/download/resource?kid=bOw4pk/hzhOgcf9a2/8I6xuyASB6Zlq3AGbkocD0" />
                             <div class="info">
                                 <div class="title">은빛마계왕</div>
@@ -128,14 +146,32 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="slider-item">
+                            <img src="//dn-img-page.kakao.com/download/resource?kid=bsDI3U/hyQ9MaNJp3/UGik7ITKisEMoPPqr7ur9k" alt="화산권마" />
+                            <div class="info">
+                                <div class="title">화산권마</div>
+                                <div class="detail">
+                                    <img class="up" src="https://static-page.kakao.com/static/pc/badge-bigthum-up.svg?a70b9cea4cb6b972e794d199820782a2" alt="up" />
+                                    <img class="clock" src="https://static-page.kakao.com/static/pc/ico-bigthum-wait.svg?aeb2837e99c7d1055cbc3444433f4858" alt="clock" />
+                                    <div>웹툰</div>
+                                    <img class="seperator" src="https://static-page.kakao.com/static/common/line_top_banner.png?343ab907f94da6068f627f916b4b35ea" alt="seperator"/>
+                                    <img class="person" src="https://static-page.kakao.com/static/pc/ico-bigthum-person.svg?100328455b1454b0ffff555caf02e71e"
+                                    alt="person" />
+                                    <div class="num">34만명</div>
+                                </div>
+                                <div class="highlight">
+                                    <p>불굴의 두 주먹, 천하를 가른다!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button class="prev-btn">
+                    <button id="carousel-prev">
                         <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-back-nor.svg?85bef3b447d17ee7cbefa349c973fe56" alt="이전 페이지"/>
                     </button>
-                    <button class="next-btn">
+                    <button id="carousel-next">
                         <img src="https://static-page.kakao.com/static/pc/ic-banner-paging-next-nor.svg?cf6a870397c04c13add6c27f1f735d93" alt="다음 페이지"/>
                     </button>
-                    <div class="current-page">
+                    <div id="current-page">
                         1 / 5
                     </div>
                 </div>
@@ -165,6 +201,33 @@
                             <span class="title">오늘 랭킹</span>
                             <div class="number">1위</div>
                         </a>
+                    </div>
+                </div>
+                <div class="banner-carousel">
+                    <button>
+                        <img src="https://static-page.kakao.com/static/pc/ic-paging-back-nor.svg?2c964bb7a6b07a7941252b32ea13f03c"/>
+                    </button>
+                    <img class="banner-image" src="//dn-img-page.kakao.com/download/resource?kid=gPEB1/hzhOklLHwx/b9atKBc9aVXCF3Gu9KKKHK" />
+                    <button>
+                        <img src="https://static-page.kakao.com/static/pc/ic-paging-next-nor.svg?b76f34a1b77e59514735b92464295b7c"/>
+                    </button>
+                </div>
+                <div class="weekday-top">
+                    <div class="title-wrapper">
+                        <div class="title">
+                            <h3>
+                                <div class="text-ellipsis"> 
+                                    요일 연재 TOP
+                                </div>
+                            </h3>
+                            <div class="number">
+                                (1,562)
+                            </div>
+                        </div>
+                        <div class="show-more">
+                            <div>더보기</div>
+                            <img src="https://static-page.kakao.com/static/common/ic-more-gray.svg?639494b81c8127013d0e627243aee94e" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,5 +275,6 @@
 
             </footer>
         </div>
+        <script type="module" src="index.js"></script>
     </body>
 </html>
