@@ -14,7 +14,7 @@ const adjustPosition = () => {
   }
 }
 
-const setup = () => {
+const setupSlider = () => {
   for(let i = 0; i < sliderCount; i++){
     let item = sliderItems[i];
     let left = 720 * i;
@@ -24,23 +24,21 @@ const setup = () => {
 }
 
 const onLeft = () => {
-  if(currentItem > 0){
-    currentItem--;
-  }
+  currentItem = currentItem > 0 ? currentItem - 1 : sliderCount - 1;
   adjustPosition();
-  showCurrentPageNumber();}
+  showCurrentPageNumber();
+}
 
 const onRight = () => {
-  if(currentItem < sliderCount - 1){
-    currentItem++;
-  }
+  currentItem = currentItem < sliderCount - 1 ? currentItem + 1 : 0;
   adjustPosition();
   showCurrentPageNumber();
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  setup();
+  setupSlider();
   document.getElementById("carousel-prev").addEventListener("click", onLeft);
   document.getElementById("carousel-next").addEventListener("click", onRight);
+  setInterval(onRight, 3000);
 });
 

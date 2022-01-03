@@ -238,6 +238,7 @@ nav {
 * {
     font-family: NotoSans;
     line-height: 1.4;
+    user-select: none;
 }
 
 /* root content */
@@ -274,6 +275,7 @@ nav {
     padding: 22px 0px;
     font-size: 20px;
     display: flex;
+    cursor: pointer;
 }
 
 .category-item > a {
