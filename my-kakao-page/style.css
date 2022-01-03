@@ -250,6 +250,7 @@ nav {
 
 .content {
     margin-top: 167px;
+    width: 720px;
 }
 
 .category-list {
@@ -485,6 +486,85 @@ nav {
     font-size: 16px;
     background-color: #ffd200;
     box-sizing: border-box;
+}
+
+/* banner carousel */
+.banner-carousel {
+    margin-top: 11px;
+    cursor: pointer;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-carousel > .banner-image {
+    width: 550px;
+    height: 100px;
+}
+
+.banner-carousel > button {
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* weekday-top */
+
+.weekday-top {
+    box-sizing: border-box;
+    min-width: 0;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    margin: 11px 0 0;
+    padding: 22px 19px;
+}
+
+.weekday-top > .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weekday-top > .title-wrapper > .title > h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+    margin: 0;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.weekday-top > .title-wrapper > .show-more {
+    cursor: pointer;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(153, 153, 153);
+    display: flex;
+}
+
+.weekday-top > .title-wrapper > .show-more > img {
+    width: 8px;
+    height: 14px;
+    margin: 0 0 4px 4px;
+}
+
+.weekday-top > .title-wrapper > .title {
+    display: flex;
+    align-items: center;
+}
+
+.weekday-top > .title-wrapper > .title > .number {
+    color: #999;
+    font-size: 14px;
+    margin-left: 4px;
 }
 
 /* footer */
